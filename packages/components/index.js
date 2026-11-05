@@ -1,4 +1,4 @@
-export const version = "0.43.0-community.1";
+export const version = "0.43.0-community.2";
 export { resolveCornerRadius, applyControlGeometry } from "./geometry.js";
 export { createButton, createField, createStatus, createEmptyState, createNotice, bindNavigation, createSidebarController, createPopup } from "./primitives.js";
 

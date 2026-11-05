@@ -1,6 +1,6 @@
 {
-  "version": "2.1.2-community.1",
-  "packageSha256": "50da5380b6ab0c963e28f035a5d1899ff653c87d0c845a70e7e14dda47e399d2",
+  "version": "2.1.2-community.2",
+  "packageSha256": "400394dca81367d8fad7f9c3009c492bcfec9738706adc68f5e09a3ef71abef4",
   "files": {
     "content-rail.js": "b7710a034b5f4d2c1d40514f8749eb9ac8a3573f8d0c3d75b46480b988f682f4",
     "runtime.js": "616b75ad0bf2a94ac2848c613b4bd8f2d92e52b4fa59caf68313b96e3a26cae3",
@@ -11,6 +11,6 @@
     "feed-rail-progress.js": "9c8c7bf8fdbf5a31715063368d3b5d64d309b95190895c4c4d061459232d1870",
     "feed-rail-tracker.js": "5420ba276379366bc420f7daf8f4602f91e13cc1e7a5c2502b3cb3f995d5e9eb",
     "feed-rail.css": "12929f35170d9a31b3ca3d01efcb65daabe12b2e7e4ead923410293a2987db75",
-    "package.json": "3c9c175b0f6582d1b2d8ec618a6be996424ed95f632b739c49690d56620860e5"
+    "package.json": "713c53d1e1a789c6a2dfa5bd525ac0e3834d94e77be2f14f94bdc07b7b8131dc"
   }
 }

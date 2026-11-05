@@ -1,6 +1,6 @@
 {
   "package": "@ag-design/visual-tools",
-  "version": "2.1.2-community.1",
+  "version": "2.1.2-community.2",
   "basis": "exact offline package source; not consumer qualification",
   "files": {
     "packages/visual-tools/chart-ascii-paint.js": "69bf35ee4f6f4ce6b959e0a27903767c7d3af7a28dde5ce1dce8a758bffe0848",

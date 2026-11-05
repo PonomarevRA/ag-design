@@ -1,5 +1,5 @@
 {
-  "version": "0.43.0-community.1",
+  "version": "0.43.0-community.2",
   "files": {
     "APCA-LICENSE.md": "45822a7b8120d9792a1233b602839b66184beca222d0771672d773eafe26a438",
     "ASCIIFY-LICENSE.md": "60c568870b997b7082eadfaed333334b28e65921906a1f0b4f2566934cc42783",
@@ -138,7 +138,7 @@
     "i18n.js": "fb4816f5510ab8b5bae4b3da82dc0ac8f3e33d825ad6a15e7186eac6eae79d50",
     "i18n.md": "8d06b0cf5ea67253d3951cf4a7aa5ba8e057083576a30a1bc1de687c4b48f25e",
     "index.d.ts": "3538c301f48a34eec6e0fbd5c6aa1e332dfeda093d52db764566f87b5d52310c",
-    "index.js": "2543d66f420cef5359359d17ee28fdbdc64de37bd5aedf2a3e6272fc9f9d92ae",
+    "index.js": "748ce5d27fecde57912fcb72f7d74780f21652dc5e4590bdd4cd537f45d0c9bf",
     "inline-help-localized.js": "60438b8984aab10c52aa74a8fc800de281f3219624904d23763abe93b7f5e0b0",
     "inline-help-position.js": "7ba1877a9252eb4fd58bb6ef75cbc47c6950b56b7dc03513f366bf8035496c72",
     "inline-help.js": "4b5bf0f98f127417acebf86b04f7ce4a7f8f6016c1b0d3855c3679363aa31e49",

@@ -96,20 +96,20 @@
   "edition": "community",
   "packageArtifacts": {
     "components": {
-      "version": "0.43.0-community.1",
-      "sha256": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+      "version": "0.43.0-community.2",
+      "sha256": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
     },
     "rules": {
-      "version": "0.32.0-community.1",
-      "sha256": "f7371d6b5b9bd06c28b04569f74326c5cc6c43994494f24cf0badc85bc27ddfa"
+      "version": "0.32.0-community.2",
+      "sha256": "7a2478421e50009d9ede67efa10100fcdc9632a26ff9c03cd663efa6e2ba029b"
     },
     "visual-tools": {
-      "version": "2.1.2-community.1",
-      "sha256": "50da5380b6ab0c963e28f035a5d1899ff653c87d0c845a70e7e14dda47e399d2"
+      "version": "2.1.2-community.2",
+      "sha256": "400394dca81367d8fad7f9c3009c492bcfec9738706adc68f5e09a3ef71abef4"
     },
     "interaction-tools": {
-      "version": "1.0.0-community.1",
-      "sha256": "34e9ee6f1b551c1b8f795cd6ac96b61217c7c7ee2c6646715e3230e7b86db564"
+      "version": "1.0.0-community.2",
+      "sha256": "b5c83ba3b58a0e07b625d27e80d3bcef65ef469e2c75037e549fc533b3c059f9"
     }
   }
 }

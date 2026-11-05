@@ -2,7 +2,7 @@
 
 [Русский](Publishing-ru.md) · [Home](Home.md)
 
-Community packages use distinct `-community.1` release coordinates and their own archive hashes.
+Community packages use distinct, versioned community prereleases and their own archive hashes.
 
 The public repository is a separately curated source edition with its own Git history and `.gitignore`. It contains reusable libraries, clean catalogue seeds, the book, examples and installation tools. Internal project memory, client settings, local reports, runtime databases, dependency caches and generated archives are outside this edition. Usage/debt seeds and project-specific profile bindings start empty.
 

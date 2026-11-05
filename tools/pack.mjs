@@ -1,3 +1,4 @@
+import { normalizeCommunityArchive } from "./community-archive.mjs";
 import { buildPalette } from "./build-palette.mjs";
 import { buildStyleComponents } from "./build-style-components.mjs";
 import { buildCmsEditor } from "./build-cms-editor.mjs";
@@ -160,6 +161,11 @@ export async function pack(
   const destination = path.join(root, "dist");
   await mkdir(destination, { recursive: true });
   const receipts = [];
+  const publication = await readFile(path.join(root, "PUBLICATION.json"), "utf8").catch(error => {
+    if (error.code === "ENOENT") return null;
+    throw error;
+  });
+  const community = publication !== null && JSON.parse(publication).edition === "community";
   const libraryPackages = path.join(destination, "library-packages");
   await mkdir(libraryPackages, { recursive: true });
   for (const name of [
@@ -175,6 +181,10 @@ export async function pack(
       { cwd: directory, encoding: "utf8" },
     );
     const [entry] = JSON.parse(output);
+    if (community) {
+      const bytes = await normalizeCommunityArchive(path.join(destination, entry.filename));
+      entry.integrity = "sha512-" + createHash("sha512").update(bytes).digest("base64");
+    }
     await copyFile(
       path.join(destination, entry.filename),
       path.join(libraryPackages, entry.filename),

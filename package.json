@@ -15,7 +15,8 @@
     "check:publication": "python tools/verify_repository.py --git"
   },
   "devDependencies": {
-    "esbuild": "0.25.12"
+    "esbuild": "0.25.12",
+    "fflate": "0.8.2"
   },
   "license": "MIT"
 }
