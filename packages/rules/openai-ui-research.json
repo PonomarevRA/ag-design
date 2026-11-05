@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "ag-design/openai-ui-research-v1",
+  "checkedAt": "2026-10-31",
+  "scope": "ChatGPT plugin UI guidance; transferable principles are conditional AG interpretation, not universal website restrictions.",
+  "items": [
+    {
+      "id": "ui",
+      "title": "OpenAI: UI guidelines",
+      "url": "https://developers.openai.com/plugins/concepts/ui-guidelines",
+      "sha256": "20f5a48aec06032d34a3d04bb012c5469c67202b73be7030317ef3d18dbb53e7",
+      "edition": "Markdown documentation"
+    },
+    {
+      "id": "build",
+      "title": "OpenAI: Add UI to your MCP server",
+      "url": "https://developers.openai.com/plugins/build/chatgpt-ui",
+      "sha256": "9403394ff61d97fd0185a24acdb7602648371c4d58f450d59af762d63bb536ab",
+      "edition": "Markdown documentation"
+    },
+    {
+      "id": "tools",
+      "title": "OpenAI: Define tools",
+      "url": "https://developers.openai.com/plugins/plan/tools",
+      "sha256": "c0cb4c691004aeddd3c624d508ee858278e3616fbac878d8ce80f45d45f0557a",
+      "edition": "Markdown documentation"
+    },
+    {
+      "id": "security",
+      "title": "OpenAI: Security & Privacy",
+      "url": "https://developers.openai.com/plugins/guides/security-privacy",
+      "sha256": "2354bba4b09c87d348058b63496d0ee1043adabbc950405462ec57106c010ba6",
+      "edition": "Markdown documentation"
+    },
+    {
+      "id": "metadata",
+      "title": "OpenAI: Optimize Metadata",
+      "url": "https://developers.openai.com/plugins/guides/optimize-metadata",
+      "sha256": "a553d71ee2adf6c8630cd9fcb6e14b78840a98550e6ee45676c50f47d0646a09",
+      "edition": "Markdown documentation"
+    },
+    {
+      "id": "reference",
+      "title": "OpenAI: Plugin UI reference",
+      "url": "https://developers.openai.com/plugins/reference",
+      "sha256": "c4479095e718215f8d5e3518238c089f21a36fc7e1b802b73d1b2c8e8edaf3b6",
+      "edition": "Markdown documentation"
+    },
+    {
+      "id": "library",
+      "title": "OpenAI: optional Apps SDK UI library",
+      "url": "https://openai.github.io/apps-sdk-ui/",
+      "sha256": "c1ba243357e2d01cb6c15088fc23834c967862d7b0aa113b1c85458b0f68e5ce",
+      "edition": "Storybook component index; implementation not audited"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "openai-conversation-surfaces",
+      "ruleId": "openai-conversation-surfaces-guidance",
+      "reuseCandidates": [
+        "conversation-card",
+        "catalog-card",
+        "button",
+        "board-viewport",
+        "state-panel"
+      ]
+    },
+    {
+      "id": "openai-tool-ui-contract",
+      "ruleId": "openai-tool-ui-contract-guidance",
+      "reuseCandidates": [
+        "conversation-card",
+        "async-boundary",
+        "event-bus",
+        "request-router"
+      ]
+    },
+    {
+      "id": "openai-embedded-ui-security",
+      "ruleId": "openai-embedded-ui-security-guidance",
+      "reuseCandidates": [
+        "conversation-card",
+        "async-boundary",
+        "state-panel",
+        "markdown-viewer"
+      ]
+    }
+  ]
+}

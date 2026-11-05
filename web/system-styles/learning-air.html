@@ -1,0 +1,329 @@
+<!doctype html>
+<html data-ag-select-indicators data-example="learning" lang="ru" data-style="learning-air">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Learning Air · стиль системы</title>
+    <link rel="stylesheet" href="vendor/chart.css" />
+    <link rel="stylesheet" href="dashboard-styles.css" />
+    <script type="module" src="learning-air.js"></script>
+    <link rel="stylesheet" href="./vendor/lab/components.css?v=form-review-1" />
+    <link rel="stylesheet" href="./component-lab.css?v=form-review-1" />
+    <link rel="stylesheet" href="../locale-settings.css" />
+    <script type="module" src="./vendor/lab/components.js?v=form-review-1"></script>
+    <link rel="stylesheet" href="./application-layout.css" />
+    <link rel="stylesheet" href="./demo-system.css?v=demo-systems-4" />
+  </head>
+  <body class="learning">
+    <a class="skip-link" href="#dashboard-main">К содержимому</a>
+    <aside class="dashboard-sidebar">
+      <a class="dashboard-brand" href="#overview"
+        ><span class="brand-logo" aria-hidden="true">a</span>airly</a
+      >
+      <p class="sidebar-eyebrow">ВАШЕ ОБУЧЕНИЕ</p>
+      <nav aria-label="Разделы примера">
+        <a href="#overview" aria-current="page"
+          ><span aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z"
+              /></svg></span
+          >Обзор</a
+        ><a href="#courses"
+          ><span aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M5 3h10l4 4v14H5z M14 3v5h5 M8 12h8 M8 16h6"
+              /></svg></span
+          >Курсы</a
+        ><a href="#activity"
+          ><span aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M2 12h5l3-9 4 18 3-9h5" /></svg></span
+          >Активность</a
+        ><a href="#calendar"
+          ><span aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 5h16v16H4z M8 2v6 M16 2v6 M4 10h16" /></svg></span
+          >Расписание</a
+        ><a href="#community"
+          ><span aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0 M4 22v-3a8 8 0 0 1 16 0v3"
+              /></svg></span
+          >Сообщество</a
+        >
+      </nav>
+      <div class="sidebar-end">
+        <p>Учитесь в своём ритме.</p>
+        <a href="/#styles">Все стили ↗</a
+        ><span class="demo-badge">Локальный пример</span>
+      </div>
+    </aside>
+    <div class="learning-workspace">
+      <header class="dashboard-header" id="overview">
+        <div>
+          <p class="eyebrow">LEARNING AIR / SYSTEM STYLE 07</p>
+          <h1>Каждый день — чуть больше</h1>
+          <p>Ваше пространство для знаний и практики.</p>
+        </div>
+        <a class="quiet-link" href="/#styles">Все стили ↗</a>
+      </header>
+      <aside
+        class="learning-context"
+        id="calendar"
+        aria-label="Выбранный курс и расписание"
+      >
+        <h2 class="context-title">Сегодня в фокусе</h2>
+        <div
+          class="course-cover"
+          id="course-cover"
+          data-course="ui"
+          role="img"
+          aria-label="Абстрактная лавандовая композиция учебного курса"
+        >
+          <span class="cover-plane"></span><span class="cover-ring"></span
+          ><span class="cover-dot"></span
+          ><span class="cover-stars" aria-hidden="true">✦</span>
+        </div>
+        <p class="eyebrow" id="course-category"></p>
+        <h2 class="selected-course" id="selected-course">UI-системы</h2>
+        <p class="course-description">
+          От понятных принципов — к самостоятельной практике. Продолжите с того
+          места, где остановились.
+        </p>
+        <p class="chapter-label" id="chapter-label"></p>
+        <progress
+          id="chapter-progress"
+          value="3"
+          max="10"
+          aria-label="Прогресс выбранного курса"
+        ></progress>
+        <ol class="chapters" id="chapters"></ol>
+        <button class="primary-button" id="continue-course" type="button">
+          Завершить следующую главу
+        </button>
+        <p class="panel-footnote" id="course-position"></p>
+        <p class="local-note">
+          Прогресс курса сохраняется в этом браузере.
+        </p>
+        <details class="course-schedule">
+          <summary>Расписание недели</summary>
+          <div class="calendar-heading">
+            <h2>Октябрь, 2026</h2>
+            <span>19–25</span>
+          </div>
+          <div
+            id="learning-days"
+            class="learning-days"
+            role="group"
+            aria-label="День занятий"
+          ></div>
+          <p class="day-study" id="day-study"></p>
+        </details>
+      </aside>
+      <main class="learning-main" id="dashboard-main">
+        <section class="learning-kpis" aria-label="Прогресс обучения">
+          <article class="panel learning-metric">
+            <h2>
+              <span class="metric-icon violet" aria-hidden="true">★</span>Баллы
+            </h2>
+            <strong>42</strong>
+            <p>За учебные задания</p>
+          </article>
+          <article class="panel learning-metric">
+            <h2>
+              <span class="metric-icon amber" aria-hidden="true">♧</span
+              >Сертификаты
+            </h2>
+            <strong>6</strong>
+            <p>Завершённые курсы</p>
+          </article>
+          <article class="panel level-card">
+            <h2>
+              <span class="metric-icon teal" aria-hidden="true">⌁</span
+              >Уверенный исследователь
+            </h2>
+            <div class="level-label">
+              <span>Уровень 4</span><span>Ещё 12 баллов</span>
+            </div>
+            <progress
+              value="28"
+              max="40"
+              aria-label="До следующего уровня: 28 из 40 баллов"
+            ></progress>
+          </article>
+        </section>
+        <div class="learning-middle">
+          <section class="panel courses-panel" id="courses">
+            <div class="panel-heading">
+              <div>
+                <h2>Ваши курсы</h2>
+                <p>Неделя 19–25 октября</p>
+              </div>
+              <strong class="small-count">3</strong>
+            </div>
+            <div id="course-bars"></div>
+            <p class="panel-footnote">
+              Выберите курс, чтобы открыть его программу.
+            </p>
+          </section>
+          <section class="panel heatmap-panel" id="activity">
+            <div class="panel-heading">
+              <div>
+                <h2>Время на этой неделе</h2>
+                <strong class="study-total" id="week-total">20 ч 35 мин</strong>
+              </div>
+            </div>
+            <div class="heatmap-scale">
+              <span>Минуты</span><i data-level="1"></i><span>&lt;40</span
+              ><i data-level="2"></i><span>40–74</span><i data-level="3"></i
+              ><span>75+</span>
+            </div>
+            <div class="table-scroll" tabindex="0" aria-label="Таблица данных">
+              <table class="study-heatmap">
+                <caption class="sr-only">
+                  Минуты занятий по курсам и дням недели
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Курс / день</th>
+                    <th scope="col">Пн</th>
+                    <th scope="col">Вт</th>
+                    <th scope="col">Ср</th>
+                    <th scope="col">Чт</th>
+                    <th scope="col">Пт</th>
+                    <th scope="col">Сб</th>
+                    <th scope="col">Вс</th>
+                  </tr>
+                </thead>
+                <tbody id="study-cells"></tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+        <section class="community-section" id="community">
+          <div class="section-title">
+            <h2>Учимся вместе</h2>
+            <span>Сводка сообщества</span>
+          </div>
+          <div class="panel table-scroll">
+            <table class="leaderboard">
+              <caption class="sr-only">
+                Учебное сообщество: курсы, общее время и баллы. Синтетический
+                пример.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Место</th>
+                  <th scope="col">Участник</th>
+                  <th scope="col">Курсы</th>
+                  <th scope="col">Часы</th>
+                  <th scope="col">Баллы</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <th scope="row">
+                    <span class="avatar" aria-hidden="true">AM</span>Анна
+                    Морозова
+                  </th>
+                  <td>25</td>
+                  <td>28:20</td>
+                  <td><strong>986</strong></td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <th scope="row">
+                    <span class="avatar" aria-hidden="true">МЛ</span>Марк
+                    Лебедев
+                  </th>
+                  <td>12</td>
+                  <td>10:21</td>
+                  <td><strong>820</strong></td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <th scope="row">
+                    <span class="avatar" aria-hidden="true">ЕВ</span>Елена
+                    Волкова
+                  </th>
+                  <td>32</td>
+                  <td>12:10</td>
+                  <td><strong>721</strong></td>
+                </tr>
+                <tr>
+                  <td>04</td>
+                  <th scope="row">
+                    <span class="avatar" aria-hidden="true">ИК</span>Иван Ким
+                  </th>
+                  <td>26</td>
+                  <td>32:25</td>
+                  <td><strong>612</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="panel-footnote">
+            Данные участников синтетические · время за весь период.
+          </p>
+        </section>
+        <section class="learning-note">
+          <span aria-hidden="true">✦</span>
+          <div>
+            <h2>Ритм важнее спешки</h2>
+            <p>Один небольшой шаг сегодня — уверенность завтра.</p>
+          </div>
+        </section>
+
+        <section
+          id="ag-components"
+          data-ag-component-lab
+          aria-label="Компоненты AG Design в выбранном стиле"
+        ></section>
+      </main>
+      <footer class="dashboard-footer">
+        Learning Air · локальный пример на синтетических данных
+        <a href="saas-clarity.html">SaaS Clarity ↗</a>
+      </footer>
+    </div>
+    <div class="sr-only" role="status" id="learning-announcement"></div>
+  </body>
+</html>

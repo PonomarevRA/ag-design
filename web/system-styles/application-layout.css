@@ -1,0 +1,977 @@
+/* Example composition only. Recipes and reusable component tokens keep their owners. */
+html[data-example] {
+  --example-gap: 1.5rem;
+  --example-pad: clamp(1rem, 2vw, 2rem);
+  scroll-padding-block: 1.5rem;
+}
+[data-example] :is(main, section, article, aside, header, footer, form, label) {
+  min-inline-size: 0;
+}
+[data-example] :is(h1, h2, h3, p, label, button, summary, a) {
+  overflow-wrap: anywhere;
+}
+[data-example] :is(button, a, summary) {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+[data-example="workspace"][data-style] .metrics > div:nth-child(n) {
+  grid-column: auto;
+  grid-row: auto;
+  min-height: 0;
+}
+[data-example="workspace"][data-style="midnight-glass"] .page-intro {
+  padding: 1.5rem;
+}
+[data-example="console"] .scene-commit .gold-primary {
+  width: 100%;
+  margin: 0;
+}
+[data-example="console"] .scene-commit .secondary-actions {
+  justify-content: start;
+}
+[data-example] :is(button, input, select, textarea, summary):focus-visible {
+  outline: 3px solid var(--accent, var(--ag-accent));
+  outline-offset: 3px;
+}
+[data-example]
+  :is(input:not([type="checkbox"]):not([type="range"]), select, textarea) {
+  max-inline-size: 100%;
+  font-size: 1rem;
+}
+[data-example] :is(button, select, summary) {
+  min-block-size: 2.75rem;
+}
+[data-example] :is(.table-scroll, .event-scroll) {
+  max-inline-size: 100%;
+  overscroll-behavior-inline: contain;
+}
+[data-example] .ag-style-lab {
+  margin-block-start: 3rem;
+  padding: var(--example-pad);
+  border-radius: var(--ag-radius-panel);
+}
+
+/* Forma: a 2:1 operational grid, with details directly below the project picker. */
+[data-example="workspace"] main {
+  grid-template-columns: minmax(0, 1.6fr) minmax(18rem, 1fr);
+  gap: var(--example-gap);
+  padding: var(--example-pad);
+}
+[data-example="workspace"] .page-intro {
+  grid-column: 1 / -1;
+  min-height: 0;
+  padding: 0.5rem 0 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.618fr) minmax(8rem, 1fr);
+  align-items: center;
+}
+[data-example="workspace"] .page-intro h1 {
+  max-width: none;
+  font-size: clamp(1.75rem, 2.4vw, 2rem);
+}
+[data-example="workspace"] .intro-copy {
+  max-width: 56ch;
+  font-size: 1rem;
+}
+[data-example="workspace"] .sculpture {
+  position: relative;
+  inset: auto;
+  justify-self: center;
+  margin-block: -5rem;
+  transform: scale(0.42) rotate(-5deg);
+}
+[data-example="workspace"] .metrics {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  padding-block: 0.75rem;
+  border-block: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+}
+[data-example="workspace"] .metrics > div {
+  padding: 0.25rem 1rem;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+[data-example="workspace"] .metrics > div + div {
+  border-inline-start: 1px solid var(--line);
+}
+[data-example="workspace"] .metrics :is(p, small) {
+  font-size: 0.8125rem;
+}
+[data-example="workspace"] .project-panel {
+  grid-column: 1;
+  grid-row: 3;
+}
+[data-example="workspace"] .task-panel {
+  grid-column: 2;
+  grid-row: 3;
+}
+[data-example="workspace"] .detail-panel {
+  display: block;
+  grid-column: 1;
+  grid-row: 4;
+  padding: 1.5rem;
+}
+[data-example="workspace"] .project-art {
+  display: none;
+}
+[data-example="workspace"] .detail-description {
+  max-width: 58ch;
+}
+[data-example="workspace"] .workspace-chart-panel {
+  grid-column: 2;
+  grid-row: 4;
+}
+[data-example="workspace"] .note-panel {
+  grid-column: 1 / -1;
+  grid-row: 5;
+  padding: 1.5rem;
+  border-radius: 0;
+  background: transparent;
+  border-block-start: 1px solid var(--line);
+}
+[data-example="workspace"] .note-panel h2 {
+  font-size: 1.5rem;
+}
+[data-example="workspace"] :is(.section-heading, .project-tools) {
+  padding: 1.25rem;
+}
+[data-example="workspace"] .project-tools {
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+[data-example="workspace"] .search {
+  flex: 1 1 12rem;
+}
+[data-example="workspace"] .project-select {
+  white-space: normal;
+}
+[data-example="workspace"] .project-panel thead {
+  display: table-header-group;
+}
+[data-example="workspace"] .project-panel tr {
+  display: table-row;
+}
+[data-example="workspace"]
+  .project-panel
+  :is(th, td:nth-child(2), td:nth-child(3), td:nth-child(4)) {
+  display: table-cell;
+}
+[data-example="workspace"] .project-panel table {
+  min-width: 32rem;
+}
+[data-example="workspace"] .project-panel th {
+  font-size: 0.75rem;
+  text-align: start;
+  padding: 0.5rem 1rem;
+}
+[data-example="workspace"] .project-panel .project-select {
+  gap: 0.5rem;
+}
+[data-example="workspace"] .search {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.375rem;
+}
+[data-example="workspace"] .search > span[aria-hidden] {
+  display: none;
+}
+[data-example="workspace"] .search-label {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+[data-example="workspace"] .task-row {
+  align-items: start;
+}
+[data-example="workspace"] .demo-footer {
+  grid-row: 6;
+}
+
+/* CMS: one manuscript/editor region and a smaller selection column. */
+[data-example="cms"] #cms-main {
+  padding: var(--example-pad);
+  padding-block-start: 0;
+}
+[data-example="cms"] .cms-hero {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: 1rem 0;
+  margin-block-end: 0.5rem;
+}
+[data-example="cms"] .hero-copy {
+  padding: 0;
+  max-width: none;
+}
+[data-example="cms"] .cms-hero h1 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+[data-example="cms"] .cms-hero h1 br {
+  display: none;
+}
+[data-example="cms"] .hero-description {
+  max-width: 52ch;
+  margin-block: 0.75rem 1rem;
+}
+[data-example="cms"] .cms-art {
+  position: relative;
+  inset: auto;
+  width: 10rem;
+  height: 6rem;
+  min-height: 0;
+  align-self: center;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+[data-example="cms"] .art-page {
+  transform: scale(0.3);
+  transform-origin: top left;
+  top: 1rem;
+  left: 26%;
+}
+[data-example="cms"] .art-folder {
+  transform: scale(0.3);
+  transform-origin: top left;
+  top: 1rem;
+  left: 8%;
+}
+[data-example="cms"] .art-card {
+  transform: scale(0.3);
+  transform-origin: bottom right;
+  bottom: 0.75rem;
+  right: 1rem;
+}
+[data-example="cms"] .cms-metrics {
+  gap: 0;
+  margin-block: 0 1rem;
+  border-block: 1px solid var(--line);
+}
+[data-example="cms"] .cms-metrics > div {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  padding: 0.5rem 1rem;
+}
+[data-example="cms"] .cms-metrics > div + div {
+  border-inline-start: 1px solid var(--line);
+}
+[data-example="cms"] .cms-metrics strong {
+  font-size: 1.75rem;
+}
+[data-example="cms"] .cms-work-grid {
+  grid-template-columns: minmax(14rem, 0.27fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 1.5rem;
+}
+[data-example="cms"] .cms-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  padding-block: 0;
+  margin-block-end: 0.75rem;
+}
+[data-example="cms"] .cms-properties {
+  border-block: 1px solid var(--line);
+}
+[data-example="cms"] .cms-properties summary {
+  display: list-item;
+  padding-block: 0.625rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+[data-example="cms"] .cms-properties-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding-block: 0.5rem 1rem;
+}
+[data-example="cms"] .cms-properties-grid .excerpt-field {
+  grid-column: 1 / -1;
+}
+[data-example="cms"] .editor-heading {
+  padding: 0;
+  margin-block-end: 1rem;
+}
+[data-example="cms"] .editor-context {
+  border-top: 0;
+  padding-block: 0.5rem;
+}
+[data-example="cms"] .editor-heading h2 {
+  font-size: 1.125rem;
+}
+[data-example="cms"] .local-edit-note {
+  max-width: 74ch;
+}
+[data-example="cms"] .cms-media {
+  margin-block-start: 2rem;
+}
+
+/* Analytics and learning: comparable modules with a stable reading order. */
+[data-example="analytics"] .analytics-kpis {
+  gap: 1rem;
+}
+[data-example="analytics"] .metric-card {
+  align-items: start;
+  padding: 1.25rem;
+  box-shadow: none;
+}
+[data-example="analytics"] .metric-card h2 {
+  min-block-size: 2.5em;
+  text-transform: none;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+}
+[data-example="analytics"] .metric-card strong {
+  font-size: 2rem;
+}
+[data-example="analytics"] .analytics-grid {
+  gap: 1.5rem;
+  align-items: start;
+}
+[data-example="analytics"] .panel-heading {
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+[data-example="analytics"] .panel-heading h2 {
+  font-size: 1.125rem;
+}
+[data-example="analytics"] .segmented {
+  flex-wrap: wrap;
+}
+[data-example="learning"] .learning-kpis {
+  gap: 1rem;
+}
+[data-example="learning"] .learning-middle {
+  gap: 1.5rem;
+}
+[data-example="learning"] .learning-metric {
+  padding: 1.25rem;
+}
+[data-example="learning"] .course-cover {
+  max-block-size: 10rem;
+}
+
+/* Scene control: commit belongs to the parameter, ahead of its diagnostic chart. */
+[data-example="console"] :is(.premium-layout, .console-layout) {
+  gap: 1.5rem;
+}
+[data-example="console"] .gold-panel {
+  padding: 1.5rem;
+}
+[data-example="console"] .tactile-dial {
+  width: 15rem;
+  height: 15rem;
+  margin-block: 1.5rem;
+}
+[data-example="console"] .scene-commit {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem 1rem;
+  margin-block: 1.5rem;
+}
+[data-example="console"] .scene-commit .secondary-actions {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+[data-example="console"] .scene-commit .secondary-actions button {
+  min-width: 6rem;
+  padding-inline: 1rem;
+}
+[data-example="console"] #gold-calendar button {
+  min-block-size: 1.75rem;
+}
+[data-example="console"] .scene-commit .apply-status {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+[data-example="console"] .quick-grid {
+  gap: 1rem;
+}
+[data-example="console"] .scene-buttons {
+  gap: 0.75rem;
+}
+[data-example="console"] .dial-range-label {
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Fitness keeps three mobile canvases, with more separation between tasks than controls. */
+[data-example="fitness"] .screens {
+  gap: 1.5rem;
+  align-items: start;
+}
+[data-example="fitness"] .profile {
+  padding: 1.25rem;
+}
+[data-example="fitness"] .screen-content {
+  padding: 1.25rem;
+}
+[data-example="fitness"] .activity-grid {
+  gap: 0.75rem;
+}
+[data-example="fitness"] .activity-button {
+  padding: 0.75rem 0.25rem;
+}
+[data-example="fitness"] .section-heading {
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+[data-example="fitness"] .bottom-nav a {
+  min-height: 3.5rem;
+}
+
+/* Locality: creation belongs to the collection, not the decorative introduction. */
+[data-example="workspace"] .project-heading-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+[data-example="workspace"] .project-tools {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding-block-start: 0;
+}
+[data-example="workspace"] .project-tools .search {
+  grid-row: 1;
+  inline-size: 100%;
+  width: auto;
+}
+[data-example="workspace"] .filters {
+  justify-content: start;
+}
+[data-example="workspace"] .project-panel,
+[data-example="workspace"] .task-panel {
+  align-self: start;
+}
+[data-example="workspace"] .metrics strong {
+  font-size: 1.75rem;
+}
+[data-example="workspace"] .style-caption {
+  display: none;
+}
+
+/* CMS is an editor, with a compact overview and a stable manuscript surface. */
+[data-example="cms"] .cms-hero {
+  display: block;
+  background: transparent;
+}
+[data-example="cms"] .cms-hero::before,
+[data-example="cms"] .cms-hero::after,
+[data-example="cms"] .cms-hero .cms-art {
+  display: none;
+}
+[data-example="cms"] .cms-hero .hero-description {
+  margin-block: 0.5rem 0;
+}
+[data-example="cms"] .cms-metrics .metric-symbol {
+  display: none;
+}
+[data-example="cms"] .cms-metrics p {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+[data-example="cms"] .cms-metrics strong {
+  font-size: 1.5rem;
+}
+[data-example="cms"] .cms-list .section-heading {
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+[data-example="cms"] .cms-list .section-heading .primary {
+  width: 100%;
+}
+[data-example="cms"] .cms-list {
+  grid-column: 1;
+  grid-row: 1;
+}
+[data-example="cms"] .cms-editor-panel {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 1.5rem;
+  background: var(--surface, #fff);
+}
+[data-example="cms"] .cms-editor-panel .ag-md-editor {
+  min-block-size: 24rem;
+}
+[data-example="cms"] .local-edit-note {
+  line-height: 1.6;
+  font-size: 0.8125rem;
+}
+
+[data-example="cms"] :is(.collection-jump, .editor-jump) {
+  font-size: 0.875rem;
+  text-underline-offset: 0.2em;
+}
+[data-example="console"] .console-overview {
+  min-inline-size: 0;
+}
+
+/* Analytics: a dominant time-series and comparable secondary modules. */
+[data-example="analytics"] .analytics-grid {
+  grid-template-columns: minmax(0, 1.618fr) minmax(15rem, 1fr);
+}
+[data-example="analytics"] .growth-panel {
+  grid-column: 1;
+  grid-row: 1;
+}
+[data-example="analytics"] .segment-panel {
+  grid-column: 2;
+  grid-row: 1;
+}
+[data-example="analytics"] .funnel-panel {
+  grid-column: 1;
+  grid-row: 2;
+}
+[data-example="analytics"] .market-panel {
+  grid-column: 2;
+  grid-row: 2;
+}
+[data-example="analytics"] .cohort-panel {
+  grid-column: 1;
+  grid-row: 3;
+}
+[data-example="analytics"] .adoption-panel {
+  grid-column: 2;
+  grid-row: 3;
+}
+[data-example="analytics"] .analytics-kpis .metric-icon {
+  display: none;
+}
+[data-example="analytics"] .metric-card {
+  border-block-start: 3px solid var(--accent);
+}
+[data-example="analytics"] .metric-card h2 {
+  min-block-size: 0;
+  margin-block-end: 0.75rem;
+}
+[data-example="analytics"] .metric-card strong {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Course comes before statistics in DOM order, including the single-column view. */
+[data-example="learning"] .learning-workspace {
+  margin-inline: 190px 0;
+  padding-inline: 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.618fr) minmax(17rem, 1fr);
+  gap: 0 1.5rem;
+  align-items: start;
+}
+[data-example="learning"] .dashboard-header {
+  grid-column: 1 / -1;
+}
+[data-example="learning"] .learning-main {
+  grid-column: 1;
+  grid-row: 2;
+}
+[data-example="learning"] .learning-context {
+  position: static;
+  grid-column: 2;
+  grid-row: 2;
+  width: auto;
+  min-height: 0;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+[data-example="learning"] .learning-context .context-title {
+  margin-block: 0 1rem;
+}
+[data-example="learning"] .learning-context .course-cover {
+  height: 7rem;
+}
+[data-example="learning"] .learning-context .course-description {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+[data-example="learning"] .learning-middle {
+  grid-template-columns: minmax(0, 1fr);
+}
+[data-example="learning"] .learning-kpis {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+[data-example="learning"] .level-card {
+  grid-column: 1 / -1;
+}
+[data-example="learning"] .learning-metric {
+  padding: 1rem;
+}
+[data-example="learning"] .course-schedule {
+  margin-block-start: 1rem;
+  border-block-start: 1px solid var(--line);
+}
+[data-example="learning"] .course-schedule summary {
+  cursor: pointer;
+  padding-block: 0.75rem;
+}
+[data-example="learning"] .dashboard-footer {
+  grid-column: 1 / -1;
+}
+
+/* Scene work precedes overview; decoration no longer determines operational rows. */
+[data-example="console"] .premium-layout {
+  grid-template-columns: minmax(0, 1.618fr) minmax(18rem, 1fr);
+  align-items: start;
+}
+[data-example="console"] .control-panel {
+  grid-column: 1;
+}
+[data-example="console"] .overview-panel {
+  grid-column: 2;
+}
+[data-example="console"] .console-layout {
+  grid-template-columns: minmax(0, 1.618fr) minmax(18rem, 1fr);
+  align-items: start;
+}
+[data-example="console"] .parameter-panel {
+  grid-column: 2;
+  grid-row: 1;
+}
+[data-example="console"] .console-overview {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  gap: 1.5rem;
+}
+[data-example="console"] .system-panel {
+  grid-column: auto;
+  grid-row: auto;
+}
+[data-example="console"] .channels-panel {
+  grid-column: auto;
+  grid-row: auto;
+}
+[data-example="console"] .stream-panel {
+  grid-column: 1;
+  grid-row: 2;
+}
+[data-example="console"] .scenes-panel {
+  grid-column: 2;
+  grid-row: 2;
+}
+[data-example="console"] .portal-panel {
+  grid-column: 2;
+  grid-row: 3;
+  min-height: 0;
+  height: 13rem;
+}
+[data-example="console"] .journal-panel {
+  grid-column: 1;
+  grid-row: 3;
+  inline-size: auto;
+  max-inline-size: 100%;
+}
+[data-example="console"] .calendar-panel {
+  grid-template-columns: minmax(0, 1fr);
+}
+[data-example="console"] .satin-art {
+  display: none;
+}
+[data-example="console"] .channel-tabs {
+  flex-wrap: wrap;
+}
+[data-example="console"] .channel-tabs button {
+  flex: 1 1 6rem;
+}
+
+/* A stable opaque reading surface retains the existing Coral palette. */
+[data-example="fitness"] .screen {
+  background: #24193d;
+  box-shadow: none;
+}
+[data-example="fitness"] .profile {
+  background: #263d69;
+}
+[data-example="fitness"] .screen-content > .section-label {
+  color: #c7c0dd;
+}
+[data-example="fitness"] .screen-content {
+  line-height: 1.55;
+}
+[data-example="fitness"] .activity-button {
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 1100px) {
+  [data-example="workspace"] main {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  [data-example="cms"] .cms-work-grid {
+    grid-template-columns: 13rem minmax(0, 1fr);
+  }
+  [data-example="cms"] .cms-art {
+    height: 6rem;
+  }
+}
+@media (max-width: 800px) {
+  [data-example] {
+    --example-gap: 1.5rem;
+    --example-pad: 1rem;
+  }
+  [data-example]
+    :is(
+      .topbar,
+      .dashboard-header,
+      .cms-header,
+      .console-header,
+      .gold-page-header
+    ) {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 1rem;
+  }
+  [data-example="workspace"] main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  [data-example="workspace"] .sidebar nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+  [data-example="workspace"] .sidebar .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+  [data-example="workspace"] .nav-count {
+    display: none;
+  }
+  [data-example="workspace"]
+    :is(
+      .project-panel,
+      .task-panel,
+      .detail-panel,
+      .workspace-chart-panel,
+      .note-panel,
+      .demo-footer
+    ) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  [data-example="workspace"] .page-intro {
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: 0.5rem 1rem;
+  }
+  [data-example="workspace"] .sculpture {
+    display: none;
+  }
+  [data-example="workspace"] .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0;
+  }
+  [data-example="workspace"] .metrics > div:nth-child(3) {
+    border-inline-start: 0;
+  }
+  [data-example="workspace"] .style-caption {
+    position: static;
+  }
+  [data-example="cms"] .cms-work-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  [data-example="cms"] .cms-hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1.25rem;
+  }
+  [data-example="cms"] .cms-art {
+    display: none;
+  }
+  [data-example="cms"] .cms-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  [data-example="cms"] .cms-metrics .metric-symbol {
+    display: none;
+  }
+  [data-example="cms"] .cms-metrics > div {
+    padding: 0.75rem 0.5rem;
+  }
+  [data-example="cms"] .cms-metrics p {
+    font-size: 0.8125rem;
+  }
+  [data-example="cms"] .list-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  [data-example="cms"] #cms-items {
+    max-height: 15rem;
+    overflow-y: auto;
+  }
+  [data-example="analytics"] .analytics-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  [data-example="analytics"] .metric-card {
+    display: block;
+  }
+  [data-example="analytics"] .metric-icon {
+    margin-block-end: 0.75rem;
+  }
+  [data-example="console"] .scene-commit {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  [data-example="console"] .scene-commit .secondary-actions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1100px) {
+  [data-example="learning"] .learning-workspace {
+    margin-inline-start: 170px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  [data-example="learning"] .learning-context {
+    grid-column: 1;
+    grid-row: 2;
+    margin-block-end: 1.5rem;
+  }
+  [data-example="learning"] .learning-main {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  [data-example="learning"] .course-cover {
+    display: none;
+  }
+  [data-example="learning"] .learning-middle {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 800px) {
+  [data-example="learning"] .learning-workspace {
+    margin-inline: 0;
+    padding-inline: 1rem;
+  }
+  [data-example="learning"] .learning-middle {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  [data-example="analytics"] .analytics-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  [data-example="analytics"] .analytics-grid > .panel {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  [data-example="console"] :is(.premium-layout, .console-layout) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  [data-example="console"]
+    :is(.premium-layout, .console-layout)
+    > :is(section, .console-overview) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  [data-example="console"] .portal-panel {
+    height: 10rem;
+  }
+  [data-example="console"] .scenes-panel {
+    inline-size: auto;
+    max-inline-size: 100%;
+  }
+  [data-example="cms"] .cms-editor-panel {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 1rem;
+  }
+  [data-example="cms"] .cms-list {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  [data-example="cms"] .cms-hero {
+    padding-inline: 0;
+  }
+  [data-example="cms"] .cms-metrics p {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+@media (max-width: 420px) {
+  [data-example="console"] .scene-buttons {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  [data-example] :is(.section-heading, .panel-heading, .editor-heading) {
+    flex-wrap: wrap;
+  }
+  [data-example="cms"] .cms-properties-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  [data-example="cms"] .list-controls {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  [data-example="analytics"] .analytics-kpis {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  [data-example="analytics"] .metric-card h2 {
+    min-block-size: 0;
+  }
+  [data-example="fitness"] .periods {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  [data-example="fitness"] .periods button {
+    flex: 1 1 auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-example] {
+    scroll-behavior: auto;
+  }
+}
+
+/* Authored Bento overviews reuse core tracks; previous direct-child placements stay outside wrappers. */
+[data-example] .example-bento-host {
+  display: block;
+  min-inline-size: 0;
+}
+[data-example] .example-bento > .ag-bento-grid__item > :is(.panel, .community-section) {
+  grid-column: auto;
+  grid-row: auto;
+  min-inline-size: 0;
+  margin: 0;
+  align-self: stretch;
+}
+[data-example="learning"] .example-bento .community-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+[data-example="learning"] .example-bento .community-section .section-title {
+  margin: 0;
+}
+[data-example="learning"] .demo-course-search-row,
+[data-example="learning"] .demo-course-search-row > label {
+  display: grid;
+  min-inline-size: 0;
+  gap: .5rem;
+}
+/* Enlarged numbers and the native period control must not widen a narrow overview. */
+[data-example="analytics"] .metric-card strong {
+  overflow-wrap: anywhere;
+}
+[data-example="analytics"] .period-control select {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  box-sizing: border-box;
+}
+/* Match the existing course heading/list content inset; the search must not touch the card edge. */
+[data-example="learning"] .demo-course-search-row {
+  padding-inline: 18px;
+  box-sizing: border-box;
+}
+[data-example="learning"] .demo-course-search input {
+  border-color: var(--muted);
+}

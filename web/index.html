@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ru" data-theme="auto" data-palette="design">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>ag-design</title>
+    <link rel="icon" type="image/svg+xml" href="/brand/app-icon.svg" />
+    <link rel="alternate icon" type="image/png" href="/brand/app.png" />
+    <link rel="apple-touch-icon" href="/brand/app.png" />
+    <script src="/shell.js"></script>
+    <link rel="stylesheet" href="/vendor/ag-design/tokens.css" />
+    <link rel="stylesheet" href="/vendor/ag-design/styles.css" />
+    <link rel="stylesheet" href="/vendor/content-rail/styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/locale-settings.css" />
+    <link rel="stylesheet" href="/system-styles.css" />
+    <link rel="stylesheet" href="/catalog-rail.css" />
+    <link rel="stylesheet" href="/catalog-view-controls.css" />
+    <link rel="stylesheet" href="/ui-map-view.css" />
+    <link rel="stylesheet" href="/composition-editor.css" />
+    <link rel="stylesheet" href="/brand-studio.css" />
+    <link rel="stylesheet" href="/composition-properties.css" />
+    <link rel="stylesheet" href="/interface-workspace.css" />
+    <link rel="stylesheet" href="/workbench.css" />
+    <script type="module" src="/app.js"></script>
+    <script type="module" src="/window-review.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">К содержимому</a>
+    <div class="app-window">
+      <header class="titlebar">
+        <div class="nav-header">
+          <button
+            id="sidebar-toggle"
+            class="ag-button ag-button--quiet ag-icon-button"
+            aria-label="Свернуть меню"
+            aria-controls="sidebar"
+            aria-expanded="true"
+            title="Свернуть меню (⌘⇧S)"
+          >
+            <span aria-hidden="true">◧</span>
+          </button>
+        </div>
+        <div class="content-header">
+          <a class="brand" href="/" aria-label="ag-design" title="ag-design"
+            ><span class="brand-mark" aria-hidden="true"></span
+            ><span class="brand-label">ag-design</span></a
+          ><span class="title-context">Библиотека интерфейсов</span>
+          <div class="title-actions">
+            <button
+              class="ag-button ag-button--quiet ag-icon-button"
+              id="theme"
+              aria-label="Сменить тему"
+              title="Сменить тему"
+            >
+              ◐</button
+            ><button
+              class="ag-button ag-button--quiet ag-icon-button"
+              id="refresh"
+              aria-label="Обновить каталог"
+              title="Обновить каталог"
+            >
+              ↻
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="workspace">
+        <aside id="sidebar">
+          <nav class="ag-nav" aria-label="Разделы">
+            <button class="ag-button" data-view="styles" aria-label="Стили систем" title="Стили систем">
+              <span class="nav-symbol" aria-hidden="true">◈</span><span class="ag-nav__label">Стили систем</span>
+            </button>
+            <button
+              class="ag-button"
+              data-view="catalog"
+              aria-current="page"
+              aria-label="Компоненты"
+              title="Компоненты"
+            >
+              <span class="nav-symbol" aria-hidden="true">▦</span
+              ><span class="ag-nav__label">Компоненты</span></button
+            ><button
+              class="ag-button"
+              data-view="rules"
+              aria-label="Дизайн-бук"
+              title="Дизайн-бук"
+            >
+              <span class="nav-symbol" aria-hidden="true">▤</span
+              ><span class="ag-nav__label">Дизайн-бук</span></button
+            ><button
+              class="ag-button"
+              data-view="usage"
+              aria-label="Проекты и долг"
+              title="Проекты и долг"
+            >
+              <span class="nav-symbol" aria-hidden="true">◇</span
+              ><span class="ag-nav__label">Проекты и долг</span></button
+            ><button
+              class="ag-button"
+              data-view="performance"
+              aria-label="Производительность"
+              title="Производительность"
+            >
+              <span class="nav-symbol" aria-hidden="true">◴</span
+              ><span class="ag-nav__label">Производительность</span>
+            </button>
+            <button
+              class="ag-button"
+              data-view="recommendations"
+              aria-label="Рекомендации"
+              title="Рекомендации"
+            >
+              <span class="nav-symbol" aria-hidden="true">◇</span
+              ><span class="ag-nav__label">Рекомендации</span>
+            </button>
+            <button
+              class="ag-button"
+              data-view="sandbox"
+              aria-label="Песочница"
+              title="Песочница"
+            >
+              <span class="nav-symbol" aria-hidden="true">▧</span
+              ><span class="ag-nav__label">Песочница</span>
+            </button>
+            <button class="ag-button" data-view="studio" aria-label="Бренд-бук и пути" title="Бренд-бук и пути"><span class="nav-symbol" aria-hidden="true">♧</span><span class="ag-nav__label">Бренд-бук и пути</span></button>
+            <button
+              class="ag-button"
+              data-view="libraries"
+              aria-label="Библиотеки"
+              title="Библиотеки"
+            >
+              <span class="nav-symbol" aria-hidden="true">▣</span
+              ><span class="ag-nav__label">Библиотеки</span>
+            </button>
+            <button class="ag-button" data-view="settings" aria-label="Язык и регион" title="Язык и регион"><span class="nav-symbol" aria-hidden="true">◎</span><span class="ag-nav__label">Язык и регион</span></button>
+          </nav>
+          <div class="sidebar-footer">
+            <span class="footer-label">Локальная библиотека</span
+            ><span class="footer-detail" id="connection">Подключение…</span>
+          </div>
+        </aside>
+        <main id="main" tabindex="-1">
+          <div class="page-heading">
+            <div>
+              <h1 id="heading">Компоненты</h1>
+              <button id="window-history-open" type="button" class="ag-button ag-button--quiet"
+                aria-haspopup="dialog">История запросов</button>
+              <p id="description">
+                Одна система поведения. Палитра вашего сервиса.
+              </p>
+            </div>
+            <span id="catalog-count" class="ag-status"></span>
+          </div>
+          <div id="error" role="alert" hidden></div>
+          <section id="catalog-tools" class="catalog-tools">
+            <label class="search-field ag-field"
+              ><span class="ag-field__label">Найти компонент</span
+              ><input
+                id="search"
+                type="search"
+                placeholder="Навигация, кнопка, popup…"
+                autocomplete="off" /></label
+            >
+            <label class="ag-field library-field"
+              ><span class="ag-field__label">Библиотека элементов</span
+              ><select id="library">
+                <option value="">Все библиотеки</option>
+              </select></label
+            >
+            <details class="catalog-options"><summary>Вид и сортировка</summary>
+<div class="catalog-options__fields"><label class="ag-field palette-field"
+              ><span class="ag-field__label">Палитра превью</span
+              ><select id="palette">
+                <option value="design">ag-design</option>
+                <option value="atlas">Зелёная</option>
+                <option value="memory">Фиолетовая</option>
+                <option value="observer">Голубая</option>
+                <option value="tasks">Синяя</option>
+              </select></label
+            ><label class="ag-field catalog-sort-field"
+              ><span class="ag-field__label">Сортировка</span
+              ><select id="catalog-sort">
+                <option value="relevance">По соответствию</option>
+                <option value="usage-desc">Чаще используются</option>
+                <option value="usage-asc">Реже используются</option>
+                <option value="name-asc">Название: А–Я</option>
+                <option value="name-desc">Название: Я–А</option>
+              </select></label
+            >
+            <label class="ag-field catalog-sort-field"
+              ><span class="ag-field__label">Метка использования</span
+              ><select id="catalog-usage-mode">
+                <option value="value">Количество</option>
+                <option value="score">Частота: 0–5</option>
+              </select></label
+            >
+            <p id="catalog-usage-note" class="catalog-usage-note"></p>
+            </div></details>
+<span id="catalog-reset"></span>
+<div class="categories" role="group" aria-label="Категория">
+              <button class="ag-button" data-category="" aria-pressed="true">
+                Все</button
+              ><button
+                class="ag-button"
+                data-category="navigation"
+                aria-pressed="false"
+              >
+                Навигация</button
+              ><button
+                class="ag-button"
+                data-category="controls"
+                aria-pressed="false"
+              >
+                Управление</button
+              ><button
+                class="ag-button"
+                data-category="feedback"
+                aria-pressed="false"
+              >
+                Состояния</button
+              ><button
+                class="ag-button"
+                data-category="overlays"
+                aria-pressed="false"
+              >
+                Окна</button
+              ><button
+                class="ag-button"
+                data-category="data"
+                aria-pressed="false"
+              >
+                Карточки</button
+              ><button
+                class="ag-button"
+                data-category="layout"
+                aria-pressed="false"
+              >
+                Компоновка
+              </button>
+            </div>
+          </section>
+          <section id="content" aria-live="polite" aria-busy="true">
+            <div class="ag-empty">
+              <h2>Загружаем каталог</h2>
+              <p>
+                Компоненты и правила появятся после ответа локального сервиса.
+              </p>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <dialog id="window-history" class="ag-popup detail-dialog" aria-labelledby="window-history-title">
+      <div class="ag-popup__header detail-header">
+        <h2 id="window-history-title">История запросов</h2>
+        <button id="window-history-close" type="button" class="ag-button ag-button--quiet"
+          aria-label="Закрыть историю">Закрыть</button>
+      </div>
+      <div class="ag-popup__body detail-body">
+        <label for="window-history-filter">Результат</label>
+        <select id="window-history-filter" class="ag-select__control">
+          <option value="all">Все запросы</option>
+          <option value="ok">Успешные</option>
+          <option value="error">Ошибки</option>
+        </select>
+        <p id="window-history-status" role="status"></p>
+        <ol id="window-history-list"></ol>
+        <p class="muted">Последние восемь операций текущего процесса. Источник запроса не определяется.</p>
+      </div>
+    </dialog>
+    <dialog
+      id="detail"
+      class="ag-popup detail-dialog"
+      aria-labelledby="detail-title"
+    >
+      <div class="ag-popup__header detail-header">
+        <h2 id="detail-title"></h2>
+        <button
+          id="detail-close"
+          class="ag-button ag-button--quiet ag-icon-button"
+          aria-label="Закрыть подробности"
+          title="Закрыть"
+        >
+          <span class="ag-button__icon" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              focusable="false"
+            >
+              <path d="M6 6l12 12M18 6 6 18"></path></svg
+          ></span>
+        </button>
+      </div>
+      <div
+        class="ag-popup__body detail-body"
+        tabindex="0"
+        role="region"
+        aria-label="Содержимое подробностей"
+      >
+        <p class="muted" id="detail-category"></p>
+        <div id="detail-content"></div>
+      </div>
+    </dialog>
+    <div
+      id="announcement"
+      class="sr-only"
+      role="status"
+      aria-live="polite"
+    ></div>
+  </body>
+</html>

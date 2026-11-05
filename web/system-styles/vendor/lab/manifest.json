@@ -1,0 +1,12 @@
+{
+  "package": "@ag-design/components",
+  "version": "0.43.0-community.1",
+  "files": {
+    "components.js": "e977cd19a312fa322c66af05c7ce00549534e1425f6001a1f1670e69135d59ad",
+    "components.css": "3e99b859569c19685436689cc0ce4f766276cb11fd9bee8879a7577c173c9430",
+    "audit.js": "01c0d2db43113531c33056c456a36f14310d05d616b09aaebd4bb3e1e243ff21",
+    "locale.js": "e2ad9025a33387db703520758fd084b3d736dc1b5ff324eb423c409c2ebb805d",
+    "choices.js": "ad90a882dcd606ef046df30be410d3a0e331f48a47ed4f7e76988ea6b502d865",
+    "bento.js": "e7ea920bb85f0e730a1ba23158d5dad3fb486ff68a68fdea4ca58608ea75c592"
+  }
+}

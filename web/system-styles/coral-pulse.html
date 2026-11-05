@@ -1,0 +1,276 @@
+<!doctype html>
+<html
+  data-ag-select-indicators
+  data-example="fitness"
+  lang="ru"
+  data-style="coral-pulse"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Coral Pulse · стиль системы</title>
+    <link rel="stylesheet" href="./coral-pulse.css" />
+    <link rel="stylesheet" href="./vendor/chart.css" />
+    <link rel="stylesheet" href="./style-chart.css" />
+    <script type="module" src="./coral-pulse.js?v=demo-systems-5"></script>
+    <link rel="stylesheet" href="./vendor/lab/components.css?v=form-review-1" />
+    <link rel="stylesheet" href="./component-lab.css?v=form-review-1" />
+    <link rel="stylesheet" href="../locale-settings.css" />
+    <script type="module" src="./vendor/lab/components.js?v=form-review-1"></script>
+    <link rel="stylesheet" href="./application-layout.css" />
+    <link rel="stylesheet" href="./demo-system.css?v=demo-systems-4" />
+    <link rel="stylesheet" href="./demo-fitness.css?v=demo-systems-3" />
+  </head>
+  <body>
+    <a class="skip" href="#screens">К примерам экранов</a>
+    <header class="showcase-heading">
+      <div>
+        <p class="eyebrow">AG DESIGN / SYSTEM STYLE 03</p>
+        <h1>Coral Pulse<span>Движение в своём ритме.</span></h1>
+        <p>Индиго, тёплый градиент и точная линия. Три экрана одной системы.</p>
+      </div>
+      <a href="/#styles">Все стили ↗</a>
+    </header>
+    <main id="screens" class="screens">
+      <section class="screen" aria-labelledby="activities-title">
+        <header class="profile">
+          <div class="avatar" aria-hidden="true"><i></i></div>
+          <div>
+            <span>CORAL PULSE</span>
+            <h2>Обзор</h2>
+            <p>Активность и привычки</p>
+          </div>
+          <span class="profile-spark" aria-hidden="true">✧</span>
+        </header>
+        <div class="screen-content">
+          <p class="screen-number">01 / ОБЗОР</p>
+          <div class="section-heading">
+            <h3 id="activities-title">Выберите ритм</h3>
+            <span>На сегодня</span>
+          </div>
+          <p class="support">Небольшие шаги складываются в движение.</p>
+          <div
+            id="activity-grid"
+            class="activity-grid"
+            role="group"
+            aria-label="Вид активности"
+          ></div>
+          <div class="section-heading graph-heading">
+            <h3>Ваш ритм дня</h3>
+            <span id="activity-name">Кардио</span>
+          </div>
+          <div id="overview-chart" class="overview-chart"></div>
+          <p class="graph-caption" hidden>
+            <span>08:00</span><span>12:00</span><span>16:00</span
+            ><span>20:00</span>
+          </p>
+          <div class="summary-strip">
+            <span
+              >Время в движении<strong id="activity-minutes"
+                >42 <small>мин</small></strong
+              ></span
+            ><span
+              >Ритм недели<strong id="activity-days"
+                >4 <small>дня</small></strong
+              ></span
+            >
+          </div>
+          <details class="chart-data" hidden>
+            <summary>Данные графика</summary>
+            <p id="overview-data"></p>
+          </details>
+        </div>
+        <nav class="bottom-nav" aria-label="Связанные экраны обзора">
+          <a href="#activities-title" aria-current="page"
+            ><span aria-hidden="true">◫</span>Обзор</a
+          ><a href="#today-title"><span aria-hidden="true">◷</span>Активность</a
+          ><a href="#progress-title"
+            ><span aria-hidden="true">↗</span>Прогресс</a
+          >
+        </nav>
+      </section>
+      <section class="screen" aria-labelledby="today-title">
+        <header class="profile">
+          <div class="avatar" aria-hidden="true"><i></i></div>
+          <div>
+            <span>CORAL PULSE</span>
+            <h2>Активность</h2>
+            <p>Активность и привычки</p>
+          </div>
+          <span class="profile-spark" aria-hidden="true">✧</span>
+        </header>
+        <div class="screen-content">
+          <p class="screen-number">02 / АКТИВНОСТЬ</p>
+          <h3 id="today-title" class="screen-title">Каждый шаг важен</h3>
+          <div class="periods" role="group" aria-label="Период активности">
+            <button data-period="day" aria-pressed="true">Сегодня</button
+            ><button data-period="week" aria-pressed="false">Неделя</button
+            ><button data-period="month" aria-pressed="false">Месяц</button>
+          </div>
+          <div class="ring-wrap">
+            <div class="ring-note">
+              <span aria-hidden="true">♡</span
+              ><span>Ваш ритм<br /><strong>без спешки</strong></span>
+            </div>
+            <div
+              class="ring"
+              id="steps-ring"
+              role="progressbar"
+              aria-label="Прогресс по шагам"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="72"
+            >
+              <svg viewBox="0 0 200 200" aria-hidden="true">
+                <defs>
+                  <linearGradient id="step-gradient">
+                    <stop stop-color="#ffac74" />
+                    <stop offset="1" stop-color="#ff6fa6" />
+                  </linearGradient>
+                </defs>
+                <circle class="ring-track" cx="100" cy="100" r="83" />
+                <circle
+                  class="ring-value"
+                  cx="100"
+                  cy="100"
+                  r="83"
+                  id="steps-arc"
+                />
+              </svg>
+              <div>
+                <span class="ring-icon" aria-hidden="true">♥</span
+                ><strong id="steps-value">7 240</strong
+                ><span id="steps-goal">из 10 000 шагов</span>
+              </div>
+            </div>
+          </div>
+          <div class="movement">
+            <span
+              ><i aria-hidden="true">↟</i
+              ><strong id="walk-value">32 мин</strong>прогулка</span
+            ><span
+              ><i aria-hidden="true">↗</i
+              ><strong id="run-value">18 мин</strong>тренировка</span
+            >
+          </div>
+          <div class="section-heading graph-heading">
+            <h3>В течение дня</h3>
+            <span id="period-label">Сегодня</span>
+          </div>
+          <div id="bars" class="bar-chart"></div>
+          <p class="graph-caption" hidden>
+            <span>Утро</span><span>День</span><span>Вечер</span>
+          </p>
+          <details class="chart-data" hidden>
+            <summary>Данные активности</summary>
+            <p id="period-data"></p>
+          </details>
+          <p class="gentle-note">Ваш прогресс — это ваш собственный темп.</p>
+        </div>
+        <nav class="bottom-nav" aria-label="Связанные экраны активности">
+          <a href="#activities-title"><span aria-hidden="true">◫</span>Обзор</a
+          ><a href="#today-title" aria-current="page"
+            ><span aria-hidden="true">◷</span>Активность</a
+          ><a href="#progress-title"
+            ><span aria-hidden="true">↗</span>Прогресс</a
+          >
+        </nav>
+      </section>
+      <section class="screen" aria-labelledby="progress-title">
+        <header class="profile">
+          <div class="avatar" aria-hidden="true"><i></i></div>
+          <div>
+            <span>CORAL PULSE</span>
+            <h2>Прогресс</h2>
+            <p>Активность и привычки</p>
+          </div>
+          <span class="profile-spark" aria-hidden="true">✧</span>
+        </header>
+        <div class="screen-content">
+          <p class="screen-number">03 / ПРОГРЕСС</p>
+          <div class="section-heading">
+            <h3 id="progress-title">Неделя в движении</h3>
+          </div>
+          <div class="days" role="group" aria-label="День недели">
+            <button data-day="0" aria-pressed="false"><span>Пн</span>19</button
+            ><button data-day="1" aria-pressed="false"><span>Вт</span>20</button
+            ><button data-day="2" aria-pressed="false"><span>Ср</span>21</button
+            ><button data-day="3" aria-pressed="false"><span>Чт</span>22</button
+            ><button data-day="4" aria-pressed="false"><span>Пт</span>23</button
+            ><button data-day="5" aria-pressed="false"><span>Сб</span>24</button
+            ><button data-day="6" aria-pressed="true"><span>Вс</span>25</button>
+          </div>
+          <p class="selected-date" id="selected-date">
+            Воскресенье, 25 октября
+          </p>
+          <div
+            class="gauge"
+            role="progressbar"
+            aria-label="Время в движении"
+            aria-valuemin="0"
+            aria-valuemax="60"
+            aria-valuenow="48"
+            id="minute-gauge"
+          >
+            <svg viewBox="0 0 260 170" aria-hidden="true">
+              <defs>
+                <linearGradient id="gauge-gradient">
+                  <stop stop-color="#ffb273" />
+                  <stop offset="1" stop-color="#ff70b0" />
+                </linearGradient>
+              </defs>
+              <path class="gauge-track" d="M30 135 A100 100 0 0 1 230 135" />
+              <path
+                class="gauge-value"
+                id="minute-arc"
+                d="M30 135 A100 100 0 0 1 230 135"
+              />
+              <path class="gauge-inner" d="M51 135 A79 79 0 0 1 209 135" />
+            </svg>
+            <div>
+              <span>Время в движении</span><strong id="minute-value">48</strong
+              ><span>из 60 минут</span>
+            </div>
+          </div>
+          <div class="streak">
+            <span class="streak-icon" aria-hidden="true">✧</span>
+            <div>
+              <strong>Маленькая победа</strong>
+              <p id="day-note">Ещё один день в вашем ритме.</p>
+            </div>
+          </div>
+          <div class="section-heading graph-heading">
+            <h3>Из чего сложился день</h3>
+          </div>
+          <div id="contributions" class="contributions"></div>
+          <details class="chart-data">
+            <summary>Данные прогресса</summary>
+            <p id="progress-data"></p>
+          </details>
+          <div class="week-summary">
+            <span>Дней в движении</span><strong>7 <small>/ 7</small></strong>
+            <div class="week-dots" aria-hidden="true">● ● ● ● ● ● ●</div>
+          </div>
+        </div>
+        <nav class="bottom-nav" aria-label="Связанные экраны прогресса">
+          <a href="#activities-title"><span aria-hidden="true">◫</span>Обзор</a
+          ><a href="#today-title"><span aria-hidden="true">◷</span>Активность</a
+          ><a href="#progress-title" aria-current="page"
+            ><span aria-hidden="true">↗</span>Прогресс</a
+          >
+        </nav>
+      </section>
+
+      <section
+        id="ag-components"
+        data-ag-component-lab
+        aria-label="Компоненты AG Design в выбранном стиле"
+      ></section>
+    </main>
+    <footer class="showcase-footer">
+      <span>Coral Pulse · базовая стилистика системы</span
+      ><span>Синтетические данные · Графики построены по данным</span>
+    </footer>
+    <p class="sr-only" id="announce" role="status" aria-live="polite"></p>
+  </body>
+</html>

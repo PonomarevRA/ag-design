@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Проверка компоновки · ag-design</title>
+    <link rel="stylesheet" href="/vendor/ag-design/tokens.css" />
+    <link rel="stylesheet" href="/vendor/ag-design/styles.css" />
+    <link rel="stylesheet" href="/layout-review.css" />
+    <script type="module" src="/layout-review.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/">← Каталог</a>
+      <h1>Проверка компоновки</h1>
+      <label class="ag-field"
+        ><span class="ag-field__label">Ширина окна</span
+        ><select id="width">
+          <option value="320">320 px</option>
+          <option value="768">768 px</option>
+          <option value="1280">1280 px</option>
+        </select></label
+      ><label class="ag-field"
+        ><span class="ag-field__label">Масштаб текста</span
+        ><select id="text-size">
+          <option value="100">100%</option>
+          <option value="200">200%</option>
+        </select></label
+      >
+    </header>
+    <p>
+      Проверьте основное действие, подписи, порядок фокуса и отсутствие
+      горизонтального сдвига. Это реальный каталог в отдельной области браузера.
+    </p>
+    <div class="review-area">
+      <iframe
+        id="preview"
+        title="Каталог в выбранном размере"
+        src="/?layoutReview=1"
+      ></iframe>
+    </div>
+    <p id="dimensions" role="status"></p>
+  </body>
+</html>

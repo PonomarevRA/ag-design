@@ -1,0 +1,394 @@
+{
+  "schemaVersion": "ag-design/component-system-guidance-v1",
+  "reviewedAt": "2026-10-28",
+  "systems": [
+    "Carbon",
+    "Fluent2",
+    "Spectrum"
+  ],
+  "interpretation": "Conditional AG interpretations; source conventions are not normative accessibility requirements, implementation claims or qualification.",
+  "items": [
+    {
+      "id": "text-entry",
+      "sectionId": "forms",
+      "components": [
+        "field",
+        "textarea"
+      ],
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/text-input/guidelines",
+        "https://fluent2.microsoft.design/components/web/react/core/textarea/usage/",
+        "https://spectrum.adobe.com/web/rsp/components/text-area"
+      ],
+      "title": "Поле и textarea",
+      "titleEn": "Text input and textarea",
+      "recommendationRu": "Однострочное значение — field, комментарий или абзацы — textarea. Высота соответствует ожидаемому вводу, подпись и нужная подсказка остаются видимыми.",
+      "recommendationEn": "Use field for a short value and textarea for paragraphs. Size for expected input; keep a visible label and useful helper text.",
+      "avoidRu": "Не добавляйте placeholder и hint ради одинаковой высоты. Resize у Carbon включён, у Fluent опционален; AG выбирает vertical для контекста графика.",
+      "avoidEn": "Avoid redundant placeholder/helper copy. Carbon defaults to resizing while Fluent opts in; AG chooses vertical resize for chart context.",
+      "checks": [
+        "label/control association",
+        "multiline paste and native reset",
+        "narrow and200% text",
+        "readonly remains selectable"
+      ],
+      "checksRu": [
+        "Связь подписи с полем",
+        "Многострочная вставка и сброс формы",
+        "Узкая ширина и удвоенный текст",
+        "Выделение readonly значения"
+      ]
+    },
+    {
+      "id": "selection",
+      "sectionId": "forms",
+      "components": [
+        "select",
+        "dropdown-select"
+      ],
+      "sources": [
+        "https://fluent2.microsoft.design/components/web/react/core/combobox/usage"
+      ],
+      "title": "Select или combobox",
+      "titleEn": "Select or combobox",
+      "recommendationRu": "Короткий закрытый список — native select; поиск по длинному списку — combobox. Фильтрация списка сама по себе не разрешает произвольный ответ.",
+      "recommendationEn": "Use select for a short closed list and combobox for searchable long lists. Filtering does not by itself authorize free-form values.",
+      "avoidRu": "AG dropdown-select сейчас single-choice и не принимает freeform: multi-select и свободный ввод требуют отдельного проверенного контракта.",
+      "avoidEn": "AG dropdown-select is single-choice and closed-value; multiselect/freeform require a separately checked contract.",
+      "checks": [
+        "keyboard open/select/Escape",
+        "no-match versus server failure",
+        "selected value after filtering"
+      ],
+      "checksRu": [
+        "Открытие, выбор и Escape с клавиатуры",
+        "Нет совпадений отличается от сбоя",
+        "Выбранное значение после фильтрации"
+      ]
+    },
+    {
+      "id": "choice-commit",
+      "sectionId": "forms",
+      "components": [
+        "segmented-choice",
+        "field"
+      ],
+      "sources": [
+        "https://fluent2.microsoft.design/components/web/react/core/switch/usage/",
+        "https://fluent2.microsoft.design/components/web/react/core/checkbox/usage"
+      ],
+      "title": "Checkbox, radio и switch",
+      "titleEn": "Checkbox, radio and switch",
+      "recommendationRu": "Независимые варианты — checkbox, один из группы — radio; switch обычно немедленно меняет настройку. Сохранение формы и применение переключателя должны быть явно различимы.",
+      "recommendationEn": "Use checkboxes for independent choices, radio for one of a group, and a switch for an immediate setting. Make commit timing explicit.",
+      "avoidRu": "Это соглашение Fluent, не запрет немедленных preview checkbox. Не заменяйте согласие switch. Отдельный switch в AG не заявлен; используйте native семантику или проверенную композицию.",
+      "avoidEn": "This is Fluent guidance, not a ban on immediate preview checkboxes. Do not turn consent into a switch; no standalone AG switch is claimed.",
+      "checks": [
+        "commit timing",
+        "group name and selected state",
+        "mixed parent state",
+        "rollback on failed save"
+      ],
+      "checksRu": [
+        "Момент применения",
+        "Имя группы и выбранное состояние",
+        "Частичный выбор дочерних элементов",
+        "Откат при сбое сохранения"
+      ]
+    },
+    {
+      "id": "button-emphasis",
+      "sectionId": "actions",
+      "components": [
+        "button"
+      ],
+      "sources": [
+        "https://fluent2.microsoft.design/components/web/react/core/button/usage",
+        "https://spectrum.adobe.com/web/rsp/components/button"
+      ],
+      "title": "Иерархия кнопок",
+      "titleEn": "Button emphasis",
+      "recommendationRu": "AG оставляет одно ведущее действие в смысловой группе, остальные спокойнее. Название команды описывает результат; pending защищает от дубля и сохраняет понятный статус.",
+      "recommendationEn": "AG keeps one leading action per semantic group. Label the outcome, prevent duplicate submission and expose pending status.",
+      "avoidRu": "Названия вариантов не переносите буквально: Spectrum primary — средний акцент, accent — сильный; Fluent primary обозначает ведущее действие.",
+      "avoidEn": "Do not copy variant names blindly: Spectrum primary is medium emphasis and accent is stronger; Fluent primary marks the leading action.",
+      "checks": [
+        "relative visual emphasis",
+        "Enter/Space and focus",
+        "pending duplicate request",
+        "icon name and recognition"
+      ],
+      "checksRu": [
+        "Относительный акцент действий",
+        "Enter/Space и фокус",
+        "Защита от дубля при ожидании",
+        "Имя и понятность иконки"
+      ]
+    },
+    {
+      "id": "toolbar-overflow",
+      "sectionId": "actions",
+      "components": [
+        "menu",
+        "button",
+        "window-toolbar"
+      ],
+      "sources": [
+        "https://fluent2.microsoft.design/components/web/react/core/toolbar/usage/"
+      ],
+      "title": "Toolbar и меню",
+      "titleEn": "Toolbar and menu",
+      "recommendationRu": "Группируйте команды по задаче возле текущего контекста. При нехватке места toolbar использует доступное overflow-меню с подписями, сохраняя главную команду.",
+      "recommendationEn": "Group toolbar commands by task near their context. Use labelled overflow for constrained toolbars while retaining the leading command.",
+      "avoidRu": "Не применяйте запрет переноса toolbar к любой форме. Destructive-команды отделяйте; порядок и доступность клавиатурой сохраняйте.",
+      "avoidEn": "A toolbar non-wrap convention is not a ban on wrapping form controls. Separate destructive actions and preserve keyboard order.",
+      "checks": [
+        "narrow overflow reachability",
+        "toolbar accessible name",
+        "focus after overflow close",
+        "destructive grouping"
+      ],
+      "checksRu": [
+        "Доступность overflow при узкой ширине",
+        "Доступное имя toolbar",
+        "Возврат фокуса из меню",
+        "Отделение опасных действий"
+      ]
+    },
+    {
+      "id": "tab-activation",
+      "sectionId": "navigation",
+      "components": [
+        "tabs",
+        "segmented-choice"
+      ],
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/tabs/guidelines"
+      ],
+      "title": "Tabs и активация",
+      "titleEn": "Tabs and activation",
+      "recommendationRu": "Tabs группируют связанные разделы одного контекста. Automatic подходит быстрым панелям; manual позволяет стрелками выбрать вкладку и активировать Enter/Space при дорогой загрузке.",
+      "recommendationEn": "Tabs group related sections. Use automatic activation for fast panels and manual activation for slow panels; arrows move focus, Enter/Space activates.",
+      "avoidRu": "Сравнение двух разделов не прячьте за tabs. Для режима отображения одних данных сначала рассмотрите segmented-choice; шаги процесса не являются tabs.",
+      "avoidEn": "Avoid hiding side-by-side comparisons behind tabs. A view-mode toggle may fit segmented-choice; a sequence of required steps is not a tablist.",
+      "checks": [
+        "manual/automatic behavior",
+        "selected versus focused",
+        "no clipped labels at narrow width"
+      ],
+      "checksRu": [
+        "Ручная и автоматическая активация",
+        "Выбор отличается от фокуса",
+        "Подписи не обрезаны при узкой ширине"
+      ]
+    },
+    {
+      "id": "dialog-task",
+      "sectionId": "layers",
+      "components": [
+        "popup"
+      ],
+      "sources": [
+        "https://fluent2.microsoft.design/components/web/react/core/dialog/usage",
+        "https://spectrum.adobe.com/web/rsp/components/standard-dialog"
+      ],
+      "title": "Диалоги",
+      "titleEn": "Dialogs",
+      "recommendationRu": "Modal прерывает работу для ограниченной задачи, non-modal помогает продолжать её. Сохраните заголовок и действия при прокрутке, верните фокус к инициатору.",
+      "recommendationEn": "Use modal for a bounded interrupting task and nonmodal for an ongoing helper. Keep title/actions reachable while scrolling and return focus to the trigger.",
+      "avoidRu": "Не вкладывайте dialogs. Источники различаются по закрытию снаружи и кнопкам: определите безопасные правила отмены с учётом несохранённого ввода.",
+      "avoidEn": "Do not nest dialogs. Vendor dismissal/footer conventions differ; choose safe cancellation explicitly for unsaved input.",
+      "checks": [
+        "initial focus and modal trap",
+        "Escape/cancel without data loss",
+        "focus return",
+        "narrow scrolling"
+      ],
+      "checksRu": [
+        "Начальный фокус и удержание в modal",
+        "Escape и отмена без потери ввода",
+        "Возврат фокуса",
+        "Прокрутка при узкой ширине"
+      ]
+    },
+    {
+      "id": "table-actions",
+      "sectionId": "data",
+      "components": [
+        "data-table",
+        "data-grid"
+      ],
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines"
+      ],
+      "title": "Таблица и групповые действия",
+      "titleEn": "Tables and batch actions",
+      "recommendationRu": "Общие действия относятся к таблице, row-actions — к строке, batch — к явному набору выбранных объектов. Покажите количество и область выбора.",
+      "recommendationEn": "Separate table-wide, row and batch actions. Expose selected count and scope before acting on a selected set.",
+      "avoidRu": "Обычная таблица не заменяет spreadsheet. Не применяйте выбор текущей страницы молча ко всем страницам; редактирование ячеек требует data-grid контракта.",
+      "avoidEn": "A table is not a spreadsheet. Do not silently extend page selection across all pages; cell editing requires the data-grid contract.",
+      "checks": [
+        "sort announcement",
+        "page/filter selection scope",
+        "batch cancel",
+        "keyboard row/cell semantics"
+      ],
+      "checksRu": [
+        "Объявление сортировки",
+        "Область выбора при смене страницы/фильтра",
+        "Отмена batch-режима",
+        "Клавиатура строк и ячеек"
+      ]
+    },
+    {
+      "id": "message-scope",
+      "sectionId": "feedback",
+      "components": [
+        "notice",
+        "state-panel",
+        "field"
+      ],
+      "sources": [
+        "https://fluent2.microsoft.design/components/web/react/core/toast/usage/",
+        "https://fluent2.microsoft.design/components/web/react/core/messagebar/usage",
+        "https://fluent2.microsoft.design/components/web/react/core/field/usage/"
+      ],
+      "title": "Уведомления и ошибки",
+      "titleEn": "Notifications and errors",
+      "recommendationRu": "Локальная ошибка остаётся у поля, проблема области — в устойчивом notice/state-panel. Toast подходит некритичному временному результату, а не обязательному исправлению.",
+      "recommendationEn": "Keep field errors inline and surface-wide problems in persistent notice/state-panel. Toasts suit noncritical transient outcomes, not mandatory recovery.",
+      "avoidRu": "Не обрезайте важное сообщение; покажите действие восстановления. Не переносите фиксированный таймер, число toast или assertive-политику Fluent как общее правило AG.",
+      "avoidEn": "Wrap important messages and offer recovery. Do not import Fluent toast timers, stack limits or assertive defaults as universal AG rules.",
+      "checks": [
+        "message scope",
+        "recovery remains available",
+        "wrap at200%",
+        "live-region interruption rate"
+      ],
+      "checksRu": [
+        "Область действия сообщения",
+        "Доступность восстановления",
+        "Перенос при удвоенном тексте",
+        "Частота live-объявлений"
+      ]
+    },
+    {
+      "id": "empty-reason",
+      "sectionId": "feedback",
+      "components": [
+        "empty-state",
+        "state-panel"
+      ],
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/patterns/empty-states"
+      ],
+      "title": "Пустые состояния",
+      "titleEn": "Empty states",
+      "recommendationRu": "Различайте первый запуск, отсутствие совпадений, отсутствие прав и сбой загрузки. Покажите объяснение и уместный следующий шаг в самой пустой области.",
+      "recommendationEn": "Distinguish first use, no matches, missing permission and fetch failure. Put an explanation and suitable next step in the empty region.",
+      "avoidRu": "Не имитируйте все случаи нулём или одинаковым рисунком. В малом блоке полезный текст важнее иллюстрации.",
+      "avoidEn": "Do not turn every case into zero or the same illustration. In compact regions useful text outranks decoration.",
+      "checks": [
+        "reason-specific copy/action",
+        "reset filters versus retry",
+        "no fabricated zero",
+        "repeated dashboard failures"
+      ],
+      "checksRu": [
+        "Текст и действие соответствуют причине",
+        "Сброс фильтров отличается от повтора",
+        "Неизвестное не показано нулём",
+        "Повторные сбои виджетов"
+      ]
+    },
+    {
+      "id": "loading-truth",
+      "sectionId": "feedback",
+      "components": [
+        "loading-indicator",
+        "progress",
+        "skeleton",
+        "state-panel"
+      ],
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/patterns/loading",
+        "https://www.carbondesignsystem.com/building-blocks/core/components/progress-bar/guidelines"
+      ],
+      "title": "Загрузка и прогресс",
+      "titleEn": "Loading and progress",
+      "recommendationRu": "Skeleton показывает ожидаемую структуру нового контента; inline-индикатор — выполняемую операцию. Процент допустим только при измеренном объёме, иначе indeterminate.",
+      "recommendationEn": "Use skeleton for expected new content structure and inline busy feedback for an operation. Show percentages only from measured work; otherwise use indeterminate.",
+      "avoidRu": "Сохраняйте прежнее содержимое при обновлении, помечая stale/busy. Не создавайте skeleton для toast/меню и не копируйте vendor пороги времени без проверки.",
+      "avoidEn": "Preserve existing content during refresh with stale/busy state. Avoid skeletons for toasts/menus and untested vendor timing thresholds.",
+      "checks": [
+        "slow/error/retry",
+        "real measured progress",
+        "existing content retained",
+        "reduced motion"
+      ],
+      "checksRu": [
+        "Задержка, сбой и повтор",
+        "Прогресс основан на измерении",
+        "Прежнее содержимое сохранено",
+        "Уменьшение движения"
+      ]
+    },
+    {
+      "id": "help-surface",
+      "sectionId": "icons",
+      "components": [
+        "inline-help"
+      ],
+      "sources": [
+        "https://spectrum.adobe.com/web/rsp/components/tooltip"
+      ],
+      "title": "Tooltip и контекстная помощь",
+      "titleEn": "Tooltip and contextual help",
+      "recommendationRu": "Короткая дополнительная подсказка доступна при hover и фокусе. Важные требования остаются видимыми; длинный или интерактивный ответ требует отдельной поверхности помощи.",
+      "recommendationEn": "Offer brief supplemental tooltips on hover and focus. Keep essential requirements visible; long or interactive help needs another surface.",
+      "avoidRu": "Не делайте tooltip единственным именем кнопки и не считайте hover поддержкой touch. Проверяйте границы и цель подсказки.",
+      "avoidEn": "A tooltip is not the only button name; hover does not prove touch support. Check placement and the target remain visible.",
+      "checks": [
+        "focus/Escape/hover",
+        "touch alternative",
+        "viewport collision",
+        "no hidden mandatory instructions"
+      ],
+      "checksRu": [
+        "Фокус, Escape и hover",
+        "Альтернатива на touch",
+        "Границы viewport",
+        "Важные инструкции не скрыты"
+      ]
+    },
+    {
+      "id": "tree-navigation",
+      "sectionId": "navigation",
+      "components": [
+        "tree",
+        "resizable-panel"
+      ],
+      "sources": [
+        "https://spectrum.adobe.com/web/rsp/components/tree-view"
+      ],
+      "title": "Дерево и длинные названия",
+      "titleEn": "Trees and long labels",
+      "recommendationRu": "Разделяйте раскрытие узла, выбор и действие. Дайте увидеть полное обрезанное имя при фокусе и регулируйте ширину панели для глубокой иерархии.",
+      "recommendationEn": "Separate expansion, selection and action. Reveal a truncated label on focus and offer adjustable width for deep hierarchies.",
+      "avoidRu": "Не переносите Spectrum drag-and-drop или внешние drop как уже реализованный AG контракт; проверяйте существующий tree API и альтернативы клавиатурой.",
+      "avoidEn": "Do not claim Spectrum drag/drop or external-drop support for AG; inspect the actual tree API and keyboard alternatives.",
+      "checks": [
+        "expand versus select",
+        "full label via focus",
+        "deep narrow hierarchy",
+        "large-tree loading"
+      ],
+      "checksRu": [
+        "Раскрытие отличается от выбора",
+        "Полное имя доступно при фокусе",
+        "Глубокое дерево в узкой панели",
+        "Загрузка большого дерева"
+      ]
+    }
+  ]
+}

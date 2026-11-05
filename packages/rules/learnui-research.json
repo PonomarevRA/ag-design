@@ -1,0 +1,288 @@
+{
+  "schemaVersion": "ag-design/learnui-research-v1",
+  "checkedAt": "2026-10-29",
+  "requestedArticleCount": 7,
+  "relatedTypographySource": {
+    "slug": "mobile-desktop-website-font-size-guidelines",
+    "url": "https://www.learnui.design/blog/mobile-desktop-website-font-size-guidelines.html",
+    "resolvedUrl": "https://www.learnui.design/blog/mobile-desktop-website-font-size-guidelines.html",
+    "httpStatus": 200,
+    "htmlSha256": "17c49fe9993dd0d21955b958ef024d428c6af1623c7c7da97365facdda1a5804",
+    "bytes": 60033
+  },
+  "evidenceBoundary": "Short attributed takeaways plus original AG workflow/checks. No source HTML, screenshots, brands or full 37-technique catalogue ships. Practitioner preference/numbers are distinct from primary standards, existing AG gates and unverified effectiveness.",
+  "items": [
+    {
+      "id": "mesh-gradients",
+      "source": {
+        "url": "https://www.learnui.design/blog/mesh-gradients.html",
+        "title": "Technique Deep Dive #1: Mesh Gradients",
+        "author": "Erik D. Kennedy",
+        "published": "2025-03-06",
+        "retrievedAt": "2026-10-29T20:48:17.105782+00:00",
+        "htmlSha256": "17f2966683a0e144a9a0f6a991f20eedd5c0603897b000e716a44b6cbc19d096",
+        "claimType": "practitioner-heuristic"
+      },
+      "takeaway": {
+        "ru": "Автор показывает, как цветовые поля объединяют бренд, различают его направления и направляют внимание.",
+        "en": "The author demonstrates color fields for brand identity, sub-brand variation and attention."
+      },
+      "agDecision": {
+        "ru": "Анимация не обязательна; изображения брендов не переносятся.",
+        "en": "Animation is optional; branded examples are not copied."
+      },
+      "wikiSectionId": "mesh-gradients",
+      "ruleId": "learnui-mesh-gradients-guidance",
+      "relatedSections": [
+        "color",
+        "color-palettes",
+        "motion",
+        "creative-direction"
+      ],
+      "reuseCandidates": [
+        "palette-builder",
+        "catalog-card"
+      ],
+      "sourceUrls": [
+        "https://www.learnui.design/blog/mesh-gradients.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+      ]
+    },
+    {
+      "id": "visual-interest-techniques",
+      "source": {
+        "url": "https://www.learnui.design/blog/spice-up-designs.html",
+        "title": "37 Easy Ways to Spice Up Your UI Designs",
+        "author": "Anthony Hobday (guest article published by Erik D. Kennedy)",
+        "published": "2022-07-11",
+        "retrievedAt": "2026-10-29T20:48:17.105782+00:00",
+        "htmlSha256": "191007507cbc3c9fb30bb4687522a05f7c6c99e31d4b62a425aeafb71c8c41af",
+        "claimType": "practitioner-heuristic"
+      },
+      "takeaway": {
+        "ru": "Гостевая статья предлагает набор выразительных приёмов для уже прочной композиционной основы.",
+        "en": "The guest article offers expressive techniques on top of a sound visual foundation."
+      },
+      "agDecision": {
+        "ru": "Не копировать весь перечень эффектов или чужую графику; не обещать рост метрик.",
+        "en": "Do not copy the full effect catalogue or third-party assets; no metric uplift is promised."
+      },
+      "wikiSectionId": "visual-interest-techniques",
+      "ruleId": "learnui-visual-interest-techniques-guidance",
+      "relatedSections": [
+        "creative-direction",
+        "hierarchy",
+        "layers",
+        "motion"
+      ],
+      "reuseCandidates": [
+        "catalog-card",
+        "button"
+      ],
+      "sourceUrls": [
+        "https://www.learnui.design/blog/spice-up-designs.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ]
+    },
+    {
+      "id": "authentication-ux",
+      "source": {
+        "url": "https://www.learnui.design/blog/tips-signup-login-ux.html",
+        "title": "15 Tips for Better Signup / Login UX",
+        "author": "Erik D. Kennedy",
+        "updated": "2024-06-19",
+        "retrievedAt": "2026-10-29T20:48:17.105782+00:00",
+        "htmlSha256": "cacb31d5c51ce34f245badf33547b908e1d146437c921f611f5801fc1a59e768",
+        "claimType": "practitioner-heuristic"
+      },
+      "takeaway": {
+        "ru": "Статья предлагает уменьшать трение ввода, ясно называть переходы и помогать исправлять ошибки.",
+        "en": "The article proposes reducing input friction, clarifying transitions and helping error recovery."
+      },
+      "agDecision": {
+        "ru": "HTML, согласие, срок жизни credential и безопасность пересмотрены по первичным источникам; советы статьи не являются готовой политикой.",
+        "en": "HTML, consent, credential lifetime and security need primary-source/host review; article tips are not a ready-made policy."
+      },
+      "wikiSectionId": "authentication-ux",
+      "ruleId": "learnui-authentication-ux-guidance",
+      "relatedSections": [
+        "forms",
+        "form-quality-common",
+        "web-security-by-design",
+        "secure-web-actions"
+      ],
+      "reuseCandidates": [
+        "field",
+        "button",
+        "state-panel",
+        "async-boundary"
+      ],
+      "sourceUrls": [
+        "https://www.learnui.design/blog/tips-signup-login-ux.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html",
+        "https://www.w3.org/WAI/tutorials/forms/labels/",
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input",
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode",
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html",
+        "https://pages.nist.gov/800-63-4/sp800-63b.html"
+      ]
+    },
+    {
+      "id": "logo-robustness",
+      "source": {
+        "url": "https://www.learnui.design/blog/3-most-common-logo-design-mistakes.html",
+        "title": "The 3 Most Common Logo Design Mistakes (and How to Fix Them)",
+        "author": "Erik D. Kennedy",
+        "published": "2019-11-08",
+        "retrievedAt": "2026-10-29T20:48:17.105782+00:00",
+        "htmlSha256": "e08a4a6f28674f07288cecbc6d93e67586a7c2775af298dba44b7a79a0384b49",
+        "claimType": "practitioner-heuristic"
+      },
+      "takeaway": {
+        "ru": "Автор рекомендует искать различимый образ и не перегружать знак мелкими деталями.",
+        "en": "The author recommends differentiated imagery and avoiding excessive small detail."
+      },
+      "agDecision": {
+        "ru": "Категоричные вкусовые оценки и чужие брендовые активы не импортируются.",
+        "en": "Absolute taste judgments and third-party brand assets are not imported."
+      },
+      "wikiSectionId": "logo-robustness",
+      "ruleId": "learnui-logo-robustness-guidance",
+      "relatedSections": [
+        "brand-book",
+        "creative-measurement",
+        "icons",
+        "grid-icon-generation"
+      ],
+      "reuseCandidates": [
+        "button",
+        "sidebar"
+      ],
+      "sourceUrls": [
+        "https://www.learnui.design/blog/3-most-common-logo-design-mistakes.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+      ]
+    },
+    {
+      "id": "intuitive-control-selection",
+      "source": {
+        "url": "https://www.learnui.design/blog/4-rules-intuitive-ux.html",
+        "title": "4 Rules for Intuitive UX",
+        "author": "Erik D. Kennedy",
+        "updated": "2024-06-19",
+        "retrievedAt": "2026-10-29T20:48:17.105782+00:00",
+        "htmlSha256": "f309c17a28ff41777824a1578fdb7fe1f18811a87d25d4d0d32bd9f61704c966",
+        "claimType": "practitioner-heuristic"
+      },
+      "takeaway": {
+        "ru": "Четыре эвристики связывают положение действия, выбор контролов, визуальный приоритет и объяснение через пример.",
+        "en": "Four heuristics connect locality, control choice, visual priority and concrete examples."
+      },
+      "agDecision": {
+        "ru": "Не запрещать select и не считать визуальную эвристику доказательством исследования.",
+        "en": "Do not ban selects or treat a visual heuristic as user research."
+      },
+      "wikiSectionId": "intuitive-control-selection",
+      "ruleId": "learnui-intuitive-control-selection-guidance",
+      "relatedSections": [
+        "forms",
+        "actions",
+        "action-locality",
+        "human-first-agent-interfaces"
+      ],
+      "reuseCandidates": [
+        "select",
+        "dropdown-select",
+        "segmented-choice",
+        "field"
+      ],
+      "sourceUrls": [
+        "https://www.learnui.design/blog/4-rules-intuitive-ux.html",
+        "https://www.w3.org/WAI/tutorials/forms/labels/"
+      ]
+    },
+    {
+      "id": "action-locality",
+      "source": {
+        "url": "https://www.learnui.design/blog/the-3-laws-of-locality.html",
+        "title": "The 3 Laws of Locality",
+        "author": "Erik D. Kennedy",
+        "published": "2019-07-31",
+        "retrievedAt": "2026-10-29T20:48:17.105782+00:00",
+        "htmlSha256": "c4188381f69d2fd252b96e3ef20e9da294bfed9ac926d1fe52fccabb4ef1848b",
+        "claimType": "practitioner-heuristic"
+      },
+      "takeaway": {
+        "ru": "Автор связывает размещение команды с областью изменения и заметностью удалённого управления.",
+        "en": "The author relates command placement to effect scope and the salience of distant controls."
+      },
+      "agDecision": {
+        "ru": "Три закона — эвристики размещения, не нормативы геометрии или полномочий.",
+        "en": "The three laws are placement heuristics, not geometry or authorization standards."
+      },
+      "wikiSectionId": "action-locality",
+      "ruleId": "learnui-action-locality-guidance",
+      "relatedSections": [
+        "actions",
+        "information-architecture",
+        "form-row-layout",
+        "human-first-agent-interfaces"
+      ],
+      "reuseCandidates": [
+        "window-toolbar",
+        "catalog-card",
+        "data-table",
+        "menu",
+        "button"
+      ],
+      "sourceUrls": [
+        "https://www.learnui.design/blog/the-3-laws-of-locality.html",
+        "https://www.w3.org/WAI/tutorials/forms/labels/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ]
+    },
+    {
+      "id": "ui-font-sizing",
+      "source": {
+        "url": "https://www.learnui.design/blog/ultimate-guide-font-sizes-ui-design.html",
+        "title": "Font Sizes in UI Design: The Complete Guide",
+        "author": "Erik D. Kennedy",
+        "updated": "2024-05-29",
+        "retrievedAt": "2026-10-29T20:48:17.105782+00:00",
+        "htmlSha256": "e687750196778b37cb430dcff72ff1ab65e44b2ba2f6db976455d3f30bca486a",
+        "claimType": "practitioner-heuristic"
+      },
+      "takeaway": {
+        "ru": "Обзор разделяет платформы; связанная веб-глава различает страницы для чтения и для взаимодействия.",
+        "en": "The hub separates platforms; its linked web chapter distinguishes reading from interaction."
+      },
+      "agDecision": {
+        "ru": "Числа и платформенные примеры 2024 не являются актуальными стандартами ОС или универсальными минимумами.",
+        "en": "The2024ranges/platform examples are not current OS standards or universal minima."
+      },
+      "wikiSectionId": "ui-font-sizing",
+      "ruleId": "learnui-ui-font-sizing-guidance",
+      "relatedSections": [
+        "typography",
+        "form-row-layout",
+        "platform",
+        "golden-canon-grid"
+      ],
+      "reuseCandidates": [
+        "field",
+        "textarea",
+        "button",
+        "data-table"
+      ],
+      "sourceUrls": [
+        "https://www.learnui.design/blog/ultimate-guide-font-sizes-ui-design.html",
+        "https://www.learnui.design/blog/mobile-desktop-website-font-size-guidelines.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+      ]
+    }
+  ]
+}

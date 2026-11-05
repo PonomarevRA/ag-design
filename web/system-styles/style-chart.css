@@ -1,0 +1,101 @@
+.style-chart {
+  --ag-text: var(--ink, #27213e);
+  --ag-muted: var(--muted, #665c7d);
+  --ag-surface: var(--surface, #24193d);
+  --ag-surface-alt: var(--alt, #302743);
+  --ag-accent: var(--accent, #ff8b99);
+  --ag-border: var(--line, #786b94);
+  --ag-success: var(--cyan, #b8eff6);
+  --ag-danger: #ff9e93;
+  --ag-radius: 10px;
+  color: var(--ag-text);
+  min-width: 0;
+}
+.style-chart-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 0 0 10px;
+  font-size: 11px;
+  color: var(--ag-muted);
+}
+.style-chart-controls span {
+  flex: 1;
+  min-width: 100px;
+}
+.style-chart-controls button {
+  border: 1px solid var(--ag-border);
+  border-radius: 7px;
+  background: var(--ag-surface);
+  color: var(--ag-text);
+  padding: 6px 9px;
+  font: inherit;
+  min-height: 34px;
+  cursor: pointer;
+}
+.style-chart-controls button:focus-visible {
+  outline: 3px solid var(--ag-accent);
+  outline-offset: 3px;
+}
+.style-chart .ag-vt-chart {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+}
+.style-chart .ag-vt-chart > h3 {
+  font-size: 13px;
+  margin: 8px 0;
+  color: var(--ag-text);
+  font-weight: 500;
+}
+.style-chart .ag-vt-chart__legend {
+  font-size: 11px;
+  margin-block: 4px;
+}
+.style-chart .ag-vt-chart__readout {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.style-chart .ag-vt-chart__data {
+  font-size: 12px;
+}
+.style-chart .ag-vt-chart__data table {
+  font-size: 12px;
+  min-width: 0;
+}
+.style-chart .ag-vt-chart__data th,
+.style-chart .ag-vt-chart__data td {
+  font-size: 12px;
+  padding: 7px;
+}
+.style-chart .ag-vt-chart__plot {
+  min-width: 0;
+}
+.style-chart .ag-vt-chart__icon-button {
+  min-width: 34px;
+  min-height: 34px;
+}
+.style-chart .ag-vt-chart__tooltip {
+  font-size: 12px;
+}
+@media (max-width: 760px) {
+  .style-chart-controls button,
+  .style-chart .ag-vt-chart__icon-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .style-chart-controls {
+    font-size: 12px;
+  }
+  .style-chart .ag-vt-chart__readout {
+    font-size: 13px;
+  }
+}
+
+.style-chart .ag-vt-chart__svg {
+  font-size: var(--style-chart-axis-size, 24px);
+}
+

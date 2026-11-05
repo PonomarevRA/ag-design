@@ -1,0 +1,109 @@
+.system-style-intro {
+  max-width: 85ch;
+  line-height: 1.65;
+  margin: 0 0 24px;
+}
+.system-style-search {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 16px;
+}
+.system-style-search .ag-field {
+  flex: 1;
+  max-width: 640px;
+}
+.system-style-search button {
+  min-height: 40px;
+}
+.system-style-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.system-style-card {
+  border: 1px solid var(--ag-border);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--ag-surface);
+}
+.system-style-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid var(--ag-border);
+}
+.system-style-card-body {
+  padding: 24px;
+}
+.system-style-card-body h2 {
+  margin: 6px 0 12px;
+  font-size: 24px;
+}
+.system-style-card-body p {
+  line-height: 1.65;
+}
+.system-style-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ag-muted);
+}
+.system-style-card details {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ag-border);
+}
+.system-style-card summary {
+  cursor: pointer;
+  line-height: 1.6;
+  font-weight: 600;
+  min-height: 32px;
+}
+.system-style-recipe {
+  overflow-wrap: anywhere;
+}
+.system-style-recipe h3 {
+  margin: 20px 0 8px;
+}
+.system-style-recipe ul {
+  padding-inline-start: 20px;
+  line-height: 1.65;
+}
+.system-style-recipe li {
+  margin-block: 6px;
+}
+.system-style-tokens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+  font-variant-numeric: tabular-nums;
+}
+.system-style-tokens dd {
+  margin: 0;
+  font-family: monospace;
+}
+@media (max-width: 600px) {
+  .system-style-search {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .system-style-card-body {
+    padding: 18px;
+  }
+}
+
+.system-style-graphics dt {
+  font-weight: 600;
+  margin-top: 14px;
+}
+.system-style-graphics dd {
+  margin: 6px 0 12px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.system-style-concept img,.system-style-originals img{width:100%;height:auto;display:block;border-radius:8px;margin-block:12px}
+.system-style-originals figure{margin:16px 0}.system-style-originals figcaption{font-size:12px;color:var(--ag-muted)}

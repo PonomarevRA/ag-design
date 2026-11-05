@@ -1,0 +1,37 @@
+.golden-canon-panel[open] {
+  flex: 1 1 36rem;
+  min-width: 0;
+  max-width: 100%;
+}
+.golden-canon-panel__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+  margin-block: 12px;
+}
+.golden-canon-panel .golden-canon-panel__field {
+  display: grid;
+  gap: 4px;
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+.golden-canon-panel .golden-canon-panel__toggle {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  align-self: center;
+}
+.golden-canon-panel__field input,
+.golden-canon-panel__field select {
+  width: 100%;
+  min-width: 0;
+}
+.golden-canon-panel output {
+  display: block;
+  overflow-wrap: anywhere;
+}
+.golden-canon-panel input[type="file"] {
+  max-width: 100%;
+  min-width: 0;
+}

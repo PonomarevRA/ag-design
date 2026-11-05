@@ -1,0 +1,25 @@
+{
+  "name": "@ag-design/interaction-tools",
+  "version": "1.0.0-community.1",
+  "description": "Offline original AG notifications, filter chips and animated numbers",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./styles.css": "./styles.css"
+  },
+  "files": [
+    "*.js",
+    "*.css",
+    "*.d.ts",
+    "README.md",
+    "component-specs.json"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "dependencies": {}
+}

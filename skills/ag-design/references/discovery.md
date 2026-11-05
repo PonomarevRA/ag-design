@@ -1,0 +1,7 @@
+# Local candidate discovery
+
+AG Design0.38+ exposes `design_discover(query,kind,platform,library_id,category,limit)` when freshly advertised. `kind` is components/sections/all; limit1–8. It returns exact/FTS5/E5 candidate evidence with current source hashes. Inspect current component/chapter details before use; candidate ranking does not establish capability, applicability or qualification. Mandatory color/accessibility/security rules and host semantics retain priority.
+
+Existing catalog and book search preserve strict items, add `discoveryCandidates` and report `discoveryStatus`; recommendations expose `componentCandidates`/`knowledgeCandidates`. UI shows candidate links separately from exact result counts. Negative/ambiguous query constraints are not waived. Missing/busy/stale model/index states are visible; lexical search remains available.
+
+Operator source setup: `python -m pip install -e '.[search]'`, then `python tools/setup-search-model.py`, restart the service and reconnect MCP. The command explicitly downloads pinned public E5 weights/tokenizer into the external cache and verifies SHA-256. Startup and requests never download or send metadata/query text externally. Native0.38 ships CPU runtime; weights stay external. `AG_DESIGN_SEARCH_MODEL_DIR` selects a trusted operator directory; `AG_DESIGN_SEARCH_MODE=fts` disables model loading. These are local installation choices, never request-supplied paths.

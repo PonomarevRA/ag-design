@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "ag-design/brand-consumer-v1",
+  "version": "1.0.0",
+  "appId": "ag-design",
+  "files": {
+    "app-icon.svg": "8c420124a5035ad5b392a9701af15875443fbd0078407e59886b7bbd1fbc7188",
+    "mark.svg": "ce460033bf19027a7ea346515a9ce996cc9371c6e385be29c98974757461aaf5",
+    "mark.png": "dd91b13677bb16fdcfdace59564db95d778f2c920df1f7f991d2b042494f68ee",
+    "app.png": "42b79bf6f76143c8ff9cdf906e3d6a9126ba3533e49346b978bf4d73df07dcdd",
+    "app.ico": "50c0e626fe7b08209efbf143d20cd70b4153a2c07cd58c019f9c00b96ba591b6"
+  },
+  "scope": "source assets, not proof of an installed application update"
+}

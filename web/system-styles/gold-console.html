@@ -1,0 +1,173 @@
+<!doctype html>
+<html data-ag-select-indicators data-example="console" lang="ru" data-style="graphite-gold">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="./vendor/chart.css" />
+    <link rel="stylesheet" href="./style-chart.css" />
+    <link rel="stylesheet" href="./gold-console.css" />
+    <script type="module" src="./gold-console.js?v=demo-systems-5"></script>
+    <title>Graphite Gold · личное пространство</title>
+    <link rel="stylesheet" href="./vendor/lab/components.css?v=form-review-1" />
+    <link rel="stylesheet" href="./component-lab.css?v=form-review-1" />
+    <link rel="stylesheet" href="../locale-settings.css" />
+    <script type="module" src="./vendor/lab/components.js?v=form-review-1"></script>
+    <link rel="stylesheet" href="./application-layout.css" />
+    <link rel="stylesheet" href="./demo-system.css?v=demo-systems-4" />
+  </head>
+  <body>
+    <a class="skip" href="#gold-main">К содержимому</a>
+    <header class="gold-page-header">
+      <div>
+        <p class="eyebrow">AG DESIGN / SYSTEM STYLE 04</p>
+        <h1>Graphite Gold</h1>
+        <p>Тихая точность личного пространства.</p>
+      </div>
+      <nav class="style-picker" aria-label="Примеры золотого семейства">
+        <a href="./gold-console.html">Graphite Gold</a
+        ><a href="./amber-circuit.html">Amber Circuit</a
+        ><a href="/#styles">Все стили ↗</a>
+      </nav>
+    </header>
+    <main id="gold-main" class="premium-layout">
+      <section class="gold-panel control-panel">
+        <h2>Мои сцены</h2>
+        <div class="channel-tabs" role="group" aria-label="Канал настройки">
+          <button data-channel="0" aria-pressed="true">Освещение</button
+          ><button data-channel="1" aria-pressed="false">Звук</button
+          ><button data-channel="2" aria-pressed="false">Климат</button
+          ><button data-channel="3" aria-pressed="false">Медиа</button>
+        </div>
+        <div
+          class="tactile-dial"
+          id="gold-dial"
+          role="img"
+          aria-label="Интенсивность 72%"
+        >
+          <div class="dial-face">
+            <span aria-hidden="true">☀</span><strong id="dial-value">72%</strong
+            ><span id="dial-label">Освещение</span>
+          </div>
+        </div>
+        <label class="dial-range-label"
+          >Интенсивность<input
+            type="range"
+            id="dial-range"
+            min="0"
+            max="100"
+            value="72"
+        /></label>
+        <div class="scene-commit">
+          <button id="apply-scene" class="gold-primary">
+            Применить <span aria-hidden="true">→</span>
+          </button>
+          <div class="secondary-actions">
+            <button id="reset-scene">Сброс</button
+            ><button id="save-scene">Сохранить</button>
+          </div>
+          <p id="apply-status" class="apply-status" role="status">
+            Параметры подготовлены для локального примера.
+          </p>
+        </div>
+        <div class="gold-chart-block">
+          <h3>Активность канала</h3>
+          <div id="gold-chart"></div>
+        </div>
+        <details class="gold-history">
+          <summary>История локальных действий</summary>
+          <div class="event-scroll" tabindex="0" aria-label="История действий">
+            <table>
+              <caption class="sr-only">
+                Локальные действия в демонстрации
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Время</th>
+                  <th scope="col">Источник</th>
+                  <th scope="col">Событие</th>
+                </tr>
+              </thead>
+              <tbody id="gold-events">
+                <tr>
+                  <td>09:05:00</td>
+                  <td>Демо</td>
+                  <td>Базовая сцена загружена</td>
+                </tr>
+                <tr>
+                  <td>09:04:32</td>
+                  <td>Демо</td>
+                  <td>Контролы готовы к настройке</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </section>
+      <section class="gold-panel overview-panel">
+        <h2>Обзор</h2>
+        <p class="panel-description">Понедельник, 26 октября</p>
+        <div class="calendar-panel">
+          <div>
+            <p class="calendar-clock">09:05</p>
+            <p class="calendar-date" id="calendar-date">26 октября</p>
+            <div
+              class="calendar-grid"
+              id="gold-calendar"
+              role="group"
+              aria-label="Выбор дня октября"
+            ></div>
+          </div>
+          <div class="satin-art" aria-hidden="true"></div>
+        </div>
+        <h3>Быстрые действия</h3>
+        <div class="quick-grid" role="group" aria-label="Быстрые действия">
+          <button data-channel="0" aria-pressed="true">
+            <span aria-hidden="true">☀</span>Освещение</button
+          ><button data-channel="1" aria-pressed="false">
+            <span aria-hidden="true">♫</span>Звук</button
+          ><button data-channel="2" aria-pressed="false">
+            <span aria-hidden="true">♧</span>Климат</button
+          ><button data-channel="3" aria-pressed="false">
+            <span aria-hidden="true">▷</span>Медиа
+          </button>
+        </div>
+        <h3>Мои сцены</h3>
+        <div class="scene-buttons" role="group" aria-label="Сцены">
+          <button data-scene="base" aria-pressed="true">
+            <span aria-hidden="true">◎</span>Базовая</button
+          ><button data-scene="depth" aria-pressed="false">
+            <span aria-hidden="true">▱</span>Глубина</button
+          ><button data-scene="pulse" aria-pressed="false">
+            <span aria-hidden="true">⌁</span>Импульс</button
+          ><button data-scene="scan" aria-pressed="false">
+            <span aria-hidden="true">⬡</span>Сканирование
+          </button>
+        </div>
+        <div class="room-note">
+          <span aria-hidden="true">☀</span>
+          <div>
+            <strong>Личное пространство</strong>
+            <p>Всё нужное — в своём ритме.</p>
+          </div>
+          <strong>22°</strong>
+        </div>
+      </section>
+
+      <section
+        id="ag-components"
+        data-ag-component-lab
+        aria-label="Компоненты AG Design в выбранном стиле"
+      ></section>
+    </main>
+    <footer class="gold-page-footer">
+      Синтетические данные · настройки и действия относятся только к этому
+      примеру.
+    </footer>
+    <p
+      id="gold-announcement"
+      class="sr-only"
+      role="status"
+      aria-live="polite"
+    ></p>
+  </body>
+</html>

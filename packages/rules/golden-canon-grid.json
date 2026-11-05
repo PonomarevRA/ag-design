@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "ag-design/golden-canon-v1",
+  "profile": "ag-diagonal-core-v1",
+  "construction": "Selected projections of intersections of diagonals of the carrier and its equal half rectangles. Reduced AG profile, not a reproduction of the BONT V3 asset.",
+  "fractions": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "defaultTolerance": 0.008,
+  "maximumAnchors": 200,
+  "sources": [
+    "https://grids.obys.agency/",
+    "https://habr.com/ru/articles/479580/"
+  ],
+  "trust": "Geometry only; no aesthetic, comprehension or accessibility certification."
+}

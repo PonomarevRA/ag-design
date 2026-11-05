@@ -1,0 +1,5899 @@
+{
+  "schemaVersion": "ag-design/catalog-v1",
+  "items": [
+    {
+      "id": "sidebar",
+      "name": "Боковая навигация",
+      "summary": "Схлопываемая панель по образцу Atlas: иконки остаются слева, состояние и фокус сохраняются.",
+      "category": "navigation",
+      "tags": [
+        "navigation",
+        "rail",
+        "collapse",
+        "меню",
+        "навигация"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createSidebarController",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "leading-sidebar",
+        "native-shell",
+        "toolbar-hierarchy",
+        "accessible-name",
+        "disclosure-state",
+        "target-size",
+        "keyboard-flow",
+        "zoom-reflow",
+        "reduced-motion",
+        "performance-evidence",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "layout-semantic-groups",
+        "layout-group-spacing",
+        "layout-alignment-anchors",
+        "layout-control-slots",
+        "layout-primary-flow",
+        "layout-surface-restraint",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-label-choice",
+        "action-primary-per-group",
+        "action-name-state",
+        "action-tooltip-supplement",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "apple-material-layer",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "onChange",
+        "CSS variables",
+        "native toolbar adapter"
+      ],
+      "usageExample": "createSidebarController({panel,toggle,storageKey:'my-app-sidebar-v1'})",
+      "budget": {
+        "mountP95Ms": 4,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 65536
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Рабочие приложения с несколькими разделами и частыми переходами.",
+        "rationale": "Постоянный ряд иконок сохраняет моторную память; схлопывание освобождает место без переноса навигации.",
+        "alternatives": [
+          "Специализированный элемент при отличающейся семантике; не маскировать неподходящую функцию стилями."
+        ],
+        "limitations": "Не заменяет предметную модель, авторизацию и ручную проверку доступности.",
+        "lifecycle": "candidate",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+          "https://m3.material.io/foundations/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3",
+      "anatomy": [
+        "Постоянная ведущая рейка",
+        "Иконка и подпись раздела",
+        "Явный текущий раздел",
+        "Переключатель над меню"
+      ],
+      "variants": [
+        "развёрнутая",
+        "рейка иконок"
+      ],
+      "states": [
+        "выбран раздел",
+        "фокус",
+        "свёрнуто"
+      ]
+    },
+    {
+      "id": "button",
+      "name": "Кнопка",
+      "summary": "Одинаковая геометрия для основного, обычного, опасного и тихого действия.",
+      "category": "controls",
+      "tags": [
+        "button",
+        "action",
+        "кнопка",
+        "кнопка для подтверждения",
+        "подтвердить действие",
+        "confirmation button",
+        "confirm action"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createButton",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "toolbar-hierarchy",
+        "accessible-name",
+        "target-size",
+        "contrast",
+        "keyboard-flow",
+        "reduced-motion",
+        "performance-evidence",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-label-choice",
+        "action-primary-per-group",
+        "action-name-state",
+        "action-tooltip-supplement",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-concentric-corners",
+        "apple-neighbor-shapes",
+        "apple-shape-variants",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "enterprise-button-emphasis",
+        "enterprise-toolbar-overflow"
+      ],
+      "extensions": [
+        "DOM events",
+        "icon",
+        "CSS variables"
+      ],
+      "usageExample": "createButton({label:'Сохранить',variant:'primary',onClick:save})",
+      "budget": {
+        "mountP95Ms": 4,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 65536
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Явные действия, подтверждение и повтор запросов.",
+        "rationale": "Нативный button сохраняет клавиатуру и доступное имя; вариант подчёркивает важность, а не меняет смысл.",
+        "alternatives": [
+          "Специализированный элемент при отличающейся семантике; не маскировать неподходящую функцию стилями."
+        ],
+        "limitations": "Не заменяет предметную модель, авторизацию и ручную проверку доступности.",
+        "lifecycle": "candidate",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+          "https://m3.material.io/foundations/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3",
+      "anatomy": [
+        "Текст действия или подписанная иконка",
+        "Видимый фокус и состояние disabled"
+      ],
+      "variants": [
+        "primary",
+        "secondary",
+        "quiet",
+        "danger",
+        "density: compact/comfortable/touch",
+        "shape: fixed/capsule/concentric with standalone fallback"
+      ],
+      "states": [
+        "обычное",
+        "фокус",
+        "наведение",
+        "недоступно"
+      ]
+    },
+    {
+      "id": "field",
+      "name": "Поле ввода",
+      "summary": "Постоянная подпись, подсказка и единая область ввода.",
+      "category": "controls",
+      "tags": [
+        "form",
+        "input",
+        "search",
+        "поле",
+        "поиск"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createField",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "target-size",
+        "contrast",
+        "keyboard-flow",
+        "zoom-reflow",
+        "performance-evidence",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "form-field-purpose",
+        "form-label-persistence",
+        "form-constraints-before-error",
+        "form-control-task-fit",
+        "form-error-recovery-extended",
+        "form-reuse-known-data",
+        "form-submit-integrity",
+        "form-draft-stage",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-concentric-corners",
+        "apple-neighbor-shapes",
+        "apple-shape-variants",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "a11y-authentication",
+        "a11y-slider-drag-alternative",
+        "i18n-contract",
+        "enterprise-message-scope",
+        "enterprise-text-entry",
+        "enterprise-choice-commit"
+      ],
+      "extensions": [
+        "input attributes",
+        "validation",
+        "events",
+        "maxLength with remaining counter",
+        "sync and dispose"
+      ],
+      "usageExample": "const field = createField({id:\"title\",label:\"Название\",maxLength:80});\ncontainer.append(field);\n// field.sync(); field.dispose();",
+      "budget": {
+        "mountP95Ms": 4,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 65536
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Ввод значений с видимой подписью и пояснением.",
+        "rationale": "Label и hint связаны с полем: смысл не исчезает после ввода и передаётся assistive technology.",
+        "alternatives": [
+          "Специализированный элемент при отличающейся семантике; не маскировать неподходящую функцию стилями."
+        ],
+        "limitations": "Native UTF-16 maximum; programmatic values require sync(), server validation stays host-owned. Dispose counter subscriptions on unmount. Native/AT qualification separate.",
+        "lifecycle": "candidate",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+          "https://m3.material.io/foundations/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3",
+      "anatomy": [
+        "Видимая подпись",
+        "Поле ввода",
+        "Подсказка с aria-describedby"
+      ],
+      "variants": [
+        "text",
+        "search",
+        "email",
+        "density: compact/comfortable/touch",
+        "readOnly: true",
+        "error: visible text with aria-invalid/aria-describedby"
+      ],
+      "states": [
+        "пустое",
+        "заполненное",
+        "фокус"
+      ]
+    },
+    {
+      "id": "status",
+      "name": "Состояние",
+      "summary": "Смысловой текст состояния; цвет дополняет содержание.",
+      "category": "feedback",
+      "tags": [
+        "badge",
+        "state",
+        "статус"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createStatus",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "contrast",
+        "honest-states",
+        "performance-evidence",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "tone",
+        "textContent"
+      ],
+      "usageExample": "createStatus({label:'Подключено',tone:'success'})",
+      "budget": {
+        "mountP95Ms": 4,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 65536
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Состояния задач, соединений и проверок.",
+        "rationale": "Текст несёт состояние; цвет дополняет его и не становится единственным различием.",
+        "alternatives": [
+          "Специализированный элемент при отличающейся семантике; не маскировать неподходящую функцию стилями."
+        ],
+        "limitations": "Не заменяет предметную модель, авторизацию и ручную проверку доступности.",
+        "lifecycle": "candidate",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+          "https://m3.material.io/foundations/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3",
+      "anatomy": [
+        "Читаемый текст состояния",
+        "Дополняющий смысловой цвет"
+      ],
+      "variants": [
+        "neutral",
+        "accent",
+        "success",
+        "danger"
+      ],
+      "states": [
+        "статическое текстовое состояние"
+      ]
+    },
+    {
+      "id": "empty-state",
+      "name": "Пустое состояние",
+      "summary": "Объясняет отсутствие данных и предлагает понятный следующий шаг.",
+      "category": "feedback",
+      "tags": [
+        "empty",
+        "пусто",
+        "загрузка"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createEmptyState",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "reduced-motion",
+        "honest-states",
+        "performance-evidence",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "enterprise-empty-reason"
+      ],
+      "extensions": [
+        "action element",
+        "description"
+      ],
+      "usageExample": "createEmptyState({title:'Ничего не найдено',description:'Измените запрос.'})",
+      "budget": {
+        "mountP95Ms": 4,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 65536
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Пустые результаты и первые шаги пользователя.",
+        "rationale": "Объяснение и подходящее действие помогают продолжить работу, не выдавая пустоту за ошибку.",
+        "alternatives": [
+          "Специализированный элемент при отличающейся семантике; не маскировать неподходящую функцию стилями."
+        ],
+        "limitations": "Не заменяет предметную модель, авторизацию и ручную проверку доступности.",
+        "lifecycle": "candidate",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+          "https://m3.material.io/foundations/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3",
+      "anatomy": [
+        "Понятный заголовок",
+        "Причина отсутствия данных",
+        "Опциональное следующее действие"
+      ],
+      "variants": [
+        "первый запуск",
+        "пустой поиск"
+      ],
+      "states": [
+        "нет данных"
+      ]
+    },
+    {
+      "id": "notice",
+      "name": "Сообщение",
+      "summary": "Контекстная ошибка или уведомление с корректным live region.",
+      "category": "feedback",
+      "tags": [
+        "error",
+        "notice",
+        "ошибка"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createNotice",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "contrast",
+        "honest-states",
+        "performance-evidence",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "enterprise-message-scope"
+      ],
+      "extensions": [
+        "tone",
+        "DOM composition"
+      ],
+      "usageExample": "createNotice({text:'Не удалось загрузить данные',tone:'danger'})",
+      "budget": {
+        "mountP95Ms": 4,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 65536
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Обратная связь об ошибке, загрузке и результате действия.",
+        "rationale": "Контекстное сообщение сохраняет рабочее окружение; только ошибки используют прерывающее объявление.",
+        "alternatives": [
+          "Специализированный элемент при отличающейся семантике; не маскировать неподходящую функцию стилями."
+        ],
+        "limitations": "Не заменяет предметную модель, авторизацию и ручную проверку доступности.",
+        "lifecycle": "candidate",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+          "https://m3.material.io/foundations/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3",
+      "anatomy": [
+        "Текст результата или причины",
+        "Контекстный live region"
+      ],
+      "variants": [
+        "neutral",
+        "accent",
+        "success",
+        "danger"
+      ],
+      "states": [
+        "уведомление",
+        "ошибка"
+      ]
+    },
+    {
+      "id": "popup",
+      "name": "Компактное окно",
+      "summary": "Нативный HTML dialog с постоянной компактной шапкой, Escape и прокруткой содержимого.",
+      "category": "overlays",
+      "tags": [
+        "dialog",
+        "popup",
+        "попап",
+        "диалог"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createPopup",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "native-shell",
+        "accessible-name",
+        "disclosure-state",
+        "keyboard-flow",
+        "zoom-reflow",
+        "performance-evidence",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "layout-semantic-groups",
+        "layout-group-spacing",
+        "layout-alignment-anchors",
+        "layout-control-slots",
+        "layout-primary-flow",
+        "layout-surface-restraint",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-label-choice",
+        "action-primary-per-group",
+        "action-name-state",
+        "action-tooltip-supplement",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-concentric-corners",
+        "apple-neighbor-shapes",
+        "apple-shape-variants",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "apple-material-layer",
+        "i18n-contract",
+        "enterprise-dialog-task"
+      ],
+      "extensions": [
+        "content element",
+        "dialog events",
+        "CSS variables"
+      ],
+      "usageExample": "createPopup({id:'detail',title:'Подробности',content})",
+      "budget": {
+        "mountP95Ms": 4,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 65536
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Краткие подробности и подтверждения, где нужен modal focus.",
+        "rationale": "Нативный dialog предоставляет Escape, top layer и удержание фокуса без самописной ловушки.",
+        "alternatives": [
+          "Специализированный элемент при отличающейся семантике; не маскировать неподходящую функцию стилями."
+        ],
+        "limitations": "Не заменяет предметную модель, авторизацию и ручную проверку доступности.",
+        "lifecycle": "candidate",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+          "https://m3.material.io/foundations/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3",
+      "anatomy": [
+        "Постоянная компактная шапка",
+        "Кнопка закрытия",
+        "Прокручиваемая область содержимого",
+        "Нативный dialog"
+      ],
+      "variants": [
+        "модальные подробности"
+      ],
+      "states": [
+        "открыто",
+        "закрыто",
+        "фокус внутри"
+      ]
+    },
+    {
+      "id": "agent-activity-chat",
+      "name": "Чат действий агентов",
+      "summary": "Компактный журнал запросов/ответов с переключением в типизированный диалог и совместимым прежним режимом.",
+      "category": "feedback",
+      "tags": [
+        "agent",
+        "chat",
+        "request",
+        "response",
+        "агент",
+        "чат"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createAgentActivityChat",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "accessible-name",
+        "predictable-navigation",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "callbacks",
+        "CSS variables",
+        "DOM events",
+        "dispose"
+      ],
+      "usageExample": "createAgentActivityChat({maxEntries:50,status:\"MCP · ожидание\",onMarkersChange:enabled=>setMarkers(enabled)})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Мониторинг запросов агентов без перекрытия основного содержимого.",
+        "rationale": "Согласованный popup Atlas: компактная шапка «Агенты», управление размером, настройки и независимый синий переключатель маркеров; журнал запросов/ответов и нижняя панель. Палитра задаётся профилем.",
+        "alternatives": [
+          "Использовать предметный специализированный renderer, если базовый контракт не покрывает сценарий."
+        ],
+        "limitations": "Транспорт и серверная история принадлежат продукту. Очистка удаляет только видимые записи; статус задаёт продукт. Три цветных элемента управляют только popup, не системным окном. Режим conversation включается явно; прежние append/count/markers и activity renderer сохранены.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+          "https://m3.material.io/foundations/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3",
+      "anatomy": [
+        "Компактная шапка «Агенты»",
+        "Агент и задача",
+        "Запрос и ответ",
+        "Состояние и настройки",
+        "Нижняя панель навигации и очистки"
+      ],
+      "variants": [
+        "floating",
+        "inline",
+        "расширенный",
+        "activity",
+        "conversation"
+      ],
+      "states": [
+        "выключен по умолчанию",
+        "пусто",
+        "данные",
+        "свёрнут",
+        "маркеры включены отдельно"
+      ]
+    },
+    {
+      "id": "resizable-panel",
+      "name": "Регулируемая панель",
+      "summary": "Изменение ширины левого и правого меню за внутреннюю границу.",
+      "category": "navigation",
+      "tags": [
+        "panel",
+        "splitter",
+        "resize",
+        "панель",
+        "меню"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "bindResizablePanel",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "accessible-name",
+        "predictable-navigation",
+        "resize-panels",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "enterprise-tree-navigation"
+      ],
+      "extensions": [
+        "callbacks",
+        "CSS variables",
+        "DOM events",
+        "dispose"
+      ],
+      "usageExample": "bindResizablePanel({panel,edge:\"right\",onResize:width=>setNavigationWidth(width)})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Левая навигация и правый инспектор в рабочих окнах.",
+        "rationale": "Pointer и клавиатура используют одни ограничения; панель не меняет сторону, состояние можно сохранить.",
+        "alternatives": [
+          "Использовать предметный специализированный renderer, если базовый контракт не покрывает сценарий."
+        ],
+        "limitations": "Хост отвечает за общую компоновку и мобильный режим; minimum content сохраняется в пределах доступной ширины.",
+        "lifecycle": "candidate",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+          "https://m3.material.io/foundations/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3",
+      "anatomy": [
+        "Содержимое существующей панели",
+        "Внутренняя граница separator",
+        "Диапазон ширины"
+      ],
+      "variants": [
+        "левое меню",
+        "правый инспектор"
+      ],
+      "states": [
+        "drag",
+        "клавиатура",
+        "min/max",
+        "dispose"
+      ]
+    },
+    {
+      "id": "window-toolbar",
+      "name": "Контекстная шапка окна",
+      "summary": "Контекстный заголовок и компактные иконки без рамок: история, панели и частые команды.",
+      "category": "navigation",
+      "tags": [
+        "toolbar",
+        "titlebar",
+        "header",
+        "шапка"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createWindowToolbar",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "accessible-name",
+        "predictable-navigation",
+        "contextual-window-title",
+        "layout-semantic-groups",
+        "layout-group-spacing",
+        "layout-alignment-anchors",
+        "layout-control-slots",
+        "layout-primary-flow",
+        "layout-surface-restraint",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-label-choice",
+        "action-primary-per-group",
+        "action-name-state",
+        "action-tooltip-supplement",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-neighbor-shapes",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "apple-material-layer",
+        "i18n-contract",
+        "enterprise-toolbar-overflow"
+      ],
+      "extensions": [
+        "callbacks",
+        "CSS variables",
+        "DOM events",
+        "dispose",
+        "bindWindowShell"
+      ],
+      "usageExample": "createWindowToolbar({title:\"Канбан\",onToggleLeft:toggleSidebar,actions:[{label:\"Обновить\",icon:\"refresh\",onClick:refresh},{label:\"Создать задачу\",icon:\"plus\",onClick:createTask}]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Браузерная шапка и fallback для native toolbar рабочих приложений.",
+        "rationale": "Стабильные группы и тонкие иконки без рамок оставляют больше места контексту; aria-label, подсказки и keyboard focus сохраняют смысл действий. Неизвестная команда без иконки остаётся с текстом. Системные traffic lights не имитируются.",
+        "alternatives": [
+          "Использовать предметный специализированный renderer, если базовый контракт не покрывает сценарий."
+        ],
+        "limitations": "Веб-элемент не рисует настоящую системную шапку; native host обязан подтвердить поддержку до скрытия fallback.",
+        "lifecycle": "candidate",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+          "https://m3.material.io/foundations/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3",
+      "anatomy": [
+        "Реальная история назад/вперёд",
+        "Контекстный заголовок",
+        "Частые команды",
+        "Переключатели панелей"
+      ],
+      "variants": [
+        "browser fallback",
+        "native capability handshake"
+      ],
+      "states": [
+        "доступная история",
+        "нет истории",
+        "открыта сущность"
+      ]
+    },
+    {
+      "id": "card-connections",
+      "name": "Связи карточек Atlas",
+      "summary": "Порты на сторонах карточки и кубические кривые с направлением реальной связи.",
+      "category": "visualization",
+      "tags": [
+        "graph",
+        "card",
+        "edge",
+        "atlas",
+        "граф",
+        "связь"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createCardConnections",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "accessible-name",
+        "predictable-navigation",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "callbacks",
+        "CSS variables",
+        "DOM events",
+        "dispose"
+      ],
+      "usageExample": "createCardConnections({container,cards:new Map([[\"a\",first],[\"b\",second]]),edges:[{from:\"a\",to:\"b\"}]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Граф реальных зависимостей кода или задач с открытием выбранной связи.",
+        "rationale": "Опоры1/3 и2/3 из Atlas сохраняют боковые касательные без искусственного центрального хаба; доступный список дублирует смысл линий.",
+        "alternatives": [
+          "Использовать предметный специализированный renderer, если базовый контракт не покрывает сценарий."
+        ],
+        "limitations": "Базовый портовый renderer, не весь bundling/obstacle-routing Atlas. Хост вызывает update после перемещения карточек; максимум200связей.",
+        "lifecycle": "candidate",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+          "https://m3.material.io/foundations/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3",
+      "anatomy": [
+        "Явные ID узлов",
+        "Направленные реальные рёбра",
+        "Боковые порты",
+        "Доступный список связей"
+      ],
+      "variants": [
+        "horizontal",
+        "vertical",
+        "direct"
+      ],
+      "states": [
+        "связи видны",
+        "неизвестный конец пропущен",
+        "dispose"
+      ]
+    },
+    {
+      "id": "issue-summary",
+      "name": "Карточка задачи",
+      "summary": "Сначала решение: статус, цель, роль и следующий шаг. Результат и проблемы раскрываются по запросу.",
+      "category": "data",
+      "tags": [
+        "task",
+        "issue",
+        "card",
+        "задача",
+        "карточка",
+        "роль",
+        "проблемы"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createIssueSummary",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "performance-evidence",
+        "honest-states",
+        "card-scan-order",
+        "card-progressive-detail",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "semantic CSS variables",
+        "existing DOM composition",
+        "callbacks",
+        "dispose"
+      ],
+      "usageExample": "createIssueSummary({issue:{key:'DS-42',title:'Показать следующий шаг',status:'На ревью',role:'Разработчик',nextAction:'Критик проверяет результат'},onOpen:issue=>openIssue(issue.key)})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Канбан, список и небольшие графы задач: быстро понять, кому и что делать дальше.",
+        "rationale": "Иерархия Atlas сохранена: идентичность → цель → контекст → действие; вторичные свидетельства вынесены в details, чтобы метки не спорили с названием.",
+        "alternatives": [
+          "Таблица для массового сравнения",
+          "Полная страница задачи для расследования"
+        ],
+        "limitations": "Новый кандидат проверяется сначала в дизайн-системе. Не заменяет модель задач, доступ или статусы сервиса. Данные примера иллюстративны; родитель передаёт настоящий следующий шаг.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/layout",
+          "https://m3.material.io/foundations/layout/understanding-layout/overview",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "anatomy": [
+        "Номер и читаемый статус",
+        "Название как отдельная кнопка открытия",
+        "Роль и до трёх систем",
+        "Следующий шаг",
+        "Нативное раскрытие результата и проблем"
+      ],
+      "variants": [
+        "обычная",
+        "требует внимания"
+      ],
+      "states": [
+        "нет результата",
+        "на ревью",
+        "нужна доработка",
+        "длинный заголовок",
+        "dispose"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "section-stack",
+      "name": "Группа связанных элементов",
+      "summary": "Связанные условия объединены заголовком и близостью, без лишних рамок.",
+      "category": "layout",
+      "tags": [
+        "spacing",
+        "group",
+        "layout",
+        "группа",
+        "отступы",
+        "композиция"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createSectionStack",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "performance-evidence",
+        "honest-states",
+        "spacing-scale",
+        "grouping-proximity",
+        "layout-semantic-groups",
+        "layout-group-spacing",
+        "layout-alignment-anchors",
+        "layout-control-slots",
+        "layout-primary-flow",
+        "layout-surface-restraint",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "form-field-purpose",
+        "form-label-persistence",
+        "form-constraints-before-error",
+        "form-control-task-fit",
+        "form-error-recovery-extended",
+        "form-reuse-known-data",
+        "form-submit-integrity",
+        "form-draft-stage",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-concentric-corners",
+        "apple-neighbor-shapes",
+        "apple-shape-variants",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "semantic CSS variables",
+        "existing DOM composition",
+        "callbacks",
+        "native DOM ownership"
+      ],
+      "usageExample": "createSectionStack({title:'Критерии готовности',items:[dorElement,dodElement]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Критерии DoR/DoD, настройки и связанные поля в инспекторах.",
+        "rationale": "Близость показывает отношения надёжнее декоративных рамок; внутренняя дистанция меньше внешнего расстояния между смысловыми разделами.",
+        "alternatives": [
+          "fieldset/legend для группы полей формы",
+          "Таблица для попарного сравнения"
+        ],
+        "limitations": "Не создаёт поля и не управляет бизнес-валидацией. Для формы используйте подходящие нативные fieldset/legend; содержимое принадлежит вызывающему коду.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/layout",
+          "https://m3.material.io/foundations/layout/understanding-layout/overview",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "anatomy": [
+        "Заголовок группы",
+        "Опциональное объяснение",
+        "Связанные существующие DOM-элементы"
+      ],
+      "variants": [
+        "comfortable: 12px",
+        "compact: 8px"
+      ],
+      "states": [
+        "заполненная группа",
+        "пустая группа"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "state-panel",
+      "name": "Загрузка, пустота и ошибка",
+      "summary": "Отдельные честные состояния с объяснением и действием восстановления.",
+      "category": "feedback",
+      "tags": [
+        "loading",
+        "empty",
+        "error",
+        "state",
+        "загрузка",
+        "пусто",
+        "ошибка",
+        "human-first",
+        "semantic interface",
+        "интерфейсы для агентов"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createStatePanel",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "performance-evidence",
+        "honest-states",
+        "state-recovery",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "enterprise-message-scope",
+        "enterprise-empty-reason",
+        "enterprise-loading-truth",
+        "human-first-agent-interfaces-guidance"
+      ],
+      "extensions": [
+        "semantic CSS variables",
+        "existing DOM composition",
+        "callbacks",
+        "dispose"
+      ],
+      "usageExample": "createStatePanel({state:'error',title:'Каталог недоступен',description:'Проверьте локальный сервис.',actionLabel:'Повторить запрос',onAction:retry})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Состояния рабочих областей, каталога и результатов поиска.",
+        "rationale": "Одно место для объяснения и следующего шага сохраняет контекст; loading не выдаётся за отсутствие данных.",
+        "alternatives": [
+          "Неблокирующее inline-уведомление при сохранённых данных",
+          "Skeleton только при известной структуре и коротком ожидании"
+        ],
+        "limitations": "Компонент не выполняет запросы, не повторяет запись автоматически и не показывает выдуманный прогресс. При переходе фокус и отмену запросов контролирует продукт.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/layout",
+          "https://m3.material.io/foundations/layout/understanding-layout/overview",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "anatomy": [
+        "Читаемый заголовок",
+        "Причина или ожидание",
+        "Доступное объявление",
+        "Опциональное действие восстановления"
+      ],
+      "variants": [
+        "loading",
+        "empty",
+        "error"
+      ],
+      "states": [
+        "ожидание без ложного процента",
+        "нет данных",
+        "ошибка с повтором",
+        "dispose"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "inline-help",
+      "name": "Подсказка рядом с текстом",
+      "summary": "Контекстная i-подсказка с клавиатурой, Escape и размещением в пределах экрана.",
+      "category": "feedback",
+      "tags": [
+        "contextual-help",
+        "tooltip",
+        "help",
+        "inline",
+        "подсказка рядом с текстом",
+        "пояснение рядом с полем",
+        "справка к настройке",
+        "help beside text",
+        "inline contextual help"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createInlineHelp",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "performance-evidence",
+        "accessible-name",
+        "keyboard-flow",
+        "layer-contract",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-label-choice",
+        "action-primary-per-group",
+        "action-name-state",
+        "action-tooltip-supplement",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "enterprise-help-surface"
+      ],
+      "extensions": [
+        "semantic CSS variables",
+        "label and bounded text",
+        "setOpen",
+        "dispose",
+        "hoverDelayMs/focusDelayMs:0..5000ms",
+        "setDelays",
+        "shared bindTooltip behavior"
+      ],
+      "usageExample": "const help = createInlineHelp({label:\"Настройка\",text:\"Пояснение\",hoverDelayMs:250});\ncontainer.append(help.element);\n// help.dispose();",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Видимый текст или подпись",
+        "Именованная нативная кнопка пояснения",
+        "Связанные aria-controls/aria-describedby",
+        "Короткая неинтерактивная справка"
+      ],
+      "variants": [
+        "закрыто по умолчанию",
+        "открыто по команде",
+        "светлая и тёмная темы",
+        "delayed hover250ms",
+        "keyboard focus immediate",
+        "click/touch pinned note"
+      ],
+      "states": [
+        "фокус",
+        "click/touch/Enter/Space",
+        "Escape",
+        "уход фокуса или внешнее нажатие",
+        "dispose"
+      ],
+      "design": {
+        "intendedUse": "Найти подсказку рядом с текстом, полем или настройкой: объяснение термина, ограничений и последствий без перехода со страницы.",
+        "rationale": "Явная кнопка работает на клавиатуре и сенсорном экране, в отличие от hover-only tooltip. Короткое объяснение раскрывается рядом с местом вопроса; нативная кнопка сохраняет знакомую активацию.",
+        "alternatives": [
+          "Короткий постоянный helper text для обязательной информации",
+          "Настоящий tooltip при кратком hover/focus пояснении без действий",
+          "Специализированный popover/dialog для ссылок, форм и интерактивного содержимого"
+        ],
+        "limitations": "Non-modal literal note, not an interactive popover. Hover default250ms and focus default0 are configurable. Click/touch pins immediately; do not hide mandatory instructions here. Native/AT and real viewport checks stay separate.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+          "https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "segmented-choice",
+      "name": "Сегментированный выбор",
+      "summary": "Выбор одного из нескольких локальных значений с нативными radio, подписью группы и доступной клавиатурой.",
+      "category": "controls",
+      "tags": [
+        "segmented",
+        "choice",
+        "radio",
+        "выбор",
+        "сегменты",
+        "переключатель плотности",
+        "human-first",
+        "semantic interface",
+        "интерфейсы для агентов"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createSegmentedChoice",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "performance-evidence",
+        "accessible-name",
+        "keyboard-flow",
+        "honest-states",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "form-field-purpose",
+        "form-label-persistence",
+        "form-constraints-before-error",
+        "form-control-task-fit",
+        "form-error-recovery-extended",
+        "form-reuse-known-data",
+        "form-submit-integrity",
+        "form-draft-stage",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "enterprise-tab-activation",
+        "enterprise-choice-commit",
+        "human-first-agent-interfaces-guidance",
+        "choice-chips-selection"
+      ],
+      "extensions": [
+        "semantic CSS variables",
+        "native DOM events",
+        "callbacks",
+        "dispose"
+      ],
+      "usageExample": "createSegmentedChoice({label:'Плотность',options:[{value:'normal',label:'Обычная'},{value:'compact',label:'Компактная'}],value:'normal',onChange:applyDensity})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Нативный fieldset и legend",
+        "2–6 вариантов с radio одного имени",
+        "Ровно одно выбранное доступное значение",
+        "Видимый фокус и disabled"
+      ],
+      "variants": [
+        "обычный",
+        "с недоступным вариантом",
+        "недоступная группа"
+      ],
+      "states": [
+        "checked",
+        "focus",
+        "native Arrow/Space",
+        "disabled",
+        "setValue",
+        "dispose"
+      ],
+      "design": {
+        "intendedUse": "Небольшой взаимоисключающий выбор представления или параметра внутри текущего сценария.",
+        "rationale": "Нативные radio дают знакомые формы и клавиатуру. Близость вариантов показывает общий смысл; геометрия общая, цвет задаёт профиль.",
+        "alternatives": [
+          "Select при большем числе вариантов",
+          "Tabs только для настоящих панелей вкладок",
+          "Навигационные ссылки для переходов по маршрутам"
+        ],
+        "limitations": "Не tabs и не навигация. 2–6 вариантов — ограничение AG, не универсальная норма HIG. Настоящее Arrow/Space-поведение проверяется браузером; DOM-тест не эмулирует клавиатурный default action.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/ARIA/apg/patterns/radio/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "breadcrumbs",
+      "name": "Путь раздела",
+      "summary": "Иерархические хлебные крошки: реальные родители и явно обозначенная текущая страница.",
+      "category": "navigation",
+      "tags": [
+        "breadcrumbs",
+        "hierarchy",
+        "navigation",
+        "путь раздела",
+        "хлебные крошки",
+        "где я"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createBreadcrumbs",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "performance-evidence",
+        "accessible-name",
+        "keyboard-flow",
+        "honest-states",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "semantic CSS variables",
+        "native DOM events",
+        "callbacks",
+        "dispose"
+      ],
+      "usageExample": "createBreadcrumbs({items:[{label:'Пространства',href:'/spaces'},{label:'Компоненты'}]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Именованный nav",
+        "Упорядоченный список реальных родителей",
+        "Ссылки или явные callback переходов",
+        "Последний элемент без перехода с aria-current"
+      ],
+      "variants": [
+        "ссылки web",
+        "callback маршрутизации хоста"
+      ],
+      "states": [
+        "длинный текст",
+        "один текущий элемент",
+        "фокус ссылки/кнопки",
+        "dispose"
+      ],
+      "design": {
+        "intendedUse": "Показать положение раздела или сущности в настоящей иерархии и путь к её родителям.",
+        "rationale": "Последовательность родителей объясняет контекст без угадывания; текущая страница не ведёт сама на себя. Это дополняет, а не подменяет историю назад/вперёд.",
+        "alternatives": [
+          "Заголовок с родителем для мелкой иерархии",
+          "Левая навигация для постоянных основных разделов"
+        ],
+        "limitations": "Не строит иерархию из URL или истории браузера и не проверяет права. До8 позиций — бюджет AG. Только http(s)/относительные URL без credentials; авторизацию, внешние переходы и native origin guards реализует хост.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "progress",
+      "name": "Прогресс операции",
+      "summary": "Нативный progress для известного объёма работы и отдельное неопределённое состояние без выдуманного процента.",
+      "category": "feedback",
+      "tags": [
+        "progress",
+        "loading",
+        "determinate",
+        "indeterminate",
+        "прогресс",
+        "загрузка",
+        "объём работы"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createProgress",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "performance-evidence",
+        "accessible-name",
+        "keyboard-flow",
+        "honest-states",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "enterprise-loading-truth"
+      ],
+      "extensions": [
+        "semantic CSS variables",
+        "native DOM events",
+        "measured update",
+        "dispose"
+      ],
+      "usageExample": "createProgress({label:'Проверка компонентов',value:6,max:18,description:'Обработано 6 из 18'})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Видимая связанная подпись",
+        "Нативный progress",
+        "Известная доля или отсутствие value",
+        "Опциональное объяснение операции"
+      ],
+      "variants": [
+        "известный объём",
+        "неизвестный объём"
+      ],
+      "states": [
+        "0% известно",
+        "часть завершена",
+        "100% только при value=max",
+        "unknown без value",
+        "dispose"
+      ],
+      "design": {
+        "intendedUse": "Длительная операция с настоящим счётчиком выполненной работы; ожидание неизвестного объёма показано без процента.",
+        "rationale": "Нативная семантика progress понятна assistive technology. Unknown не притворяется0%, а100% появляется только при достижении настоящего максимума.",
+        "alternatives": [
+          "Короткое сообщение ожидания для очень быстрых операций",
+          "Status для дискретных этапов без численной доли",
+          "Meter только для измеряемого значения в диапазоне, не хода работы"
+        ],
+        "limitations": "Не запускает операцию, таймеры или синтетический прогресс и не обещает ETA. Число и максимум даёт хост. Browser/native motion и assistive technology требуют отдельной проверки; JSDOM не доказывает реальную отрисовку нативного контрола.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developer.android.com/develop/ui/compose/components/progress"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "board-viewport",
+      "name": "Рабочая доска графа",
+      "summary": "Поле для перемещения и масштаба графа: камера, горячие клавиши, цвет фона и заливка. Pan zoom canvas board.",
+      "category": "layout",
+      "tags": [
+        "доска",
+        "поле",
+        "граф",
+        "перемещение",
+        "масштаб",
+        "фон",
+        "узор",
+        "горячие клавиши",
+        "canvas",
+        "board",
+        "pan",
+        "zoom",
+        "background",
+        "pattern"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createBoardViewport",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "performance-evidence",
+        "accessible-name",
+        "keyboard-flow",
+        "honest-states",
+        "layout-semantic-groups",
+        "layout-group-spacing",
+        "layout-alignment-anchors",
+        "layout-control-slots",
+        "layout-primary-flow",
+        "layout-surface-restraint",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "a11y-slider-drag-alternative",
+        "a11y-chart-equivalence",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "onChange",
+        "host-owned scene",
+        "CSS color profiles",
+        "storageKey"
+      ],
+      "usageExample": "createBoardViewport({viewport,scene,storageKey:'my-app:space:board:v1'})",
+      "budget": {
+        "mountP95Ms": 8,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 131072
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Сфокусированное поле обзора",
+        "Единая сцена карточек и связей",
+        "Неподвижная панель масштаба",
+        "Иконки настроек фона и справки ⓘ"
+      ],
+      "variants": [
+        "Фон темы или пользовательский цвет",
+        "Без узора, точки или сетка"
+      ],
+      "states": [
+        "Обзор",
+        "Перетаскивание",
+        "Масштаб 20–250%",
+        "Фокус клавиатуры",
+        "Отмена жеста",
+        "dispose"
+      ],
+      "design": {
+        "intendedUse": "Граф задач, карта связей и доска с большим пространством. Камера перемещает всю сцену; карточки и реальные связи принадлежат продукту.",
+        "rationale": "Отдельная камера сохраняет моторную модель Atlas и освобождает продукт от повторной реализации жестов. Неподвижные кнопки и клавиатура дают альтернативу перетаскиванию. Настройки фона и справка раскрываются отдельными компактными иконками: редкая инструкция не занимает место постоянно.",
+        "alternatives": [
+          "Обычный список или таблица для последовательного просмотра",
+          "Специализированный renderer для десятков тысяч узлов"
+        ],
+        "limitations": "Не редактор геометрии, не автоматическая раскладка; фон и камера сохраняются локально в браузере. Single-pointer pan, modifier-wheel zoom; нативный pinch ОС отдельно не заявлен.",
+        "lifecycle": "draft",
+        "sources": []
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "skeleton",
+      "name": "Скелетон загрузки",
+      "summary": "Декоративные формы и композиции загрузки с явным состоянием и reduced motion.",
+      "category": "feedback",
+      "tags": [
+        "skeleton",
+        "offline",
+        "общие"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createSkeleton",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "keyboard-flow",
+        "color-profiles",
+        "reduced-motion",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "enterprise-loading-truth"
+      ],
+      "extensions": [
+        "semantic CSS variables",
+        "dispose"
+      ],
+      "usageExample": "createSkeleton({variant:\"list\",rows:3})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Область содержимого",
+        "Явное состояние"
+      ],
+      "variants": [
+        "light",
+        "dark"
+      ],
+      "states": [
+        "готово",
+        "взаимодействие",
+        "отмена"
+      ],
+      "design": {
+        "intendedUse": "Декоративные формы и композиции загрузки с явным состоянием и reduced motion.",
+        "rationale": "Общий автономный примитив с предсказуемым жизненным циклом.",
+        "alternatives": [
+          "Использовать предметный компонент для отдельного сценария."
+        ],
+        "limitations": "Локальные данные и callbacks. Ручная проверка экранного диктора и физических touch-устройств не выполнена.",
+        "lifecycle": "draft",
+        "sources": []
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "motion",
+      "name": "Анимации интерфейса",
+      "summary": "Явные ограниченные анимации с отменой, освобождением и reduced motion.",
+      "category": "feedback",
+      "tags": [
+        "motion",
+        "offline",
+        "общие"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createMotion",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "keyboard-flow",
+        "color-profiles",
+        "reduced-motion",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "semantic CSS variables",
+        "dispose"
+      ],
+      "usageExample": "createMotion(element).play(\"slide-up\")",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Область содержимого",
+        "Явное состояние"
+      ],
+      "variants": [
+        "light",
+        "dark"
+      ],
+      "states": [
+        "готово",
+        "взаимодействие",
+        "отмена"
+      ],
+      "design": {
+        "intendedUse": "Явные ограниченные анимации с отменой, освобождением и reduced motion.",
+        "rationale": "Общий автономный примитив с предсказуемым жизненным циклом.",
+        "alternatives": [
+          "Использовать предметный компонент для отдельного сценария."
+        ],
+        "limitations": "Локальные данные и callbacks. Ручная проверка экранного диктора и физических touch-устройств не выполнена.",
+        "lifecycle": "draft",
+        "sources": []
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "drag-drop",
+      "name": "Перенос элементов",
+      "summary": "Локальные списки: перенос, копия, обмен; указатель, touch и клавиатура.",
+      "category": "controls",
+      "tags": [
+        "drag-drop",
+        "offline",
+        "общие"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createDragDrop",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "keyboard-flow",
+        "color-profiles",
+        "reduced-motion",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "semantic CSS variables",
+        "dispose"
+      ],
+      "usageExample": "createDragDrop({lanes})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Область содержимого",
+        "Явное состояние"
+      ],
+      "variants": [
+        "light",
+        "dark"
+      ],
+      "states": [
+        "готово",
+        "взаимодействие",
+        "отмена"
+      ],
+      "design": {
+        "intendedUse": "Локальные списки: перенос, копия, обмен; указатель, touch и клавиатура.",
+        "rationale": "Общий автономный примитив с предсказуемым жизненным циклом.",
+        "alternatives": [
+          "Использовать предметный компонент для отдельного сценария."
+        ],
+        "limitations": "Локальные данные и callbacks. Ручная проверка экранного диктора и физических touch-устройств не выполнена.",
+        "lifecycle": "draft",
+        "sources": []
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "ascii-background",
+      "name": "Динамический ASCII-фон",
+      "summary": "ASCII-фон с локальным медиа и потоковым текстом: символы обтекают буквы с зазором, адаптивной толщиной, переливом и покачиванием.",
+      "category": "Компоновка",
+      "tags": [
+        "ascii",
+        "background",
+        "landing",
+        "media",
+        "video",
+        "image",
+        "stream",
+        "ticker",
+        "animation",
+        "фон",
+        "лендинг",
+        "бегущая строка"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createAsciiBackground",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "keyboard-flow",
+        "color-profiles",
+        "reduced-motion",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "a11y-media-alternatives",
+        "a11y-auditory-equivalence",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "semantic CSS variables",
+        "setFile",
+        "setSource",
+        "appendText",
+        "pause/play",
+        "dispose",
+        "textWeight:auto/thin/regular/bold",
+        "textGap:2–6 cells"
+      ],
+      "usageExample": "const bg=createAsciiBackground({pattern:'flow'}); host.append(bg.element); bg.appendText('Новости · '); // host owns pause button and data transport",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 524288
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Декоративный слой под содержимым",
+        "Ограниченная символьная сетка",
+        "ASCII-конвертер локальных кадров",
+        "Бегущая строка",
+        "Контурная маска зазора вокруг ASCII-букв"
+      ],
+      "variants": [
+        "Плавный шум",
+        "Символьный дождь",
+        "Шум",
+        "Изображение или видео",
+        "Поток текста"
+      ],
+      "states": [
+        "Анимация",
+        "Пауза",
+        "Статичный кадр",
+        "Reduced motion",
+        "Вне экрана",
+        "Ошибка",
+        "dispose"
+      ],
+      "design": {
+        "intendedUse": "Декоративный фон лендинга, hero-секции или сайта; смысловой текст и действия находятся отдельным слоем. Локальные изображения и видеокадры сохраняют узнаваемую композицию. Текст поступает через appendText без собственного транспорта.",
+        "rationale": "Общий слой с ограниченным числом символов, семантической палитрой и единым жизненным циклом. Готовый конвертер asciify-engine4.32.0 включён локально в изолированном MIT-подмножестве.",
+        "alternatives": [
+          "Статичная иллюстрация или фон без движения",
+          "Обычный текстовый блок для важного содержания"
+        ],
+        "limitations": "Декоративный aria-hidden слой: важной информации нужен видимый/доступный эквивалент. max6000ячеек/24fps; текст4096Unicode-символов. Локальные PNG/JPEG/WebP32MiB и MP4/WebM128MiB, размердо8192px; кодеки зависят от браузера. Нет URL-загрузок, GIF-анимации, аудио, WebGL и собственного stream-транспорта. Хост показывает паузу. Физический touch/другие ОС отдельно не проверены.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://github.com/ayangabryl/asciify-engine",
+          "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "ambient-chart",
+      "name": "Атмосферный график",
+      "summary": "Общее мягкое свечение для декоративных и реальных данных; точная шкала, таблица и отключаемое мини-окно с дополнительным текстом.",
+      "category": "visualization",
+      "tags": [
+        "ambient",
+        "decorative",
+        "chart",
+        "графики",
+        "свечение",
+        "offline"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createAmbientChart",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "keyboard-flow",
+        "color-profiles",
+        "reduced-motion",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "a11y-chart-equivalence",
+        "i18n-contract",
+        "chart-time-axis-context"
+      ],
+      "extensions": [
+        "semantic CSS variables",
+        "update",
+        "select/onSelect",
+        "pause/play/replay",
+        "dispose",
+        "showPanel",
+        "panelTitle",
+        "panelText: literal ≤1200 characters"
+      ],
+      "usageExample": "createAmbientChart({mode:'data',title:'Нагрузка',labels:['Пн','Вт'],values:[18,32],showPanel:true,panelTitle:'Контекст',panelText:'Измерения сервера за два дня'})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 524288
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "semantic grid",
+        "SVG marks",
+        "decorative code",
+        "honest linear scale",
+        "exact data table",
+        "pause/replay"
+      ],
+      "variants": [
+        "decorative",
+        "data",
+        "bars",
+        "line",
+        "area",
+        "light",
+        "dark"
+      ],
+      "states": [
+        "playing",
+        "paused",
+        "reduced-motion",
+        "hidden",
+        "offscreen",
+        "idle",
+        "disposed"
+      ],
+      "design": {
+        "intendedUse": "Декоративная графика лендингов или выразительный показ одного переданного ряда без искажения значений.",
+        "rationale": "Разделение декоративных и реальных данных сохраняет честность графика; цвета принадлежат профилю, а движение имеет владельца и явную паузу.",
+        "alternatives": [
+          "createChart из visual-tools для многосерийных аналитических графиков",
+          "Статичная иллюстрация, если движение не добавляет смысла"
+        ],
+        "limitations": "Один ряд до96 точек, |value|≤1e12; null сохраняет пропуск. Не торговый терминал. Нет сетевых запросов. Физический touch, все экранные дикторы и native RSS не сертифицированы. Декоративная метка и код скрыты в режиме данных.",
+        "lifecycle": "draft",
+        "sources": []
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "loading-indicator",
+      "name": "Индикаторы ожидания",
+      "summary": "Кольцо, прыгающие точки, бегущая полоса и скелетон: четыре локальных анимации ожидания с паузой и reduced motion.",
+      "category": "feedback",
+      "tags": [
+        "loading",
+        "spinner",
+        "dots",
+        "progress",
+        "skeleton",
+        "ожидание",
+        "загрузка",
+        "human-first",
+        "semantic interface",
+        "интерфейсы для агентов"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createLoadingIndicator",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "keyboard-flow",
+        "color-profiles",
+        "reduced-motion",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "enterprise-loading-truth",
+        "human-first-agent-interfaces-guidance"
+      ],
+      "extensions": [
+        "variant",
+        "label",
+        "animated",
+        "play/pause",
+        "setLoading",
+        "dispose"
+      ],
+      "usageExample": "createLoadingIndicator({variant:'dots',label:'Загрузка списка'})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Один статус ожидания",
+        "Декоративная форма",
+        "Управляемое движение"
+      ],
+      "variants": [
+        "spinner",
+        "dots",
+        "progress",
+        "skeleton"
+      ],
+      "states": [
+        "playing",
+        "paused",
+        "reduced-motion",
+        "offscreen",
+        "hidden",
+        "disposed"
+      ],
+      "design": {
+        "intendedUse": "Показать ожидание операции с неизвестной длительностью. Хост завершает загрузку и предоставляет паузу.",
+        "rationale": "Четыре узнаваемые формы с общей семантикой, CSS-палитрой и освобождением подписок.",
+        "alternatives": [
+          "Измеренный createProgress для известного объёма",
+          "Скелетон композиции createSkeleton"
+        ],
+        "limitations": "Не измеряет проценты и не выполняет запросов. Анимация останавливается при паузе, скрытии, offscreen и reduced motion. Проверка продукта отдельно.",
+        "lifecycle": "draft",
+        "sources": []
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "render-window",
+      "name": "Окно отрисовки",
+      "summary": "Ленивое создание и освобождение компонентов вне экрана с сохранением размера, состояния и активного ввода.",
+      "category": "layout",
+      "tags": [
+        "render-window",
+        "offscreen",
+        "lazy",
+        "memory",
+        "виртуализация",
+        "память",
+        "длинный список",
+        "длинные списки",
+        "длинная лента",
+        "галерея",
+        "тяжёлые превью",
+        "long list",
+        "large list",
+        "heavy previews",
+        "offscreen rendering",
+        "lazy mount",
+        "тяжелые превью",
+        "gallery",
+        "long feed"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createRenderWindow",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "keyboard-flow",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "render/snapshot",
+        "root/rootMargin",
+        "estimatedHeight",
+        "unmountDelay",
+        "setPinned",
+        "refresh",
+        "dispose"
+      ],
+      "usageExample": "createRenderWindow({label:'Карточка',render:saved=>mountCard(saved)})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Лёгкий placeholder",
+        "Owned subtree",
+        "Снимок состояния"
+      ],
+      "variants": [
+        "viewport",
+        "scroll-root"
+      ],
+      "states": [
+        "idle",
+        "mounted",
+        "suspended",
+        "error",
+        "disposed"
+      ],
+      "design": {
+        "intendedUse": "Освобождать тяжёлые локальные примеры и карточки за окном видимости; сохранять модель в хосте.",
+        "rationale": "Общий observer, запас у края и задержка снижают число активных DOM-деревьев без циклического опроса. Фокус/drag/выбор удерживают экземпляр.",
+        "alternatives": [
+          "content-visibility для пропуска layout/paint без удаления DOM",
+          "Постраничная загрузка или виртуализация списка для миллионов строк"
+        ],
+        "limitations": "Не освобождает данные хоста и не гарантирует нулевой RSS. render синхронный; dispose обязан освобождать свои ресурсы. Произвольное состояние восстанавливается через snapshot. Нет observer — eager fallback. Встроенный поиск браузера не видит удалённый контент. Factory results must transfer fresh detached same-document elements; connected/foreign/ancestor or retired DOM is never adopted or disposed as a new candidate. Reentrant teardown remains final.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "agent-conversation",
+      "name": "Чат с агентом",
+      "summary": "Потоковый диалог с сообщениями, инструментами, файлами, историей и действиями приложения.",
+      "category": "feedback",
+      "tags": [
+        "agent",
+        "chat",
+        "conversation",
+        "streaming",
+        "dialog",
+        "чат",
+        "агент",
+        "переписка",
+        "MCP",
+        "ACP",
+        "document chat",
+        "messenger",
+        "work-log",
+        "переписка",
+        "журнал работы"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createAgentConversation",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "accessible-name",
+        "predictable-navigation",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "chat-composer-patterns-guidance",
+        "agent-work-presentation-guidance",
+        "chat-presentation-selection-guidance"
+      ],
+      "extensions": [
+        "callbacks",
+        "CSS variables",
+        "DOM events",
+        "dispose",
+        "composerAppearance / composerLabel",
+        "composerActions + onComposerAction",
+        "composerState (redacted)",
+        "setPresentation(document/messenger/work-log)",
+        "presentationState (redacted)"
+      ],
+      "usageExample": "createAgentConversation({onHistory:loadPage,capabilities:[]}); // applySnapshot/applyUpdates; transport belongs to host",
+      "budget": {
+        "mountP95Ms": 50,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 16777216
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Читаемый потоковый чат с любым агентом поверх универсальной модели представления.",
+        "rationale": "Сессия, сообщения и типизированные блоки разделены; обновления по ID не создают token-карточки. Внешние действия передаются только host callbacks.",
+        "alternatives": [
+          "agent-activity-chat для компактного журнала готовых request/response",
+          "conversation-rail для отдельной навигации по уже смонтированным сообщениям"
+        ],
+        "limitations": "Нет транспорта, durable history, queue runner, процесса агента или гарантии exactly-once. Markdown: безопасное ограниченное подмножество без HTML/links/media. DOM/текст и UI receipts ограничены. New DS qualification required; caller evidence is not native/AT attestation. Compact composer is opt-in; field-sizing is progressive enhancement with manual resize fallback. Up to4declared host tools and8unsettled intents; no file/voice permissions, transport or server deduplication. composerState is redacted structure, not qualification. Three presentations share source chronology and state; setPresentation preserves keyed DOM and pending receipts. Comparison is a synthetic local host, not execution/transport or consumer qualification.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.jetbrains.com/help/ai-assistant/ai-chat.html",
+          "https://www.jetbrains.com/help/ai-assistant/codex-agent.html",
+          "https://www.jetbrains.com/help/ai-assistant/chat-mode.html",
+          "https://x.ai/grok",
+          "https://x.ai/bot"
+        ]
+      },
+      "anatomy": [
+        "Сессия и состояние источника",
+        "Сообщения пользователя и агента",
+        "Типизированные блоки и группы операций",
+        "История и чтение новых сообщений",
+        "Опциональный ввод через host callback"
+      ],
+      "variants": [
+        "read-only",
+        "interactive host callbacks",
+        "panel",
+        "inline",
+        "standard composer (default)",
+        "compact composer (opt-in)",
+        "capability-declared composer tools",
+        "presentation: document (default)",
+        "presentation: messenger",
+        "presentation: work-log"
+      ],
+      "states": [
+        "пусто",
+        "streaming",
+        "ожидание ответа",
+        "разрыв связи",
+        "пропуск событий",
+        "неподтверждённая отправка",
+        "загрузка истории",
+        "ошибка",
+        "ограниченное окно"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "numeric-badge",
+      "name": "Числовая метка",
+      "summary": "Точное число или частота0–5 по процентильной шкале; цветовая интенсивность из заданного диапазона.",
+      "category": "data",
+      "tags": [
+        "badge",
+        "label",
+        "count",
+        "number",
+        "usage",
+        "метка",
+        "число",
+        "частота",
+        "нормализация"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createNumericBadge",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "contrast",
+        "honest-states",
+        "performance-evidence",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "raw/score mode",
+        "percentile anchors",
+        "min/max range",
+        "semantic CSS variables",
+        "update",
+        "dispose"
+      ],
+      "usageExample": "const scale = createNumericScale({values:[0,1,2,3,5,8,13,21,34,55],maximum:5});\nconst badge = createNumericBadge({document,value:13,label:\"Использований\",mode:\"score\",scale});",
+      "budget": {
+        "mountP95Ms": 4,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 65536
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Компактный показатель количества или относительной частоты с сохранением исходного значения.",
+        "rationale": "Данные, шкала и палитра принадлежат приложению; частота не является оценкой качества.",
+        "alternatives": [
+          "Обычный текст для одного числа.",
+          "Status для категориального состояния."
+        ],
+        "limitations": "Нормализованная оценка зависит от популяции. Повторы порогов пропускают интервалы; равная популяция даёт0. Не является рейтингом качества или runtime-счётчиком. Ручная AT и полная визуальная квалификация не выполнены.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+          "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+        ]
+      },
+      "anatomy": [
+        "Число или оценка",
+        "Цветовая интенсивность",
+        "Точное доступное значение"
+      ],
+      "variants": [
+        "value",
+        "score",
+        "light",
+        "dark"
+      ],
+      "states": [
+        "готово",
+        "нет шкалы",
+        "обновление"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "select",
+      "name": "Выпадающий список",
+      "summary": "Нативный выбор с группами, подписью, подсказкой и состояниями.",
+      "category": "controls",
+      "tags": [
+        "management",
+        "engineering",
+        "select"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createSelect",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "i18n-contract",
+        "enterprise-selection"
+      ],
+      "extensions": [
+        "onChange",
+        "setValue",
+        "setDisabled",
+        "setError"
+      ],
+      "usageExample": "createSelect({label:\"Состояние\",value:\"active\",options:[{value:\"active\",label:\"В работе\"},{value:\"done\",label:\"Готово\"}]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Системы управления и инженерные интерфейсы: Нативный выбор с группами, подписью, подсказкой и состояниями.",
+        "rationale": "Предсказуемая семантика, явная идентичность/состояние, общий ритм и клавиатура вместо визуального копирования редактора.",
+        "alternatives": [
+          "Нативные HTML-элементы для простых случаев."
+        ],
+        "limitations": "Данные и внешние действия принадлежат приложению. Browser/AT/host evidence отделены; функциональные тесты не сертифицируют интерфейс.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/ARIA/apg/",
+          "https://app.openpencil.dev/demo"
+        ]
+      },
+      "anatomy": [
+        "Подписанный корень",
+        "Семантические действия",
+        "Состояние и обратная связь"
+      ],
+      "variants": [
+        "Основное представление",
+        "Длинные подписи",
+        "Узкая область"
+      ],
+      "states": [
+        "ready",
+        "disabled",
+        "focus-visible",
+        "empty"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "tabs",
+      "name": "Вкладки",
+      "summary": "Клавиатурные вкладки с явным сохранением, очисткой или offscreen-жизненным циклом панелей.",
+      "category": "controls",
+      "tags": [
+        "management",
+        "engineering",
+        "tabs"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createTabs",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "i18n-contract",
+        "enterprise-tab-activation",
+        "choice-chips-selection"
+      ],
+      "extensions": [
+        "onChange",
+        "setValue",
+        "setDisabled",
+        "getPanel"
+      ],
+      "usageExample": "createTabs({label:\"Разделы\",tabs:[{id:\"details\",label:\"Данные\",lifecycle:\"preserve\",mount:()=>document.createElement(\"section\")} ]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Системы управления и инженерные интерфейсы: Клавиатурные вкладки с явным сохранением, очисткой или offscreen-жизненным циклом панелей.",
+        "rationale": "Предсказуемая семантика, явная идентичность/состояние, общий ритм и клавиатура вместо визуального копирования редактора.",
+        "alternatives": [
+          "Нативные HTML-элементы для простых случаев."
+        ],
+        "limitations": "Данные и внешние действия принадлежат приложению. Browser/AT/host evidence отделены; функциональные тесты не сертифицируют интерфейс.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/ARIA/apg/",
+          "https://app.openpencil.dev/demo"
+        ]
+      },
+      "anatomy": [
+        "Подписанный корень",
+        "Семантические действия",
+        "Состояние и обратная связь"
+      ],
+      "variants": [
+        "Основное представление",
+        "Длинные подписи",
+        "Узкая область"
+      ],
+      "states": [
+        "ready",
+        "disabled",
+        "focus-visible",
+        "empty"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "menu",
+      "name": "Меню действий",
+      "summary": "Группы команд, горячие клавиши-подсказки, отмеченные пункты и вложенное меню.",
+      "category": "controls",
+      "tags": [
+        "management",
+        "engineering",
+        "menu"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createMenu",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "i18n-contract",
+        "enterprise-toolbar-overflow"
+      ],
+      "extensions": [
+        "onAction",
+        "setItems",
+        "open",
+        "close"
+      ],
+      "usageExample": "createMenu({label:\"Действия\",items:[{id:\"open\",label:\"Открыть\",shortcut:\"⌘O\"}]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Системы управления и инженерные интерфейсы: Группы команд, горячие клавиши-подсказки, отмеченные пункты и вложенное меню.",
+        "rationale": "Предсказуемая семантика, явная идентичность/состояние, общий ритм и клавиатура вместо визуального копирования редактора.",
+        "alternatives": [
+          "Нативные HTML-элементы для простых случаев."
+        ],
+        "limitations": "Данные и внешние действия принадлежат приложению. Browser/AT/host evidence отделены; функциональные тесты не сертифицируют интерфейс.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/ARIA/apg/",
+          "https://app.openpencil.dev/demo"
+        ]
+      },
+      "anatomy": [
+        "Подписанный корень",
+        "Семантические действия",
+        "Состояние и обратная связь"
+      ],
+      "variants": [
+        "Основное представление",
+        "Длинные подписи",
+        "Узкая область"
+      ],
+      "states": [
+        "ready",
+        "disabled",
+        "focus-visible",
+        "empty"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "data-table",
+      "name": "Таблица данных",
+      "summary": "Семантическая таблица с запросами сортировки, выбором строк и состояниями.",
+      "category": "controls",
+      "tags": [
+        "management",
+        "engineering",
+        "data-table"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createDataTable",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "i18n-contract",
+        "enterprise-table-actions"
+      ],
+      "extensions": [
+        "onSort",
+        "onSelectionChange",
+        "onPageChange",
+        "setRows",
+        "setSort",
+        "setSelection",
+        "setStatus",
+        "setPage"
+      ],
+      "usageExample": "createDataTable({caption:\"Устройства\",columns:[{id:\"name\",label:\"Имя\"}],rows:[{id:\"one\",cells:{name:\"Контроллер\"}}]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Системы управления и инженерные интерфейсы: Семантическая таблица с запросами сортировки, выбором строк и состояниями.",
+        "rationale": "Предсказуемая семантика, явная идентичность/состояние, общий ритм и клавиатура вместо визуального копирования редактора.",
+        "alternatives": [
+          "Нативные HTML-элементы для простых случаев."
+        ],
+        "limitations": "Данные и внешние действия принадлежат приложению. Browser/AT/host evidence отделены; функциональные тесты не сертифицируют интерфейс.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/ARIA/apg/",
+          "https://app.openpencil.dev/demo"
+        ]
+      },
+      "anatomy": [
+        "Подписанный корень",
+        "Семантические действия",
+        "Состояние и обратная связь"
+      ],
+      "variants": [
+        "Основное представление",
+        "Длинные подписи",
+        "Узкая область"
+      ],
+      "states": [
+        "ready",
+        "disabled",
+        "focus-visible",
+        "empty"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "tree",
+      "name": "Дерево объектов",
+      "summary": "Явная иерархия объектов и слоёв с раскрытием, клавиатурой, выбором и отдельными действиями строки; обычная и компактная плотность.",
+      "category": "controls",
+      "tags": [
+        "management",
+        "engineering",
+        "tree",
+        "hierarchy",
+        "layers",
+        "compact",
+        "слои",
+        "вложенность"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createTree",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "i18n-contract",
+        "enterprise-tree-navigation"
+      ],
+      "extensions": [
+        "onSelect",
+        "onExpand",
+        "setNodes",
+        "setSelection",
+        "setExpanded",
+        "density"
+      ],
+      "usageExample": "createTree({label:\"Объекты\",density:\"compact\",nodes:[{id:\"system\",label:\"Система\"},{id:\"device\",parentId:\"system\",label:\"Контроллер\"}],expandedIds:[\"system\"]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Системы управления и инженерные интерфейсы: Явная иерархия с раскрытием, клавиатурой, выбором и отдельными действиями строки.",
+        "rationale": "Предсказуемая семантика, явная идентичность/состояние, общий ритм и клавиатура вместо визуального копирования редактора.",
+        "alternatives": [
+          "Нативные HTML-элементы для простых случаев."
+        ],
+        "limitations": "Данные и внешние действия принадлежат приложению. Browser/AT/host evidence отделены; функциональные тесты не сертифицируют интерфейс. Compact сокращает видимую подпись, сохраняя полное доступное имя и title; крупный текст увеличивает строку. Виртуализации строк нет. UI-состояние и адаптация к документу принадлежат приложению.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/ARIA/apg/",
+          "https://app.openpencil.dev/demo"
+        ]
+      },
+      "anatomy": [
+        "Подписанный корень",
+        "Семантические действия",
+        "Состояние и обратная связь"
+      ],
+      "variants": [
+        "Основное представление",
+        "Длинные подписи",
+        "Узкая область",
+        "comfortable — по умолчанию",
+        "compact — минимум 24 CSS px"
+      ],
+      "states": [
+        "ready",
+        "disabled",
+        "focus-visible",
+        "empty"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "settings-panel",
+      "name": "Панель настроек",
+      "summary": "Категории, группы и ровные строки настроек; чувствительные поля очищаются при уходе.",
+      "category": "controls",
+      "tags": [
+        "management",
+        "engineering",
+        "settings-panel"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createSettingsPanel",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "i18n-contract"
+      ],
+      "extensions": [
+        "onChange",
+        "setValue",
+        "categories[].groups[].rows[].mount"
+      ],
+      "usageExample": "createSettingsPanel({title:\"Настройки\",categories:[{id:\"general\",label:\"Основные\",groups:[{id:\"appearance\",title:\"Внешний вид\",rows:[{id:\"name\",label:\"Имя\",mount:()=>document.createElement(\"input\")}]}]}]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Системы управления и инженерные интерфейсы: Категории, группы и ровные строки настроек; чувствительные поля очищаются при уходе.",
+        "rationale": "Предсказуемая семантика, явная идентичность/состояние, общий ритм и клавиатура вместо визуального копирования редактора.",
+        "alternatives": [
+          "Нативные HTML-элементы для простых случаев."
+        ],
+        "limitations": "Данные и внешние действия принадлежат приложению. Browser/AT/host evidence отделены; функциональные тесты не сертифицируют интерфейс.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/ARIA/apg/",
+          "https://app.openpencil.dev/demo"
+        ]
+      },
+      "anatomy": [
+        "Подписанный корень",
+        "Семантические действия",
+        "Состояние и обратная связь"
+      ],
+      "variants": [
+        "Основное представление",
+        "Длинные подписи",
+        "Узкая область"
+      ],
+      "states": [
+        "ready",
+        "disabled",
+        "focus-visible",
+        "empty"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "masonry-layout",
+      "name": "Сетка Pinterest · Masonry layout",
+      "summary": "Адаптивная лента карточек естественной высоты: добавление, удаление и пересчёт без смены порядка чтения.",
+      "category": "layout",
+      "tags": [
+        "pinterest",
+        "pinterset",
+        "pinteresst",
+        "masonry-layout",
+        "masonry",
+        "grid",
+        "layout",
+        "пинтерест",
+        "сетка",
+        "карточки",
+        "лента"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createMasonryLayout",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "keyboard-flow",
+        "zoom-reflow",
+        "performance-evidence",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "layout-alignment-anchors",
+        "a11y-structure-reading",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "bind existing container",
+        "auto/fixed columns",
+        "minColumnWidth",
+        "gap",
+        "rowHeight",
+        "refresh/update/dispose",
+        "ResizeObserver",
+        "dynamic children",
+        "image load fallback",
+        "wide cards"
+      ],
+      "usageExample": "const grid = createMasonryLayout({document, items:cards, minColumnWidth:280, gap:16});\ncontainer.append(grid.element);\ngrid.element.append(newCard);\ngrid.update({columns:3});\n// grid.dispose();",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 131072
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Адаптивные каталоги и галереи с карточками разной высоты.",
+        "rationale": "Одна локальная реализация для библиотеки и каталога. Обычный CSS Grid сохраняет DOM и Tab порядок, наблюдатели обновляют геометрию по событиям.",
+        "alternatives": [
+          "Обычный CSS Grid для равной высоты.",
+          "Пагинация для больших данных; render-window для дорогого содержимого."
+        ],
+        "limitations": "Высота округляется до шага rowHeight + gap; плотная перестановка не применяется. Нужна естественная высота и нулевые внешние вертикальные отступы. Без observers вызывать refresh. AT и CPU/RSS квалификация не завершены.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence.html",
+          "https://www.w3.org/TR/css-grid-1/"
+        ]
+      },
+      "anatomy": [
+        "Контейнер сетки",
+        "Карточки естественной высоты"
+      ],
+      "variants": [
+        "responsive",
+        "fixed-columns",
+        "wide-card",
+        "light",
+        "dark"
+      ],
+      "states": [
+        "пусто",
+        "готово",
+        "изменение размера",
+        "добавление",
+        "удаление",
+        "скрыто",
+        "disposed"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "dropdown-select",
+      "name": "Выпадающий список с поиском",
+      "summary": "Локальный выбор одного значения: поиск, группы, недоступные варианты и синхронизация с формой.",
+      "category": "controls",
+      "tags": [
+        "select",
+        "dropdown-select",
+        "dropdown",
+        "combobox",
+        "searchable",
+        "nice-select",
+        "nice-select2",
+        "выпадающий",
+        "список",
+        "поиск",
+        "выбор",
+        "форма"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createDropdownSelect",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "i18n-contract",
+        "enterprise-selection"
+      ],
+      "extensions": [
+        "local filtering",
+        "native form value/reset",
+        "placeholder",
+        "groups",
+        "disabled/required/error",
+        "silent setters",
+        "dynamic options",
+        "keyboard/IME",
+        "viewport placement",
+        "dispose"
+      ],
+      "usageExample": "const control = createDropdownSelect({document,label:\"Команда\",options:[{value:\"design\",label:\"Дизайн\"},{value:\"engineering\",label:\"Разработка\"}],name:\"team\",searchable:true,onChange:value=>chooseTeam(value)});\ncontainer.append(control.element);\n// control.setOptions(nextOptions);\n// control.dispose();",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Выбор одного локального значения из списка с возможностью найти его по тексту.",
+        "rationale": "Стилизованный combobox дополняет нативный select; значение формы и ввод поискового запроса разделены, ресурсы принадлежат экземпляру.",
+        "alternatives": [
+          "createSelect для простого нативного выбора.",
+          "Отдельный серверный поиск для больших справочников."
+        ],
+        "limitations": "Только одиночный выбор, до 500 локальных вариантов. Данные и persistence принадлежат host. AT, полный browser/performance qualification и внешняя consumer qualification не заявлены.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+          "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html"
+        ]
+      },
+      "anatomy": [
+        "Подпись и поле combobox",
+        "Раскрываемый listbox",
+        "Группы и варианты",
+        "Подсказка и ошибка",
+        "Нативное значение формы"
+      ],
+      "variants": [
+        "searchable",
+        "select-only",
+        "light",
+        "dark"
+      ],
+      "states": [
+        "закрыт",
+        "открыт",
+        "поиск",
+        "нет совпадений",
+        "пусто",
+        "недоступен",
+        "ошибка",
+        "disposed"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "data-grid",
+      "name": "Таблица данных · Data Grid",
+      "summary": "Сортировка, фильтры, правки и выбор строк; виртуальная отрисовка строк и столбцов или постраничный режим.",
+      "category": "controls",
+      "tags": [
+        "data-grid",
+        "data grid",
+        "table",
+        "таблица",
+        "grid",
+        "virtual",
+        "виртуализация",
+        "async",
+        "sortable",
+        "editable",
+        "filterable",
+        "сортировка",
+        "фильтры",
+        "редактирование",
+        "regular-table",
+        "data-grid-component"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createDataGrid",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "i18n-contract",
+        "enterprise-table-actions"
+      ],
+      "extensions": [
+        "local or callback data source",
+        "two-axis virtualization",
+        "structured filtering and search",
+        "sorting",
+        "stable-ID selection",
+        "editing validation",
+        "column resize/order/visibility",
+        "grouped headers",
+        "paged mode",
+        "cancellation and stale response fencing",
+        "dispose"
+      ],
+      "usageExample": "const grid = createDataGrid({document,label:\"Задачи\",columns:[{id:\"name\",label:\"Название\",editable:true}],rows:[{id:\"one\",cells:{name:\"Исследовать\"}}],mode:\"virtual\"});\ncontainer.append(grid.element);\n// grid.dispose();",
+      "budget": {
+        "mountP95Ms": 50,
+        "interactionP95Ms": 50,
+        "retainedBytesPerInstance": 1048576
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Большие рабочие таблицы с поиском, фильтрами, правками и выбором строк; асинхронная выдача видимой области.",
+        "rationale": "Двумерное окно ограничивает живой DOM; источник данных и renderer имеют явный жизненный цикл и защищают идентичность строк.",
+        "alternatives": [
+          "createDataTable для небольшой нативной таблицы с данными и пагинацией приложения.",
+          "Постраничный режим Data Grid для многострочного текста и деталей."
+        ],
+        "limitations": "Фиксированная высота строк и известная ширина колонок в виртуальном режиме. Host отвечает за транспорт, данные, права и долговременное сохранение. Бюджеты — целевые, не измеренная гарантия. Полная AT и consumer qualification не заявлены.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/ARIA/apg/patterns/grid/",
+          "https://www.w3.org/WAI/ARIA/apg/practices/grid-and-table-properties/",
+          "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html"
+        ]
+      },
+      "anatomy": [
+        "Название и поиск",
+        "Настройки и фильтры",
+        "Заголовки колонок и групп",
+        "Видимое окно строк и ячеек",
+        "Редактор и действия",
+        "Состояние и навигация"
+      ],
+      "variants": [
+        "virtual",
+        "paged",
+        "light",
+        "dark"
+      ],
+      "states": [
+        "ready",
+        "loading",
+        "empty",
+        "error",
+        "editing",
+        "saving",
+        "disposed"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "code-viewer",
+      "name": "Просмотр кода",
+      "summary": "Подсветка синтаксиса, поиск, выделение, копирование и номера строк; локальные языковые анализаторы.",
+      "category": "controls",
+      "tags": [
+        "код",
+        "code",
+        "syntax",
+        "подсветка",
+        "source",
+        "vscode",
+        "редактор",
+        "readonly"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createCodeViewer",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "i18n-contract"
+      ],
+      "extensions": [
+        "offline",
+        "profiles",
+        "bounded document",
+        "lifecycle",
+        "literal source",
+        "dispose",
+        "toolbarMode: compact/labeled",
+        "tooltipDelayMs:0..5000ms"
+      ],
+      "usageExample": "const view = createCodeViewer({document,code:\"Hello\"});\ncontainer.append(view.element);\n// view.dispose();",
+      "budget": {
+        "mountP95Ms": 250,
+        "interactionP95Ms": 100,
+        "retainedBytesPerInstance": 8388608
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Подсветка синтаксиса, поиск, выделение, копирование и номера строк; локальные языковые анализаторы.",
+        "rationale": "Раздельные модель текста, языковые анализаторы и безопасный просмотр; общий движок и явный жизненный цикл.",
+        "alternatives": [
+          "Обычный pre/code для небольшого одноцветного текста.",
+          "Хостовый редактор для IDE, language server и файловой системы."
+        ],
+        "limitations": "Локальные языки и ограниченный документ; бюджет — целевой. Нет runtime CDN, language server, выполнения кода или автоматического сохранения. Браузерная/AT и consumer qualification не заявлены.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html",
+          "https://spec.commonmark.org/0.31.2/"
+        ]
+      },
+      "anatomy": [
+        "Контекст документа",
+        "Локальные действия",
+        "Область исходника/документа",
+        "Состояние"
+      ],
+      "variants": [
+        "text",
+        "javascript",
+        "typescript",
+        "json",
+        "csharp",
+        "python",
+        "html",
+        "css",
+        "sql",
+        "markdown",
+        "shell",
+        "yaml",
+        "light",
+        "dark",
+        "compact toolbar (default)",
+        "labeled toolbar"
+      ],
+      "states": [
+        "loading",
+        "ready",
+        "error",
+        "disposed"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "markdown-viewer",
+      "name": "Просмотр Markdown",
+      "summary": "Документ Markdown и подсвеченный исходник: заголовки, списки, таблицы и блоки кода.",
+      "category": "controls",
+      "tags": [
+        "markdown",
+        "md",
+        "просмотр",
+        "документ",
+        "исходник",
+        "preview",
+        "source"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createMarkdownViewer",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "i18n-contract"
+      ],
+      "extensions": [
+        "offline",
+        "profiles",
+        "bounded document",
+        "lifecycle",
+        "literal source",
+        "dispose"
+      ],
+      "usageExample": "const view = createMarkdownViewer({document,markdown:\"Hello\"});\ncontainer.append(view.element);\n// view.dispose();",
+      "budget": {
+        "mountP95Ms": 250,
+        "interactionP95Ms": 100,
+        "retainedBytesPerInstance": 8388608
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Документ Markdown и подсвеченный исходник: заголовки, списки, таблицы и блоки кода.",
+        "rationale": "Раздельные модель текста, языковые анализаторы и безопасный просмотр; общий движок и явный жизненный цикл.",
+        "alternatives": [
+          "Обычный pre/code для небольшого одноцветного текста.",
+          "Хостовый редактор для IDE, language server и файловой системы."
+        ],
+        "limitations": "Локальные языки и ограниченный документ; бюджет — целевой. Нет runtime CDN, language server, выполнения кода или автоматического сохранения. Браузерная/AT и consumer qualification не заявлены.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html",
+          "https://spec.commonmark.org/0.31.2/"
+        ]
+      },
+      "anatomy": [
+        "Контекст документа",
+        "Локальные действия",
+        "Область исходника/документа",
+        "Состояние"
+      ],
+      "variants": [
+        "rendered",
+        "source",
+        "light",
+        "dark"
+      ],
+      "states": [
+        "loading",
+        "ready",
+        "error",
+        "disposed"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "markdown-editor",
+      "name": "Редактор Markdown с предпросмотром",
+      "summary": "Редактирование Markdown с историей, локальными файлами и общим просмотром рядом с исходником.",
+      "category": "controls",
+      "tags": [
+        "markdown",
+        "md",
+        "editor",
+        "редактирование",
+        "предпросмотр",
+        "split",
+        "файл"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createMarkdownEditor",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "i18n-contract"
+      ],
+      "extensions": [
+        "offline",
+        "profiles",
+        "bounded document",
+        "lifecycle",
+        "literal source",
+        "dispose"
+      ],
+      "usageExample": "const view = createMarkdownEditor({document,markdown:\"Hello\"});\ncontainer.append(view.element);\n// view.dispose();",
+      "budget": {
+        "mountP95Ms": 250,
+        "interactionP95Ms": 100,
+        "retainedBytesPerInstance": 8388608
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Редактирование Markdown с историей, локальными файлами и общим просмотром рядом с исходником.",
+        "rationale": "Раздельные модель текста, языковые анализаторы и безопасный просмотр; общий движок и явный жизненный цикл.",
+        "alternatives": [
+          "Обычный pre/code для небольшого одноцветного текста.",
+          "Хостовый редактор для IDE, language server и файловой системы."
+        ],
+        "limitations": "Локальные языки и ограниченный документ; бюджет — целевой. Нет runtime CDN, language server, выполнения кода или автоматического сохранения. Браузерная/AT и consumer qualification не заявлены.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html",
+          "https://spec.commonmark.org/0.31.2/"
+        ]
+      },
+      "anatomy": [
+        "Контекст документа",
+        "Локальные действия",
+        "Область исходника/документа",
+        "Состояние"
+      ],
+      "variants": [
+        "edit",
+        "split",
+        "preview",
+        "light",
+        "dark"
+      ],
+      "states": [
+        "loading",
+        "ready",
+        "error",
+        "disposed"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "git-history",
+      "name": "История Git",
+      "summary": "Граф коммитов, родителей и refs с поиском и подробностями.",
+      "category": "visualization",
+      "tags": [
+        "history",
+        "timeline",
+        "graph",
+        "история",
+        "git"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createGitHistory",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "accessible-name",
+        "predictable-navigation",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "form-row-semantic-group",
+        "form-row-control-alignment",
+        "form-row-common-density",
+        "form-row-feedback-track",
+        "form-row-reflow-order",
+        "form-row-disclosure-visibility",
+        "form-row-label-alignment",
+        "form-field-inline-alignment",
+        "form-field-track-order"
+      ],
+      "extensions": [
+        "callbacks",
+        "CSS variables",
+        "snapshot replacement",
+        "dispose"
+      ],
+      "usageExample": "createGitHistory({commits:[{id:\"c1\",title:\"Первый коммит\",parents:[]}]})",
+      "budget": {
+        "mountP95Ms": 200,
+        "interactionP95Ms": 100,
+        "retainedBytesPerInstance": 4194304
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Граф коммитов, родителей и refs с поиском и подробностями.",
+        "rationale": "Один список и точные центры строк сохраняют чтение, клавиатуру и переносы; connectionCurve повторяет Atlas, связи не выдумываются.",
+        "alternatives": [
+          "createCardConnections для свободных карточек; createDataTable для плоских журналов."
+        ],
+        "limitations": "240 коммитов, 12 одновременных дорожек, reverse topological snapshot. Нет Git команд, branch membership, obstacle routing или пагинации. Draft, полный native/AT/load допуск не установлен.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+          "https://m3.material.io/foundations/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "anatomy": [
+        "Поиск и фильтр",
+        "SVG-дорожки явных связей",
+        "Список native buttons",
+        "Панель подробностей",
+        "Статус выборки"
+      ],
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "данные",
+        "выбрано",
+        "фильтр",
+        "пусто",
+        "граница снимка",
+        "dispose"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "task-history",
+      "name": "История задач",
+      "summary": "Дорожки задач, журнал событий и явные зависимости с host-owned actions.",
+      "category": "visualization",
+      "tags": [
+        "history",
+        "timeline",
+        "graph",
+        "история",
+        "задачи"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createTaskHistory",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "accessible-name",
+        "predictable-navigation",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "form-row-semantic-group",
+        "form-row-control-alignment",
+        "form-row-common-density",
+        "form-row-feedback-track",
+        "form-row-reflow-order",
+        "form-row-disclosure-visibility",
+        "form-row-label-alignment",
+        "form-field-inline-alignment",
+        "form-field-track-order"
+      ],
+      "extensions": [
+        "callbacks",
+        "CSS variables",
+        "snapshot replacement",
+        "dispose"
+      ],
+      "usageExample": "createTaskHistory({tasks:[{id:\"t1\",title:\"Редактор\"}],events:[{id:\"e1\",taskId:\"t1\",title:\"Создано\"}]})",
+      "budget": {
+        "mountP95Ms": 200,
+        "interactionP95Ms": 100,
+        "retainedBytesPerInstance": 4194304
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Дорожки задач, журнал событий и явные зависимости с host-owned actions.",
+        "rationale": "Один список и точные центры строк сохраняют чтение, клавиатуру и переносы; connectionCurve повторяет Atlas, связи не выдумываются.",
+        "alternatives": [
+          "createCardConnections для свободных карточек; createDataTable для плоских журналов."
+        ],
+        "limitations": "240 событий, 12 задач и 240 явных зависимостей. Дорожки неизменны при обновлении. Статус текущий, backend/сохранение принадлежат хосту. Draft, полный native/AT/load допуск не установлен.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+          "https://m3.material.io/foundations/",
+          "https://www.artlebedev.ru/backstage/navigation-rules/"
+        ]
+      },
+      "anatomy": [
+        "Поиск и фильтр",
+        "SVG-дорожки явных связей",
+        "Список native buttons",
+        "Панель подробностей",
+        "Статус выборки"
+      ],
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "данные",
+        "выбрано",
+        "фильтр",
+        "пусто",
+        "граница снимка",
+        "dispose"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "language-switcher",
+      "name": "Выбор языка",
+      "summary": "Самоназвания, пара или список по числу языков, спокойное оформление и примеры размещения в шапке/подвале меню.",
+      "category": "controls",
+      "tags": [
+        "language",
+        "locale",
+        "i18n",
+        "язык",
+        "локализация",
+        "настройки"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createLanguageSwitcher",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "i18n-contract"
+      ],
+      "extensions": [
+        "i18n",
+        "variant",
+        "names",
+        "onChange",
+        "dispose",
+        "appearance",
+        "labelVisibility"
+      ],
+      "usageExample": "createLanguageSwitcher({i18n,variant:\"auto\",appearance:\"quiet\",onChange:()=>savePreferences()})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Переключение включённых языков интерфейса без потери текущей работы.",
+        "rationale": "Самоназвания помогают найти знакомый язык; глобус дополняет видимый текст. Нативный select сохраняет платформенную клавиатуру.",
+        "alternatives": [
+          "inline для небольшой видимой пары",
+          "compact для ограниченного места и расширяемого списка",
+          "Ссылки на эквивалентные страницы, если переключение меняет URL.",
+          "auto с переходом пары в список при расширении локалей",
+          "quiet для служебной навигации; хост задаёт размещение"
+        ],
+        "limitations": "Меняет только locale контекста. Хост владеет переводом, навигацией и сохранением. Не выбор страны/валюты; screen reader/native qualification pending. Порог auto и закреплённый подвал — defaults AG; GOV.UK trial, не универсально доказанное лучшее место.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://designsystem.digital.gov/components/language-selector/",
+          "https://design-system.service.gov.uk/components/language-navigation/",
+          "https://www.w3.org/International/questions/qa-navigation-select",
+          "https://designsystem.digital.gov/patterns/select-a-language/two-languages/",
+          "https://designsystem.digital.gov/patterns/select-a-language/three-or-more-languages/"
+        ]
+      },
+      "anatomy": [
+        "Подпись языка",
+        "Декоративный глобус",
+        "Самоназвания языков и выбранное состояние"
+      ],
+      "variants": [
+        "compact",
+        "inline",
+        "auto"
+      ],
+      "states": [
+        "ready",
+        "selected",
+        "single-locale",
+        "focus-visible"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "golden-canon-grid",
+      "name": "Golden Canon Grid",
+      "summary": "Наложение диагональной сетки с реальными опорами, контрольными точками и отклонениями.",
+      "category": "layout",
+      "tags": [
+        "golden",
+        "canon",
+        "grid",
+        "сетка",
+        "верстка",
+        "композиция",
+        "pptx"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createGoldenCanonGrid",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "golden-canon-preferred",
+        "contrast"
+      ],
+      "extensions": [
+        "update",
+        "dispose",
+        "anchors",
+        "tolerance"
+      ],
+      "usageExample": "createGoldenCanonGrid({width:960,height:540,anchors:[{id:'title',x:320,y:180}]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "design": {
+        "intendedUse": "Геометрическая проверка выбранных опор при композиции UI и PPTX.",
+        "rationale": "Один воспроизводимый профиль и явный допуск вместо визуальной догадки.",
+        "alternatives": [
+          "Обязательная сетка бренда",
+          "Колонки при плотных операционных формах"
+        ],
+        "limitations": "Draft. Геометрия не измеряет baseline/ink, понимание, эстетику и AT. Не копия BONT V3. Бюджеты являются целями.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://grids.obys.agency/",
+          "https://habr.com/ru/articles/479580/"
+        ]
+      },
+      "anatomy": [
+        "Носитель",
+        "Направляющие",
+        "Контрольные точки",
+        "Опоры и отклонения"
+      ],
+      "states": [
+        "empty anchors: unknown",
+        "hit",
+        "miss",
+        "disposed"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "layout-grid-overlay",
+      "name": "Сетки композиции · Layout grid inspector",
+      "summary": "14смысловых сеток, кино/фото framing, вложенные scopes и те же числовые targets в overlay/MCP/PPTX.",
+      "category": "layout",
+      "tags": [
+        "grid",
+        "grids",
+        "сетка",
+        "сетки",
+        "колонки",
+        "baseline",
+        "modular",
+        "bento",
+        "spacing",
+        "thirds",
+        "manuscript",
+        "mcp",
+        "cinematic",
+        "photography",
+        "кино",
+        "фото",
+        "композиция кадра",
+        "14 grids"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createLayoutGridOverlay",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "design-rationale",
+        "qualification"
+      ],
+      "extensions": [
+        "update",
+        "dispose",
+        "report",
+        "profiles",
+        "scopes",
+        "anchors",
+        "explicit guide anchors",
+        "finite segments/circles/regions",
+        "markerScale"
+      ],
+      "usageExample": "createLayoutGridOverlay({width:600,height:400,grid:{type:'columns'},anchors:[{id:'field',x:16,kind:'x-line'}]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "design": {
+        "intendedUse": "Геометрическая инспекция нескольких сеток по назначению страницы и компонентов.",
+        "rationale": "Одинаковый числовой контракт для overlay, offline, PPTX и MCP без распознавания изображений.",
+        "alternatives": [
+          "Golden Canon для свободной композиции",
+          "Обязательные сетки хозяина",
+          "CSS subgrid для реального наследования tracks"
+        ],
+        "limitations": "Draft. Непроверенные baselines/оптические точки unknown. Геометрия не доказывает качество, AT или native Office. Целевые бюджеты требуют host evidence. New framing templates use declared optical points; no image recognition or aesthetic certificate. Inherited axes clear local special guides.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://atlassian.design/foundations/grid",
+          "https://www.carbondesignsystem.com/building-blocks/foundations/2x-grid/overview"
+        ]
+      },
+      "anatomy": [
+        "Носитель",
+        "Направляющие",
+        "Контрольные точки",
+        "Опоры и отклонения"
+      ],
+      "states": [
+        "empty: unknown",
+        "hit",
+        "miss",
+        "unknown",
+        "inherited axes",
+        "disposed"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "textarea",
+      "name": "Многострочное поле",
+      "summary": "Нативный textarea с постоянной подписью, подсказкой и оформлением полей AG.",
+      "category": "controls",
+      "tags": [
+        "textarea",
+        "multiline",
+        "multirow",
+        "text",
+        "form",
+        "многострочное",
+        "поле",
+        "комментарий",
+        "заметка"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createTextarea",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "target-size",
+        "contrast",
+        "keyboard-flow",
+        "zoom-reflow",
+        "performance-evidence",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "form-field-purpose",
+        "form-label-persistence",
+        "form-constraints-before-error",
+        "form-control-task-fit",
+        "form-error-recovery-extended",
+        "form-reuse-known-data",
+        "form-submit-integrity",
+        "form-draft-stage",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-concentric-corners",
+        "apple-neighbor-shapes",
+        "apple-shape-variants",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "a11y-authentication",
+        "a11y-slider-drag-alternative",
+        "i18n-contract",
+        "enterprise-text-entry"
+      ],
+      "extensions": [
+        "native textarea attributes",
+        "value and selection",
+        "host input/change listeners",
+        "maxLength with remaining counter",
+        "sync and dispose"
+      ],
+      "usageExample": "const field = createTextarea({id:\"note\",label:\"Комментарий\",maxLength:1200});\ncontainer.append(field);\n// field.sync(); field.dispose();",
+      "budget": {
+        "mountP95Ms": 4,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 65536
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Многострочные заметки, комментарии и контекст графика.",
+        "rationale": "Сохраняет нативное редактирование, видимую подпись и общий язык существующих полей.",
+        "alternatives": [
+          "createField для одной строки",
+          "Code/Markdown editor для исходного кода и форматирования"
+        ],
+        "limitations": "Native UTF-16 maximum; programmatic values require sync(), server validation stays host-owned. Dispose counter subscriptions on unmount. Native/AT qualification separate.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.carbondesignsystem.com/building-blocks/core/components/text-input/guidelines",
+          "https://fluent2.microsoft.design/components/web/react/core/textarea/usage/",
+          "https://spectrum.adobe.com/web/rsp/components/text-area",
+          "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3",
+      "anatomy": [
+        "Постоянная видимая подпись",
+        "Native textarea",
+        "Связанные hint/error"
+      ],
+      "variants": [
+        "rows",
+        "resize: vertical/none",
+        "density: compact/comfortable/touch",
+        "readonly/disabled/required",
+        "error"
+      ],
+      "states": [
+        "empty",
+        "filled",
+        "focus",
+        "readonly",
+        "disabled",
+        "invalid"
+      ]
+    },
+    {
+      "id": "async-boundary",
+      "name": "Асинхронная граница",
+      "summary": "Загрузка owned-компонента: отмена, таймаут, защита от устаревших ответов, сохранение содержимого при обновлении и безопасный retry.",
+      "category": "feedback",
+      "tags": [
+        "async-boundary",
+        "async",
+        "asynchronous components",
+        "асинхронный компонент",
+        "асинхронные компоненты",
+        "загрузка",
+        "отмена",
+        "retry",
+        "timeout",
+        "race condition",
+        "cancellation",
+        "stale content",
+        "async component",
+        "асинхронная загрузка"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createAsyncBoundary",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "keyboard-flow",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "async-component-lifecycle"
+      ],
+      "extensions": [
+        "load({signal,key})",
+        "run({key,load})",
+        "cancel",
+        "dispose",
+        "state"
+      ],
+      "usageExample": "createAsyncBoundary({label:'Отчёт',key:reportId,load:({signal,key})=>loadReport({signal,key})})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Именованная область",
+        "Owned content / aria-busy",
+        "Polite status",
+        "Явный retry/cancel"
+      ],
+      "variants": [
+        "initial load",
+        "same-key background refresh",
+        "explicit identity change"
+      ],
+      "states": [
+        "idle",
+        "loading",
+        "ready",
+        "empty",
+        "error",
+        "cancelled",
+        "disposed"
+      ],
+      "design": {
+        "intendedUse": "Асинхронные карточки, previews и панели с явным владельцем ресурсов.",
+        "rationale": "Единый lifecycle и generation fencing предотвращают гонки и удержание поздних компонентов.",
+        "alternatives": [
+          "Синхронный компонент для простого UI",
+          "Host query cache плюс boundary для owned DOM",
+          "render-window для видимости и async-boundary для Promise"
+        ],
+        "limitations": "Abort кооперативный; нет shared cache, polling, auto retry, мутаций или SSR. Defaults и budget — authored targets, не измеренная production/AT квалификация. Async diagnostic callback rejections are contained; diagnostics never alter lifecycle outcomes.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal",
+          "https://react.dev/reference/react/useEffect",
+          "https://tanstack.com/query/latest/docs/framework/react/guides/query-cancellation",
+          "https://tanstack.com/query/latest/docs/framework/react/guides/background-fetching-indicators",
+          "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "palette-builder",
+      "name": "Конструктор палитры",
+      "summary": "Подбор палитры нажатием на цветное кольцо и перетаскиванием связанных точек, с гармониями и отдельными проверками AA/APCA.",
+      "category": "design-tools",
+      "tags": [
+        "palette-builder",
+        "palette",
+        "color palette",
+        "color wheel",
+        "harmony",
+        "палитра",
+        "подбор палитры",
+        "цветовой круг",
+        "цвета",
+        "OKLCH",
+        "HSL",
+        "design_palette",
+        "drag",
+        "hue",
+        "linked-handles"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createPaletteBuilder",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "palette-harmony-candidates",
+        "contrast",
+        "apca-preference",
+        "semantic-color-roles",
+        "a11y-noncolor-meaning",
+        "i18n-contract",
+        "qualification",
+        "design-rationale"
+      ],
+      "extensions": [
+        "generatePalette(options)",
+        "design_palette MCP",
+        "update(options)",
+        "result",
+        "dispose()",
+        "explicit i18n"
+      ],
+      "usageExample": "createPaletteBuilder({document,i18n,baseColor:'#176f56',background:'#ffffff',foreground:'#202126'})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Базовый цвет и контекст",
+        "Семь гармоний и круг",
+        "Проверки конкретных пар",
+        "Тональная шкала",
+        "JSON результата"
+      ],
+      "variants": [
+        "HSL / OKLCH",
+        "actual typography",
+        "light/dark host tokens",
+        "RU/EN explicit locale",
+        "linked pointer/keyboard hue handles"
+      ],
+      "states": [
+        "valid",
+        "invalid draft / stale result",
+        "neutral hue",
+        "gamut mapped",
+        "disposed"
+      ],
+      "design": {
+        "intendedUse": "Подбор и сравнение цветовых кандидатов для нового бренда/акцента с явным host контекстом.",
+        "rationale": "Гармония и доступность разделены; общий генератор/проверки одинаковы в браузере и MCP.",
+        "alternatives": [
+          "Существующий профиль проекта",
+          "design_contrast для одной пары",
+          "design_color_scheme для набора реальных текстовых пар"
+        ],
+        "limitations": "Draft. Не меняет профили. Не гарантирует эстетическое качество, CVD/AT/native/CMYK или полное WCAG соответствие. OKLCH не HCT/RYB. Budget targets unmeasured.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://color.adobe.com/create/color-wheel",
+          "https://bottosson.github.io/posts/oklab/",
+          "https://www.w3.org/TR/css-color-4/",
+          "https://developer.android.com/design/ui/mobile/guides/styles/color",
+          "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+          "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+          "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+          "https://github.com/Myndex/SAPC-APCA/blob/master/documentation/minimum_compliance.md"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "catalog-card",
+      "name": "Карточка каталога",
+      "summary": "Сравнение товаров или компонентов: понятное назначение, честные факты, отдельные действия и borrowed media без фиксированной высоты.",
+      "category": "data",
+      "tags": [
+        "catalog-card",
+        "catalog card",
+        "product card",
+        "карточка товара",
+        "карточка компонента",
+        "товар",
+        "презентация товара",
+        "каталог"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createCatalogCard",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "catalog-item-presentation-guidance",
+        "qualification",
+        "design-rationale",
+        "i18n-contract",
+        "a11y-keyboard-focus",
+        "a11y-status-announcement"
+      ],
+      "extensions": [
+        "host callbacks",
+        "literal metadata",
+        "state",
+        "update",
+        "dispose",
+        "borrowed media"
+      ],
+      "usageExample": "createCatalogCard({title:'Предмет',summary:'Для какой задачи',facts:[{label:'Версия',value:'1.0'}]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Идентичность и назначение",
+        "Решающие факты",
+        "Отдельные действия",
+        "Host media"
+      ],
+      "variants": [
+        "framed/plain",
+        "headingLevel2–6",
+        "product/component metadata"
+      ],
+      "states": [
+        "metadata",
+        "unknown/zero reviews",
+        "focused action",
+        "disposed"
+      ],
+      "design": {
+        "intendedUse": "Товарные и компонентные каталоги, где нужно сравнение и прозрачный переход к деталям.",
+        "rationale": "Содержание и управление выбором отделены от host layout, transport и свидетельств качества.",
+        "alternatives": [
+          "Existing host card/query controls",
+          "issue-summary для задач",
+          "data-table для строгого сравнения строк"
+        ],
+        "limitations": "Draft; host data/claims/resources/routes/index remain host-owned. Does not replace Pinterest/masonry or qualify AT/native/fullWCAG/performance. Budgets are targets, not measurements.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://baymard.com/research-articles/product-listing-information",
+          "https://baymard.com/research-articles/ecommerce-search-query-types",
+          "https://help.shopify.com/en/manual/products/product-media",
+          "https://seller.wildberries.ru/instructions/ru/ru/material/item-photo-rules-recommendations-and-common-mistakes",
+          "https://www.carbondesignsystem.com/building-blocks/core/patterns/filtering",
+          "https://spectrum.adobe.com/web/rsp/components/search-field",
+          "https://www.w3.org/WAI/tutorials/page-structure/content/",
+          "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "catalog-search-controls",
+      "name": "Поиск и фильтры каталога",
+      "summary": "Нативный поиск с draft/applied фильтрами, chips, сбросом и revision-bound статусом; индекс, transport и раскладка остаются у host.",
+      "category": "data",
+      "tags": [
+        "catalog-search-controls",
+        "catalog search",
+        "product search",
+        "поиск товаров",
+        "поиск компонентов",
+        "фильтры",
+        "search controls",
+        "catalog",
+        "form-row",
+        "inline form",
+        "поля в строке"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createCatalogSearchControls",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "catalog-discovery-guidance",
+        "qualification",
+        "design-rationale",
+        "i18n-contract",
+        "a11y-keyboard-focus",
+        "a11y-status-announcement",
+        "form-row-semantic-group",
+        "form-row-control-alignment",
+        "form-row-common-density",
+        "form-row-feedback-track",
+        "form-row-reflow-order",
+        "form-row-disclosure-visibility"
+      ],
+      "extensions": [
+        "onChange(request,reason)",
+        "draft/applied",
+        "report({revision,status,total})",
+        "update(value)",
+        "state",
+        "dispose",
+        "adjacentFields: host-owned labels (max4)"
+      ],
+      "usageExample": "createCatalogSearchControls({label:'Найти',onChange:request=>loadResults(request)})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Нативный запрос",
+        "Фильтры и сортировка",
+        "Применённые chips",
+        "Count/status вне выдачи"
+      ],
+      "variants": [
+        "submit/instant",
+        "single/multiple facets",
+        "revision receipts"
+      ],
+      "states": [
+        "draft/applied",
+        "loading",
+        "ready/no matches",
+        "error/stale",
+        "disposed"
+      ],
+      "design": {
+        "intendedUse": "Товарные и компонентные каталоги, где нужно сравнение и прозрачный переход к деталям.",
+        "rationale": "Содержание и управление выбором отделены от host layout, transport и свидетельств качества.",
+        "alternatives": [
+          "Existing host card/query controls",
+          "issue-summary для задач",
+          "data-table для строгого сравнения строк"
+        ],
+        "limitations": "Draft; host data/claims/resources/routes/index remain host-owned. Does not replace Pinterest/masonry or qualify AT/native/fullWCAG/performance. Budgets are targets, not measurements.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://baymard.com/research-articles/product-listing-information",
+          "https://baymard.com/research-articles/ecommerce-search-query-types",
+          "https://help.shopify.com/en/manual/products/product-media",
+          "https://seller.wildberries.ru/instructions/ru/ru/material/item-photo-rules-recommendations-and-common-mistakes",
+          "https://www.carbondesignsystem.com/building-blocks/core/patterns/filtering",
+          "https://spectrum.adobe.com/web/rsp/components/search-field",
+          "https://www.w3.org/WAI/tutorials/page-structure/content/",
+          "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+          "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "event-bus",
+      "name": "Шина событий",
+      "summary": "Scoped обмен событиями: три tier, bounded FIFO, TTL, coalescing и очистка подписок.",
+      "category": "feedback",
+      "tags": [
+        "event-bus",
+        "event bus",
+        "шина событий",
+        "coordination",
+        "shared data",
+        "общие данные",
+        "high load",
+        "высокая нагрузка",
+        "lifecycle",
+        "hot gestures"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createEventBus",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "keyboard-flow",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "event-bus-coordination-guidance",
+        "request-routing-data-guidance",
+        "realtime-ui-load-guidance"
+      ],
+      "extensions": [
+        "subscribe/publish/flush/dispose",
+        "AbortSignal",
+        "immutable stats"
+      ],
+      "usageExample": "createEventBus({capacityPerTier:1024,autoFlush:true})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Headless scope",
+        "Bounded queues",
+        "Explicit ownership",
+        "Programmatic counters"
+      ],
+      "variants": [
+        "automatic slices",
+        "manual frame flush"
+      ],
+      "states": [
+        "idle",
+        "pending",
+        "active",
+        "overloaded",
+        "cancelled",
+        "disposed"
+      ],
+      "design": {
+        "intendedUse": "Scoped обмен событиями: три tier, bounded FIFO, TTL, coalescing и очистка подписок.",
+        "rationale": "Separate local notifications from shared asynchronous transport, with explicit bounded ownership.",
+        "alternatives": [
+          "Callback/parent state for small coupled UI",
+          "EventTarget for simple local signals",
+          "Existing mature host query layer for server state"
+        ],
+        "limitations": "Short synchronous notifications only. No transport, persistence, replay, async admission or hard real-time. Payload bytes and immutability belong to host. Headless core has no visual appearance; catalog/sandbox demos reuse host tokens and controls. Web/native-wrapper JS only, no separate native API qualification. Budgets are targets, not certified capacity.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget",
+          "https://developer.mozilla.org/en-US/docs/Web/API/Scheduler/postTask",
+          "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal",
+          "https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame",
+          "https://tanstack.com/query/latest/docs/framework/react/guides/important-defaults",
+          "https://tanstack.com/query/latest/docs/framework/react/guides/query-keys",
+          "https://tanstack.com/query/latest/docs/framework/react/guides/query-cancellation",
+          "https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel",
+          "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers",
+          "https://web.dev/articles/inp"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "request-router",
+      "name": "Роутер запросов",
+      "summary": "Именованные query/command: общий handler, query-only dedup/cache, deadlines и лимит физических вызовов.",
+      "category": "navigation",
+      "tags": [
+        "request-router",
+        "request router",
+        "роутер запросов",
+        "coordination",
+        "shared data",
+        "общие данные",
+        "high load",
+        "высокая нагрузка",
+        "lifecycle",
+        "hot gestures"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createRequestRouter",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "keyboard-flow",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "event-bus-coordination-guidance",
+        "request-routing-data-guidance",
+        "realtime-ui-load-guidance"
+      ],
+      "extensions": [
+        "register/request/invalidate/dispose",
+        "AbortSignal",
+        "immutable stats"
+      ],
+      "usageExample": "createRequestRouter({scopeKey:'opaque-session-epoch',maxConcurrent:6})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Headless scope",
+        "Bounded queues",
+        "Explicit ownership",
+        "Programmatic counters"
+      ],
+      "variants": [
+        "query sharing",
+        "command dispatch",
+        "explicit freshness"
+      ],
+      "states": [
+        "idle",
+        "pending",
+        "active",
+        "overloaded",
+        "cancelled",
+        "disposed"
+      ],
+      "design": {
+        "intendedUse": "Именованные query/command: общий handler, query-only dedup/cache, deadlines и лимит физических вызовов.",
+        "rationale": "Separate local notifications from shared asynchronous transport, with explicit bounded ownership.",
+        "alternatives": [
+          "Callback/parent state for small coupled UI",
+          "EventTarget for simple local signals",
+          "Existing mature host query layer for server state"
+        ],
+        "limitations": "Operation routing, not URL navigation. No automatic retries/polling/batching/SWR/exactly-once or rate limiting. Host owns complete keys, session scope, server authority and byte budgets; ignored abort retains active slot. Headless core has no visual appearance; catalog/sandbox demos reuse host tokens and controls. Web/native-wrapper JS only, no separate native API qualification. Budgets are targets, not certified capacity.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget",
+          "https://developer.mozilla.org/en-US/docs/Web/API/Scheduler/postTask",
+          "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal",
+          "https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame",
+          "https://tanstack.com/query/latest/docs/framework/react/guides/important-defaults",
+          "https://tanstack.com/query/latest/docs/framework/react/guides/query-keys",
+          "https://tanstack.com/query/latest/docs/framework/react/guides/query-cancellation",
+          "https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel",
+          "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers",
+          "https://web.dev/articles/inp"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "grid-icon-draft",
+      "name": "Иконка по сетке",
+      "summary": "Оригинальный bounded SVG starter с keylines, программными stroke bounds и отдельной оптической проверкой.",
+      "category": "visualization",
+      "tags": [
+        "grid-icon-draft",
+        "иконки",
+        "генерация иконок",
+        "icon generation",
+        "SVG",
+        "keylines",
+        "grid-first"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createGridIconDraft",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "keyboard-flow",
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "grid-icon-generation-guidance"
+      ],
+      "extensions": [
+        "bounded pure SVG/data draft",
+        "currentColor",
+        "visibleBounds",
+        "grid report"
+      ],
+      "usageExample": "createGridIconDraft({symbol:'focus',purpose:'ui',grid:{type:'icon-keylines'},label:'Focus'})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Original fixed primitives",
+        "Safe literal title/currentColor",
+        "Visible stroke bounds",
+        "Numeric construction report"
+      ],
+      "variants": [
+        "play",
+        "focus",
+        "image",
+        "compass"
+      ],
+      "states": [
+        "draft",
+        "constructed",
+        "host-review-unknown"
+      ],
+      "design": {
+        "intendedUse": "Первичные проверяемые черновики иконок по сетке до consumer integration.",
+        "rationale": "Агенты получают ограниченный SVG и числовые факты до image review; optically final work remains separate.",
+        "alternatives": [
+          "Reuse a familiar existing host icon",
+          "Author a distinct SVG under the same constraints",
+          "Use a raster illustration workflow when vector semantics are unsuitable"
+        ],
+        "limitations": "Four fixed original symbols, not unrestricted AI or arbitrary SVG parser. Headless data helper. UI24/keylines/spacing; illustrative64framing.80UTF16title; no external resources. Optical/recognition/contrast/AT/originality/host qualification unknown. Budgets are targets, not measured production claims.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.ibm.com/design/language/iconography/ui-icons/design/",
+          "https://m1.material.io/style/icons.html"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "popover",
+      "name": "Немодальная контекстная панель",
+      "summary": "Необязательные настройки рядом с триггером: закрытие/фокус, сохранённый DOM и принадлежащий компоненту слой.",
+      "category": "overlays",
+      "tags": [
+        "popover",
+        "gitlab",
+        "pajamas",
+        "popover",
+        "настройки вида",
+        "compact controls"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createPopover",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "nonmodal-popover-guidance",
+        "list-view-controls-guidance",
+        "qualification",
+        "i18n-contract",
+        "a11y-keyboard-focus",
+        "form-row-control-alignment"
+      ],
+      "extensions": [
+        "open/close",
+        "state",
+        "setDisabled",
+        "onOpenChange",
+        "dispose"
+      ],
+      "usageExample": "createPopover({label:'Вид',title:'Вид карточек',content:settingsElement})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Именованный триггер/контрол",
+        "Контекстное содержимое или направление",
+        "Видимый фокус и локальные значения"
+      ],
+      "variants": [
+        "click",
+        "nonmodal",
+        "top-layer/fallback",
+        "preserved-content"
+      ],
+      "states": [
+        "closed/open",
+        "disabled",
+        "disposed"
+      ],
+      "design": {
+        "intendedUse": "Необязательные настройки рядом с триггером: закрытие/фокус, сохранённый DOM и принадлежащий компоненту слой.",
+        "rationale": "Original AG implementation of source-backed work-list patterns, preserving native semantics and host ownership.",
+        "alternatives": [
+          "Existing select/dropdown-select and segmented-choice",
+          "Menu for commands; popup for a bounded modal task"
+        ],
+        "limitations": "Draft. Host owns content/data/listeners/routes/validation. AT/native-WebView/fullWCAG/production performance remain unqualified; budgets are targets, not measurements.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/popover/popover.vue",
+          "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/new_dropdowns/base_dropdown/base_dropdown.vue"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "sorting-control",
+      "name": "Критерий и направление сортировки",
+      "summary": "Независимый выбор критерия и направления; relevance без фиктивного порядка; сортировка данных принадлежит host.",
+      "category": "controls",
+      "tags": [
+        "sorting-control",
+        "gitlab",
+        "pajamas",
+        "sort direction",
+        "направление сортировки",
+        "compact controls"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createSortingControl",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "list-view-controls-guidance",
+        "qualification",
+        "i18n-contract",
+        "a11y-keyboard-focus",
+        "form-row-control-alignment"
+      ],
+      "extensions": [
+        "value",
+        "silent setValue",
+        "setDisabled",
+        "onChange",
+        "dispose"
+      ],
+      "usageExample": "createSortingControl({label:'Сортировка',options:[{value:'name',label:'Название'}],value:{by:'name',direction:'asc'},onChange:sortHost})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Именованный триггер/контрол",
+        "Контекстное содержимое или направление",
+        "Видимый фокус и локальные значения"
+      ],
+      "variants": [
+        "criterion/direction",
+        "directionless",
+        "disabled"
+      ],
+      "states": [
+        "selected/directionless",
+        "disabled",
+        "disposed"
+      ],
+      "design": {
+        "intendedUse": "Независимый выбор критерия и направления; relevance без фиктивного порядка; сортировка данных принадлежит host.",
+        "rationale": "Original AG implementation of source-backed work-list patterns, preserving native semantics and host ownership.",
+        "alternatives": [
+          "Existing select/dropdown-select and segmented-choice",
+          "Menu for commands; popup for a bounded modal task"
+        ],
+        "limitations": "Draft. Host owns content/data/listeners/routes/validation. AT/native-WebView/fullWCAG/production performance remain unqualified; budgets are targets, not measurements.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/sorting/sorting.vue",
+          "https://gitlab.com/gitlab-org/gitlab/-/blob/4a0d285e5e2958702347bb4231f8ba515bf639db/app/assets/javascripts/vue_shared/components/filtered_search_bar/filtered_search_bar_root.vue"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "conversation-card",
+      "name": "Карточка результата в диалоге",
+      "summary": "Компактный результат, до двух действий, обновляемое состояние и redacted inspection без собственного транспорта.",
+      "category": "feedback",
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "MCP Apps",
+        "conversation-card",
+        "inline card",
+        "карточка диалога",
+        "карточка результата"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createConversationCard",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "openai-conversation-surfaces-guidance",
+        "openai-tool-ui-contract-guidance",
+        "openai-embedded-ui-security-guidance",
+        "accessible-name",
+        "keyboard-flow",
+        "qualification",
+        "design-rationale",
+        "i18n-contract"
+      ],
+      "extensions": [
+        "host callbacks",
+        "update",
+        "inspect",
+        "dispose",
+        "inspectConversationSurface"
+      ],
+      "usageExample": "createConversationCard({title:'Вариант найден',summary:'Детали результата',actions:[{id:'choose',label:'Выбрать',primary:true,onAction:choose}]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Связанный заголовок",
+        "Сохранённое содержимое",
+        "Статус вне busy",
+        "Не более двух действий"
+      ],
+      "variants": [
+        "inline result",
+        "host-supplied localized content"
+      ],
+      "states": [
+        "ready",
+        "loading",
+        "empty",
+        "error",
+        "disposed"
+      ],
+      "design": {
+        "intendedUse": "Фокусированный результат инструмента или inline-карточка диалога; обычный сайт сохраняет свою палитру.",
+        "rationale": "Композиция existing native buttons отделяет отображение результата от host authority и транспорта.",
+        "alternatives": [
+          "catalog-card для сравнения каталога",
+          "async-boundary для lifecycle запроса",
+          "host fullscreen для сложного редактора"
+        ],
+        "limitations": "Draft. No MCP Apps bridge, automatic fullscreen/PiP, authorization, persistence or async runner. Callback is intent, not success. inspectConversationSurface checks caller facts only. AT/real ChatGPT qualification unknown; budgets are targets.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developers.openai.com/plugins/concepts/ui-guidelines",
+          "https://developers.openai.com/plugins/build/chatgpt-ui",
+          "https://developers.openai.com/plugins/guides/security-privacy",
+          "https://developers.openai.com/plugins/reference"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "widget-list",
+      "name": "Список результатов виджета",
+      "summary": "Keyed-строки, адресные действия, progressive disclosure и self/container pending без собственного транспорта.",
+      "category": "data",
+      "tags": [
+        "widget-list",
+        "ChatKit",
+        "ListView",
+        "widgets",
+        "список виджетов",
+        "список результатов",
+        "действия виджета"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createWidgetList",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "chatkit-widget-composition-guidance",
+        "chatkit-widget-actions-guidance",
+        "qualification",
+        "design-rationale",
+        "i18n-contract",
+        "keyboard-flow"
+      ],
+      "extensions": [
+        "update(newer complete snapshot)",
+        "setPending(none/self/container)",
+        "inspect",
+        "host intent callback",
+        "dispose"
+      ],
+      "usageExample": "createWidgetList({title:'Варианты',revision:1,items:[],showMoreLabel:'Показать ещё',emptyMessage:'Нет вариантов',onAction:handleIntent})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Именованный контейнер",
+        "Keyed semantic list",
+        "Одно действие строки",
+        "Отдельный status и раскрытие"
+      ],
+      "variants": [
+        "static/action rows",
+        "progressive disclosure",
+        "explicit pending scope"
+      ],
+      "states": [
+        "snapshot",
+        "self pending",
+        "container pending",
+        "empty",
+        "disposed"
+      ],
+      "design": {
+        "intendedUse": "Короткие структурированные результаты внутри продуктового чата или обычного интерфейса.",
+        "rationale": "Стабильные строки сохраняют controls; newer display revisions и scoped pending предотвращают ложные визуальные переходы.",
+        "alternatives": [
+          "conversation-card для одного результата",
+          "data-table для сравнения",
+          "render-window для большой коллекции"
+        ],
+        "limitations": "Draft. AG schema only, not a ChatKit renderer/SDK/bridge.100items cap, initial batch1–20. Host owns current snapshot, effects, permissions and native disabled focus recovery. inspect is redacted structural evidence, not qualification. Budgets remain targets.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developers.openai.com/api/docs/guides/chatkit-widgets",
+          "https://developers.openai.com/api/docs/guides/chatkit-actions",
+          "https://developers.openai.com/api/docs/guides/chatkit-themes"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "text-block",
+      "name": "Текстовый блок",
+      "summary": "Безопасный вывод текста с локальным выделением и опциональной иконкой копирования под блоком.",
+      "category": "controls",
+      "tags": [
+        "text",
+        "output",
+        "select-all",
+        "copy",
+        "clipboard",
+        "текст",
+        "вывод",
+        "копирование",
+        "выделение"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createTextBlock",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "i18n-contract"
+      ],
+      "extensions": [
+        "literal text",
+        "copyable",
+        "Ctrl/Cmd+A local/page",
+        "setText",
+        "dispose"
+      ],
+      "usageExample": "const view = createTextBlock({label:\"Результат\",text:\"Готово\",copyable:true});\ncontainer.append(view.element);\n// view.dispose();",
+      "budget": {
+        "mountP95Ms": 25,
+        "interactionP95Ms": 50,
+        "retainedBytesPerInstance": 131072
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "design": {
+        "intendedUse": "Короткие и средние текстовые результаты, которые нужно прочитать, выделить или скопировать.",
+        "rationale": "Локальная клавиатурная область и простое действие под текстом сохраняют привычное чтение без редактора.",
+        "alternatives": [
+          "Readonly field для короткого значения",
+          "Markdown/code viewer для структурированного текста"
+        ],
+        "limitations": "Без HTML/Markdown, хранения и транспорта. Clipboard может быть запрещён; доступен ручной путь. 600ms повтор — AG default. Budget target only; native/AT separate.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html",
+          "https://www.w3.org/TR/clipboard-apis/"
+        ]
+      },
+      "anatomy": [
+        "Подписанная область чтения",
+        "Локальное выделение",
+        "Опциональная тихая иконка под блоком",
+        "Результат копирования"
+      ],
+      "variants": [
+        "plain",
+        "copyable",
+        "light",
+        "dark"
+      ],
+      "states": [
+        "ready",
+        "copying",
+        "copied",
+        "manual-copy",
+        "disposed"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "choice-chips",
+      "name": "Чипсы выбора",
+      "summary": "Одна строка чипсов с горизонтальным пролистыванием без полосы прокрутки, нативным radio-выбором и видимым фокусом.",
+      "category": "controls",
+      "tags": [
+        "chips",
+        "чипсы",
+        "чипы",
+        "горизонтальное пролистывание",
+        "режимы",
+        "фильтры",
+        "radio",
+        "scroll"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createChoiceChips",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "color-profiles",
+        "qualification",
+        "design-rationale",
+        "performance-evidence",
+        "accessible-name",
+        "keyboard-flow",
+        "honest-states",
+        "optical-shape-balance",
+        "optical-correction-record",
+        "optical-no-universal-ratio",
+        "optical-family-consistency",
+        "form-field-purpose",
+        "form-label-persistence",
+        "form-constraints-before-error",
+        "form-control-task-fit",
+        "form-error-recovery-extended",
+        "form-reuse-known-data",
+        "form-submit-integrity",
+        "form-draft-stage",
+        "action-name-state",
+        "action-target-size",
+        "a11y-noncolor-meaning",
+        "a11y-text-contrast",
+        "a11y-control-contrast",
+        "a11y-keyboard-focus",
+        "a11y-structure-reading",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "a11y-motion-control",
+        "apple-semantic-colors",
+        "apple-color-appearances",
+        "i18n-contract",
+        "enterprise-tab-activation",
+        "enterprise-choice-commit",
+        "human-first-agent-interfaces-guidance",
+        "choice-chips-selection"
+      ],
+      "extensions": [
+        "semantic CSS variables",
+        "native DOM events",
+        "callbacks",
+        "dispose"
+      ],
+      "usageExample": "createChoiceChips({label:'Представление',options:[{value:'document',label:'Документ'},{value:'messenger',label:'Переписка'},{value:'work-log',label:'Журнал работы'}],value:'document',onChange:applyMode})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Нативный fieldset и legend",
+        "Одна строка radio-чипсов",
+        "Горизонтальный scroll без видимого бара",
+        "Выбранное значение и видимый фокус"
+      ],
+      "variants": [
+        "обычный",
+        "с недоступным вариантом",
+        "недоступная группа"
+      ],
+      "states": [
+        "checked",
+        "focus",
+        "native Arrow/Space",
+        "disabled",
+        "setValue",
+        "dispose"
+      ],
+      "design": {
+        "intendedUse": "Короткий взаимоисключающий выбор представления или фильтра в ограниченной ширине.",
+        "rationale": "Повторно использует segmented-choice. Полный текст остаётся в одной строке, фокус раскрывает скрытый чипс прокруткой собственной области.",
+        "alternatives": [
+          "Select при большем числе вариантов",
+          "Tabs только для настоящих панелей вкладок",
+          "Навигационные ссылки для переходов по маршрутам"
+        ],
+        "limitations": "2–6 вариантов. Длинные названия требуют выбора другого контрола. Физический touch и экранный диктор проверяются в целевом приложении.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://www.w3.org/WAI/ARIA/apg/patterns/radio/"
+        ]
+      },
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    },
+    {
+      "id": "bento-grid",
+      "name": "Бенто-сетка · Bento Grid",
+      "summary": "Модульная компоновка блоков разных размеров: общие tracks, адаптивные spans и естественная высота на узком экране.",
+      "category": "layout",
+      "tags": [
+        "bento",
+        "bento grid",
+        "бенто",
+        "бенто-сетка",
+        "модульная сетка",
+        "карточки",
+        "dashboard",
+        "layout",
+        "nested grid"
+      ],
+      "version": "0.43.0-community.1",
+      "package": "@ag-design/components",
+      "exportName": "createBentoGrid",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "design-rationale",
+        "qualification",
+        "bento-layout-purpose",
+        "keyboard-flow"
+      ],
+      "extensions": [
+        "update",
+        "refresh",
+        "getLayout",
+        "dispose",
+        "host-owned HTML content",
+        "container reflow",
+        "nested grids",
+        "semantic CSS variables",
+        "alignItems: start | stretch"
+      ],
+      "usageExample": "createBentoGrid({label:'Обзор проекта',items:[{id:'main',content:document.createElement('article'),colSpan:2,rowSpan:2}]})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "design": {
+        "intendedUse": "Обзор продукта, компактный dashboard, презентация возможностей с разной значимостью карточек.",
+        "rationale": "Реальная CSS Grid-компоновка с едиными tracks и gutter; размер служит иерархии, DOM-order не меняется ради плотности. alignItems:start сохраняет естественную высоту коротких карточек; stretch заполняет span и остаётся default.",
+        "alternatives": [
+          "masonry-layout для естественной высоты ленты",
+          "равные колонки для сопоставимых карточек",
+          "table/data-grid для строковых сравнений",
+          "layout-grid-overlay для геометрической инспекции"
+        ],
+        "limitations": "Draft; не заменяет Pinterest-каталог, таблицу или последовательную форму. Максимум64элемента; colSpan1..12,rowSpan1..6. Содержимое, маршруты, ARIA внутри блоков и dispose вложенных компонентов принадлежат хозяину. Проверки браузера не являются полной AT/native-квалификацией.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility",
+          "https://www.w3.org/WAI/WCAG22/Techniques/css/C27"
+        ]
+      },
+      "anatomy": [
+        "Контейнер",
+        "Общие колонки и строки",
+        "Блоки с colSpan/rowSpan",
+        "Числовые bounds"
+      ],
+      "states": [
+        "wide",
+        "container-narrow",
+        "single-column natural height",
+        "empty",
+        "updated",
+        "RTL",
+        "disposed"
+      ],
+      "variants": [
+        "light",
+        "dark"
+      ],
+      "artifactHash": "619c9f2daedb0144160b5182a84f85343f1e7b36deaf2ab39bfca9c1db2a7cb3"
+    }
+  ]
+}

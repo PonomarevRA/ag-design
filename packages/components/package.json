@@ -1,0 +1,174 @@
+{
+  "name": "@ag-design/components",
+  "version": "0.43.0-community.1",
+  "description": "Framework independent AG controls and Atlas-style navigation",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./styles.css": "./styles.css",
+    "./tokens.css": "./tokens.css",
+    "./audit": "./audit.js",
+    "./profiles": "./color-profile.js",
+    "./agent-chat": "./agent-activity-chat-localized.js",
+    "./resizable-panel": "./resizable-panel-localized.js",
+    "./window-toolbar": "./window-toolbar-localized.js",
+    "./card-connections": "./card-connections-localized.js",
+    "./board-viewport": "./board-viewport-localized.js",
+    "./geometry": "./geometry.js",
+    "./agent-conversation": {
+      "types": "./index.d.ts",
+      "default": "./agent-conversation-localized.js"
+    },
+    "./numeric-scale": {
+      "types": "./index.d.ts",
+      "default": "./numeric-scale.js"
+    },
+    "./numeric-badge": {
+      "types": "./index.d.ts",
+      "default": "./numeric-badge-localized.js"
+    },
+    "./masonry-layout": {
+      "types": "./masonry-layout.d.ts",
+      "default": "./masonry-layout.js"
+    },
+    "./dropdown-select": {
+      "types": "./dropdown-select.d.ts",
+      "default": "./dropdown-select-localized.js"
+    },
+    "./data-grid": {
+      "types": "./data-grid.d.ts",
+      "default": "./data-grid-localized.js"
+    },
+    "./code-viewer": {
+      "types": "./code-viewer.d.ts",
+      "default": "./code-viewer-localized.js"
+    },
+    "./markdown-viewer": {
+      "types": "./markdown-viewer.d.ts",
+      "default": "./markdown-viewer-localized.js"
+    },
+    "./markdown-editor": {
+      "types": "./markdown-editor.d.ts",
+      "default": "./markdown-editor-localized.js"
+    },
+    "./git-history": {
+      "types": "./history.d.ts",
+      "default": "./git-history-localized.js"
+    },
+    "./task-history": {
+      "types": "./history.d.ts",
+      "default": "./task-history-localized.js"
+    },
+    "./i18n": {
+      "types": "./i18n.d.ts",
+      "default": "./i18n.js"
+    },
+    "./language-switcher": {
+      "types": "./language-switcher.d.ts",
+      "default": "./language-switcher.js"
+    },
+    "./golden-canon-grid": {
+      "types": "./index.d.ts",
+      "default": "./golden-canon-grid.js"
+    },
+    "./layout-grid": {
+      "types": "./layout-grid.d.ts",
+      "default": "./layout-grid.js"
+    },
+    "./layout-grid-overlay": {
+      "types": "./layout-grid.d.ts",
+      "default": "./layout-grid-overlay.js"
+    },
+    "./textarea": {
+      "types": "./textarea.d.ts",
+      "default": "./textarea.js"
+    },
+    "./async-boundary": {
+      "types": "./async-boundary.d.ts",
+      "default": "./async-boundary.js"
+    },
+    "./palette-model": {
+      "types": "./palette-model.d.ts",
+      "default": "./palette-model.js"
+    },
+    "./palette-builder": {
+      "types": "./palette-builder.d.ts",
+      "default": "./palette-builder.js"
+    },
+    "./catalog-card": {
+      "types": "./catalog-card.d.ts",
+      "default": "./catalog-card.js"
+    },
+    "./catalog-search-controls": {
+      "types": "./catalog-search-controls.d.ts",
+      "default": "./catalog-search-controls.js"
+    },
+    "./event-bus": {
+      "types": "./event-bus.d.ts",
+      "default": "./event-bus.js"
+    },
+    "./request-router": {
+      "types": "./request-router.d.ts",
+      "default": "./request-router.js"
+    },
+    "./grid-icon-draft": {
+      "types": "./grid-icon-draft.d.ts",
+      "default": "./grid-icon-draft.js"
+    },
+    "./popover": {
+      "types": "./popover.d.ts",
+      "default": "./popover.js"
+    },
+    "./sorting-control": {
+      "types": "./sorting-control.d.ts",
+      "default": "./sorting-control.js"
+    },
+    "./conversation-card": {
+      "types": "./conversation-card.d.ts",
+      "default": "./conversation-card.js"
+    },
+    "./conversation-surface": {
+      "types": "./conversation-surface.d.ts",
+      "default": "./conversation-surface.js"
+    },
+    "./widget-list": {
+      "types": "./widget-list.d.ts",
+      "default": "./widget-list.js"
+    },
+    "./text-block": {
+      "types": "./text-block.d.ts",
+      "default": "./text-block.js"
+    },
+    "./tooltip": {
+      "types": "./tooltip.d.ts",
+      "default": "./tooltip.js"
+    },
+    "./select-indicator.css": "./select-indicator.css",
+    "./form-tracks.css": "./form-tracks.css",
+    "./form-tracks.md": "./form-tracks.md",
+    "./choice-chips": {
+      "types": "./index.d.ts",
+      "default": "./choice-chips.js"
+    },
+    "./bento-grid": {
+      "types": "./bento-grid.d.ts",
+      "default": "./bento-grid.js"
+    }
+  },
+  "files": [
+    "*.js",
+    "*.css",
+    "*.d.ts",
+    "*.md",
+    "TEXT-ENGINE-MANIFEST.json"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "dependencies": {}
+}

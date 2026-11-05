@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  background: var(--ag-surface-alt);
+  color: var(--ag-text);
+  font: 15px/1.5 var(--ag-font);
+}
+main {
+  max-width: 1060px;
+  padding: 24px;
+  margin: auto;
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+}
+main > label {
+  display: grid;
+  gap: 8px;
+  max-width: 420px;
+}
+select {
+  min-height: 44px;
+  font: inherit;
+  padding: 8px;
+  background: var(--ag-surface);
+  color: var(--ag-text);
+  border: 1px solid var(--ag-border);
+  border-radius: var(--ag-radius-control);
+}
+.ag-history {
+  --ag-text-size: 15px;
+}
+.ag-history h3 {
+  overflow-wrap: anywhere;
+}
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+@media (max-width: 600px) {
+  main {
+    padding: 12px;
+  }
+}

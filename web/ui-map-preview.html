@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Проверка карты интерфейса · ag-design</title>
+    <link rel="stylesheet" href="/vendor/ag-design/tokens.css" />
+    <link rel="stylesheet" href="/vendor/ag-design/styles.css" />
+    <link rel="stylesheet" href="/ui-map-view.css" />
+    <link rel="stylesheet" href="/ui-map-preview.css" />
+    <script type="module" src="/ui-map-preview.js"></script>
+  </head>
+  <body>
+    <section id="preview-controls" aria-label="Окружение проверки карты">
+      <a href="/">Вернуться в ag-design</a>
+      <h1>Проверка карты интерфейса</h1>
+      <p>
+        Локальный модуль и реальные API. Ширина задаёт viewport iframe; масштаб
+        текста — явное условие стенда, не изменение системного zoom.
+      </p>
+      <div class="ui-map-preview-controls">
+        <label
+          >Ширина viewport<select id="preview-width">
+            <option value="320">320 CSS px</option>
+            <option value="960" selected>960 CSS px</option>
+          </select></label
+        >
+        <label
+          >Масштаб текста<select id="preview-text">
+            <option value="1">100%</option>
+            <option value="2">200%</option>
+          </select></label
+        >
+        <label
+          >Тема<select id="preview-theme">
+            <option value="light">Светлая</option>
+            <option value="dark">Тёмная</option>
+          </select></label
+        >
+        <label
+          >Контраст<select id="preview-contrast">
+            <option value="standard">Обычный</option>
+            <option value="increased">Повышенный</option>
+          </select></label
+        >
+        <label
+          >Палитра<select id="preview-palette">
+            <option value="design">Бирюзовая</option>
+            <option value="atlas">Зелёная</option>
+            <option value="memory">Фиолетовая</option>
+            <option value="observer">Голубая</option>
+            <option value="tasks">Синяя</option>
+          </select></label
+        >
+        <button id="preview-apply" class="ag-button" type="button">
+          Применить окружение
+        </button>
+      </div>
+      <p id="preview-environment" role="status"></p>
+      <div class="ui-map-preview-frame">
+        <iframe
+          id="preview-frame"
+          title="Реальная карта в заданном viewport"
+          src="about:blank"
+        ></iframe>
+      </div>
+    </section>
+    <main id="preview-content" hidden></main>
+  </body>
+</html>

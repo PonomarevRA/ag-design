@@ -1,0 +1,575 @@
+{
+  "schemaVersion": "ag-design/layout-grids-v1",
+  "sourcesCheckedAt": "2026-10-28",
+  "preferredCreativeProfile": "golden-canon",
+  "trust": "Authored guidance and caller-reported geometry; no aesthetic or accessibility certification.",
+  "items": [
+    {
+      "id": "golden-canon",
+      "name": "Golden Canon Grid",
+      "nameRu": "Диагональная композиция",
+      "tags": [
+        "creative",
+        "hero",
+        "presentation",
+        "slide",
+        "композиция",
+        "акцент",
+        "слайд",
+        "презентация"
+      ],
+      "useWhen": "Свободная выразительная композиция страницы или отдельного смыслового компонента. Предпочтительный старт AG по выбору владельца.",
+      "avoid": "Не навязывать плотной операционной форме, обязательной сетке бренда или естественному потоку текста.",
+      "defaultTarget": "point",
+      "sectionIds": [
+        "grid-golden-canon",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "Obys — Grids",
+          "url": "https://grids.obys.agency/",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-golden-canon",
+      "iconSuitability": {
+        "systemIcon": "avoid-as-primary",
+        "illustrativeMark": "conditional",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    },
+    {
+      "id": "columns",
+      "name": "Responsive columns",
+      "nameRu": "Адаптивные колонки",
+      "tags": [
+        "form",
+        "forms",
+        "operational",
+        "settings",
+        "форма",
+        "формы",
+        "операционная",
+        "настройки",
+        "колонки",
+        "адаптивная",
+        "responsive"
+      ],
+      "useWhen": "Формы, настройки, каталоги, сопоставление элементов и устойчивые общие вертикали.",
+      "avoid": "Не использовать число колонок как цель; проверить минимальную ширину содержимого и переносы.",
+      "defaultTarget": "x-line",
+      "sectionIds": [
+        "grid-columns",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "Atlassian — Grid",
+          "url": "https://atlassian.design/foundations/grid",
+          "kind": "primary"
+        },
+        {
+          "title": "IBM Carbon — 2x Grid",
+          "url": "https://www.carbondesignsystem.com/building-blocks/foundations/2x-grid/overview",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-columns",
+      "iconSuitability": {
+        "systemIcon": "avoid-as-primary",
+        "illustrativeMark": "layout-only",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    },
+    {
+      "id": "modular",
+      "name": "Modular / Bento",
+      "nameRu": "Модульная сетка и Bento",
+      "tags": [
+        "dashboard",
+        "cards",
+        "bento",
+        "modular",
+        "дашборд",
+        "карточки",
+        "модули",
+        "сводка"
+      ],
+      "useWhen": "Сопоставимые карточки, панели показателей и смешанные размеры блоков с осмысленными spans.",
+      "avoid": "Не придавать одинаковую важность всем карточкам и не переставлять смысловой порядок ради заполнения дыр. Bento — приём композиции модулей, не новая формула сетки.",
+      "defaultTarget": "point",
+      "sectionIds": [
+        "grid-modular",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "IBM Carbon — 2x Grid",
+          "url": "https://www.carbondesignsystem.com/building-blocks/foundations/2x-grid/overview",
+          "kind": "primary"
+        },
+        {
+          "title": "Adobe — Document grid",
+          "url": "https://helpx.adobe.com/indesign/desktop/layout-and-grid-tools/grids/use-a-document-grid.html",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-modular",
+      "iconSuitability": {
+        "systemIcon": "avoid-as-primary",
+        "illustrativeMark": "layout-only",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    },
+    {
+      "id": "baseline",
+      "name": "Typography baseline",
+      "nameRu": "Сетка базовых линий",
+      "tags": [
+        "text",
+        "typography",
+        "editorial",
+        "baseline",
+        "текст",
+        "типографика",
+        "текстовый",
+        "редакционный",
+        "базовые",
+        "линии"
+      ],
+      "useWhen": "Длинный текст, многоколоночное чтение и соседние текстовые рамки. Шаг задаётся leading, локальная рамка может иметь свой шаг.",
+      "avoid": "Не считать верх или низ рамки базовой линией. Без baselineSource и измеренной ординаты результат unknown.",
+      "defaultTarget": "baseline",
+      "sectionIds": [
+        "grid-baseline",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "Adobe — Baseline grid",
+          "url": "https://helpx.adobe.com/in/indesign/desktop/layout-and-grid-tools/grids/use-a-baseline-grid.html",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-baseline",
+      "iconSuitability": {
+        "systemIcon": "avoid-as-primary",
+        "illustrativeMark": "layout-only",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    },
+    {
+      "id": "spacing",
+      "name": "Spacing lattice",
+      "nameRu": "Шаговая сетка координат",
+      "tags": [
+        "spacing",
+        "controls",
+        "density",
+        "8",
+        "point",
+        "отступы",
+        "шаговая",
+        "контролы",
+        "плотность",
+        "ритм"
+      ],
+      "useWhen": "Внутренняя геометрия контролов и повторяемый координатный ритм; шаг задаётся токенами хозяина.",
+      "avoid": "Проверяются заявленные координаты. Это не автоматическая проверка всех gaps/padding; оптические корректировки допустимы. Не округлять реальные значения графика.",
+      "defaultTarget": "point",
+      "sectionIds": [
+        "grid-spacing",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "Atlassian — Spacing",
+          "url": "https://atlassian.design/foundations/spacing",
+          "kind": "primary"
+        },
+        {
+          "title": "IBM Carbon — 2x Grid",
+          "url": "https://www.carbondesignsystem.com/building-blocks/foundations/2x-grid/overview",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-spacing",
+      "iconSuitability": {
+        "systemIcon": "supporting",
+        "illustrativeMark": "supporting",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    },
+    {
+      "id": "thirds",
+      "name": "Rule of thirds",
+      "nameRu": "Правило третей",
+      "tags": [
+        "image",
+        "photo",
+        "focal",
+        "hero",
+        "visual",
+        "thirds",
+        "фото",
+        "изображение",
+        "фокус",
+        "трети",
+        "обложка"
+      ],
+      "useWhen": "Крупное изображение, обложка и один выраженный фокус слайда; интерес представляют четыре пересечения.",
+      "avoid": "Не выравнивать все строки формы по третям. Оптический объект на фотографии не определяется по её прямоугольной рамке.",
+      "defaultTarget": "point",
+      "sectionIds": [
+        "grid-thirds",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "Adobe — Rule of thirds",
+          "url": "https://www.adobe.com/creativecloud/photography/technique/rule-of-thirds.html",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-thirds",
+      "iconSuitability": {
+        "systemIcon": "avoid-as-primary",
+        "illustrativeMark": "conditional",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    },
+    {
+      "id": "manuscript",
+      "name": "Single-column manuscript",
+      "nameRu": "Одна полоса чтения",
+      "tags": [
+        "reading",
+        "article",
+        "document",
+        "manuscript",
+        "longform",
+        "чтение",
+        "статья",
+        "документ",
+        "полоса"
+      ],
+      "useWhen": "Статья, справочник и последовательное чтение с ограниченной шириной строки и спокойными полями.",
+      "avoid": "Не растягивать текст на всю ширину большого монитора; поля и ширину проверять по содержимому.",
+      "defaultTarget": "point",
+      "sectionIds": [
+        "grid-manuscript",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "Atlassian — Grid",
+          "url": "https://atlassian.design/foundations/grid",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-manuscript",
+      "iconSuitability": {
+        "systemIcon": "avoid-as-primary",
+        "illustrativeMark": "layout-only",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    },
+    {
+      "id": "edge-balance",
+      "name": "Edge balance",
+      "nameRu": "Акцент у края",
+      "family": "cinema",
+      "tags": [
+        "edge-balance",
+        "композиция",
+        "кино",
+        "cinematic"
+      ],
+      "useWhen": "Один объект у выбранного края и противовес/свободное поле с другой стороны.",
+      "avoid": "Не превращать асимметрию в потерю объекта, текста или важных кнопок; не имитировать психологический эффект числом.",
+      "defaultTarget": "point",
+      "sectionIds": [
+        "grid-edge-balance",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "Smithsonian — Video handbook",
+          "url": "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/English-Video-Handbook.pdf",
+          "kind": "primary"
+        },
+        {
+          "title": "Fujifilm — Negative space",
+          "url": "https://www.fujifilm-x.com/en-gb/learning-centre/using-negative-space/",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-edge-balance",
+      "iconSuitability": {
+        "systemIcon": "avoid-as-primary",
+        "illustrativeMark": "conditional",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    },
+    {
+      "id": "lead-room",
+      "name": "Look / lead room",
+      "nameRu": "Пространство взгляда и движения",
+      "family": "cinema",
+      "tags": [
+        "lead-room",
+        "композиция",
+        "кино",
+        "cinematic"
+      ],
+      "useWhen": "Портрет, движение и обложка, где известно направление взгляда/действия.",
+      "avoid": "Направление не определяется по image box. Осознанное тесное/обратное кадрирование возможно, но требует объяснения.",
+      "defaultTarget": "point",
+      "sectionIds": [
+        "grid-lead-room",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "Smithsonian — Video handbook",
+          "url": "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/English-Video-Handbook.pdf",
+          "kind": "primary"
+        },
+        {
+          "title": "Fujifilm — Negative space",
+          "url": "https://www.fujifilm-x.com/en-gb/learning-centre/using-negative-space/",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-lead-room",
+      "iconSuitability": {
+        "systemIcon": "avoid-as-primary",
+        "illustrativeMark": "conditional",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    },
+    {
+      "id": "center-perspective",
+      "name": "Central perspective",
+      "nameRu": "Центральная перспектива",
+      "family": "cinema",
+      "tags": [
+        "center-perspective",
+        "композиция",
+        "кино",
+        "cinematic"
+      ],
+      "useWhen": "Симметричный акцент, архитектура и заявленная точка схода с направляющими от краёв.",
+      "avoid": "Не считать эту схему калибровкой камеры или автоматическим восстановлением перспективы.",
+      "defaultTarget": "point",
+      "sectionIds": [
+        "grid-center-perspective",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "Smithsonian — Video handbook",
+          "url": "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/English-Video-Handbook.pdf",
+          "kind": "primary"
+        },
+        {
+          "title": "Nikon School — Leading lines",
+          "url": "https://nikonschool.co.uk/hints-and-tips/using-leading-lines-in-your-compositions",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-center-perspective",
+      "iconSuitability": {
+        "systemIcon": "avoid-as-primary",
+        "illustrativeMark": "conditional",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    },
+    {
+      "id": "phi-grid",
+      "name": "Phi grid",
+      "nameRu": "φ-сетка",
+      "family": "photo-art",
+      "tags": [
+        "phi-grid",
+        "композиция",
+        "фото",
+        "photography"
+      ],
+      "useWhen": "Более близкие к центру пересечения около0.382/0.618 для обложки, кадра и крупного знака.",
+      "avoid": "Не путать с Golden Canon и не приписывать пропорции универсальную красоту или историческую доказанность.",
+      "defaultTarget": "point",
+      "sectionIds": [
+        "grid-phi-grid",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "Martin Evening — Crop overlays",
+          "url": "https://www.photoshopforphotographers.com/3101-1901/Help_guide/tp/Crop_tool.html",
+          "kind": "primary"
+        },
+        {
+          "title": "Fujifilm — Negative space",
+          "url": "https://www.fujifilm-x.com/en-gb/learning-centre/using-negative-space/",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-phi-grid",
+      "iconSuitability": {
+        "systemIcon": "avoid-as-primary",
+        "illustrativeMark": "conditional",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    },
+    {
+      "id": "golden-triangle",
+      "name": "Golden triangle",
+      "nameRu": "Золотой треугольник",
+      "family": "photo-art",
+      "tags": [
+        "golden-triangle",
+        "композиция",
+        "фото",
+        "photography"
+      ],
+      "useWhen": "Диагональный основной ход и перпендикуляры из противоположных углов, рассчитанные в физических координатах.",
+      "avoid": "Не растягивать нормализованные45° линии как правильные перпендикуляры; это не гарантия φ-пропорций всех треугольников.",
+      "defaultTarget": "point",
+      "sectionIds": [
+        "grid-golden-triangle",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "CBSE — Introduction to photography",
+          "url": "https://cbseacademic.nic.in/web_material/Curriculum24/publication/Photography_Module2.pdf",
+          "kind": "primary"
+        },
+        {
+          "title": "Martin Evening — Crop overlays",
+          "url": "https://www.photoshopforphotographers.com/3101-1901/Help_guide/tp/Crop_tool.html",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-golden-triangle",
+      "iconSuitability": {
+        "systemIcon": "avoid-as-primary",
+        "illustrativeMark": "conditional",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    },
+    {
+      "id": "diagonal-flow",
+      "name": "Diagonal flow",
+      "nameRu": "Диагональный поток",
+      "family": "photo-art",
+      "tags": [
+        "diagonal-flow",
+        "композиция",
+        "фото",
+        "photography"
+      ],
+      "useWhen": "Направляющий диагональный ход, пересечение и промежуточные интересы для динамичного кадра.",
+      "avoid": "Не называть X-диагонали универсальным Diagonal Method45°; угол зависит от aspect ratio, а движение не распознаётся автоматически.",
+      "defaultTarget": "point",
+      "sectionIds": [
+        "grid-diagonal-flow",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "Nikon School — Leading lines",
+          "url": "https://nikonschool.co.uk/hints-and-tips/using-leading-lines-in-your-compositions",
+          "kind": "primary"
+        },
+        {
+          "title": "Smithsonian — Video handbook",
+          "url": "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/English-Video-Handbook.pdf",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-diagonal-flow",
+      "iconSuitability": {
+        "systemIcon": "avoid-as-primary",
+        "illustrativeMark": "conditional",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    },
+    {
+      "id": "icon-keylines",
+      "name": "Icon keylines",
+      "nameRu": "Keylines для иконок",
+      "family": "icon",
+      "tags": [
+        "icon-keylines",
+        "композиция",
+        "иконки",
+        "icon"
+      ],
+      "useWhen": "Согласованная семья служебных иконок с live area, квадратом, окружностью и портретной/альбомной рамками.",
+      "avoid": "Контур/рамка не заменяет оптический центр, узнаваемость и проверку обводки на реальном размере.",
+      "defaultTarget": "point",
+      "sectionIds": [
+        "grid-icon-keylines",
+        "layout-grid-selection",
+        "nested-layout-grids",
+        "layout-grid-inspection"
+      ],
+      "sources": [
+        {
+          "title": "IBM Design Language — UI icons",
+          "url": "https://www.ibm.com/design/language/iconography/ui-icons/design/",
+          "kind": "primary"
+        },
+        {
+          "title": "Material Design — Icon grid (legacy reference)",
+          "url": "https://m1.material.io/style/icons.html",
+          "kind": "primary"
+        }
+      ],
+      "wikiSectionId": "grid-icon-keylines",
+      "iconSuitability": {
+        "systemIcon": "preferred",
+        "illustrativeMark": "preferred",
+        "guidanceSectionId": "grid-icon-generation"
+      }
+    }
+  ],
+  "combination": {
+    "page": "columns or golden-canon according to purpose",
+    "cards": "modular",
+    "text": "baseline or manuscript",
+    "controls": "spacing",
+    "image": "thirds/phi/triangle/diagonal or explicit cinematic framing by intent; declared focal points only",
+    "icon": "icon-keylines or spacing for UI; expressive grids only for illustrative marks"
+  },
+  "inheritance": "Local coordinates are independent. Explicit inherited axes project parent guides; this is not CSS subgrid track sizing."
+}

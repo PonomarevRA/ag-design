@@ -1,0 +1,3707 @@
+{
+  "schemaVersion": "ag-design/catalog-v1",
+  "items": [
+    {
+      "id": "leading-sidebar",
+      "title": "Навигация остаётся у своего края",
+      "summary": "Схлопывание скрывает подписи и сохраняет ряд иконок; кнопка над своей группой, граница совпадает с шапкой.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/sidebars",
+      "componentIds": [
+        "sidebar"
+      ],
+      "tags": [
+        "layout",
+        "navigation",
+        "section:navigation",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "native-shell",
+      "title": "Настоящая шапка standalone",
+      "summary": "Нативные меню и toolbar, один набор системных кнопок, контент заполняет окно. HTML fallback скрывается только после подтверждения возможностей.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+      "componentIds": [
+        "sidebar",
+        "popup"
+      ],
+      "tags": [
+        "standalone",
+        "layout",
+        "section:platform",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "toolbar-hierarchy",
+      "title": "Частые действия видны и сгруппированы",
+      "summary": "Сначала область действия: окно/документ/компонент. Локальные действия рядом с объектом; native перенос только при ясном адресате, общей логике и подтверждённой capability. Убрать дублирующий web-ряд после сохранения всех команд и fallback. Проверка ручная.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+      "componentIds": [
+        "button",
+        "sidebar"
+      ],
+      "tags": [
+        "layout",
+        "section:navigation",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "accessible-name",
+      "title": "Доступное название каждого управления",
+      "summary": "У кнопки есть понятный текст или aria-label; у поля постоянная label, у диалога связанный заголовок.",
+      "severity": "error",
+      "check": "automated",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html",
+      "componentIds": [
+        "button",
+        "field",
+        "sidebar",
+        "popup"
+      ],
+      "tags": [
+        "accessibility",
+        "section:accessibility",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "disclosure-state",
+      "title": "Состояние раскрытия понятно",
+      "summary": "Кнопка раскрытия синхронизирует aria-expanded и aria-controls. Фокус не остаётся в скрытом содержимом.",
+      "severity": "error",
+      "check": "automated",
+      "sourceUrl": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "componentIds": [
+        "sidebar",
+        "popup"
+      ],
+      "tags": [
+        "accessibility",
+        "navigation",
+        "section:accessibility",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "target-size",
+      "title": "Удобная область нажатия",
+      "summary": "Веб-цель минимум 24 CSS px с учётом исключений WCAG. Наша компактная кнопка 32 px, на coarse pointer 44 px; это продуктовые значения, не универсальное требование Apple.",
+      "severity": "warning",
+      "check": "automated",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "componentIds": [
+        "button",
+        "field",
+        "sidebar"
+      ],
+      "tags": [
+        "accessibility",
+        "geometry",
+        "section:spacing",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "contrast",
+      "title": "Контраст в обеих темах",
+      "summary": "Текст: WCAG SC 1.4.3 обычно 4.5:1, крупный 3:1 с исключениями. SC 1.4.11: 3:1 для визуальных частей, необходимых для распознавания controls/состояний, и значимых частей графики; декоративная граница сама по себе не обязательна, inactive controls исключены. Цвет не заменяет текст.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "componentIds": [
+        "button",
+        "field",
+        "status",
+        "notice"
+      ],
+      "tags": [
+        "accessibility",
+        "color",
+        "section:color",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "keyboard-flow",
+      "title": "Клавиатура и видимый фокус",
+      "summary": "Tab проходит все действия. Enter и Space активируют кнопки. Escape закрывает временную панель; после закрытия фокус возвращается к инициатору.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html",
+      "componentIds": [
+        "button",
+        "field",
+        "sidebar",
+        "popup"
+      ],
+      "tags": [
+        "accessibility",
+        "navigation",
+        "section:accessibility",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "zoom-reflow",
+      "title": "Увеличение и узкое окно",
+      "summary": "Проверить 200% текста и ширину 320 CSS px. Скрытие подписи не удаляет доступное название; основное действие остаётся доступно.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+      "componentIds": [
+        "field",
+        "sidebar",
+        "popup"
+      ],
+      "tags": [
+        "layout",
+        "accessibility",
+        "section:accessibility",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "reduced-motion",
+      "title": "Движение по предпочтению пользователя",
+      "summary": "Анимация объясняет действие и отключается при reduced motion. Нет постоянных эффектов, мешающих чтению данных.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+      "componentIds": [
+        "button",
+        "sidebar",
+        "empty-state"
+      ],
+      "tags": [
+        "motion",
+        "accessibility",
+        "section:motion",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "honest-states",
+      "title": "Загрузка, пустота и ошибка различимы",
+      "summary": "Загрузка отмечена aria-busy, ошибки объясняют следующее действие, отсутствие метрики не превращается в ноль.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+      "componentIds": [
+        "status",
+        "notice",
+        "empty-state"
+      ],
+      "tags": [
+        "states",
+        "section:feedback",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "performance-evidence",
+      "title": "Оценка подкреплена нагрузочным тестом",
+      "summary": "Измерить mount и interaction p95, память с указанием метода и окружения. Неподдержанный memory API означает отсутствие оценки, а не нулевое потребление.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/TR/performance-timeline/",
+      "componentIds": [
+        "button",
+        "field",
+        "sidebar",
+        "status",
+        "empty-state",
+        "notice",
+        "popup"
+      ],
+      "tags": [
+        "performance",
+        "section:performance",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "color-profiles",
+      "title": "Семантические цветовые профили",
+      "summary": "Элементы меняют палитру через --ag-* токены; общий код поведения и доступные названия остаются одинаковыми.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://m3.material.io/foundations/",
+      "componentIds": [],
+      "tags": [
+        "theme",
+        "profiles",
+        "section:color",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "apca-preference",
+      "title": "APCA и отдельный минимум WCAG2",
+      "summary": "Для известного opaque sRGB текста сохраняйте signed APCA Lc, размер/вес и font guidance. Рекомендательная политика AG: 70% APCA + 30% WCAG2; провал применимого WCAG AA — отдельный gate. APCA beta не заменяет проверку WCAG2.",
+      "severity": "warning",
+      "check": "automated",
+      "sourceUrl": "https://github.com/Myndex/SAPC-APCA/blob/master/documentation/minimum_compliance.md",
+      "componentIds": [],
+      "tags": [
+        "contrast",
+        "apca",
+        "section:color",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "qualification",
+      "title": "Сначала проверка в дизайн-системе",
+      "summary": "Версия/определение проходят functional, keyboard, profiles, load и disposal в ag-design, затем в продукте. Отчёт остаётся заявлением автора, без сертификации.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://m3.material.io/foundations/",
+      "componentIds": [],
+      "tags": [
+        "testing",
+        "release",
+        "section:marketplace",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "contextual-window-title",
+      "title": "Контекст вместо постоянного заголовка",
+      "summary": "В настоящей шапке показываем текущий раздел или выбранную сущность и частые действия; идентичность приложения остаётся в системном меню/метаданных. Обязателен browser fallback.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+      "componentIds": [],
+      "tags": [
+        "native",
+        "toolbar",
+        "layout",
+        "section:navigation",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "resize-panels",
+      "title": "Панели регулируются за внутреннюю границу",
+      "summary": "Левая и правая панели сохраняют свой край, поддерживают pointer и клавиатуру, ограничения ширины и место контента.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/layout",
+      "componentIds": [],
+      "tags": [
+        "resize",
+        "layout",
+        "section:layout",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "design-rationale",
+      "title": "Назначение и причины выбора",
+      "summary": "Компонент описывает предполагаемые сценарии, почему выбрана такая форма, альтернативы и ограничения. Единые функции имеют узнаваемое представление.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/design-principles",
+      "componentIds": [],
+      "tags": [
+        "rationale",
+        "design",
+        "section:marketplace",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "predictable-navigation",
+      "title": "Положение и обратная связь",
+      "summary": "Навигация сохраняет положение и язык действий; текущий раздел и путь понятны. Состояния данных проверяются отдельно правилом honest-states. Основание: принципы структуры, единой среды и предсказуемости Студии Артемия Лебедева.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.artlebedev.ru/backstage/navigation-rules/",
+      "componentIds": [],
+      "tags": [
+        "navigation",
+        "feedback",
+        "section:navigation",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "scenario-first",
+      "title": "Сначала сценарий",
+      "summary": "До выбора стиля запишите пользователя, основную задачу, контекст, ограничение и наблюдаемый успех; гипотезы помечайте отдельно.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.designkit.org/methods.html",
+      "componentIds": [],
+      "tags": [
+        "human-centered",
+        "section:human-centered",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "human-feedback",
+      "title": "Прототип проверяется с людьми",
+      "summary": "Агентская оценка не заменяет пользовательское исследование. Сохраните условия, участников, затруднения и изменения после обратной связи.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.designkit.org/methods.html",
+      "componentIds": [],
+      "tags": [
+        "human-centered",
+        "section:human-centered",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "information-hierarchy",
+      "title": "Структура прежде оформления",
+      "summary": "Разделы и связи отражают предметные задачи; используйте понятные названия и проверяйте рост объёма информации.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.artlebedev.ru/backstage/navigation-rules/",
+      "componentIds": [],
+      "tags": [
+        "information-architecture",
+        "section:information-architecture",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "recognition-over-recall",
+      "title": "Показывайте доступный выбор",
+      "summary": "Не требуйте помнить скрытые коды и прошлые шаги. Название, выбранное состояние и объяснение следующего шага доступны в контексте.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "componentIds": [],
+      "tags": [
+        "information-architecture",
+        "section:information-architecture",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "layout-grid",
+      "title": "Согласованная адаптивная сетка",
+      "summary": "Выравнивайте содержание и управление; изменяйте раскладку по доступному месту, сохраняя действия, safe areas и пользовательский контекст.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/layout",
+      "componentIds": [],
+      "tags": [
+        "layout",
+        "section:layout",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "content-priority",
+      "title": "Рабочая область получает место",
+      "summary": "Дополнительные панели сворачиваются или раскрываются по запросу; графики и редакторы используют доступную область без повторных шапок.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/layout",
+      "componentIds": [],
+      "tags": [
+        "layout",
+        "section:layout",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "spacing-scale",
+      "title": "Отступы задаются токенами",
+      "summary": "AG desktop/web: шаг 4 CSS px; интервалы 4/8/12/16/24/32. Это локальные defaults, не универсальный норматив Apple или Android dp.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.android.com/design/ui/mobile/guides/layout-and-content/grids-and-units",
+      "componentIds": [],
+      "tags": [
+        "spacing",
+        "section:spacing",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "control-geometry",
+      "title": "Геометрия сохраняет удобство",
+      "summary": "AG defaults: контроль 32 px, иконка 20 px, радиусы 7/12 px; рост текста может увеличить высоту. Проверяйте реальную область нажатия и платформу.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "componentIds": [],
+      "tags": [
+        "spacing",
+        "section:spacing",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "grouping-proximity",
+      "title": "Близость выражает связь",
+      "summary": "Внутренний интервал меньше межгруппового. AG отправная точка 8 px внутри, 16–24 между; сначала пробел/ось, затем обоснованный разделитель.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/layout",
+      "componentIds": [],
+      "tags": [
+        "grouping",
+        "section:grouping",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "avoid-container-noise",
+      "title": "Не вкладывайте рамку без смысла",
+      "summary": "Контейнер отделяет реальную смысловую группу; удалите повторные рамки, плашки и заголовки, не улучшающие понимание.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "componentIds": [],
+      "tags": [
+        "grouping",
+        "section:grouping",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "visual-priority",
+      "title": "Ведущая задача различима",
+      "summary": "Определите порядок чтения и ведущий акцент. Размер, вес и положение показывают важность до декоративной окраски.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/design-principles",
+      "componentIds": [],
+      "tags": [
+        "hierarchy",
+        "section:hierarchy",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "layer-contract",
+      "title": "Слои имеют явный порядок",
+      "summary": "AG: именованные слои content/sticky/popover/modal; проверяйте clipping, focus и наложения. Не лечите конфликт случайным ростом z-index. Подсказка не перекрывает источник и курсор: измерьте размер, выберите свободную сторону, при нехватке места вынесите сведения в поток.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/materials",
+      "componentIds": [],
+      "tags": [
+        "layers",
+        "section:layers",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "material-restraint",
+      "title": "Материал служит структуре",
+      "summary": "Тени/прозрачность умеренны, содержимое читаемо. Нужны reduced-transparency и непрозрачный fallback; CSS blur не доказывает нативное поведение.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/materials",
+      "componentIds": [],
+      "tags": [
+        "layers",
+        "section:layers",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "semantic-color-roles",
+      "title": "Цвет обозначает роль",
+      "summary": "Разделяйте surface/text/accent/border/focus/semantic states. Профили меняют палитру проекта, не контракт и геометрию элемента.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.android.com/design/ui/mobile/guides/styles/color",
+      "componentIds": [],
+      "tags": [
+        "color",
+        "section:color",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "color-state-matrix",
+      "title": "Проверяйте пары состояний",
+      "summary": "Default/hover/focus/selected/disabled/error проверяются в светлой и тёмной темах. Отсутствие нужной пары — unknown, а не pass.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/color",
+      "componentIds": [],
+      "tags": [
+        "color",
+        "section:color",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "type-scale",
+      "title": "Текст выбирается по сценарию",
+      "summary": "13/12/15–17/22–25 px — стартовые плотные desktop-токены AG; для долгого чтения выбирайте крупнее. Не уменьшайте шрифт ради фиксированной карточки.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/typography",
+      "componentIds": [],
+      "tags": [
+        "typography",
+        "section:typography",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "text-resilience",
+      "title": "Текст переживает увеличение",
+      "summary": "Кириллица, длинные пути и 200% текста сохраняют смысл; truncation имеет доступ к полному значению; числа сравниваются в табличном начертании.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+      "componentIds": [],
+      "tags": [
+        "typography",
+        "section:typography",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "icon-consistency",
+      "title": "Иконки согласованы по смыслу",
+      "summary": "Icon-only — для узнаваемой команды в ясном контексте; неоднозначность, важное разрешение и последствия требуют текста. Иконка+текст или подписанный overflow — осознанные альтернативы. Сохранить локализованное имя, tooltip/focus/touch, target и состояния; quiet не меняет семантику кнопки.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/icons",
+      "componentIds": [],
+      "tags": [
+        "icons",
+        "section:icons",
+        "stage:review",
+        "stage:component",
+        "icon-only",
+        "labels",
+        "tooltip",
+        "text-only",
+        "icon+text",
+        "иконки вместо текста"
+      ]
+    },
+    {
+      "id": "action-outcome",
+      "title": "Глагол объясняет результат",
+      "summary": "Кнопка называет действие и объект, ведущее действие узнаваемо, повторная отправка во время ожидания не дублирует операцию.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/buttons",
+      "componentIds": [],
+      "tags": [
+        "actions",
+        "section:actions",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "undo-recovery",
+      "title": "Ошибочный шаг можно исправить",
+      "summary": "Дайте отмену или понятный выход; необратимое действие объясняет последствия. Отключение команды имеет объяснимую причину.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "componentIds": [],
+      "tags": [
+        "actions",
+        "section:actions",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "state-recovery",
+      "title": "Ошибка сохраняет контекст",
+      "summary": "Различайте empty/error/stale; сохраняйте введённое и последнее известное, объясняйте безопасный retry. Неизвестная метрика не становится нулём.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "componentIds": [],
+      "tags": [
+        "feedback",
+        "section:feedback",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "form-labels",
+      "title": "Постоянная подпись поля",
+      "summary": "Label не заменяется placeholder; единица/диапазон видимы, ошибка связана с полем и не сбрасывает остальные значения.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html",
+      "componentIds": [],
+      "tags": [
+        "forms",
+        "section:forms",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "form-error-recovery",
+      "title": "Ошибка показывает способ исправления",
+      "summary": "Валидация объясняет конкретный ввод и следующий шаг; keyboard submit, paste и серверные ограничения проверяются отдельно.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html",
+      "componentIds": [],
+      "tags": [
+        "forms",
+        "section:forms",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "data-provenance",
+      "title": "Данные имеют контекст",
+      "summary": "Метрика показывает сервис, единицу, период, агрегацию и свежесть. Ограничение выборки и отсутствие данных видны; сравниваются сопоставимые шкалы. Для PPTX/XLSX сохраняйте единицы, baseline, знаменатели, расчёты и ограничения; сопоставляйте формат с решением, а не количеством графиков.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "componentIds": [],
+      "tags": [
+        "data",
+        "section:data",
+        "stage:review",
+        "stage:component",
+        "presentation",
+        "pptx",
+        "excel",
+        "dashboard",
+        "data storytelling",
+        "copywriting"
+      ]
+    },
+    {
+      "id": "graph-truth",
+      "title": "Связь — подтверждённое отношение",
+      "summary": "Ребро хранит реальные IDs и направление; пространственная близость не доказывает зависимость. Дублируйте смысл доступным списком.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+      "componentIds": [],
+      "tags": [
+        "data",
+        "section:data",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "card-scan-order",
+      "title": "Карточка имеет порядок чтения",
+      "summary": "AG task: ключ/статус → название → следующий шаг/блокировка → роль/языки. Code: имя/тип/место и реальные связи. Проверяйте длинный текст.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/layout",
+      "componentIds": [],
+      "tags": [
+        "cards",
+        "section:cards",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "card-progressive-detail",
+      "title": "Подробности открываются по запросу",
+      "summary": "История, DoR/DoD, результаты и проблемы — в деталях; карточка остаётся обзором. Не вкладывайте интерактивный control в другую кнопку.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/layout",
+      "componentIds": [],
+      "tags": [
+        "cards",
+        "section:cards",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "motion-purpose",
+      "title": "Движение объясняет изменение",
+      "summary": "Анимация короткая/прерываемая, не задерживает частые действия. AG starting duration 120–200 ms; reduced motion отключает необязательный переход.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/motion",
+      "componentIds": [],
+      "tags": [
+        "motion",
+        "section:motion",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "manual-accessibility",
+      "title": "Автоматический аудит неполон",
+      "summary": "Проверяйте screen reader, keyboard-only, темы и масштаб в целевой среде. Отсутствие автоматических находок не подтверждает всё WCAG/HIG.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/test-evaluate/preliminary/",
+      "componentIds": [],
+      "tags": [
+        "accessibility",
+        "section:accessibility",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "platform-fallback",
+      "title": "Нативное поведение проверяется отдельно",
+      "summary": "AppKit/Windows/Linux и browser имеют разные evidence. Скрывайте fallback после handshake, сохраняйте команды и системную идентичность.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/designing-for-macos",
+      "componentIds": [],
+      "tags": [
+        "platform",
+        "section:platform",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "bounded-shutdown",
+      "title": "Завершение не блокирует ОС",
+      "summary": "AG: ограниченное async shutdown, cooperative cancellation, сохранение данных и owned-child cleanup; скрыть в tray и завершить — разные команды.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/designing-for-macos",
+      "componentIds": [],
+      "tags": [
+        "platform",
+        "section:platform",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "performance-protocol",
+      "title": "Воспроизводимый нагрузочный протокол",
+      "summary": "Версия/хэш, устройство, viewport, прогрев, число экземпляров/циклов, p50/p95 и create/dispose обязательны. Вывод соответствует измеренному методу.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/TR/performance-timeline/",
+      "componentIds": [],
+      "tags": [
+        "performance",
+        "section:performance",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "performance-boundaries",
+      "title": "Не смешивайте разные измерения",
+      "summary": "Node/jsdom heap не browser layout и не native RSS. Неизмеренная память unknown. Компонентный p95 не является полевым INP.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://web.dev/articles/optimize-inp",
+      "componentIds": [],
+      "tags": [
+        "performance",
+        "section:performance",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "library-external",
+      "title": "Библиотека отделена от сервиса",
+      "summary": "AG: live catalog/packages/reports во внешней операторской папке; runtime не пишет артефакты в Git. Versioned package работает offline.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/design-principles",
+      "componentIds": [],
+      "tags": [
+        "marketplace",
+        "section:marketplace",
+        "stage:review",
+        "stage:component",
+        "stage:plan"
+      ]
+    },
+    {
+      "id": "reuse-evidence",
+      "title": "Выбор опирается на контракт",
+      "summary": "До разметки для каждого нового типа управления: точный кандидат/версия/контракт/checks; решение reuse/adapt/native-fallback/new-in-ag и конкретная причина. Общий top-k поиск не доказывает отсутствие компонента; draft не означает отсутствия кода. Fallback сохраняет геометрию/состояния/доступность AG. Ручная проверка записи и результата; unknown не является PASS.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.designkit.org/methods.html",
+      "componentIds": [],
+      "tags": [
+        "marketplace",
+        "section:marketplace",
+        "stage:review",
+        "stage:component",
+        "stage:plan",
+        "section:design-system-governance",
+        "native-fallback"
+      ]
+    },
+    {
+      "id": "evaluation-evidence",
+      "title": "Оценка имеет доказательства",
+      "summary": "Сохраняйте сценарий, версию и наблюдение для каждого критерия. AG weighted rubric — эвристика, не научно валидированная универсальная оценка.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "componentIds": [],
+      "tags": [
+        "evaluation",
+        "section:evaluation",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "evaluation-unknown",
+      "title": "Неизвестное не получает баллы",
+      "summary": "Unknown отдельно от fail/pass; N/A требует применимой причины. Показывайте coverage и critical gates рядом со score.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/test-evaluate/preliminary/",
+      "componentIds": [],
+      "tags": [
+        "evaluation",
+        "section:evaluation",
+        "stage:review",
+        "stage:component",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "agent-transparency",
+      "title": "Запрос и ответ агента видимы",
+      "summary": "Лог связывает агента/задачу/request/response, отличает предложение, ошибку и выполнение. Полномочия человека и автоматизации показаны явно.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://learn.microsoft.com/ru-ru/agents/design-guidelines/human-centered-design",
+      "componentIds": [],
+      "tags": [
+        "agent-control",
+        "section:agent-control",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "agent-log-bounds",
+      "title": "Чат компактен и ограничен",
+      "summary": "AG: popup внизу справа, выключен по умолчанию, свернуть/развернуть/фильтр; маркеры отдельным opt-in, история ограничена, transport host-owned.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://learn.microsoft.com/ru-ru/agents/design-guidelines/human-centered-design",
+      "componentIds": [],
+      "tags": [
+        "agent-control",
+        "section:agent-control",
+        "stage:review",
+        "stage:component"
+      ]
+    },
+    {
+      "id": "offscreen-lifecycle",
+      "title": "Окно отрисовки для длинных тяжёлых лент",
+      "summary": "Рассмотрите createRenderWindow для offscreen превью/галерей. Явные snapshot/dispose, сохранение высоты и фокуса; небольшой статичный или основной текст оставляйте eager. Проверяйте живые экземпляры и ресурсы, не обещайте CPU/RSS по Node-счётчикам.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API",
+      "componentIds": [
+        "render-window"
+      ],
+      "tags": [
+        "performance",
+        "lifecycle",
+        "render-window",
+        "section:performance",
+        "stage:plan",
+        "stage:layout",
+        "stage:component",
+        "stage:review",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "layout-semantic-groups",
+      "title": "Настройки, навигация, действия и пояснения образуют различимые смысловые группы. Подпись визуально принадлежит своему полю.",
+      "summary": "Отмеченные группы и порядок чтения на широком и узком экране; отсутствие неоднозначной принадлежности подписей.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.nngroup.com/articles/gestalt-proximity/",
+      "componentIds": [
+        "board-viewport",
+        "popup",
+        "section-stack",
+        "sidebar",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:spacing",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "layout-group-spacing",
+      "title": "Интервал между соседними смысловыми группами больше интервала внутри каждой группы. Начальный ориентир AG: межгрупповой зазор не меньше 1,5 максимального сопоставимого внутреннего зазора.",
+      "summary": "Измерить локальные соседние интервалы одной оси. Заголовок, подпись и поле сравнивать как объявленные группы; не считать отношение по всему экрану. Рамка или заголовок могут обосновывать иную композицию.",
+      "severity": "warning",
+      "check": "manual",
+      "sourceUrl": "https://www.nngroup.com/articles/gestalt-proximity/",
+      "componentIds": [
+        "board-viewport",
+        "popup",
+        "section-stack",
+        "sidebar",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:spacing",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "layout-alignment-anchors",
+      "title": "Сетка задаёт явные оси: края контейнеров, базовые линии текста и центры рядов управления.",
+      "summary": "Для каждого ряда указан тип опоры. Номинальные однотипные опоры совпадают; начальная техническая погрешность AG ≤1 CSS px в согласованной среде. Сохранять максимальное отклонение.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms",
+      "componentIds": [
+        "board-viewport",
+        "popup",
+        "section-stack",
+        "sidebar",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:spacing",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "layout-control-slots",
+      "title": "Поле состоит из подписи, области управления и пояснения/ошибки. В одном ряду однотипные области управления имеют согласованную минимальную высоту.",
+      "summary": "Проверка коротких/длинных подписей, ошибок и 200% текста. Многострочная подпись увеличивает слот ряда, а не вызывает обрезку или перекрытие.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms",
+      "componentIds": [
+        "board-viewport",
+        "popup",
+        "section-stack",
+        "sidebar",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:responsive",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "layout-primary-flow",
+      "title": "Для последовательного заполнения исходная компоновка — одна основная колонка. Связанные короткие поля допускаются в одной строке. Независимые группы CRM могут занимать несколько колонок при ясном порядке.",
+      "summary": "Проверка порядка глазами, клавиатурой и скринридером; причины многоколоночной компоновки.",
+      "severity": "warning",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms",
+      "componentIds": [
+        "board-viewport",
+        "popup",
+        "section-stack",
+        "sidebar",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:responsive",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "layout-surface-restraint",
+      "title": "Сначала разделять группы отступом, заголовком и осью; рамку или фон добавлять при недостаточной различимости.",
+      "summary": "Для каждой вложенной декоративной поверхности объяснить её роль. Универсального ограничения числа карточек нет.",
+      "severity": "warning",
+      "check": "manual",
+      "sourceUrl": "https://www.nngroup.com/articles/common-region/",
+      "componentIds": [
+        "board-viewport",
+        "popup",
+        "section-stack",
+        "sidebar",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:spacing",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "optical-shape-balance",
+      "title": "Различать габариты контейнера, видимые границы рисунка и воспринимаемую массу. Равные габариты круга и квадрата не гарантируют равного воспринимаемого размера.",
+      "summary": "Сравнить формы рядом в одинаковых слотах, на реальном масштабе, обеих темах; записать визуальное наблюдение.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://atlassian.design/guidelines/product/foundations/iconography",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:consistency",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "optical-correction-record",
+      "title": "Оптическая поправка принадлежит рисунку/семейству иконок; она не сдвигает сетку контейнеров и область нажатия.",
+      "summary": "Сохранить glyph/variant, исходный размер, scale, offsetX/offsetY, причину и проверенные размеры.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://atlassian.design/guidelines/product/foundations/iconography",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:consistency",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "optical-no-universal-ratio",
+      "title": "Не вводить универсальный процент увеличения круга, треугольника или тонкой иконки.",
+      "summary": "Размеры и поправки проверяются в конкретном наборе. Формула площади не выдаётся за модель зрительного восприятия.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://atlassian.design/guidelines/product/foundations/iconography",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:consistency",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "optical-family-consistency",
+      "title": "Иконки одной панели согласованы по стилю, толщине штриха и воспринимаемому размеру; смешение контуров, заливок и emoji требует причины.",
+      "summary": "Сравнение всего набора, включая selected/disabled; оценка остаётся ручной.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://atlassian.design/guidelines/product/foundations/iconography",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:consistency",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-field-purpose",
+      "title": "Для каждого поля определены назначение, момент необходимости и потребитель данных. Необходимость обязательного поля привязана к текущему этапу.",
+      "summary": "Реестр полей; ноль полей без объяснённой роли. Поля «на всякий случай» требуют пересмотра.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms",
+      "componentIds": [
+        "field",
+        "section-stack",
+        "segmented-choice"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:scenario",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-label-persistence",
+      "title": "В типовых формах постоянная видимая подпись объясняет поле; она программно связана с контролом. Placeholder служит примером.",
+      "summary": "Проверка пустого/заполненного поля и accessibility tree. WCAG: 1.3.1, 3.3.2, 4.1.2; видимая постоянная label — политика AG для типовых полей.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/TR/WCAG22/",
+      "componentIds": [
+        "field",
+        "section-stack",
+        "segmented-choice"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:semantics",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-constraints-before-error",
+      "title": "Обязательность, единицы, существенный формат и ограничения доступны до ошибки и связаны с полем.",
+      "summary": "Например, «Интервал, секунды; от 1 до 60». Условия не спрятаны только в tooltip.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/TR/WCAG22/",
+      "componentIds": [
+        "field",
+        "section-stack",
+        "segmented-choice"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:semantics",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-control-task-fit",
+      "title": "Вид ввода соответствует задаче: известная дата допускает прямой ввод; длинный справочник — поиск; несколько независимых вариантов — чекбоксы.",
+      "summary": "Описать способ ввода, количество/известность вариантов, проверку клавиатуры и вставки.",
+      "severity": "warning",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms",
+      "componentIds": [
+        "field",
+        "section-stack",
+        "segmented-choice"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:semantics",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-error-recovery-extended",
+      "title": "Ошибка называет проблему и доступный способ исправления, связана с полем; корректные данные сохраняются после ошибки/сбоя.",
+      "summary": "Неверный формат, пустое обязательное поле, серверный отказ и повтор. WCAG 3.3.1/3.3.3 — идентификация/подсказка с применимыми условиями; сохранение ввода — политика AG.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/tutorials/forms/labels/",
+      "componentIds": [
+        "field",
+        "section-stack",
+        "segmented-choice"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:recovery",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-reuse-known-data",
+      "title": "Уже предоставленные в том же процессе данные подставляются либо доступны для выбора; исключения требуют причины.",
+      "summary": "Реестр повторного ввода. WCAG 3.3.7 допускает исключения: необходимость повторения, безопасность, утратившая актуальность информация.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html",
+      "componentIds": [
+        "field",
+        "section-stack",
+        "segmented-choice"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:semantics",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-submit-integrity",
+      "title": "Отправка показывает ход и результат, предотвращает непреднамеренное повторение; повтор после сбоя безопасен в пределах контракта операции.",
+      "summary": "Проверить двойное нажатие, медленный ответ, сетевой сбой и повтор. Одного disabled-состояния недостаточно для доказательства серверной идемпотентности.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms",
+      "componentIds": [
+        "field",
+        "section-stack",
+        "segmented-choice"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:recovery",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-draft-stage",
+      "title": "В CRM черновик требует минимум данных текущего этапа; перед значимым переходом проверяются нужные этому этапу сведения.",
+      "summary": "Сценарии создания черновика, изменения статуса и восстановления после перерыва. Не применять незаметное автосохранение к необратимому действию.",
+      "severity": "warning",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms",
+      "componentIds": [
+        "field",
+        "section-stack",
+        "segmented-choice"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:recovery",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "action-label-choice",
+      "title": "Основное, незнакомое или неоднозначное действие имеет видимую текстовую подпись. Иконная кнопка допустима для узнаваемого локального/повторяемого действия в понятном контексте.",
+      "summary": "Для icon-only записать назначение, область действия, знакомую метафору и свидетельство понимания. «Обновить» уточнить: данные, страницу или синхронизацию.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://atlassian.design/guidelines/product/foundations/iconography",
+      "componentIds": [
+        "button",
+        "inline-help",
+        "popup",
+        "sidebar",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:hierarchy",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "action-primary-per-group",
+      "title": "В одной смысловой группе выделено не более одного основного действия.",
+      "summary": "Проверка визуальных акцентов; независимые группы могут иметь собственные основные действия.",
+      "severity": "warning",
+      "check": "manual",
+      "sourceUrl": "https://atlassian.design/components/button/usage",
+      "componentIds": [
+        "button",
+        "inline-help",
+        "popup",
+        "sidebar",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:hierarchy",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "action-name-state",
+      "title": "У действия есть доступное имя; состояние/текущее значение передаются программно. Видимый текст входит в доступное имя.",
+      "summary": "Accessibility tree и целевой скринридер; WCAG 4.1.2 и 2.5.3. Иконка при текстовой подписи не дублируется ненужным озвучиванием.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/TR/WCAG22/",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:hierarchy",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "action-tooltip-supplement",
+      "title": "Tooltip дополняет доступное имя; существенные инструкции доступны без наведения.",
+      "summary": "Проверить мышь, focus и touch. Для появляющегося по hover/focus содержимого учитывать WCAG 1.4.13: возможность скрыть, навести на него и прочитать с предусмотренными исключениями.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.nngroup.com/articles/icon-usability/",
+      "componentIds": [
+        "button",
+        "inline-help",
+        "popup",
+        "sidebar",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:hierarchy",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "action-target-size",
+      "title": "Цель указателя отвечает WCAG 2.5.8: 24×24 CSS px либо конкретное допустимое исключение. Цель AG для touch/coarse pointer — 44×44 CSS px.",
+      "summary": "Измерять область взаимодействия, а не рисунок. Для исключения по расстоянию применять правило окружностей диаметром 24 px; перечислить inline/equivalent/UA/essential исключения при использовании.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:hierarchy",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "a11y-noncolor-meaning",
+      "title": "Статусы, ошибки, выбранность и серии графика различаются не только цветом.",
+      "summary": "Отключить цветовую подсказку: текст, форма, маркер или штрих сохраняют смысл; симуляции разных нарушений цветового зрения — дополнительная проверка. WCAG 1.4.1.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:semantics",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "a11y-text-contrast",
+      "title": "Реальные пары текста/фона проходят SC 1.4.3: 4,5:1; крупный текст — 3:1, с исключениями критерия.",
+      "summary": "Каждая применимая пара в каждой теме/состоянии; крупный текст — от 24 CSS px или примерно 18,67 CSS px полужирного. Проверять значения без округления порога вверх.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:color",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "a11y-control-contrast",
+      "title": "Необходимая для распознавания управления/состояний и понимания графики визуальная информация имеет 3:1 к соседним цветам по SC 1.4.11.",
+      "summary": "Реальные соседние цвета, фон и состояния. Не распространять требование на все декоративные рамки; учитывать inactive, UA и essential исключения.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:color",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "a11y-keyboard-focus",
+      "title": "Применимые функции доступны с клавиатуры; нет ловушек, порядок фокуса сохраняет смысл, фокус видим и не полностью перекрыт авторским содержимым.",
+      "summary": "Завершение сценария, диалоги, возврат фокуса; SC 2.1.1/2.1.2/2.4.3/2.4.7/2.4.11. AG рекомендует полную видимость фокуса; минимум 2.4.11 допускает частичное перекрытие.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/TR/WCAG22/",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:keyboard",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "a11y-structure-reading",
+      "title": "Заголовки, группы, таблицы и последовательность чтения передают структуру программно; визуальное перемещение не разрушает смысловой порядок.",
+      "summary": "Accessibility tree + чтение целевым скринридером. SC 1.3.1/1.3.2/4.1.2. Предпочитать нативную семантику; ARIA не создаёт поведение автоматически.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/TR/WCAG22/",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:semantics",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "a11y-status-announcement",
+      "title": "Сообщения статуса доступны вспомогательным технологиям без принудительного перемещения фокуса там, где применим SC 4.1.3.",
+      "summary": "Проверить сохранение, загрузку, ошибку и завершение. Объявлять существенные изменения; не озвучивать каждый кадр анимации и каждое обновление декоративного графика.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:feedback",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "a11y-zoom-reflow-extended",
+      "title": "Текст увеличивается до 200% без потери содержимого и функций по SC 1.4.4, с его исключениями для captions и изображений текста; для вертикального контента reflow работает при ширине 320 CSS px с исключениями SC 1.4.10.",
+      "summary": "Отдельные проверки 200% текста и reflow, например viewport 1280 px при 400% zoom. Двумерная таблица/карта может иметь собственную прокрутку; окружающие формы и пояснения доступны.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:responsive",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "a11y-auditory-equivalence",
+      "title": "Значимые звуковые сигналы имеют видимое текстовое сообщение; основные действия и поддержка имеют достаточный для сценария путь без обязательного слухового восприятия.",
+      "summary": "Пройти согласованные сценарии с выключенным звуком; проверить время доступности сообщения и текстовый канал. Для слепоглухих пользователей предусмотреть программно доступный текст.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/media/av/planning/",
+      "componentIds": [
+        "ascii-background"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:semantics",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "a11y-media-alternatives",
+      "title": "Для записанных audio-only материалов есть применимая текстовая альтернатива; для записанного синхронного видео со звуком — субтитры; для live synchronized media — live-субтитры. Существенная визуальная информация записанного видео доступна через аудиодескр",
+      "summary": "Инвентарь медиа, ручная проверка речи, говорящих, значимых звуков, синхронизации и визуальных сведений. SC 1.2.1/1.2.2/1.2.4/1.2.5; исключения рассматривать по каждому критерию.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/media/av/planning/",
+      "componentIds": [
+        "ascii-background"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:semantics",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "a11y-chart-equivalence",
+      "title": "Содержательный график имеет текстовый эквивалент существенных данных и выводов; доступная таблица — один из способов. Чистая декорация исключается из чтения, если не передаёт самостоятельной информации.",
+      "summary": "Пользователь получает смысл и необходимые значения без изображения; у таблицы заголовки/единицы. Не считать подпись «график продаж» достаточной. SC 1.1.1/1.3.1.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "componentIds": [
+        "ambient-chart",
+        "board-viewport"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:semantics",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "a11y-slider-drag-alternative",
+      "title": "Ползунок имеет имя, значение, диапазон, клавиатурное управление; dragging допускает альтернативу одиночным указателем без перетаскивания с исключениями SC 2.5.7.",
+      "summary": "Стрелки и границы диапазона; выбор кликом, кнопками или полем в зависимости от компонента. Одна клавиатурная альтернатива сама по себе не закрывает 2.5.7. Для точности рекомендуется числовой ввод.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/ARIA/apg/patterns/slider/",
+      "componentIds": [
+        "field",
+        "board-viewport"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:semantics",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "a11y-authentication",
+      "title": "Авторизация не требует когнитивного теста без предусмотренной SC 3.3.8 альтернативы/помощи/исключения; не препятствовать подходящим менеджерам паролей и вставке.",
+      "summary": "Проверить пароль, одноразовый код, CAPTCHA и альтернативный путь. Нельзя считать любую CAPTCHA автоматически соответствующей.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html",
+      "componentIds": [
+        "field"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:semantics",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "a11y-motion-control",
+      "title": "Движение и автообновление имеют применимые механизмы остановки по SC 2.2.2; вспышки отвечают SC 2.3.1. AG дополнительно учитывает prefers-reduced-motion.",
+      "summary": "Проверить паузу/скрытие, восстановление, уменьшение движения и сохранность данных. Reduced motion — политика AG сверх перечисленных минимальных критериев, а не самостоятельный критерий AA.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/TR/WCAG22/",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:motion",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "apple-concentric-corners",
+      "title": "Вложенные скругления согласованы с контейнером; для равномерного inset круговых дуг использовать max(0, R_outer - inset), с ограничением размером дочернего элемента.",
+      "summary": "Проверить R_outer/inset/R_inner, одинаковые центры дуг и fallback вне контейнера. Асимметричные/continuous/native shapes требуют платформенной проверки, а не этой упрощённой формулы.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/documentation/swiftui/edge/corner/style/concentric",
+      "componentIds": [
+        "button",
+        "field",
+        "popup",
+        "section-stack"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:spacing",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "apple-neighbor-shapes",
+      "title": "Соседние равноправные элементы согласованы по семейству формы и отступам; концентричность применяется к вложенности, а не ко всем соседям.",
+      "summary": "Сравнить роли/размеры соседей, отсутствие pinched/flared углов и обоснование разных форм.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/videos/play/wwdc2025/356/",
+      "componentIds": [
+        "button",
+        "field",
+        "popup",
+        "section-stack",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:consistency",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "apple-shape-variants",
+      "title": "Выбирать fixed rounded rectangle для плотных панелей, capsule для акцентных/просторных действий и concentric с fallback для вложенных поверхностей.",
+      "summary": "Показать применимые альтернативы и выбранный вариант; это контекстный перенос принципа Apple в AG web, не имитация нативного стиля.",
+      "severity": "warning",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/videos/play/wwdc2025/356/",
+      "componentIds": [
+        "button",
+        "field",
+        "popup",
+        "section-stack"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:hierarchy",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "apple-semantic-colors",
+      "title": "Цвет задаётся смысловой ролью, а не случайным HEX; системные динамические цвета на native используются по назначению.",
+      "summary": "Проверить роли text/background/separator/accent/status и сохранность палитры хозяина.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/color",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:color",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "apple-color-appearances",
+      "title": "Собственные цвета проверены в light/dark и increased contrast вариантах; фактический фон и выбранность сохраняют читаемость.",
+      "summary": "Тестировать обе темы × standard/increased contrast; отсутствие подходящего варианта остаётся unknown, а не автоматически pass.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/color",
+      "componentIds": [
+        "agent-activity-chat",
+        "ambient-chart",
+        "ascii-background",
+        "board-viewport",
+        "breadcrumbs",
+        "button",
+        "card-connections",
+        "drag-drop",
+        "empty-state",
+        "field",
+        "inline-help",
+        "issue-summary",
+        "loading-indicator",
+        "motion",
+        "notice",
+        "popup",
+        "progress",
+        "render-window",
+        "resizable-panel",
+        "section-stack",
+        "segmented-choice",
+        "sidebar",
+        "skeleton",
+        "state-panel",
+        "status",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:color",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "apple-material-layer",
+      "title": "Материал поддерживает различие controls/content; прозрачность имеет читаемый непрозрачный вариант и не создаёт слои стекла друг над другом.",
+      "summary": "Проверить контент под поверхностью, reduced transparency/increased contrast и отсутствие клиппинга; Liquid Glass не добавляется всем карточкам.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/materials",
+      "componentIds": [
+        "popup",
+        "sidebar",
+        "window-toolbar"
+      ],
+      "tags": [
+        "requirements-v1",
+        "section:layers",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "i18n-contract",
+      "title": "Локализация предусмотрена до разработки",
+      "summary": "Явно объявить locale, включённые языки и fallback; русский необязателен. UI-тексты отделены от данных и не влияют на идентичность действий.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/International/questions/qa-i18n",
+      "componentIds": [],
+      "tags": [
+        "i18n",
+        "section:internationalization-localization",
+        "stage:plan",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "golden-canon-preferred",
+      "title": "Golden Canon Grid — предпочтительная основа композиции",
+      "summary": "Политика AG по запросу владельца: сначала рассмотреть сетку; обосновать альтернативу. Читаемость, доступность и обязательный макет сохраняют приоритет.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://grids.obys.agency/",
+      "componentIds": [
+        "golden-canon-grid"
+      ],
+      "tags": [
+        "layout",
+        "golden",
+        "canon",
+        "pptx"
+      ]
+    },
+    {
+      "id": "enterprise-dialog-task",
+      "title": "Диалоги",
+      "summary": "Modal прерывает работу для ограниченной задачи, non-modal помогает продолжать её. Сохраните заголовок и действия при прокрутке, верните фокус к инициатору. Не вкладывайте dialogs. Источники различаются по закрытию снаружи и кнопкам: определите безопасные правила отмены с учётом несохранённого ввода.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://fluent2.microsoft.design/components/web/react/core/dialog/usage",
+      "componentIds": [
+        "popup"
+      ],
+      "tags": [
+        "enterprise-components",
+        "carbon",
+        "fluent",
+        "spectrum",
+        "section:layers",
+        "stage:component",
+        "stage:review",
+        "dialog-task"
+      ]
+    },
+    {
+      "id": "enterprise-help-surface",
+      "title": "Tooltip и контекстная помощь",
+      "summary": "Короткая дополнительная подсказка доступна при hover и фокусе. Важные требования остаются видимыми; длинный или интерактивный ответ требует отдельной поверхности помощи. Не делайте tooltip единственным именем кнопки и не считайте hover поддержкой touch. Проверяйте границы и цель подсказки.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://spectrum.adobe.com/web/rsp/components/tooltip",
+      "componentIds": [
+        "inline-help"
+      ],
+      "tags": [
+        "enterprise-components",
+        "carbon",
+        "fluent",
+        "spectrum",
+        "section:icons",
+        "stage:component",
+        "stage:review",
+        "help-surface"
+      ]
+    },
+    {
+      "id": "enterprise-button-emphasis",
+      "title": "Иерархия кнопок",
+      "summary": "AG оставляет одно ведущее действие в смысловой группе, остальные спокойнее. Название команды описывает результат; pending защищает от дубля и сохраняет понятный статус. Названия вариантов не переносите буквально: Spectrum primary — средний акцент, accent — сильный; Fluent primary обозначает ведущее действие.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://fluent2.microsoft.design/components/web/react/core/button/usage",
+      "componentIds": [
+        "button"
+      ],
+      "tags": [
+        "enterprise-components",
+        "carbon",
+        "fluent",
+        "spectrum",
+        "section:actions",
+        "stage:component",
+        "stage:review",
+        "button-emphasis"
+      ]
+    },
+    {
+      "id": "enterprise-toolbar-overflow",
+      "title": "Toolbar и меню",
+      "summary": "Группируйте команды по задаче возле текущего контекста. При нехватке места toolbar использует доступное overflow-меню с подписями, сохраняя главную команду. Не применяйте запрет переноса toolbar к любой форме. Destructive-команды отделяйте; порядок и доступность клавиатурой сохраняйте.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://fluent2.microsoft.design/components/web/react/core/toolbar/usage/",
+      "componentIds": [
+        "menu",
+        "button",
+        "window-toolbar"
+      ],
+      "tags": [
+        "enterprise-components",
+        "carbon",
+        "fluent",
+        "spectrum",
+        "section:actions",
+        "stage:component",
+        "stage:review",
+        "toolbar-overflow"
+      ]
+    },
+    {
+      "id": "enterprise-tab-activation",
+      "title": "Tabs и активация",
+      "summary": "Tabs группируют связанные разделы одного контекста. Automatic подходит быстрым панелям; manual позволяет стрелками выбрать вкладку и активировать Enter/Space при дорогой загрузке. Сравнение двух разделов не прячьте за tabs. Для режима отображения одних данных сначала рассмотрите segmented-choice; шаги процесса не являются tabs.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/components/tabs/guidelines",
+      "componentIds": [
+        "tabs",
+        "segmented-choice"
+      ],
+      "tags": [
+        "enterprise-components",
+        "carbon",
+        "fluent",
+        "spectrum",
+        "section:navigation",
+        "stage:component",
+        "stage:review",
+        "tab-activation"
+      ]
+    },
+    {
+      "id": "enterprise-tree-navigation",
+      "title": "Дерево и длинные названия",
+      "summary": "Разделяйте раскрытие узла, выбор и действие. Дайте увидеть полное обрезанное имя при фокусе и регулируйте ширину панели для глубокой иерархии. Не переносите Spectrum drag-and-drop или внешние drop как уже реализованный AG контракт; проверяйте существующий tree API и альтернативы клавиатурой.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://spectrum.adobe.com/web/rsp/components/tree-view",
+      "componentIds": [
+        "tree",
+        "resizable-panel"
+      ],
+      "tags": [
+        "enterprise-components",
+        "carbon",
+        "fluent",
+        "spectrum",
+        "section:navigation",
+        "stage:component",
+        "stage:review",
+        "tree-navigation"
+      ]
+    },
+    {
+      "id": "enterprise-message-scope",
+      "title": "Уведомления и ошибки",
+      "summary": "Локальная ошибка остаётся у поля, проблема области — в устойчивом notice/state-panel. Toast подходит некритичному временному результату, а не обязательному исправлению. Не обрезайте важное сообщение; покажите действие восстановления. Не переносите фиксированный таймер, число toast или assertive-политику Fluent как общее правило AG.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://fluent2.microsoft.design/components/web/react/core/toast/usage/",
+      "componentIds": [
+        "notice",
+        "state-panel",
+        "field"
+      ],
+      "tags": [
+        "enterprise-components",
+        "carbon",
+        "fluent",
+        "spectrum",
+        "section:feedback",
+        "stage:component",
+        "stage:review",
+        "message-scope"
+      ]
+    },
+    {
+      "id": "enterprise-empty-reason",
+      "title": "Пустые состояния",
+      "summary": "Различайте первый запуск, отсутствие совпадений, отсутствие прав и сбой загрузки. Покажите объяснение и уместный следующий шаг в самой пустой области. Не имитируйте все случаи нулём или одинаковым рисунком. В малом блоке полезный текст важнее иллюстрации.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/patterns/empty-states",
+      "componentIds": [
+        "empty-state",
+        "state-panel"
+      ],
+      "tags": [
+        "enterprise-components",
+        "carbon",
+        "fluent",
+        "spectrum",
+        "section:feedback",
+        "stage:component",
+        "stage:review",
+        "empty-reason"
+      ]
+    },
+    {
+      "id": "enterprise-loading-truth",
+      "title": "Загрузка и прогресс",
+      "summary": "Skeleton показывает ожидаемую структуру нового контента; inline-индикатор — выполняемую операцию. Процент допустим только при измеренном объёме, иначе indeterminate. Сохраняйте прежнее содержимое при обновлении, помечая stale/busy. Не создавайте skeleton для toast/меню и не копируйте vendor пороги времени без проверки.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/patterns/loading",
+      "componentIds": [
+        "loading-indicator",
+        "progress",
+        "skeleton",
+        "state-panel"
+      ],
+      "tags": [
+        "enterprise-components",
+        "carbon",
+        "fluent",
+        "spectrum",
+        "section:feedback",
+        "stage:component",
+        "stage:review",
+        "loading-truth"
+      ]
+    },
+    {
+      "id": "enterprise-text-entry",
+      "title": "Поле и textarea",
+      "summary": "Однострочное значение — field, комментарий или абзацы — textarea. Высота соответствует ожидаемому вводу, подпись и нужная подсказка остаются видимыми. Не добавляйте placeholder и hint ради одинаковой высоты. Resize у Carbon включён, у Fluent опционален; AG выбирает vertical для контекста графика.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/components/text-input/guidelines",
+      "componentIds": [
+        "field",
+        "textarea"
+      ],
+      "tags": [
+        "enterprise-components",
+        "carbon",
+        "fluent",
+        "spectrum",
+        "section:forms",
+        "stage:component",
+        "stage:review",
+        "text-entry"
+      ]
+    },
+    {
+      "id": "enterprise-selection",
+      "title": "Select или combobox",
+      "summary": "Короткий закрытый список — native select; поиск по длинному списку — combobox. Фильтрация списка сама по себе не разрешает произвольный ответ. AG dropdown-select сейчас single-choice и не принимает freeform: multi-select и свободный ввод требуют отдельного проверенного контракта.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://fluent2.microsoft.design/components/web/react/core/combobox/usage",
+      "componentIds": [
+        "select",
+        "dropdown-select"
+      ],
+      "tags": [
+        "enterprise-components",
+        "carbon",
+        "fluent",
+        "spectrum",
+        "section:forms",
+        "stage:component",
+        "stage:review",
+        "selection"
+      ]
+    },
+    {
+      "id": "enterprise-choice-commit",
+      "title": "Checkbox, radio и switch",
+      "summary": "Независимые варианты — checkbox, один из группы — radio; switch обычно немедленно меняет настройку. Сохранение формы и применение переключателя должны быть явно различимы. Это соглашение Fluent, не запрет немедленных preview checkbox. Не заменяйте согласие switch. Отдельный switch в AG не заявлен; используйте native семантику или проверенную композицию.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://fluent2.microsoft.design/components/web/react/core/switch/usage/",
+      "componentIds": [
+        "segmented-choice",
+        "field"
+      ],
+      "tags": [
+        "enterprise-components",
+        "carbon",
+        "fluent",
+        "spectrum",
+        "section:forms",
+        "stage:component",
+        "stage:review",
+        "choice-commit"
+      ]
+    },
+    {
+      "id": "enterprise-table-actions",
+      "title": "Таблица и групповые действия",
+      "summary": "Общие действия относятся к таблице, row-actions — к строке, batch — к явному набору выбранных объектов. Покажите количество и область выбора. Обычная таблица не заменяет spreadsheet. Не применяйте выбор текущей страницы молча ко всем страницам; редактирование ячеек требует data-grid контракта.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines",
+      "componentIds": [
+        "data-table",
+        "data-grid"
+      ],
+      "tags": [
+        "enterprise-components",
+        "carbon",
+        "fluent",
+        "spectrum",
+        "section:data",
+        "stage:component",
+        "stage:review",
+        "table-actions"
+      ]
+    },
+    {
+      "id": "async-component-lifecycle",
+      "title": "Асинхронная работа имеет владельца и поколение",
+      "summary": "Для Promise-компонентов используйте async-boundary: AbortSignal плюс generation fence, same-key refresh, явный retry, safe status и dispose. Синхронный UI не требует границы.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal",
+      "componentIds": [
+        "async-boundary",
+        "render-window",
+        "state-panel",
+        "loading-indicator",
+        "progress"
+      ],
+      "tags": [
+        "async",
+        "асинхронный",
+        "cancellation",
+        "race",
+        "section:async-components",
+        "stage:component",
+        "stage:review",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "palette-harmony-candidates",
+      "title": "Гармония предлагает цвета; допуск проверяет пары",
+      "summary": "design_palette даёт7 вариантов и тональную шкалу без autoapply. Сохраняйте роли host; проверяйте реальные пары через существующий APCA70/WCAG30 с отдельным AA gate. Круг не доказывает доступность или CVD-различимость.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://color.adobe.com/create/color-wheel",
+      "componentIds": [
+        "palette-builder"
+      ],
+      "tags": [
+        "palette",
+        "color",
+        "палитра",
+        "harmony",
+        "section:color-palettes",
+        "stage:plan",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "catalog-item-presentation-guidance",
+      "title": "Карточка и презентация товара",
+      "summary": "Use createCatalogCard for literal decision metadata, native title/action controls and a borrowed detached media slot. The host owns resource disposal, routing and truthful fields. Map retail price/variants/review count to component version/package/platform/qualification as domain-appropriate; registered usage is not a rating. Separate listing comparison from detailed presentation. Preserve existing Pinterest/masonry natural heights, DOM order, wide board card, rail and render-window ownership; no fixed tile height/aspect ratio is imposed. Check actual platform/category media rules before publishing; they are not universal AG layout rules. Validate missing/unknown data, links/actions/alt, price variant/rating count, actual contrast, keyboard/focus/locale, narrow/text2x and disposal. Draft/library tests do not qualify consumers or imply sales/AT/native/fullWCAG outcomes.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://baymard.com/research-articles/product-listing-information",
+      "componentIds": [
+        "catalog-card"
+      ],
+      "tags": [
+        "catalog",
+        "карточка",
+        "поиск",
+        "section:catalog-item-presentation",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "catalog-discovery-guidance",
+      "title": "Поиск и выбор в каталогах",
+      "summary": "Use createCatalogSearchControls for native search/facets/sort, separate draft/applied state, visible removable chips, transparent reset and revision-bound results. The host owns index/query meaning, data, debounce, AbortSignal, URLs/history/scroll and paging. Test exact/type/feature/use-case/symptom/compatibility/abbreviation/help intents against real fixtures; existing AG matching remains lexical, with related candidates distinct from verified compatibility. Use submit mode for costly/multiple filters and instant only where appropriate. Keep no matches separate from failures, retain old results only with a stale notice, ignore late revisions and put concise polite status outside busy results. No grid reordering or live-region whole catalogue. Preserve Pinterest/masonry/rail/windowed preview ownership and usage evidence. Verify races, IME, clear/reset, draft/chips, failure/retry, keyboard/focus, locale and disposal; no invented relevance/conversion/AT qualification.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://baymard.com/research-articles/ecommerce-search-query-types",
+      "componentIds": [
+        "catalog-search-controls"
+      ],
+      "tags": [
+        "catalog",
+        "карточка",
+        "поиск",
+        "section:catalog-discovery",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "human-first-agent-interfaces-guidance",
+      "title": "Интерфейсы для людей и агентов",
+      "summary": "Design for people first; agents use the same native semantics. Preserve human task, visible labels, palette/layout and control. Use correct native role/name/state/relationships, accessible names containing visible labels, named context for repeated actions and meaningful focus/DOM order. Never add agent instructions or hidden duplicate controls to ARIA. Keep concise status outside busy results, preserve drafts/recovery and verify observed effects rather than clicks. Optional API/MCP/WebMCP adapters share host validation/permissions/revision/outcome; page content is data, not authority. WebMCP is proposed progressive enhancement, not universal support or an installed AG runtime. Core0.26 preserves full segmented labels and fixes loading/state busy ancestry. Read agent-interface-verification; current briefs and manual/AT/color gates still apply. WebMCP is the owner-requested default recommendation for new websites/web systems; see webmcp-design.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html",
+      "componentIds": [
+        "segmented-choice",
+        "loading-indicator",
+        "state-panel"
+      ],
+      "tags": [
+        "agents",
+        "human-first",
+        "semantics",
+        "verification"
+      ]
+    },
+    {
+      "id": "agent-interface-verification-guidance",
+      "title": "Проверка интерфейса действиями агента",
+      "summary": "Define person/task/object/start/observable outcome before testing. Locate by named context + role/name/label/state, require uniqueness and re-resolve after updates; avoid position/coordinates as the primary contract. Verify real results, cancel/retry, stale A→B, concurrent human edits, IME, locale, navigation recovery, narrow/text200 and disposal. Use actual declared adapter revisions/idempotency; never treat page/user text as authorization. Existing captures redact names/values and are not live handles. Core0.26 repairs segmented names and status outside own busy; host outer busy remains a responsibility. Agent task checks are bounded evidence, not full WCAG/AT/native certification or measured speed/reliability. Discover current definitions/briefs through MCP; distinguish source owner from installed old runtime.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html",
+      "componentIds": [],
+      "tags": [
+        "agents",
+        "human-first",
+        "semantics",
+        "verification"
+      ]
+    },
+    {
+      "id": "webmcp-design-guidance",
+      "title": "WebMCP с начала проектирования",
+      "summary": "For new websites/web systems, recommend WebMCP from initial architecture by default (owner AG policy), alongside human-first native UI. Map intents to a small set of task tools, choose Declarative API for suitable semantic forms and Imperative for complex state/async actions, share command/validation/permissions and visible outcomes. Feature-detect support and retain human fallback; document a concrete reason when no meaningful operation fits. Plan current-page registration/disposal, cancellation, stale results and concurrent human edits. Schemas/hints never grant authority; validate in code/server and keep page content inert. Recheck current Chrome API: proposed support is not universal; external MCP and native APIs differ. Test actual supported/unsupported browsers and observable results; this guidance adds no WebMCP runtime or fake execution evidence.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.chrome.com/docs/ai/webmcp",
+      "componentIds": [],
+      "tags": [
+        "WebMCP",
+        "agents",
+        "human-first",
+        "architecture"
+      ]
+    },
+    {
+      "id": "web-security-by-design-guidance",
+      "title": "Безопасность веб-интерфейса с начала проектирования",
+      "summary": "Baseline for every web stage: map assets, actors, object/tenant ownership, untrusted sources and operation consequences. UI owns safe contextual output and clear accessible state; server owns authentication, per-request authorization, validation, state and session controls. Hidden/disabled buttons, schemas, client roles and quality scores are not security boundaries. Minimize secrets in URLs/storage/captures/logs; support password managers and risk-based reauthentication. Apply current applicable OWASP ASVS (stable5.0.0 checked2026-10-28) with owners and positive/negative evidence. Read safe-web-content and secure-web-actions. Preserve current brief/color/accessibility gates and WebMCP baseline. Use pass/fail/unknown/not-applicable; no certification/pentest/production claim from local UI checks.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://asvs.owasp.org/",
+      "componentIds": [],
+      "tags": [
+        "security",
+        "web",
+        "trust-boundaries",
+        "manual-evidence"
+      ]
+    },
+    {
+      "id": "safe-web-content-guidance",
+      "title": "Безопасный вывод текста, ссылок и превью",
+      "summary": "Default untrusted data to textContent/escaped text. No dynamic HTML/event/code/CSS injection; contextual handling differs. Required rich HTML needs maintained allowlist sanitizer, not regex. AG Markdown disables HTML, bounds content, uses DOM nodes, placeholders and callback-only links; trusted host callback still validates URL and authority. Parse URLs with scheme/origin/resource policy; HTTPS alone is not trusted. Server owns upload checks/storage/permissions; accept/MIME/extension alone are insufficient. Sandbox untrusted previews, exact known targetOrigin, validate message source/origin/schema/current channel; null origin is not sender identity. Test inert tags/javascript links, no unexpected remote load, accepted-output retention and dispose. Local demo is bounded evidence, not sanitizer/security certification.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+      "componentIds": [],
+      "tags": [
+        "security",
+        "web",
+        "trust-boundaries",
+        "manual-evidence"
+      ]
+    },
+    {
+      "id": "secure-web-actions-guidance",
+      "title": "Защищённые действия UI, API и WebMCP",
+      "summary": "UI/API/WebMCP share server object/action/tenant authorization and business validation. Cookie-auth state changes need applicable server CSRF protection; SameSite supplements, CORS is not authorization, GET/HEAD do not mutate. Server owns sessions/logout/expiry, idempotency and revisions. UI shows real consequences, proportionate confirmation/reauthentication, denial/unknown/recovery; cancellation is not rollback. WebMCP remains AG baseline by design with human fallback/feature detection, proposed limited support and no runtime installed here. Hints/schema/LLM prose are not permissions or consent; external content cannot authorize action. Minimize tools, secrets, output and cross-origin exposure; read-only can disclose. Test authorized success, cross-tenant denial, expired session, invalid CSRF, duplicates and stale/unknown outcomes on authorized fixtures; untested enforcement remains unknown.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+      "componentIds": [],
+      "tags": [
+        "security",
+        "web",
+        "trust-boundaries",
+        "manual-evidence"
+      ]
+    },
+    {
+      "id": "event-bus-coordination-guidance",
+      "title": "Шина событий: приоритеты и срок жизни",
+      "summary": "Use callbacks/parent state for small coupled UI; EventTarget for simple signals. createEventBus is a scoped headless bounded notification bus, not a global store/durable broker/authority. Three independent FIFO queues use AG8:4:1 fairness, not strict next-first or preemption; caps1024/tier, max256events/4ms cooperative flush, TTL5000ms at drain. Explicit coalesceKey only for replaceable state, never commands/increments/undo. Payload references are immutable by convention; host owns byte budgets and schema. Short sync subscribers; async work goes router. Custom scheduler must defer/cancel/call once; manual rAF uses autoFlush:false. Unsubscribe/AbortSignal/dispose retire listeners/queues/timers and late diagnostics; no replay. Inspect stats before screenshots and verify actual host qualification.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget",
+      "componentIds": [
+        "event-bus",
+        "request-router"
+      ],
+      "tags": [
+        "coordination",
+        "lifecycle",
+        "load",
+        "evidence"
+      ]
+    },
+    {
+      "id": "request-routing-data-guidance",
+      "title": "Общие запросы и маршрутизация данных",
+      "summary": "createRequestRouter routes operation names to trusted host handlers, not URL navigation/HTTP proxy. Query-only complete-key dedup and opt-in TTL/LRU in one session/tenant scope; dispose/recreate across identity changes. Commands never dedup/cache/retry. Defaults6physical active/128pending/512waiters/128routes/128cache, not rate limiting. Each waiter has own signal/deadline; last cancellation aborts, but ignored-abort physical slots stay occupied until actual settle. Urgent join promotes queued tier without preemption or strict next-first guarantee. Invalidate/unregister/dispose fence late results and old joins; owner invalidation affects all consumers. No auto polling/SWR/replay/exactly-once. Host owns transport, authority, byte budgets, immutable results and recovery. Prefer existing mature query framework; pair with async-boundary for UI lifecycle. Counters/synthetic savings do not prove production capacity/security.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal",
+      "componentIds": [
+        "event-bus",
+        "request-router"
+      ],
+      "tags": [
+        "coordination",
+        "lifecycle",
+        "load",
+        "evidence"
+      ]
+    },
+    {
+      "id": "realtime-ui-load-guidance",
+      "title": "Горячие жесты и нагрузка интерфейса",
+      "summary": "Keep hot gesture preview local; coalesce only replaceable absolute state and render once per host rAF with bus autoFlush:false. Send settled intent through host command contract, not per-pointer APIs. Preserve keyboard and observed server outcome. Use Worker for heavy CPU, separate BroadcastChannel for optional same-origin contexts, host navigation for URL/history; none replaces authorization. Bus/router may coordinate HUD/settings/resources, not simulation/netcode/physics/anti-cheat/real-time guarantees. Compare matched physical call counts, queue/waiter caps, sharing/cache/rejections/stale cancellation, p50/p95 delivery/paint/frame gaps and post-dispose resources with actual environment/data/callback costs. INP alone is not continuous smoothness; synthetic call savings are not universal production QPS/FPS. Current color/accessibility/security/WebMCP policy stays.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Scheduler/postTask",
+      "componentIds": [
+        "event-bus",
+        "request-router"
+      ],
+      "tags": [
+        "coordination",
+        "lifecycle",
+        "load",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-golden-canon-guidance",
+      "title": "Диагональная композиция — композиция и проверка",
+      "summary": "Golden Canon Grid: Creative page/slide composition. AG uses the compatible reduced ag-diagonal-core-v1, not a copied brand template or phi grid. Consider it first for creative page/slide composition; operational forms, reading and controls may need another profile. Geometry is carrier-local and children can choose independently. Read grid-golden-canon and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=avoid-as-primary; illustrativeMark=conditional. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://grids.obys.agency/",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-columns-guidance",
+      "title": "Адаптивные колонки — композиция и проверка",
+      "summary": "Responsive columns: Aligned operational forms/catalogs. Columns are calculated inside margins with separate gutters, with counts responding to carrier width. Measure actual X track edges. Content/minimum widths/wrapping matter more than a column count. This does not replace the catalog’s existing Pinterest/masonry layout. Read grid-columns and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=avoid-as-primary; illustrativeMark=layout-only. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://atlassian.design/foundations/grid",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-modular-guidance",
+      "title": "Модульная сетка и Bento — композиция и проверка",
+      "summary": "Modular / Bento: Meaningful modular cards and dashboards. Rows/columns with margins/gutters support meaningful modules/spans. Bento is a composition technique, not another magic formula. Preserve semantic/keyboard order and importance; never fill gaps at the expense of meaning. Existing catalog layout remains owned by its host. Read grid-modular and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=avoid-as-primary; illustrativeMark=layout-only. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/foundations/2x-grid/overview",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-baseline-guidance",
+      "title": "Сетка базовых линий — композиция и проверка",
+      "summary": "Typography baseline: Actual text baseline rhythm. Step follows real leading and a declared text ordinate. A box edge is not a baseline. Require y plus renderer-baseline/native-text-engine provenance; the browser schematic stays unknown without measurement. Nested text may use its own step. Read grid-baseline and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=avoid-as-primary; illustrativeMark=layout-only. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://helpx.adobe.com/in/indesign/desktop/layout-and-grid-tools/grids/use-a-baseline-grid.html",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-spacing-guidance",
+      "title": "Шаговая сетка координат — композиция и проверка",
+      "summary": "Spacing lattice: Repeated local coordinates. A repeated lattice supports coordinate rhythm. The general8CSSpx default is authored reference, not a universal standard. An icon recipe with no explicit spacing step uses2units in a24unit carrier. Hits do not verify every padding/gap or waive optical correction. Read grid-spacing and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=supporting; illustrativeMark=supporting. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://atlassian.design/foundations/spacing",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-thirds-guidance",
+      "title": "Правило третей — композиция и проверка",
+      "summary": "Rule of thirds: Explicit photographic/cover focal placement. Two vertical/horizontal guides provide4intersections for focal placement and space. This is not an operational-form grid. Declare the real optical subject/gaze; image-box centre does not recognize it. Review crops at each aspect ratio. Read grid-thirds and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=avoid-as-primary; illustrativeMark=conditional. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.adobe.com/creativecloud/photography/technique/rule-of-thirds.html",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-manuscript-guidance",
+      "title": "Одна полоса чтения — композиция и проверка",
+      "summary": "Single-column manuscript: Sequential reading. A single reading area with margins supports sequential material. Check actual text/font/line length; matching a border does not establish readability. For icons this is surrounding layout, not the primary internal construction. Read grid-manuscript and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=avoid-as-primary; illustrativeMark=layout-only. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://atlassian.design/foundations/grid",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-edge-balance-guidance",
+      "title": "Акцент у края — композиция и проверка",
+      "summary": "Edge balance: Single subject near a chosen edge with opposing space/counterweight. Choose left/right/top/bottom. AG defaults insetRatio0.18/focusRatio0.4 define a subject point; counterweight/negative-space regions are authored suggestions, not recognized image content. Preserve essential content across crops. Suitable for a cover/hero/large illustrative mark, not a tiny action glyph. Read grid-edge-balance and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=avoid-as-primary; illustrativeMark=conditional. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/English-Video-Handbook.pdf",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-lead-room-guidance",
+      "title": "Пространство взгляда и движения — композиция и проверка",
+      "summary": "Look / lead room: Portrait/motion framing when gaze/action direction is explicitly known. The example places the subject on a chosen left/right third with room in front. Adjustable eyeLevel1/3 is an AG template, not a universal headroom requirement. Declare real gaze/motion direction. Reversed/tight framing can be an intentional artistic choice. Read grid-lead-room and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=avoid-as-primary; illustrativeMark=conditional. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/English-Video-Handbook.pdf",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-center-perspective-guidance",
+      "title": "Центральная перспектива — композиция и проверка",
+      "summary": "Central perspective: Symmetric emphasis/architecture with a declared vanishing point and converging guides. AG offers a declared vanishing point(0.5,0.45) and8finite segments from corners/edge centres. The point is adjustable; real scene perspective needs separate review. Symmetry is deliberate, not proof that every frame should be centred. Read grid-center-perspective and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=avoid-as-primary; illustrativeMark=conditional. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/English-Video-Handbook.pdf",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-phi-grid-guidance",
+      "title": "φ-сетка — композиция и проверка",
+      "summary": "Phi grid: Near-centre intersections around0.382/0.618 for a frame, cover or large mark. Fractions(3−√5)/2 and its complement produce about0.382/0.618 on X/Y and4interest points. This phi construction differs from diagonal Golden Canon. One ratio proves neither beauty, recognition nor authorship; compare matched alternatives. Read grid-phi-grid and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=avoid-as-primary; illustrativeMark=conditional. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.photoshopforphotographers.com/3101-1901/Help_guide/tp/Crop_tool.html",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-golden-triangle-guidance",
+      "title": "Золотой треугольник — композиция и проверка",
+      "summary": "Golden triangle: Main diagonal plus perpendiculars from opposite corners, measured in physical carrier coordinates. Join opposite corners, then physically project perpendiculars from the remaining corners onto that finite segment. The feet are numeric interests. X/Y reflections are physical carrier operations. Recompute after an aspect change instead of stretching square geometry. Read grid-golden-triangle and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=avoid-as-primary; illustrativeMark=conditional. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://cbseacademic.nic.in/web_material/Curriculum24/publication/Photography_Module2.pdf",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-diagonal-flow-guidance",
+      "title": "Диагональный поток — композиция и проверка",
+      "summary": "Diagonal flow: A diagonal leading flow, crossing and intermediate interest points for dynamic framing. Frame diagonals plus1/3,1/2,2/3points suggest attention flow. Angles depend on aspect ratio, not a universal45° rule. Explicit guide anchors measure finite segments; point anchors measure declared interests. Keep these criteria distinct. Read grid-diagonal-flow and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=avoid-as-primary; illustrativeMark=conditional. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://nikonschool.co.uk/hints-and-tips/using-leading-lines-in-your-compositions",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-icon-keylines-guidance",
+      "title": "Keylines для иконок — композиция и проверка",
+      "summary": "Icon keylines: A coherent UI icon family using live area, square/circle and portrait/landscape keylines. AG’s24unit square uses live area2..22,18square,20diameter circle and16×20/20×16rectangles to compare a family. These are adapted templates, not new IBM/Material mandates. The square uses the shorter side inside a rectangular carrier, preserving circles. Review visible stroke bounds and actual sizes. Read grid-icon-keylines and grid-icon-generation. Use declared carrier-local anchors/units/tolerance; point vs guide vs actual baseline provenance stay distinct. Numeric hits do not prove aesthetics, optical subject recognition or accessibility. Nested local profiles may differ; inherited axes clear local special guides. systemIcon=preferred; illustrativeMark=preferred. Current color/security/accessibility/WebMCP policy and host layout remain.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.ibm.com/design/language/iconography/ui-icons/design/",
+      "componentIds": [
+        "layout-grid-overlay"
+      ],
+      "tags": [
+        "layout",
+        "composition",
+        "evidence"
+      ]
+    },
+    {
+      "id": "grid-icon-generation-guidance",
+      "title": "Иконки: от сетки к проверенному черновику",
+      "summary": "Search existing recognizable icons first. Read design_layout_grids/iconSuitability and grid-<type>. UI icons use keylines/spacing/currentColor and host family; unfamiliar/consequential actions retain labels/native controls/target size. design_icon_draft or createGridIconDraft produces4fixed original starters, not unrestricted text-to-icon AI: purpose/ui24 vs illustrative64, safe literal80UTF16title, bounded primitives/SVG, visible stroke bounds and geometric report. No arbitrary SVG/scripts/resources. Spacing default recipe step2; structural reading/track grids are surrounding layout. Inspect numeric constraints before16/20/24/32px/lightdark/optical/recognition review. A construction hit/currentColor does not certify aesthetics, contrast, AT or originality. Preserve mandatory policies and qualify actual host use.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.ibm.com/design/language/iconography/ui-icons/design/",
+      "componentIds": [
+        "grid-icon-draft"
+      ],
+      "tags": [
+        "icons",
+        "geometry",
+        "evidence"
+      ]
+    },
+    {
+      "id": "form-row-semantic-group",
+      "title": "Связанные поля образуют явную строку; поиск с частыми фильтрами отделён от настроек отображения.",
+      "summary": "Проверить общую подпись группы, понятный порядок и отдельную полосу дополнительных настроек.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/tutorials/forms/grouping/",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel"
+      ],
+      "tags": [
+        "forms",
+        "form-row",
+        "inline form",
+        "поля в строке",
+        "section:form-row-layout",
+        "stage:layout",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-row-control-alignment",
+      "title": "В объявленной строке сопоставимых однострочных полей совпадают нижние границы контролов; подписи и подсказки — отдельные треки.",
+      "summary": "Измерить spread(control.bottom) без feedback. При общей высоте top/height существующего inspectFormRow эквивалентны нижней линии; разные высоты проверяются отдельно. Длинная подпись и раскрытие справки не нарушают ряд.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel"
+      ],
+      "tags": [
+        "forms",
+        "form-row",
+        "inline form",
+        "поля в строке",
+        "section:form-row-layout",
+        "stage:layout",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-row-common-density",
+      "title": "Сопоставимые однострочные input, select и кнопки одной строки имеют общую плотность и согласованную высоту.",
+      "summary": "Измерить разницу высот реальных рамок. Textarea и иные по назначению элементы вынести в отдельную группу или обосновать исключение.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel"
+      ],
+      "tags": [
+        "forms",
+        "form-row",
+        "inline form",
+        "поля в строке",
+        "section:form-row-layout",
+        "stage:layout",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-row-feedback-track",
+      "title": "Подписи, контролы и сообщения имеют раздельные треки. Ошибка увеличивает строку целиком без сдвига соседнего контрола.",
+      "summary": "Добавить многострочную подпись/ошибку одному полю; соседние контролы сохраняют ось, следующая строка начинается ниже всей группы.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel"
+      ],
+      "tags": [
+        "forms",
+        "form-row",
+        "inline form",
+        "поля в строке",
+        "section:form-row-layout",
+        "stage:layout",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-row-reflow-order",
+      "title": "Группа переносится по доступной ширине контейнера, сохраняя подписи, DOM-порядок и клавиатурный обход.",
+      "summary": "Проверить320/390CSSpx, узкую панель на широком экране,200% текста и400%zoom отдельно. Без обрезки и горизонтального скролла обычной формы.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://designsystem.digital.gov/components/form/",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel"
+      ],
+      "tags": [
+        "forms",
+        "form-row",
+        "inline form",
+        "поля в строке",
+        "section:form-row-layout",
+        "stage:layout",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-row-disclosure-visibility",
+      "title": "Закрытые дополнительные настройки и неактуальный сброс отсутствуют в визуальной раскладке и обходе.",
+      "summary": "Проверить details open/closed, hidden и Tab; display:flex/grid не должен показывать скрытое содержимое.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://designsystem.digital.gov/components/form/",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel"
+      ],
+      "tags": [
+        "forms",
+        "form-row",
+        "inline form",
+        "поля в строке",
+        "section:form-row-layout",
+        "stage:layout",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "gitlab-pajamas-guidance",
+      "title": "Паттерны GitLab применяются по назначению, без переноса брендинга и чужих контрактов.",
+      "summary": "Use GitLab patterns by task without importing branding or product contracts.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://design.gitlab.com/components/sorting/",
+      "componentIds": [
+        "popover",
+        "sorting-control",
+        "catalog-search-controls"
+      ],
+      "tags": [
+        "gitlab",
+        "pajamas",
+        "view controls",
+        "popover",
+        "sorting",
+        "section:gitlab-pajamas-patterns",
+        "stage:layout",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "list-view-controls-guidance",
+      "title": "Сортировка и настройки вида — компактное управление списком; короткие взаимоисключающие варианты видны.",
+      "summary": "Keep list sorting visible and view settings contextual; expose short exclusive choices.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://design.gitlab.com/components/sorting/",
+      "componentIds": [
+        "popover",
+        "sorting-control",
+        "catalog-search-controls"
+      ],
+      "tags": [
+        "gitlab",
+        "pajamas",
+        "view controls",
+        "popover",
+        "sorting",
+        "section:list-view-controls",
+        "stage:layout",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "nonmodal-popover-guidance",
+      "title": "Немодальный popover имеет явный триггер, границы слоёв, закрытие и безопасный возврат фокуса.",
+      "summary": "Nonmodal popovers need explicit triggers, owned layers, dismissal and safe focus recovery.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://design.gitlab.com/components/popover/",
+      "componentIds": [
+        "popover",
+        "sorting-control",
+        "catalog-search-controls"
+      ],
+      "tags": [
+        "gitlab",
+        "pajamas",
+        "view controls",
+        "popover",
+        "sorting",
+        "section:nonmodal-popovers",
+        "stage:layout",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "learnui-mesh-gradients-guidance",
+      "title": "Mesh-градиенты: фон, акцент и читаемый контент",
+      "summary": "Use decorative color fields by purpose while retaining semantic palette ownership and actual-background checks.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.learnui.design/blog/mesh-gradients.html",
+      "componentIds": [
+        "palette-builder",
+        "catalog-card"
+      ],
+      "tags": [
+        "learnui",
+        "section:mesh-gradients",
+        "stage:plan",
+        "stage:layout",
+        "stage:component",
+        "stage:review",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "learnui-visual-interest-techniques-guidance",
+      "title": "Визуальные акценты без потери иерархии",
+      "summary": "Choose backgrounds, boundaries, shadows and type accents for a clear purpose instead of decorating every control.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.learnui.design/blog/spice-up-designs.html",
+      "componentIds": [
+        "catalog-card",
+        "button"
+      ],
+      "tags": [
+        "learnui",
+        "section:visual-interest-techniques",
+        "stage:plan",
+        "stage:layout",
+        "stage:component",
+        "stage:review",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "learnui-authentication-ux-guidance",
+      "title": "Вход и регистрация: понятный и безопасный путь",
+      "summary": "Distinguish login, registration and recovery; assist input without weakening server security or accessibility.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.learnui.design/blog/tips-signup-login-ux.html",
+      "componentIds": [
+        "field",
+        "button",
+        "state-panel",
+        "async-boundary"
+      ],
+      "tags": [
+        "learnui",
+        "section:authentication-ux",
+        "stage:plan",
+        "stage:layout",
+        "stage:component",
+        "stage:review",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "learnui-logo-robustness-guidance",
+      "title": "Логотип: различимость и работа в малом размере",
+      "summary": "Test marks in actual contexts; article preferences do not replace approved branding.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.learnui.design/blog/3-most-common-logo-design-mistakes.html",
+      "componentIds": [
+        "button",
+        "sidebar"
+      ],
+      "tags": [
+        "learnui",
+        "section:logo-robustness",
+        "stage:plan",
+        "stage:layout",
+        "stage:component",
+        "stage:review",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "learnui-intuitive-control-selection-guidance",
+      "title": "Интуитивный выбор: подходящий контрол и видимый результат",
+      "summary": "Choose controls by selection semantics and action frequency; concrete examples aid understanding without replacing research.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.learnui.design/blog/4-rules-intuitive-ux.html",
+      "componentIds": [
+        "select",
+        "dropdown-select",
+        "segmented-choice",
+        "field"
+      ],
+      "tags": [
+        "learnui",
+        "section:intuitive-control-selection",
+        "stage:plan",
+        "stage:layout",
+        "stage:component",
+        "stage:review",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "learnui-action-locality-guidance",
+      "title": "Локальность действий: объект, список и приложение",
+      "summary": "Commands reveal their effect scope; distance needs a clear relationship, not color alone.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.learnui.design/blog/the-3-laws-of-locality.html",
+      "componentIds": [
+        "window-toolbar",
+        "catalog-card",
+        "data-table",
+        "menu",
+        "button"
+      ],
+      "tags": [
+        "learnui",
+        "section:action-locality",
+        "stage:plan",
+        "stage:layout",
+        "stage:component",
+        "stage:review",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "learnui-ui-font-sizing-guidance",
+      "title": "Размеры UI-текста по задаче и платформе",
+      "summary": "Distinguish long reading, dense interaction and platform units; numerical ranges are starting points.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.learnui.design/blog/ultimate-guide-font-sizes-ui-design.html",
+      "componentIds": [
+        "field",
+        "textarea",
+        "button",
+        "data-table"
+      ],
+      "tags": [
+        "learnui",
+        "section:ui-font-sizing",
+        "stage:plan",
+        "stage:layout",
+        "stage:component",
+        "stage:review",
+        "stage:release"
+      ]
+    },
+    {
+      "id": "form-row-label-alignment",
+      "title": "Подписи над полями одной строки начинаются на общей оси.",
+      "summary": "Измерить разницу верхних краёв подписей в объявленной строке. Не сравнивать нижние края подписей разной длины и не выдавать bounding box за базовую линию шрифта.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel",
+        "popover",
+        "sorting-control"
+      ],
+      "tags": [
+        "forms",
+        "form-row",
+        "выравнивание",
+        "подписи",
+        "подсказки",
+        "section:form-row-layout",
+        "stage:layout",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-field-inline-alignment",
+      "title": "Подпись и подсказки имеют общий начальный край со своим полем.",
+      "summary": "Измерить начальный край подписи/описаний относительно своего контрола, справа в RTL. Применяется к явно объявленным группам с подписями сверху; боковые подписи проверяются отдельно.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel",
+        "popover",
+        "sorting-control"
+      ],
+      "tags": [
+        "forms",
+        "form-row",
+        "выравнивание",
+        "подписи",
+        "подсказки",
+        "section:form-row-layout",
+        "stage:layout",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "form-field-track-order",
+      "title": "Подпись, поле и сообщения сохраняют порядок без наложения.",
+      "summary": "Измерить наложение label→control→feedback. В колонке следующая подпись начинается ниже всех сообщений предыдущего поля. Длины подсказок не обязаны совпадать. Повторить с длинной подписью и ошибкой одного поля.",
+      "severity": "error",
+      "check": "manual",
+      "sourceUrl": "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel",
+        "popover",
+        "sorting-control"
+      ],
+      "tags": [
+        "forms",
+        "form-row",
+        "выравнивание",
+        "подписи",
+        "подсказки",
+        "section:form-row-layout",
+        "stage:layout",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "openai-conversation-surfaces-guidance",
+      "title": "OpenAI: интерфейс внутри диалога",
+      "summary": "Контекстные правила ChatGPT: компактный результат, выбор режима и сохранение нативной оболочки.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developers.openai.com/plugins/concepts/ui-guidelines",
+      "componentIds": [
+        "conversation-card",
+        "catalog-card",
+        "button",
+        "board-viewport",
+        "state-panel"
+      ],
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "section:openai-conversation-surfaces",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "openai-tool-ui-contract-guidance",
+      "title": "OpenAI: инструменты, состояние и UI",
+      "summary": "Headless-first контракт, MCP Apps bridge, владение состоянием и проверяемый результат действия.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developers.openai.com/plugins/build/chatgpt-ui",
+      "componentIds": [
+        "conversation-card",
+        "async-boundary",
+        "event-bus",
+        "request-router"
+      ],
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "section:openai-tool-ui-contract",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "openai-embedded-ui-security-guidance",
+      "title": "OpenAI: границы безопасности встроенного UI",
+      "summary": "CSP, авторизация инструмента, минимизация данных и честные ограничения sandbox.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developers.openai.com/plugins/guides/security-privacy",
+      "componentIds": [
+        "conversation-card",
+        "async-boundary",
+        "state-panel",
+        "markdown-viewer"
+      ],
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "section:openai-embedded-ui-security",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "chatkit-widget-composition-guidance",
+      "title": "ChatKit: композиция виджетов и списков",
+      "summary": "Данные описывают результат; компоненты сохраняют семантику, палитру продукта и явные границы поддерживаемой схемы.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developers.openai.com/api/docs/guides/chatkit-widgets",
+      "componentIds": [
+        "widget-list",
+        "conversation-card",
+        "catalog-card",
+        "data-table",
+        "render-window"
+      ],
+      "tags": [
+        "ChatKit",
+        "widgets",
+        "section:chatkit-widget-composition",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "chatkit-widget-actions-guidance",
+      "title": "ChatKit: адресные действия и область ожидания",
+      "summary": "Типизированное намерение, текущий item/revision, разделение client/server и self/container loading.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developers.openai.com/api/docs/guides/chatkit-actions",
+      "componentIds": [
+        "widget-list",
+        "conversation-card",
+        "async-boundary",
+        "request-router",
+        "event-bus"
+      ],
+      "tags": [
+        "ChatKit",
+        "widgets",
+        "section:chatkit-widget-actions",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "chatkit-widget-forms-guidance",
+      "title": "ChatKit: компактные формы и явный payload",
+      "summary": "Именованные поля, submit/confirm, коллизии имён и граница native/server validation.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://developers.openai.com/api/docs/guides/chatkit-actions",
+      "componentIds": [
+        "field",
+        "textarea",
+        "select",
+        "settings-panel",
+        "widget-list"
+      ],
+      "tags": [
+        "ChatKit",
+        "widgets",
+        "section:chatkit-widget-forms",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "chat-composer-patterns-guidance",
+      "title": "Чат: компактный ввод и явные инструменты",
+      "summary": "Компактный ввод сохраняет label, многострочный текст, адресата и явные границы инструментов.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://x.ai/grok",
+      "componentIds": [
+        "agent-conversation",
+        "textarea",
+        "button",
+        "field"
+      ],
+      "tags": [
+        "chat",
+        "section:chat-composer-patterns",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "agent-work-presentation-guidance",
+      "title": "Чат агента: адресат, работа, черновик и результат",
+      "summary": "Показывайте текущий контекст, наблюдаемую активность и подтверждённые результаты раздельно.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://x.ai/bot",
+      "componentIds": [
+        "agent-conversation",
+        "conversation-card",
+        "widget-list",
+        "async-boundary",
+        "request-router"
+      ],
+      "tags": [
+        "chat",
+        "section:agent-work-presentation",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "chat-presentation-selection-guidance",
+      "title": "Три представления чата: документ, переписка и журнал работы",
+      "summary": "Одна модель сообщений, выбор по задаче чтения и безопасное переключение без потери текущей работы.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://x.ai/grok",
+      "componentIds": [
+        "agent-conversation"
+      ],
+      "tags": [
+        "chat",
+        "section:chat-presentation-selection",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "adaptive-component-factories",
+      "title": "Адаптивные фабрики под сценарий и ширину компонента",
+      "summary": "Сначала найдите существующую фабрику AG и её контракт. Общая фабрика или host-адаптер собирает один набор команд под задачу: desktop/mobile/embedded. Измеряйте контейнер, а не только окно; видимые главные действия и компактное меню должны сохранять имена, состояние, клавиатуру, фокус, черновик и dispose. Новый параметр профиля — проектное решение, не обещание уже существующего API. Проверка в узком контейнере широкого окна обязательна для такого сценария.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/",
+      "componentIds": [
+        "markdown-editor",
+        "tabs",
+        "window-toolbar"
+      ],
+      "tags": [
+        "factory",
+        "factories",
+        "фабрика",
+        "фабрики",
+        "adaptive",
+        "mobile",
+        "section:components",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "choice-chips-selection",
+      "title": "Подбор чипсов по сценарию и семантике",
+      "summary": "Для короткого взаимоисключающего параметра рассмотрите createChoiceChips. Для панелей сохраняйте tabs, для маршрутов ссылки, для команд кнопки. Проверьте видимость выбранного элемента, keyboard, RTL и touch-геометрию. Текущий лимит 2–6 относится к реализации AG.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/ARIA/apg/patterns/radio/",
+      "componentIds": [
+        "choice-chips",
+        "segmented-choice",
+        "tabs"
+      ],
+      "tags": [
+        "chips",
+        "чипсы",
+        "radio",
+        "tabs",
+        "section:components",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "chart-time-axis-context",
+      "title": "Контекстные подписи временной оси",
+      "summary": "Первый видимый tick задаёт контекст месяца/года; повторяйте их при смене периода относительно оставленной метки. Измеряйте ширину текста; сохраняйте полную дату в таблице, tooltip и выборе. Прореживайте подписи, а не исходные данные.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/visualizations/time-series/",
+      "componentIds": [
+        "ambient-chart"
+      ],
+      "tags": [
+        "time axis",
+        "date labels",
+        "подписи дат",
+        "ось времени",
+        "section:data",
+        "stage:component",
+        "stage:review"
+      ]
+    },
+    {
+      "id": "bento-layout-purpose",
+      "title": "Бенто по назначению и порядку чтения",
+      "summary": "Размер блока отражает важность. Общие tracks и gutter, порядок DOM/Tab сохранён; на узком экране spans схлопываются. Для сопоставимых карточек рассмотрите равные ячейки, для естественной высоты ленты — masonry.",
+      "severity": "manual",
+      "check": "manual",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Techniques/css/C27",
+      "componentIds": [
+        "bento-grid"
+      ],
+      "tags": [
+        "bento",
+        "бенто",
+        "modular",
+        "section:layout",
+        "stage:component",
+        "stage:review"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>UI map · browser benchmark</title>
+    <link rel="stylesheet" href="/vendor/ag-design/tokens.css" />
+    <link rel="stylesheet" href="/vendor/ag-design/styles.css" />
+    <link rel="stylesheet" href="/ui-map-view.css" />
+    <link rel="stylesheet" href="/ui-map-benchmark.css" />
+    <script type="module" src="/ui-map-benchmark.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/">ag-design</a>
+      <h1>Измерение карты интерфейса</h1>
+      <p>
+        Локальный синтетический DOM: 100, 1000 и 5000 элементов; 2 прогрева и 20
+        измерений. Capture — CSS/DOM; render — время после последнего ответа API
+        до двух кадров и расчёта layout. Это не GPU-время и не проверка AT.
+      </p>
+      <button id="run" type="button" class="ag-button">
+        Запустить измерение</button
+      ><button id="stop" type="button" class="ag-button" disabled>
+        Остановить
+      </button>
+      <p id="progress" role="status" aria-live="polite">Готово к запуску</p>
+    </header>
+    <main>
+      <section id="fixture" aria-label="Синтетическая сетка"></section>
+      <section id="map"></section>
+      <pre id="results" tabindex="0" aria-label="Результаты JSON"></pre>
+    </main>
+  </body>
+</html>

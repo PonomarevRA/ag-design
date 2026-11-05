@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "ag-design/artifact-research-v1",
+  "reviewed": "2026-10-28",
+  "boundaries": "Empirical studies, descriptive taxonomies, official product practices and AG defaults are distinct. Partial/full access is recorded. No universal sales/comprehension gain is claimed.",
+  "sources": [
+    {
+      "id": "assertion",
+      "title": "Assertion–evidence slide research",
+      "url": "https://www.writing.engr.psu.edu/research.html",
+      "evidenceType": "empirical",
+      "publication": "2013",
+      "scopeAndLimits": "Author research summary/search excerpt reviewed; direct page timed out. Technical-presentation studies compare message headlines with visual evidence against topic/bullet slides. Do not generalize to every audience, handout or sales outcome.",
+      "accessed": "2026-10-26"
+    },
+    {
+      "id": "dashboards",
+      "title": "Sarikaya et al.: What Do We Talk About When We Talk About Dashboards?",
+      "url": "https://alper.datav.is/publications/dashboards/",
+      "evidenceType": "taxonomy",
+      "publication": "2019",
+      "scopeAndLimits": "Author page and indexed preprint reviewed. Descriptive dashboard corpus/taxonomy; useful for separating purpose, audience and interaction. Not a causal ranking or the AG tier system.",
+      "accessed": "2026-10-26"
+    },
+    {
+      "id": "perception",
+      "title": "Heer and Bostock: Crowdsourcing Graphical Perception",
+      "url": "https://idl.uw.edu/papers/crowdsourcing-graphical-perception",
+      "evidenceType": "empirical",
+      "publication": "2010",
+      "scopeAndLimits": "Author abstract reviewed. Tests selected perception tasks/encodings and study methods. It does not establish one chart winner for every dataset or audience.",
+      "accessed": "2026-10-26"
+    },
+    {
+      "id": "narrative",
+      "title": "Segel and Heer: Narrative Visualization",
+      "url": "https://idl.uw.edu/papers/narrative",
+      "evidenceType": "taxonomy",
+      "publication": "2010",
+      "scopeAndLimits": "Author abstract reviewed. Case-study framework balances authored sequence and reader exploration. It is not a universal causal performance result.",
+      "accessed": "2026-10-26"
+    },
+    {
+      "id": "concrete",
+      "title": "Packard and Berger: How Concrete Language Shapes Customer Satisfaction",
+      "url": "https://doi.org/10.1093/jcr/ucaa038",
+      "evidenceType": "empirical",
+      "publication": "2020/2021",
+      "scopeAndLimits": "Publisher abstract and study excerpts reviewed. Evidence concerns concrete language in service/customer interactions. Do not promise the reported effects for decks, landing pages or an untested audience.",
+      "accessed": "2026-10-26"
+    },
+    {
+      "id": "xl-dashboard",
+      "title": "Microsoft: Create and share a Dashboard with Excel",
+      "url": "https://support.microsoft.com/en-us/excel/create-and-share-a-dashboard-with-excel-and-microsoft-groups",
+      "evidenceType": "product-practice",
+      "publication": "current documentation",
+      "scopeAndLimits": "Official guide reviewed. PivotTables, charts, slicers and their connections require real workbook testing; capability depends on target Excel and authoring tool.",
+      "accessed": "2026-10-26"
+    },
+    {
+      "id": "chart-types",
+      "title": "Microsoft: Available chart types in Office",
+      "url": "https://support.microsoft.com/en-au/excel/available-chart-types-in-office",
+      "evidenceType": "product-practice",
+      "publication": "current documentation",
+      "scopeAndLimits": "Official chart reference reviewed. Supported chart types are product capabilities, not proof of optimal comprehension or a mandate to use decorative3D.",
+      "accessed": "2026-10-26"
+    },
+    {
+      "id": "ppt-access",
+      "title": "Microsoft: Accessible PowerPoint presentations",
+      "url": "https://support.microsoft.com/en-us/accessibility/powerpoint/make-your-powerpoint-presentations-accessible-to-people-with-disabilities",
+      "evidenceType": "product-practice",
+      "publication": "current documentation",
+      "scopeAndLimits": "Official guidance reviewed: reading order, meaningful titles, alternatives and checking. Automated checker results are not a complete target-AT or projection test.",
+      "accessed": "2026-10-26"
+    },
+    {
+      "id": "xl-access",
+      "title": "Microsoft: Accessible Excel spreadsheets",
+      "url": "https://support.microsoft.com/en-us/accessibility/excel/accessibility-best-practices-with-excel-spreadsheets",
+      "evidenceType": "product-practice",
+      "publication": "current documentation",
+      "scopeAndLimits": "Official guidance reviewed: structured tables, descriptive sheets/A1, chart alternatives and checks. Avoid merged/split data tables; do not infer full accessibility from a visual render.",
+      "accessed": "2026-10-26"
+    },
+    {
+      "id": "chart-links",
+      "title": "Microsoft Learn: PowerPoint ChartData.IsLinked",
+      "url": "https://learn.microsoft.com/en-us/office/vba/api/powerpoint.chartdata.islinked",
+      "evidenceType": "product-practice",
+      "publication": "2022",
+      "scopeAndLimits": "Official API reference reviewed. External workbook links differ from embedded data. Verify the chosen producer/target behavior; do not assume every chart is editable or self-contained.",
+      "accessed": "2026-10-26"
+    },
+    {
+      "id": "plain",
+      "title": "CDC Clear Communication Index",
+      "url": "https://www.cdc.gov/ccindex/widget.html/1000",
+      "evidenceType": "practice-framework",
+      "publication": "current publication",
+      "scopeAndLimits": "Official tool reviewed. Audience, main message, action and numeric communication are useful questions. Health-communication scoring is not a sales/conversion certificate.",
+      "accessed": "2026-10-26"
+    },
+    {
+      "id": "unece",
+      "title": "UNECE: Making Data Meaningful, Part1",
+      "url": "https://unece.org/statistics/publications/making-data-meaningful-part-1",
+      "evidenceType": "practice-framework",
+      "publication": "2010",
+      "scopeAndLimits": "Official indexed publication summary reviewed; full PDF returned403. Limited basis: statistics should be explained for non-specialists. No detailed quotation or full-text study claim.",
+      "accessed": "2026-10-26"
+    },
+    {
+      "id": "presentation-grid-0",
+      "title": "Obys — Grids",
+      "url": "https://grids.obys.agency/",
+      "evidenceType": "practitioner-guidance",
+      "publication": "see-source",
+      "scopeAndLimits": "Прочитана индексируемая авторская инструкция: диагонали, пересечения и выбранные power lines. Интерактивная страница не отдала текст при прямом чтении. AG профиль и допуски являются собственной политикой.",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "presentation-grid-1",
+      "title": "sfi0zy — Golden canon grid: страшилка для фронтендеров",
+      "url": "https://habr.com/ru/articles/479580/",
+      "evidenceType": "practitioner-guidance",
+      "publication": "see-source",
+      "scopeAndLimits": "Прочитан авторский разбор конструкции и CSS. Его 20-ячеечный пример не является единственной сеткой; код и фирменные шаблоны не копировались.",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "presentation-grid-2",
+      "title": "Bonnie&Slide — Сильная презентация",
+      "url": "https://bonnieandslide.com/blog/strong-presentation",
+      "evidenceType": "practitioner-guidance",
+      "publication": "see-source",
+      "scopeAndLimits": "Практический материал автора; не доказательство универсального прироста качества. Проверено 2026-10-28.",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "presentation-grid-3",
+      "title": "VisualMethod / Skillbox — 17 советов",
+      "url": "https://skillbox.ru/media/management/kak-nauchitsya-delat-krasivye-prezentatsii-17-sovetov-ot-ekspertov/",
+      "evidenceType": "practitioner-guidance",
+      "publication": "see-source",
+      "scopeAndLimits": "Прочитана статья. Иерархия, единообразие и читаемость полезны как практика; универсальные лимиты текста, проценты запоминания и психология цвета не принимаются как доказанные законы.",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "presentation-grid-4",
+      "title": "Bonnie&Slide — Как сделать красивую презентацию",
+      "url": "https://bonnieandslide.com/blog/kak-sdelat-krasivuyu-prezentaciyu-v-powerpoint",
+      "evidenceType": "practitioner-guidance",
+      "publication": "see-source",
+      "scopeAndLimits": "Практический материал автора; не доказательство универсального прироста качества. Проверено 2026-10-28.",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "presentation-grid-5",
+      "title": "Storytelling with Data — The right words make the slide",
+      "url": "https://www.storytellingwithdata.com/blog/the-right-words-make-the-slide",
+      "evidenceType": "practitioner-guidance",
+      "publication": "see-source",
+      "scopeAndLimits": "Практический материал автора; не доказательство универсального прироста качества. Проверено 2026-10-28.",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "presentation-grid-6",
+      "title": "Storytelling with Data — SWD + AI: choose an appropriate visual",
+      "url": "https://www.storytellingwithdata.com/blog/swd-ai-choose-an-appropriate-visual",
+      "evidenceType": "practitioner-guidance",
+      "publication": "see-source",
+      "scopeAndLimits": "Практический материал автора; не доказательство универсального прироста качества. Проверено 2026-10-28.",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "presentation-grid-7",
+      "title": "Duarte — Projected slides and Slidedoc",
+      "url": "https://www.duarte.com/blog/the-slides-you-deliver-versus-the-slidedoc-you-leave-behind/",
+      "evidenceType": "practitioner-guidance",
+      "publication": "see-source",
+      "scopeAndLimits": "Практический материал автора; не доказательство универсального прироста качества. Проверено 2026-10-28.",
+      "accessed": "2026-10-28"
+    }
+  ]
+}

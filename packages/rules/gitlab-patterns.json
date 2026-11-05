@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "ag-design/gitlab-patterns-v1",
+  "checkedAt": "2026-10-29",
+  "upstream": {
+    "gitlab": {
+      "projectId": 278964,
+      "commit": "4a0d285e5e2958702347bb4231f8ba515bf639db",
+      "committedDate": "2026-10-29T15:34:26.000-04:00",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/commit/4a0d285e5e2958702347bb4231f8ba515bf639db",
+      "files": [
+        {
+          "path": "app/assets/javascripts/vue_shared/components/filtered_search_bar/filtered_search_bar_root.vue",
+          "sha256": "62030e46bbb831824739fa0da8f19e437e4cf666005fb8227c1f3fa9ff4216fb",
+          "url": "https://gitlab.com/gitlab-org/gitlab/-/blob/4a0d285e5e2958702347bb4231f8ba515bf639db/app/assets/javascripts/vue_shared/components/filtered_search_bar/filtered_search_bar_root.vue"
+        }
+      ]
+    },
+    "pajamas": {
+      "projectId": 4456656,
+      "commit": "0bd5ecb28b58969a0951ec6c6cc9356073718994",
+      "committedDate": "2026-10-29T18:19:37.000+00:00",
+      "url": "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/commit/0bd5ecb28b58969a0951ec6c6cc9356073718994"
+    }
+  },
+  "licenseBoundary": "GitLab UI MIT source inspected; implementation is original AG code. No GitLab assets, branding, Vue/Bootstrap/FloatingUI dependency or upstream certification is imported. Pajamas guidance is attributed by primary links; no copied source payload ships.",
+  "items": [
+    {
+      "id": "choice-vs-command",
+      "titleRu": "Выбор значения и команда — разные меню",
+      "titleEn": "Choice lists differ from command disclosures",
+      "agComponents": "dropdown-select / select; menu",
+      "action": "reuse",
+      "guidance": "Listbox changes a value; disclosure triggers an action. Keep a visible selected value and distinct ARIA role; do not put arbitrary forms inside role=menu.",
+      "source": {
+        "path": "packages/gitlab-ui/src/components/base/new_dropdowns/listbox/listbox.vue",
+        "sha256": "1c22f60601596434ef8d1074ca33d575a09f8e63299d283951005b7fd8d18e9a",
+        "url": "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/new_dropdowns/listbox/listbox.vue"
+      },
+      "guidanceRu": "Listbox меняет выбранное значение, disclosure запускает действие. Текущее значение видно; роли выбора и команды различаются. В role=menu не помещаются произвольные поля формы."
+    },
+    {
+      "id": "sorting",
+      "titleRu": "Критерий и направление сортировки",
+      "titleEn": "Sort criterion and direction",
+      "agComponents": "sorting-control",
+      "action": "implemented",
+      "guidance": "Keep criterion and direction independent. Relevance-like criteria have no artificial inverse; the host owns actual ordering, URL and paging.",
+      "source": {
+        "path": "packages/gitlab-ui/src/components/base/sorting/sorting.vue",
+        "sha256": "0629d486c67ca26b5b382a8446ac1d86183b65c2af7755885c2a0f9d00b7335c",
+        "url": "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/sorting/sorting.vue"
+      },
+      "guidanceRu": "Критерий и направление независимы. У relevance нет выдуманного обратного порядка; упорядочивание данных, URL и страницы принадлежат хозяину приложения."
+    },
+    {
+      "id": "popover",
+      "titleRu": "Немодальные настройки рядом с контекстом",
+      "titleEn": "Nonmodal contextual settings",
+      "agComponents": "popover",
+      "action": "implemented",
+      "guidance": "Click opens an optional titled settings surface. No focus trap, forced completion or hover-only controls. Preserve child values and restore focus on explicit dismissal.",
+      "source": {
+        "path": "packages/gitlab-ui/src/components/base/popover/popover.vue",
+        "sha256": "552930214f71443d0b82da55cdcbbe8fbfdd7d453dc94cfd9ebd5494e6de83ed",
+        "url": "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/popover/popover.vue"
+      },
+      "guidanceRu": "Клик открывает необязательную панель с заголовком. Нет модальной ловушки, обязательного завершения или удержания мыши; значения дочерних полей и явный возврат фокуса сохраняются."
+    },
+    {
+      "id": "layers",
+      "titleRu": "Владение плавающими слоями",
+      "titleEn": "Owned floating layers",
+      "agComponents": "popover / dropdown-select shared positioner",
+      "action": "adapted",
+      "guidance": "Fit the visual viewport and own scroll/resize/observer cleanup. Keep nested overlays inside their fallback owner and preserve semantic theme scope.",
+      "source": {
+        "path": "packages/gitlab-ui/src/components/base/new_dropdowns/base_dropdown/base_dropdown.vue",
+        "sha256": "8c0d31e87d35fd568c1b2766f590e45113a7f267b5cbe2954dedf3295ecb520e",
+        "url": "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/new_dropdowns/base_dropdown/base_dropdown.vue"
+      },
+      "guidanceRu": "Слой помещается в визуальный viewport и владеет очисткой scroll/resize/observer. Вложенные fallback-слои остаются внутри своего владельца и сохраняют тему."
+    },
+    {
+      "id": "filter-query",
+      "titleRu": "Прозрачные применённые фильтры",
+      "titleEn": "Explicit applied filter state",
+      "agComponents": "catalog-search-controls",
+      "action": "reuse",
+      "guidance": "Keep free text, structured filters, draft/applied state and result revision distinct. Domain operators, URLs, search history and remote suggestions belong to the host; no new AG token grammar is claimed.",
+      "source": {
+        "path": "packages/gitlab-ui/src/components/base/filtered_search/filtered_search.vue",
+        "sha256": "12679cfce3e63dbca1cb482563d465b6d0e301fe17ea3abc12e5a04cb76c7aa0",
+        "url": "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/filtered_search/filtered_search.vue"
+      },
+      "guidanceRu": "Свободный текст, структурные фильтры, черновые/применённые значения и ревизия выдачи различаются. Операторы предметной области, URL, история поиска и серверные подсказки принадлежат host; новый язык токенов AG не заявлен."
+    },
+    {
+      "id": "form-group",
+      "titleRu": "Подпись и пояснение принадлежат полю",
+      "titleEn": "Field label and description ownership",
+      "agComponents": "field / textarea / form-row-layout",
+      "action": "reuse",
+      "guidance": "Associate a permanent label with the actual focus target; explain constraints before error and keep adjacent feedback attached. Preserve semantic groups rather than stretching every selector equally.",
+      "source": {
+        "path": "packages/gitlab-ui/src/components/base/form/form_group/form_group.vue",
+        "sha256": "254f7b153dd8a87f23a871b87931de1ec6a4b39db771fb414342bb655f6c57ea",
+        "url": "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/form/form_group/form_group.vue"
+      },
+      "guidanceRu": "Постоянная подпись связана с настоящим фокусируемым контролом. Ограничения объясняются до ошибки, сообщение принадлежит полю. Смысловая группа важнее равной ширины всех списков."
+    },
+    {
+      "id": "alerts",
+      "titleRu": "Сообщение по месту проблемы",
+      "titleEn": "Feedback scope and announcement",
+      "agComponents": "notice / state-panel / toast-stack",
+      "action": "reuse",
+      "guidance": "Choose inline context for persistent errors and a toast only for transient feedback. Politeness follows urgency; do not automatically announce every success as assertive.",
+      "source": {
+        "path": "packages/gitlab-ui/src/components/base/alert/alert.vue",
+        "sha256": "c33eea518f1d84ea8d2cf5b2ce30379d33833b09e49d36d3a1d43cf74c7e2605",
+        "url": "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/alert/alert.vue"
+      },
+      "guidanceRu": "Постоянная ошибка показывается рядом со своим контекстом; toast служит краткой обратной связи. Срочность определяет озвучивание: не каждый успех требует assertive."
+    },
+    {
+      "id": "empty-state",
+      "titleRu": "Причина пустоты и следующий шаг",
+      "titleEn": "Empty reason and next step",
+      "agComponents": "empty-state / async-boundary",
+      "action": "reuse",
+      "guidance": "Distinguish empty inventory, no matches, unavailable permissions and transport failure. Offer a relevant next action and appropriate heading; do not imply zero data after an error.",
+      "source": {
+        "path": "packages/gitlab-ui/src/components/regions/empty_state/empty_state.vue",
+        "sha256": "528b46850cc12962642f921048498d0d025e920f333ff8fa5b8a0657abedca2f",
+        "url": "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/regions/empty_state/empty_state.vue"
+      },
+      "guidanceRu": "Пустые исходные данные, отсутствие совпадений, недоступные права и сетевой сбой — разные причины. Нужны подходящий следующий шаг и уровень заголовка; ошибка не превращается в ноль данных."
+    },
+    {
+      "id": "skeleton",
+      "titleRu": "Скелетон отражает структуру",
+      "titleEn": "Structural loading placeholders",
+      "agComponents": "loading / async-boundary",
+      "action": "reuse",
+      "guidance": "Reserve meaningful geometry while the host loads. A skeleton is not data, progress or readiness; expose loading once and preserve stale-content semantics.",
+      "source": {
+        "path": "packages/gitlab-ui/src/components/base/skeleton_loader/skeleton_loader.vue",
+        "sha256": "a107e11a7ba064d4840f80126e9ccfdc2186e7d8638da6017138c81e11ab0d49",
+        "url": "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/skeleton_loader/skeleton_loader.vue"
+      },
+      "guidanceRu": "При загрузке резервируется осмысленная геометрия. Скелетон — не данные, прогресс или готовность; объявление загрузки и устаревшее содержимое имеют явную семантику."
+    },
+    {
+      "id": "drawer",
+      "titleRu": "Контекстная панель вместо случайного modal",
+      "titleEn": "Contextual inspection panels",
+      "agComponents": "resizable-panel / popup / sidebar",
+      "action": "reuse",
+      "guidance": "Keep related detail near a list when work can continue. Choose modality from the task, define width/scroll/close ownership, and protect unsaved state; AG does not claim a new drawer factory.",
+      "source": {
+        "path": "packages/gitlab-ui/src/components/base/drawer/drawer.vue",
+        "sha256": "1c752955f28c6421e4e8f23d114ee43af62eb8bf5bf9be9ab2573885a713c5db",
+        "url": "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/drawer/drawer.vue"
+      },
+      "guidanceRu": "Связанные подробности остаются рядом со списком, если работу можно продолжить. Модальность, ширина, прокрутка, закрытие и несохранённые изменения определяются задачей; новый AG drawer не заявлен."
+    },
+    {
+      "id": "badges",
+      "titleRu": "Статус читается без цвета",
+      "titleEn": "Status remains meaningful without color",
+      "agComponents": "status / numeric-badge",
+      "action": "reuse",
+      "guidance": "Use concise literal status/value labels, optionally an icon. Counts, usage and ratings remain different; a colored badge alone does not explain state.",
+      "source": {
+        "path": "packages/gitlab-ui/src/components/base/badge/badge.vue",
+        "sha256": "0296218cf16b233e8ad45ba5c0613961fea8b1d356dd1840389fdfeba5fa0f65",
+        "url": "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/badge/badge.vue"
+      },
+      "guidanceRu": "Короткий текст статуса или значения сохраняет смысл без цвета; при необходимости добавляется иконка. Количество, использование и рейтинг не смешиваются."
+    },
+    {
+      "id": "segmented",
+      "titleRu": "Короткий выбор виден целиком",
+      "titleEn": "Short exclusive choices remain visible",
+      "agComponents": "segmented-choice",
+      "action": "reuse",
+      "guidance": "Use the existing native radio implementation for a small exclusive display choice. Do not replace tabs/routes with cosmetic buttons or copy upstream keyboard claims.",
+      "source": {
+        "path": "packages/gitlab-ui/src/components/base/segmented_control/segmented_control.vue",
+        "sha256": "ba3be5034cfb07a2d30faf45b2db5363e3d9976b765d35a2c2497ed8d001c748",
+        "url": "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/segmented_control/segmented_control.vue"
+      },
+      "guidanceRu": "Для короткого взаимоисключающего выбора представления переиспользуются нативные radio AG. Косметические кнопки не подменяют tabs/маршруты, а чужие заявления о клавиатуре не наследуются."
+    }
+  ]
+}

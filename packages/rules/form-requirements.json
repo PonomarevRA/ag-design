@@ -1,0 +1,159 @@
+{
+  "schema": "ag-design/form-requirements-v1",
+  "version": 2,
+  "checkedAt": "2026-10-26",
+  "origin": "AG supplemental authored observation policy informed by cited sources; not an automatic WCAG/production certification",
+  "sources": [
+    {
+      "id": "wai-forms",
+      "title": "W3C WAI Forms",
+      "url": "https://www.w3.org/WAI/tutorials/forms/",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "govuk-questions",
+      "title": "GOV.UK Question pages",
+      "url": "https://design-system.service.gov.uk/patterns/question-pages/",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "carbon-forms",
+      "title": "Carbon Forms",
+      "url": "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "baymard-checkout",
+      "title": "Baymard Checkout UX",
+      "url": "https://baymard.com/blog/checkout-flow-ux-optimization",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "nng-task",
+      "title": "NN/g Task scenarios",
+      "url": "https://www.nngroup.com/articles/task-scenarios-usability-testing/",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "common": [
+    {
+      "id": "labels",
+      "title": "Понятны вопросы и обязательность полей",
+      "method": "Проверьте постоянные подписи, нужные инструкции и единое обозначение обязательных/необязательных полей. Placeholder не заменяет label.",
+      "sourceIds": [
+        "wai-forms",
+        "carbon-forms"
+      ],
+      "critical": true
+    },
+    {
+      "id": "recovery",
+      "title": "Ошибки понятны, введённое не теряется",
+      "method": "Проверьте конкретную ошибку рядом с полем, доступную сводку при нескольких ошибках, исправление и сохранение безопасно допустимых значений. Не хранить пароли/платёжные данные в этом тестере.",
+      "sourceIds": [
+        "wai-forms",
+        "govuk-questions"
+      ],
+      "critical": true
+    },
+    {
+      "id": "keyboard",
+      "title": "Сценарий доступен с клавиатуры",
+      "method": "Пройдите поля и действия, проверьте видимый фокус и отсутствие ловушки. Отдельный AT/WCAG аудит этим не заменяется.",
+      "sourceIds": [
+        "wai-forms"
+      ],
+      "critical": true
+    },
+    {
+      "id": "feedback",
+      "title": "Понятно, что произошло после действия",
+      "method": "Различимы загрузка, ошибка, успех и возможность безопасного повтора; отсутствие прав не маскируется ошибкой ввода.",
+      "sourceIds": [
+        "wai-forms",
+        "carbon-forms"
+      ],
+      "critical": true
+    },
+    {
+      "id": "alignment",
+      "title": "Поля, подписи и подсказки сохраняют общие треки",
+      "method": "Использовать auditInterface(root).formRows для явно обозначенных групп: ось/высота контролов, верх подписей, начальный край, порядок сообщений. Прогнать длинную подпись, ошибку одного поля, узкую панель и 200% текста. Неизмеренные/неподдерживаемые случаи unknown; семантика и AT проверяются отдельно.",
+      "sourceIds": [
+        "wai-forms",
+        "carbon-forms"
+      ],
+      "critical": true
+    }
+  ],
+  "profiles": {
+    "funnel": {
+      "title": "Маркетинговая воронка",
+      "checks": [
+        {
+          "id": "offer",
+          "title": "Понятны предложение и ожидаемый результат",
+          "method": "Проверьте смысл шага, состав предложения, затраты/обязательства и то, что произойдёт после отправки. Не обещайте больше, чем выполняет продукт.",
+          "sourceIds": [
+            "baymard-checkout"
+          ],
+          "critical": true
+        },
+        {
+          "id": "friction",
+          "title": "Запрашиваются только нужные данные",
+          "method": "Обоснуйте каждое поле и обязательную регистрацию, сохраните разумные автозаполнение и возврат. Не сокращайте шаги за счёт ясности или безопасности.",
+          "sourceIds": [
+            "baymard-checkout",
+            "govuk-questions"
+          ],
+          "critical": true
+        },
+        {
+          "id": "choice",
+          "title": "Выбор доброволен и условия не спрятаны",
+          "method": "Необязательные предложения/подписки отделены от основного действия; интерфейс не подталкивает обманом. Это UX-наблюдение, не юридическое заключение.",
+          "sourceIds": [
+            "baymard-checkout",
+            "wai-forms"
+          ],
+          "critical": true
+        }
+      ]
+    },
+    "operations": {
+      "title": "Техническое управление",
+      "checks": [
+        {
+          "id": "scope",
+          "title": "Понятны объект, окружение и текущие значения",
+          "method": "Пользователь различает, что и где меняет, включая массовую операцию. Нужные технические поля не удаляются ради конверсии.",
+          "sourceIds": [
+            "carbon-forms"
+          ],
+          "critical": true
+        },
+        {
+          "id": "commit",
+          "title": "Различимы черновик, сохранение и итог",
+          "method": "Проверьте, когда изменения применяются, что сохранено/поставлено в очередь и как увидеть фактический результат. Успех нельзя выводить только из нажатия кнопки.",
+          "sourceIds": [
+            "carbon-forms",
+            "wai-forms"
+          ],
+          "critical": true
+        },
+        {
+          "id": "safety",
+          "title": "Есть защита опасных действий и восстановление",
+          "method": "Проверьте применимые подтверждение/отмену, конфликт версий, потерю связи и безопасный повтор. Права проверяются продуктом, а не видом disabled-кнопки. Прототип не доказывает работу сервиса.",
+          "sourceIds": [
+            "carbon-forms",
+            "wai-forms"
+          ],
+          "critical": true
+        }
+      ]
+    }
+  }
+}

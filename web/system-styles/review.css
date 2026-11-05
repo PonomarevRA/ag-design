@@ -1,0 +1,63 @@
+* {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 20px;
+        font: 16px/1.5 system-ui;
+        background: #f5f4f8;
+        color: #27213e;
+      }
+      h1 {
+        font-size: 24px;
+        margin: 0 0 8px;
+      }
+      p {
+        margin: 8px 0;
+      }
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin: 20px 0;
+      }
+      label {
+        display: grid;
+        gap: 6px;
+      }
+      select,
+      button {
+        min-height: 44px;
+        padding: 8px;
+        font: inherit;
+      }
+      button {
+        align-self: end;
+      }
+      .viewport {
+        max-width: 100%;
+        overflow: auto;
+        background: #e6e2ef;
+        padding: 12px;
+      }
+      iframe {
+        display: block;
+        height: 900px;
+        border: 1px solid #766b89;
+        background: white;
+      }
+      pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        font-size: 13px;
+        background: white;
+        padding: 16px;
+        max-height: 420px;
+        overflow: auto;
+      }
+      #result {
+        font-weight: 600;
+      }
+      a {
+        color: inherit;
+      }

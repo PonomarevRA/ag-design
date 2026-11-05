@@ -1,0 +1,16 @@
+{
+  "version": "2.1.2-community.1",
+  "packageSha256": "50da5380b6ab0c963e28f035a5d1899ff653c87d0c845a70e7e14dda47e399d2",
+  "files": {
+    "content-rail.js": "b7710a034b5f4d2c1d40514f8749eb9ac8a3573f8d0c3d75b46480b988f682f4",
+    "runtime.js": "616b75ad0bf2a94ac2848c613b4bd8f2d92e52b4fa59caf68313b96e3a26cae3",
+    "rail-preview.js": "f1337a6b41ad58dc090a9e2fff7f9a9c72c910d35864783485ee635a82d4ae3f",
+    "styles.css": "ade8c74aa24cfa853948820a22387d4f009eab280f3494a9829b85ebb3928c20",
+    "feed-rail.js": "9bc48a70cf9f51ab77a58d0ab048fe9b24b80b5bf6ece43ed09137ed8fdf85ff",
+    "feed-rail-position.js": "a4ae8a86470dcce66058996d5a2d10777b044661a740630c5d58ca18291d4e52",
+    "feed-rail-progress.js": "9c8c7bf8fdbf5a31715063368d3b5d64d309b95190895c4c4d061459232d1870",
+    "feed-rail-tracker.js": "5420ba276379366bc420f7daf8f4602f91e13cc1e7a5c2502b3cb3f995d5e9eb",
+    "feed-rail.css": "12929f35170d9a31b3ca3d01efcb65daabe12b2e7e4ead923410293a2987db75",
+    "package.json": "3c9c175b0f6582d1b2d8ec618a6be996424ed95f632b739c49690d56620860e5"
+  }
+}

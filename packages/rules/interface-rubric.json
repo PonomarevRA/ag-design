@@ -1,0 +1,1485 @@
+{
+  "policyVersion": "ag-interface-review-v2",
+  "checks": [
+    {
+      "id": "scenario",
+      "title": "Проверенный сценарий и потребность пользователя",
+      "domain": "human-centered",
+      "weight": 8,
+      "critical": false,
+      "sourceUrls": [
+        "https://developer.apple.com/design/human-interface-guidelines/design-principles"
+      ]
+    },
+    {
+      "id": "navigation",
+      "title": "Стабильные переходы и видимый текущий контекст",
+      "domain": "navigation",
+      "weight": 8,
+      "critical": false,
+      "sourceUrls": [
+        "https://www.nngroup.com/articles/ten-usability-heuristics/"
+      ]
+    },
+    {
+      "id": "hierarchy",
+      "title": "Главное действие и визуальная иерархия",
+      "domain": "hierarchy",
+      "weight": 7,
+      "critical": false,
+      "sourceUrls": [
+        "https://developer.apple.com/design/human-interface-guidelines/design-principles"
+      ]
+    },
+    {
+      "id": "spacing",
+      "title": "Последовательные отступы и смысловая группировка",
+      "domain": "layout",
+      "weight": 6,
+      "critical": false,
+      "sourceUrls": [
+        "https://developer.apple.com/design/human-interface-guidelines/design-principles"
+      ]
+    },
+    {
+      "id": "layers",
+      "title": "Слои, перекрытия и доступное закрытие",
+      "domain": "layout",
+      "weight": 5,
+      "critical": false,
+      "sourceUrls": [
+        "https://developer.apple.com/design/human-interface-guidelines/design-principles"
+      ]
+    },
+    {
+      "id": "typography",
+      "title": "Читаемая типографика и увеличение текста",
+      "domain": "typography",
+      "weight": 6,
+      "critical": false,
+      "sourceUrls": [
+        "https://www.w3.org/TR/WCAG22/"
+      ]
+    },
+    {
+      "id": "color",
+      "title": "Реальные текстовые пары проходят WCAG AA; APCA проверен отдельно",
+      "domain": "color",
+      "weight": 10,
+      "critical": true,
+      "sourceUrls": [
+        "https://www.w3.org/TR/WCAG22/"
+      ]
+    },
+    {
+      "id": "keyboard",
+      "title": "Полная клавиатурная работа и видимый фокус",
+      "domain": "accessibility",
+      "weight": 10,
+      "critical": true,
+      "sourceUrls": [
+        "https://www.w3.org/TR/WCAG22/"
+      ]
+    },
+    {
+      "id": "semantics",
+      "title": "Доступные имена, роли и состояния",
+      "domain": "accessibility",
+      "weight": 8,
+      "critical": true,
+      "sourceUrls": [
+        "https://www.w3.org/TR/WCAG22/"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "Загрузка, ошибка, пустота и результат действий",
+      "domain": "feedback",
+      "weight": 6,
+      "critical": false,
+      "sourceUrls": [
+        "https://www.nngroup.com/articles/ten-usability-heuristics/"
+      ]
+    },
+    {
+      "id": "recovery",
+      "title": "Защита данных и восстановление после ошибок",
+      "domain": "human-control",
+      "weight": 6,
+      "critical": true,
+      "sourceUrls": [
+        "https://www.nngroup.com/articles/ten-usability-heuristics/"
+      ]
+    },
+    {
+      "id": "responsive",
+      "title": "Узкий экран и увеличение текста без потери действий",
+      "domain": "layout",
+      "weight": 5,
+      "critical": false,
+      "sourceUrls": [
+        "https://www.w3.org/TR/WCAG22/"
+      ]
+    },
+    {
+      "id": "motion",
+      "title": "Уменьшение движения и отсутствие опасных вспышек",
+      "domain": "accessibility",
+      "weight": 4,
+      "critical": true,
+      "sourceUrls": [
+        "https://www.w3.org/TR/WCAG22/"
+      ]
+    },
+    {
+      "id": "performance",
+      "title": "Измерены нагрузка, взаимодействие и освобождение ресурсов",
+      "domain": "performance",
+      "weight": 5,
+      "critical": false,
+      "sourceUrls": [
+        "https://www.w3.org/TR/performance-timeline/"
+      ]
+    },
+    {
+      "id": "consistency",
+      "title": "Согласованные элементы и цветовые профили",
+      "domain": "consistency",
+      "weight": 3,
+      "critical": false,
+      "sourceUrls": [
+        "https://developer.apple.com/design/human-interface-guidelines/design-principles"
+      ]
+    },
+    {
+      "id": "agent-control",
+      "title": "Прозрачность действий агентов и контроль пользователя",
+      "domain": "human-control",
+      "weight": 3,
+      "critical": false,
+      "sourceUrls": [
+        "https://www.nngroup.com/articles/ten-usability-heuristics/"
+      ]
+    }
+  ],
+  "totalWeight": 100,
+  "weightOrigin": "AG product policy; not Apple, Nielsen, ISO or WCAG scoring requirements",
+  "statuses": [
+    "pass",
+    "fail",
+    "unknown",
+    "not-applicable"
+  ],
+  "algorithm": {
+    "score": "100 * passedWeight / applicableWeight; null when applicableWeight=0",
+    "coverage": "100 * (passedWeight + failedWeight) / applicableWeight; 0 when applicableWeight=0",
+    "applicableWeight": "all weights except explicitly justified not-applicable; omitted checks are unknown",
+    "unknownCredit": 0,
+    "criticalNotApplicable": "gate remains unknown",
+    "decisionOrder": [
+      "critical failure or severity4: blocked",
+      "unknown or critical N/A: needs-evidence",
+      "any failure: revise",
+      "otherwise: ready"
+    ]
+  },
+  "severity": {
+    "sourceUrl": "https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/",
+    "scale": {
+      "0": "no problem",
+      "1": "cosmetic",
+      "2": "minor",
+      "3": "major",
+      "4": "catastrophic"
+    },
+    "use": "caller priority only; not converted to a validated quality percentage"
+  },
+  "trust": "caller-reported; server validates shape and arithmetic, not observations",
+  "limitations": [
+    "Not a screenshot parser, usability study, security audit or conformance certification.",
+    "Review actual scenarios, themes, states, assistive technology and native/browser environments.",
+    "Use design_color_scheme for calculated color evidence; do not invent measured performance."
+  ],
+  "legacyPolicyVersion": "ag-interface-review-v1",
+  "requirementsPolicyVersion": "ag-component-requirements-v1",
+  "requirementsHash": "4d4220627d1ee7fd90b4ab613462878b5676749b2c83a6017a5f811dd448c77e",
+  "requirements": [
+    {
+      "id": "layout-semantic-groups",
+      "title": "Настройки, навигация, действия и пояснения образуют различимые смысловые группы. Подпись визуально принадлежит своему полю.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "spacing",
+      "componentIds": [
+        "popup",
+        "section-stack",
+        "window-toolbar",
+        "sidebar",
+        "board-viewport",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Отмеченные группы и порядок чтения на широком и узком экране; отсутствие неоднозначной принадлежности подписей.",
+      "sources": [
+        "https://www.nngroup.com/articles/gestalt-proximity/",
+        "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms"
+      ],
+      "fix": "Настройки, навигация, действия и пояснения образуют различимые смысловые группы. Подпись визуально принадлежит своему полю.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "layout-group-spacing",
+      "title": "Интервал между соседними смысловыми группами больше интервала внутри каждой группы. Начальный ориентир AG: межгрупповой зазор не меньше 1,5 максимального сопоставимого внутреннего зазора.",
+      "level": "R",
+      "mandatory": false,
+      "checkId": "spacing",
+      "componentIds": [
+        "popup",
+        "section-stack",
+        "window-toolbar",
+        "sidebar",
+        "board-viewport",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Измерить локальные соседние интервалы одной оси. Заголовок, подпись и поле сравнивать как объявленные группы; не считать отношение по всему экрану. Рамка или заголовок могут обосновывать иную композицию.",
+      "sources": [
+        "https://www.nngroup.com/articles/gestalt-proximity/"
+      ],
+      "fix": "Интервал между соседними смысловыми группами больше интервала внутри каждой группы. Начальный ориентир AG: межгрупповой зазор не меньше 1,5 максимального сопоставимого внутреннего зазора.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "layout-alignment-anchors",
+      "title": "Сетка задаёт явные оси: края контейнеров, базовые линии текста и центры рядов управления.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "spacing",
+      "componentIds": [
+        "popup",
+        "section-stack",
+        "window-toolbar",
+        "sidebar",
+        "board-viewport",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Для каждого ряда указан тип опоры. Номинальные однотипные опоры совпадают; начальная техническая погрешность AG ≤1 CSS px в согласованной среде. Сохранять максимальное отклонение.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms"
+      ],
+      "fix": "Сетка задаёт явные оси: края контейнеров, базовые линии текста и центры рядов управления.",
+      "origin": "AG product policy informed by cited sources",
+      "metric": {
+        "name": "maxDeviationPx",
+        "unit": "CSS px",
+        "maximum": 1,
+        "origin": "AG proposed technical tolerance"
+      }
+    },
+    {
+      "id": "layout-control-slots",
+      "title": "Поле состоит из подписи, области управления и пояснения/ошибки. В одном ряду однотипные области управления имеют согласованную минимальную высоту.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "responsive",
+      "componentIds": [
+        "popup",
+        "section-stack",
+        "window-toolbar",
+        "sidebar",
+        "board-viewport",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Проверка коротких/длинных подписей, ошибок и 200% текста. Многострочная подпись увеличивает слот ряда, а не вызывает обрезку или перекрытие.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms",
+        "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html"
+      ],
+      "fix": "Поле состоит из подписи, области управления и пояснения/ошибки. В одном ряду однотипные области управления имеют согласованную минимальную высоту.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "layout-primary-flow",
+      "title": "Для последовательного заполнения исходная компоновка — одна основная колонка. Связанные короткие поля допускаются в одной строке. Независимые группы CRM могут занимать несколько колонок при ясном порядке.",
+      "level": "R",
+      "mandatory": false,
+      "checkId": "responsive",
+      "componentIds": [
+        "popup",
+        "section-stack",
+        "window-toolbar",
+        "sidebar",
+        "board-viewport",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Проверка порядка глазами, клавиатурой и скринридером; причины многоколоночной компоновки.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms",
+        "https://baymard.com/research-articles/avoid-multi-column-forms"
+      ],
+      "fix": "Для последовательного заполнения исходная компоновка — одна основная колонка. Связанные короткие поля допускаются в одной строке. Независимые группы CRM могут занимать несколько колонок при ясном порядке.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "layout-surface-restraint",
+      "title": "Сначала разделять группы отступом, заголовком и осью; рамку или фон добавлять при недостаточной различимости.",
+      "level": "R",
+      "mandatory": false,
+      "checkId": "spacing",
+      "componentIds": [
+        "popup",
+        "section-stack",
+        "window-toolbar",
+        "sidebar",
+        "board-viewport",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Для каждой вложенной декоративной поверхности объяснить её роль. Универсального ограничения числа карточек нет.",
+      "sources": [
+        "https://www.nngroup.com/articles/common-region/"
+      ],
+      "fix": "Сначала разделять группы отступом, заголовком и осью; рамку или фон добавлять при недостаточной различимости.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "optical-shape-balance",
+      "title": "Различать габариты контейнера, видимые границы рисунка и воспринимаемую массу. Равные габариты круга и квадрата не гарантируют равного воспринимаемого размера.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "consistency",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Сравнить формы рядом в одинаковых слотах, на реальном масштабе, обеих темах; записать визуальное наблюдение.",
+      "sources": [
+        "https://atlassian.design/guidelines/product/foundations/iconography"
+      ],
+      "fix": "Различать габариты контейнера, видимые границы рисунка и воспринимаемую массу. Равные габариты круга и квадрата не гарантируют равного воспринимаемого размера.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "optical-correction-record",
+      "title": "Оптическая поправка принадлежит рисунку/семейству иконок; она не сдвигает сетку контейнеров и область нажатия.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "consistency",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Сохранить glyph/variant, исходный размер, scale, offsetX/offsetY, причину и проверенные размеры.",
+      "sources": [
+        "https://atlassian.design/guidelines/product/foundations/iconography"
+      ],
+      "fix": "Оптическая поправка принадлежит рисунку/семейству иконок; она не сдвигает сетку контейнеров и область нажатия.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "optical-no-universal-ratio",
+      "title": "Не вводить универсальный процент увеличения круга, треугольника или тонкой иконки.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "consistency",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Размеры и поправки проверяются в конкретном наборе. Формула площади не выдаётся за модель зрительного восприятия.",
+      "sources": [
+        "https://atlassian.design/guidelines/product/foundations/iconography"
+      ],
+      "fix": "Не вводить универсальный процент увеличения круга, треугольника или тонкой иконки.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "optical-family-consistency",
+      "title": "Иконки одной панели согласованы по стилю, толщине штриха и воспринимаемому размеру; смешение контуров, заливок и emoji требует причины.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "consistency",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Сравнение всего набора, включая selected/disabled; оценка остаётся ручной.",
+      "sources": [
+        "https://atlassian.design/guidelines/product/foundations/iconography"
+      ],
+      "fix": "Иконки одной панели согласованы по стилю, толщине штриха и воспринимаемому размеру; смешение контуров, заливок и emoji требует причины.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "form-field-purpose",
+      "title": "Для каждого поля определены назначение, момент необходимости и потребитель данных. Необходимость обязательного поля привязана к текущему этапу.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "scenario",
+      "componentIds": [
+        "field",
+        "segmented-choice",
+        "section-stack"
+      ],
+      "method": "Реестр полей; ноль полей без объяснённой роли. Поля «на всякий случай» требуют пересмотра.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms",
+        "https://design-system.service.gov.uk/patterns/question-pages/"
+      ],
+      "fix": "Для каждого поля определены назначение, момент необходимости и потребитель данных. Необходимость обязательного поля привязана к текущему этапу.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "form-label-persistence",
+      "title": "В типовых формах постоянная видимая подпись объясняет поле; она программно связана с контролом. Placeholder служит примером.",
+      "level": "A/W",
+      "mandatory": true,
+      "checkId": "semantics",
+      "componentIds": [
+        "field",
+        "segmented-choice",
+        "section-stack"
+      ],
+      "method": "Проверка пустого/заполненного поля и accessibility tree. WCAG: 1.3.1, 3.3.2, 4.1.2; видимая постоянная label — политика AG для типовых полей.",
+      "sources": [
+        "https://www.w3.org/TR/WCAG22/",
+        "https://www.w3.org/WAI/tutorials/forms/labels/"
+      ],
+      "fix": "В типовых формах постоянная видимая подпись объясняет поле; она программно связана с контролом. Placeholder служит примером.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "form-constraints-before-error",
+      "title": "Обязательность, единицы, существенный формат и ограничения доступны до ошибки и связаны с полем.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "semantics",
+      "componentIds": [
+        "field",
+        "segmented-choice",
+        "section-stack"
+      ],
+      "method": "Например, «Интервал, секунды; от 1 до 60». Условия не спрятаны только в tooltip.",
+      "sources": [
+        "https://www.w3.org/TR/WCAG22/",
+        "https://www.w3.org/WAI/tutorials/forms/labels/"
+      ],
+      "fix": "Обязательность, единицы, существенный формат и ограничения доступны до ошибки и связаны с полем.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "form-control-task-fit",
+      "title": "Вид ввода соответствует задаче: известная дата допускает прямой ввод; длинный справочник — поиск; несколько независимых вариантов — чекбоксы.",
+      "level": "R",
+      "mandatory": false,
+      "checkId": "semantics",
+      "componentIds": [
+        "field",
+        "segmented-choice",
+        "section-stack"
+      ],
+      "method": "Описать способ ввода, количество/известность вариантов, проверку клавиатуры и вставки.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms"
+      ],
+      "fix": "Вид ввода соответствует задаче: известная дата допускает прямой ввод; длинный справочник — поиск; несколько независимых вариантов — чекбоксы.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "form-error-recovery-extended",
+      "title": "Ошибка называет проблему и доступный способ исправления, связана с полем; корректные данные сохраняются после ошибки/сбоя.",
+      "level": "A/W",
+      "mandatory": true,
+      "checkId": "recovery",
+      "componentIds": [
+        "field",
+        "segmented-choice",
+        "section-stack"
+      ],
+      "method": "Неверный формат, пустое обязательное поле, серверный отказ и повтор. WCAG 3.3.1/3.3.3 — идентификация/подсказка с применимыми условиями; сохранение ввода — политика AG.",
+      "sources": [
+        "https://www.w3.org/WAI/tutorials/forms/labels/",
+        "https://www.w3.org/WAI/tutorials/forms/notifications/"
+      ],
+      "fix": "Ошибка называет проблему и доступный способ исправления, связана с полем; корректные данные сохраняются после ошибки/сбоя.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "form-reuse-known-data",
+      "title": "Уже предоставленные в том же процессе данные подставляются либо доступны для выбора; исключения требуют причины.",
+      "level": "A/W",
+      "mandatory": true,
+      "checkId": "semantics",
+      "componentIds": [
+        "field",
+        "segmented-choice",
+        "section-stack"
+      ],
+      "method": "Реестр повторного ввода. WCAG 3.3.7 допускает исключения: необходимость повторения, безопасность, утратившая актуальность информация.",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html"
+      ],
+      "fix": "Уже предоставленные в том же процессе данные подставляются либо доступны для выбора; исключения требуют причины.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "form-submit-integrity",
+      "title": "Отправка показывает ход и результат, предотвращает непреднамеренное повторение; повтор после сбоя безопасен в пределах контракта операции.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "recovery",
+      "componentIds": [
+        "field",
+        "segmented-choice",
+        "section-stack"
+      ],
+      "method": "Проверить двойное нажатие, медленный ответ, сетевой сбой и повтор. Одного disabled-состояния недостаточно для доказательства серверной идемпотентности.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms"
+      ],
+      "fix": "Отправка показывает ход и результат, предотвращает непреднамеренное повторение; повтор после сбоя безопасен в пределах контракта операции.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "form-draft-stage",
+      "title": "В CRM черновик требует минимум данных текущего этапа; перед значимым переходом проверяются нужные этому этапу сведения.",
+      "level": "R",
+      "mandatory": false,
+      "checkId": "recovery",
+      "componentIds": [
+        "field",
+        "segmented-choice",
+        "section-stack"
+      ],
+      "method": "Сценарии создания черновика, изменения статуса и восстановления после перерыва. Не применять незаметное автосохранение к необратимому действию.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/patterns/forms",
+        "https://design-system.service.gov.uk/patterns/question-pages/"
+      ],
+      "fix": "В CRM черновик требует минимум данных текущего этапа; перед значимым переходом проверяются нужные этому этапу сведения.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "action-label-choice",
+      "title": "Основное, незнакомое или неоднозначное действие имеет видимую текстовую подпись. Иконная кнопка допустима для узнаваемого локального/повторяемого действия в понятном контексте.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "hierarchy",
+      "componentIds": [
+        "button",
+        "window-toolbar",
+        "sidebar",
+        "inline-help",
+        "popup"
+      ],
+      "method": "Для icon-only записать назначение, область действия, знакомую метафору и свидетельство понимания. «Обновить» уточнить: данные, страницу или синхронизацию.",
+      "sources": [
+        "https://atlassian.design/guidelines/product/foundations/iconography",
+        "https://www.nngroup.com/articles/icon-usability/"
+      ],
+      "fix": "Основное, незнакомое или неоднозначное действие имеет видимую текстовую подпись. Иконная кнопка допустима для узнаваемого локального/повторяемого действия в понятном контексте.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "action-primary-per-group",
+      "title": "В одной смысловой группе выделено не более одного основного действия.",
+      "level": "R",
+      "mandatory": false,
+      "checkId": "hierarchy",
+      "componentIds": [
+        "button",
+        "window-toolbar",
+        "sidebar",
+        "inline-help",
+        "popup"
+      ],
+      "method": "Проверка визуальных акцентов; независимые группы могут иметь собственные основные действия.",
+      "sources": [
+        "https://atlassian.design/components/button/usage"
+      ],
+      "fix": "В одной смысловой группе выделено не более одного основного действия.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "action-name-state",
+      "title": "У действия есть доступное имя; состояние/текущее значение передаются программно. Видимый текст входит в доступное имя.",
+      "level": "A/W",
+      "mandatory": true,
+      "checkId": "hierarchy",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Accessibility tree и целевой скринридер; WCAG 4.1.2 и 2.5.3. Иконка при текстовой подписи не дублируется ненужным озвучиванием.",
+      "sources": [
+        "https://www.w3.org/TR/WCAG22/",
+        "https://atlassian.design/components/icon/usage"
+      ],
+      "fix": "У действия есть доступное имя; состояние/текущее значение передаются программно. Видимый текст входит в доступное имя.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "action-tooltip-supplement",
+      "title": "Tooltip дополняет доступное имя; существенные инструкции доступны без наведения.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "hierarchy",
+      "componentIds": [
+        "button",
+        "window-toolbar",
+        "sidebar",
+        "inline-help",
+        "popup"
+      ],
+      "method": "Проверить мышь, focus и touch. Для появляющегося по hover/focus содержимого учитывать WCAG 1.4.13: возможность скрыть, навести на него и прочитать с предусмотренными исключениями.",
+      "sources": [
+        "https://www.nngroup.com/articles/icon-usability/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html"
+      ],
+      "fix": "Tooltip дополняет доступное имя; существенные инструкции доступны без наведения.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "action-target-size",
+      "title": "Цель указателя отвечает WCAG 2.5.8: 24×24 CSS px либо конкретное допустимое исключение. Цель AG для touch/coarse pointer — 44×44 CSS px.",
+      "level": "W/A",
+      "mandatory": true,
+      "checkId": "hierarchy",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Измерять область взаимодействия, а не рисунок. Для исключения по расстоянию применять правило окружностей диаметром 24 px; перечислить inline/equivalent/UA/essential исключения при использовании.",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html"
+      ],
+      "fix": "Цель указателя отвечает WCAG 2.5.8: 24×24 CSS px либо конкретное допустимое исключение. Цель AG для touch/coarse pointer — 44×44 CSS px.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "a11y-noncolor-meaning",
+      "title": "Статусы, ошибки, выбранность и серии графика различаются не только цветом.",
+      "level": "W",
+      "mandatory": true,
+      "checkId": "semantics",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Отключить цветовую подсказку: текст, форма, маркер или штрих сохраняют смысл; симуляции разных нарушений цветового зрения — дополнительная проверка. WCAG 1.4.1.",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html"
+      ],
+      "fix": "Статусы, ошибки, выбранность и серии графика различаются не только цветом.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "a11y-text-contrast",
+      "title": "Реальные пары текста/фона проходят SC 1.4.3: 4,5:1; крупный текст — 3:1, с исключениями критерия.",
+      "level": "W",
+      "mandatory": true,
+      "checkId": "color",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Каждая применимая пара в каждой теме/состоянии; крупный текст — от 24 CSS px или примерно 18,67 CSS px полужирного. Проверять значения без округления порога вверх.",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+      ],
+      "fix": "Реальные пары текста/фона проходят SC 1.4.3: 4,5:1; крупный текст — 3:1, с исключениями критерия.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "a11y-control-contrast",
+      "title": "Необходимая для распознавания управления/состояний и понимания графики визуальная информация имеет 3:1 к соседним цветам по SC 1.4.11.",
+      "level": "W",
+      "mandatory": true,
+      "checkId": "color",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Реальные соседние цвета, фон и состояния. Не распространять требование на все декоративные рамки; учитывать inactive, UA и essential исключения.",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html"
+      ],
+      "fix": "Необходимая для распознавания управления/состояний и понимания графики визуальная информация имеет 3:1 к соседним цветам по SC 1.4.11.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "a11y-keyboard-focus",
+      "title": "Применимые функции доступны с клавиатуры; нет ловушек, порядок фокуса сохраняет смысл, фокус видим и не полностью перекрыт авторским содержимым.",
+      "level": "W/A",
+      "mandatory": true,
+      "checkId": "keyboard",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Завершение сценария, диалоги, возврат фокуса; SC 2.1.1/2.1.2/2.4.3/2.4.7/2.4.11. AG рекомендует полную видимость фокуса; минимум 2.4.11 допускает частичное перекрытие.",
+      "sources": [
+        "https://www.w3.org/TR/WCAG22/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html"
+      ],
+      "fix": "Применимые функции доступны с клавиатуры; нет ловушек, порядок фокуса сохраняет смысл, фокус видим и не полностью перекрыт авторским содержимым.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "a11y-structure-reading",
+      "title": "Заголовки, группы, таблицы и последовательность чтения передают структуру программно; визуальное перемещение не разрушает смысловой порядок.",
+      "level": "W",
+      "mandatory": true,
+      "checkId": "semantics",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Accessibility tree + чтение целевым скринридером. SC 1.3.1/1.3.2/4.1.2. Предпочитать нативную семантику; ARIA не создаёт поведение автоматически.",
+      "sources": [
+        "https://www.w3.org/TR/WCAG22/",
+        "https://atlassian.design/components/icon/usage"
+      ],
+      "fix": "Заголовки, группы, таблицы и последовательность чтения передают структуру программно; визуальное перемещение не разрушает смысловой порядок.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "a11y-status-announcement",
+      "title": "Сообщения статуса доступны вспомогательным технологиям без принудительного перемещения фокуса там, где применим SC 4.1.3.",
+      "level": "W",
+      "mandatory": true,
+      "checkId": "feedback",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Проверить сохранение, загрузку, ошибку и завершение. Объявлять существенные изменения; не озвучивать каждый кадр анимации и каждое обновление декоративного графика.",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
+      ],
+      "fix": "Сообщения статуса доступны вспомогательным технологиям без принудительного перемещения фокуса там, где применим SC 4.1.3.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "a11y-zoom-reflow-extended",
+      "title": "Текст увеличивается до 200% без потери содержимого и функций по SC 1.4.4, с его исключениями для captions и изображений текста; для вертикального контента reflow работает при ширине 320 CSS px с исключениями SC 1.4.10.",
+      "level": "W",
+      "mandatory": true,
+      "checkId": "responsive",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Отдельные проверки 200% текста и reflow, например viewport 1280 px при 400% zoom. Двумерная таблица/карта может иметь собственную прокрутку; окружающие формы и пояснения доступны.",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ],
+      "fix": "Текст увеличивается до 200% без потери содержимого и функций по SC 1.4.4, с его исключениями для captions и изображений текста; для вертикального контента reflow работает при ширине 320 CSS px с исключениями SC 1.4.10.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "a11y-auditory-equivalence",
+      "title": "Значимые звуковые сигналы имеют видимое текстовое сообщение; основные действия и поддержка имеют достаточный для сценария путь без обязательного слухового восприятия.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "semantics",
+      "componentIds": [
+        "ascii-background"
+      ],
+      "method": "Пройти согласованные сценарии с выключенным звуком; проверить время доступности сообщения и текстовый канал. Для слепоглухих пользователей предусмотреть программно доступный текст.",
+      "sources": [
+        "https://www.w3.org/WAI/media/av/planning/"
+      ],
+      "fix": "Значимые звуковые сигналы имеют видимое текстовое сообщение; основные действия и поддержка имеют достаточный для сценария путь без обязательного слухового восприятия.",
+      "origin": "AG product policy informed by cited sources"
+    },
+    {
+      "id": "a11y-media-alternatives",
+      "title": "Для записанных audio-only материалов есть применимая текстовая альтернатива; для записанного синхронного видео со звуком — субтитры; для live synchronized media — live-субтитры. Существенная визуальная информация записанного видео доступна через аудиодескрипцию, если основной звук её не передаёт.",
+      "level": "W",
+      "mandatory": true,
+      "checkId": "semantics",
+      "componentIds": [
+        "ascii-background"
+      ],
+      "method": "Инвентарь медиа, ручная проверка речи, говорящих, значимых звуков, синхронизации и визуальных сведений. SC 1.2.1/1.2.2/1.2.4/1.2.5; исключения рассматривать по каждому критерию.",
+      "sources": [
+        "https://www.w3.org/WAI/media/av/planning/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/captions-live.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded.html"
+      ],
+      "fix": "Для записанных audio-only материалов есть применимая текстовая альтернатива; для записанного синхронного видео со звуком — субтитры; для live synchronized media — live-субтитры. Существенная визуальная информация записанного видео доступна через аудиодескрипцию, если основной звук её не передаёт.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "a11y-chart-equivalence",
+      "title": "Содержательный график имеет текстовый эквивалент существенных данных и выводов; доступная таблица — один из способов. Чистая декорация исключается из чтения, если не передаёт самостоятельной информации.",
+      "level": "W/A",
+      "mandatory": true,
+      "checkId": "semantics",
+      "componentIds": [
+        "ambient-chart",
+        "board-viewport"
+      ],
+      "method": "Пользователь получает смысл и необходимые значения без изображения; у таблицы заголовки/единицы. Не считать подпись «график продаж» достаточной. SC 1.1.1/1.3.1.",
+      "sources": [
+        "https://www.w3.org/WAI/tutorials/images/complex/"
+      ],
+      "fix": "Содержательный график имеет текстовый эквивалент существенных данных и выводов; доступная таблица — один из способов. Чистая декорация исключается из чтения, если не передаёт самостоятельной информации.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "a11y-slider-drag-alternative",
+      "title": "Ползунок имеет имя, значение, диапазон, клавиатурное управление; dragging допускает альтернативу одиночным указателем без перетаскивания с исключениями SC 2.5.7.",
+      "level": "W/A",
+      "mandatory": true,
+      "checkId": "semantics",
+      "componentIds": [
+        "field",
+        "board-viewport"
+      ],
+      "method": "Стрелки и границы диапазона; выбор кликом, кнопками или полем в зависимости от компонента. Одна клавиатурная альтернатива сама по себе не закрывает 2.5.7. Для точности рекомендуется числовой ввод.",
+      "sources": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/slider/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html"
+      ],
+      "fix": "Ползунок имеет имя, значение, диапазон, клавиатурное управление; dragging допускает альтернативу одиночным указателем без перетаскивания с исключениями SC 2.5.7.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "a11y-authentication",
+      "title": "Авторизация не требует когнитивного теста без предусмотренной SC 3.3.8 альтернативы/помощи/исключения; не препятствовать подходящим менеджерам паролей и вставке.",
+      "level": "W",
+      "mandatory": true,
+      "checkId": "semantics",
+      "componentIds": [
+        "field"
+      ],
+      "method": "Проверить пароль, одноразовый код, CAPTCHA и альтернативный путь. Нельзя считать любую CAPTCHA автоматически соответствующей.",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html"
+      ],
+      "fix": "Авторизация не требует когнитивного теста без предусмотренной SC 3.3.8 альтернативы/помощи/исключения; не препятствовать подходящим менеджерам паролей и вставке.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "a11y-motion-control",
+      "title": "Движение и автообновление имеют применимые механизмы остановки по SC 2.2.2; вспышки отвечают SC 2.3.1. AG дополнительно учитывает prefers-reduced-motion.",
+      "level": "W/A",
+      "mandatory": true,
+      "checkId": "motion",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Проверить паузу/скрытие, восстановление, уменьшение движения и сохранность данных. Reduced motion — политика AG сверх перечисленных минимальных критериев, а не самостоятельный критерий AA.",
+      "sources": [
+        "https://www.w3.org/TR/WCAG22/"
+      ],
+      "fix": "Движение и автообновление имеют применимые механизмы остановки по SC 2.2.2; вспышки отвечают SC 2.3.1. AG дополнительно учитывает prefers-reduced-motion.",
+      "origin": "WCAG with scoped conditions; AG policy where marked"
+    },
+    {
+      "id": "apple-concentric-corners",
+      "title": "Вложенные скругления согласованы с контейнером; для равномерного inset круговых дуг использовать max(0, R_outer - inset), с ограничением размером дочернего элемента.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "spacing",
+      "componentIds": [
+        "popup",
+        "section-stack",
+        "field",
+        "button"
+      ],
+      "method": "Проверить R_outer/inset/R_inner, одинаковые центры дуг и fallback вне контейнера. Асимметричные/continuous/native shapes требуют платформенной проверки, а не этой упрощённой формулы.",
+      "sources": [
+        "https://developer.apple.com/documentation/swiftui/edge/corner/style/concentric"
+      ],
+      "fix": "Вложенные скругления согласованы с контейнером; для равномерного inset круговых дуг использовать max(0, R_outer - inset), с ограничением размером дочернего элемента.",
+      "origin": "Apple principle; AG acceptance contract, not Apple numeric scoring",
+      "metric": {
+        "name": "radiusErrorPx",
+        "unit": "CSS px",
+        "maximum": 1,
+        "origin": "AG tolerance for explicitly uniform-inset circular geometry"
+      }
+    },
+    {
+      "id": "apple-neighbor-shapes",
+      "title": "Соседние равноправные элементы согласованы по семейству формы и отступам; концентричность применяется к вложенности, а не ко всем соседям.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "consistency",
+      "componentIds": [
+        "popup",
+        "section-stack",
+        "field",
+        "button",
+        "window-toolbar"
+      ],
+      "method": "Сравнить роли/размеры соседей, отсутствие pinched/flared углов и обоснование разных форм.",
+      "sources": [
+        "https://developer.apple.com/videos/play/wwdc2025/356/"
+      ],
+      "fix": "Соседние равноправные элементы согласованы по семейству формы и отступам; концентричность применяется к вложенности, а не ко всем соседям.",
+      "origin": "Apple principle; AG acceptance contract, not Apple numeric scoring"
+    },
+    {
+      "id": "apple-shape-variants",
+      "title": "Выбирать fixed rounded rectangle для плотных панелей, capsule для акцентных/просторных действий и concentric с fallback для вложенных поверхностей.",
+      "level": "R",
+      "mandatory": false,
+      "checkId": "hierarchy",
+      "componentIds": [
+        "popup",
+        "section-stack",
+        "field",
+        "button"
+      ],
+      "method": "Показать применимые альтернативы и выбранный вариант; это контекстный перенос принципа Apple в AG web, не имитация нативного стиля.",
+      "sources": [
+        "https://developer.apple.com/videos/play/wwdc2025/356/"
+      ],
+      "fix": "Выбирать fixed rounded rectangle для плотных панелей, capsule для акцентных/просторных действий и concentric с fallback для вложенных поверхностей.",
+      "origin": "Apple principle; AG acceptance contract, not Apple numeric scoring"
+    },
+    {
+      "id": "apple-semantic-colors",
+      "title": "Цвет задаётся смысловой ролью, а не случайным HEX; системные динамические цвета на native используются по назначению.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "color",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Проверить роли text/background/separator/accent/status и сохранность палитры хозяина.",
+      "sources": [
+        "https://developer.apple.com/design/human-interface-guidelines/color"
+      ],
+      "fix": "Цвет задаётся смысловой ролью, а не случайным HEX; системные динамические цвета на native используются по назначению.",
+      "origin": "Apple principle; AG acceptance contract, not Apple numeric scoring"
+    },
+    {
+      "id": "apple-color-appearances",
+      "title": "Собственные цвета проверены в light/dark и increased contrast вариантах; фактический фон и выбранность сохраняют читаемость.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "color",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Тестировать обе темы × standard/increased contrast; отсутствие подходящего варианта остаётся unknown, а не автоматически pass.",
+      "sources": [
+        "https://developer.apple.com/design/human-interface-guidelines/color"
+      ],
+      "fix": "Собственные цвета проверены в light/dark и increased contrast вариантах; фактический фон и выбранность сохраняют читаемость.",
+      "origin": "Apple principle; AG acceptance contract, not Apple numeric scoring"
+    },
+    {
+      "id": "apple-material-layer",
+      "title": "Материал поддерживает различие controls/content; прозрачность имеет читаемый непрозрачный вариант и не создаёт слои стекла друг над другом.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "layers",
+      "componentIds": [
+        "popup",
+        "window-toolbar",
+        "sidebar"
+      ],
+      "method": "Проверить контент под поверхностью, reduced transparency/increased contrast и отсутствие клиппинга; Liquid Glass не добавляется всем карточкам.",
+      "sources": [
+        "https://developer.apple.com/design/human-interface-guidelines/materials"
+      ],
+      "fix": "Материал поддерживает различие controls/content; прозрачность имеет читаемый непрозрачный вариант и не создаёт слои стекла друг над другом.",
+      "origin": "Apple principle; AG acceptance contract, not Apple numeric scoring"
+    },
+    {
+      "id": "i18n-explicit-contract",
+      "title": "Интерфейс объявляет locale, availableLocales и fallback; локализуемый chrome и форматирование отделены от пользовательских данных. English-only допускается.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "responsive",
+      "componentIds": [
+        "*"
+      ],
+      "method": "Проверить явный locale contract. Для локализуемого интерфейса показать заявленные языки, English-only/fallback, длинные подписи и сохранение состояния. Single-locale допускается с причиной; отсутствие перевода контента не выдаётся за перевод UI.",
+      "sources": [
+        "https://www.w3.org/International/questions/qa-i18n",
+        "https://www.w3.org/International/questions/qa-html-language-declarations",
+        "https://tc39.es/ecma402/2025/"
+      ],
+      "fix": "Передать locale context и стабильные message keys; проверить lang/dir, Intl, callbacks/accessibility labels, длинный текст и lifecycle.",
+      "origin": "AG authored product policy informed by W3C/ECMA-402; not a source certification"
+    },
+    {
+      "id": "form-row-semantic-group",
+      "title": "Связанные поля образуют явную строку; поиск с частыми фильтрами отделён от настроек отображения.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "spacing",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Проверить общую подпись группы, понятный порядок и отдельную полосу дополнительных настроек.",
+      "sources": [
+        "https://www.w3.org/WAI/tutorials/forms/grouping/"
+      ],
+      "fix": "Связанные поля образуют явную строку; поиск с частыми фильтрами отделён от настроек отображения.",
+      "origin": "AG product policy informed by cited sources; geometry tolerance is authored AG policy"
+    },
+    {
+      "id": "form-row-control-alignment",
+      "title": "В одной объявленной строке выравниваются верхние границы контролов, а не блоков вместе с подсказками.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "spacing",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Измерить max(control.top)-min(control.top) в одной строке при короткой/длинной подписи и изменении статуса.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines"
+      ],
+      "fix": "В одной объявленной строке выравниваются верхние границы контролов, а не блоков вместе с подсказками.",
+      "origin": "AG product policy informed by cited sources; geometry tolerance is authored AG policy",
+      "metric": {
+        "name": "maxControlTopDeviationPx",
+        "unit": "CSS px",
+        "maximum": 1,
+        "origin": "AG technical tolerance, not a WCAG threshold"
+      }
+    },
+    {
+      "id": "form-row-common-density",
+      "title": "Сопоставимые однострочные input, select и кнопки одной строки имеют общую плотность и согласованную высоту.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "consistency",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Измерить разницу высот реальных рамок. Textarea и иные по назначению элементы вынести в отдельную группу или обосновать исключение.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines"
+      ],
+      "fix": "Сопоставимые однострочные input, select и кнопки одной строки имеют общую плотность и согласованную высоту.",
+      "origin": "AG product policy informed by cited sources; geometry tolerance is authored AG policy",
+      "metric": {
+        "name": "maxControlHeightDeviationPx",
+        "unit": "CSS px",
+        "maximum": 1,
+        "origin": "AG technical tolerance, not a WCAG threshold"
+      }
+    },
+    {
+      "id": "form-row-feedback-track",
+      "title": "Подписи, контролы и сообщения имеют раздельные треки. Ошибка увеличивает строку целиком без сдвига соседнего контрола.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "responsive",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Добавить многострочную подпись/ошибку одному полю; соседние контролы сохраняют ось, следующая строка начинается ниже всей группы.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines"
+      ],
+      "fix": "Подписи, контролы и сообщения имеют раздельные треки. Ошибка увеличивает строку целиком без сдвига соседнего контрола.",
+      "origin": "AG product policy informed by cited sources; geometry tolerance is authored AG policy"
+    },
+    {
+      "id": "form-row-reflow-order",
+      "title": "Группа переносится по доступной ширине контейнера, сохраняя подписи, DOM-порядок и клавиатурный обход.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "responsive",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Проверить320/390CSSpx, узкую панель на широком экране,200% текста и400%zoom отдельно. Без обрезки и горизонтального скролла обычной формы.",
+      "sources": [
+        "https://designsystem.digital.gov/components/form/"
+      ],
+      "fix": "Группа переносится по доступной ширине контейнера, сохраняя подписи, DOM-порядок и клавиатурный обход.",
+      "origin": "AG product policy informed by cited sources; geometry tolerance is authored AG policy"
+    },
+    {
+      "id": "form-row-disclosure-visibility",
+      "title": "Закрытые дополнительные настройки и неактуальный сброс отсутствуют в визуальной раскладке и обходе.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "keyboard",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Проверить details open/closed, hidden и Tab; display:flex/grid не должен показывать скрытое содержимое.",
+      "sources": [
+        "https://designsystem.digital.gov/components/form/"
+      ],
+      "fix": "Закрытые дополнительные настройки и неактуальный сброс отсутствуют в визуальной раскладке и обходе.",
+      "origin": "AG product policy informed by cited sources; geometry tolerance is authored AG policy"
+    },
+    {
+      "id": "form-row-label-alignment",
+      "title": "Подписи над полями одной строки начинаются на общей оси.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "spacing",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Измерить разницу верхних краёв подписей в объявленной строке. Не сравнивать нижние края подписей разной длины и не выдавать bounding box за базовую линию шрифта.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines"
+      ],
+      "fix": "Измерить разницу верхних краёв подписей в объявленной строке. Не сравнивать нижние края подписей разной длины и не выдавать bounding box за базовую линию шрифта.",
+      "origin": "AG product policy informed by cited sources; geometry tolerance is authored AG policy",
+      "metric": {
+        "name": "maxLabelTopDeviationPx",
+        "unit": "CSS px",
+        "maximum": 1,
+        "origin": "AG technical tolerance, not a WCAG threshold"
+      }
+    },
+    {
+      "id": "form-field-inline-alignment",
+      "title": "Подпись и подсказки имеют общий начальный край со своим полем.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "spacing",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Измерить начальный край подписи/описаний относительно своего контрола, справа в RTL. Применяется к явно объявленным группам с подписями сверху; боковые подписи проверяются отдельно.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines"
+      ],
+      "fix": "Измерить начальный край подписи/описаний относительно своего контрола, справа в RTL. Применяется к явно объявленным группам с подписями сверху; боковые подписи проверяются отдельно.",
+      "origin": "AG product policy informed by cited sources; geometry tolerance is authored AG policy",
+      "metric": {
+        "name": "maxFieldInlineDeviationPx",
+        "unit": "CSS px",
+        "maximum": 1,
+        "origin": "AG technical tolerance, not a WCAG threshold"
+      }
+    },
+    {
+      "id": "form-field-track-order",
+      "title": "Подпись, поле и сообщения сохраняют порядок без наложения.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "spacing",
+      "componentIds": [
+        "field",
+        "select",
+        "catalog-search-controls",
+        "settings-panel",
+        "popover",
+        "sorting-control"
+      ],
+      "method": "Измерить наложение label→control→feedback. В колонке следующая подпись начинается ниже всех сообщений предыдущего поля. Длины подсказок не обязаны совпадать. Повторить с длинной подписью и ошибкой одного поля.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines"
+      ],
+      "fix": "Измерить наложение label→control→feedback. В колонке следующая подпись начинается ниже всех сообщений предыдущего поля. Длины подсказок не обязаны совпадать. Повторить с длинной подписью и ошибкой одного поля.",
+      "origin": "AG product policy informed by cited sources; geometry tolerance is authored AG policy",
+      "metric": {
+        "name": "maxFieldTrackOverlapPx",
+        "unit": "CSS px",
+        "maximum": 1,
+        "origin": "AG technical tolerance, not a WCAG threshold"
+      }
+    },
+    {
+      "id": "layout-grid-evidence",
+      "title": "Сетка объявлена и измерена для страницы, компонента и значимого внутреннего блока.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "spacing",
+      "componentIds": [
+        "*"
+      ],
+      "method": "До правки объявить carrier, профиль по назначению, опоры и допуск. После рендера проверить реальные опоры через check_layout_grids/inspect_layout_grids в широком и узком контейнере. Приложить numeric report, coverage и максимальный остаток в CSS px. Нет измерения — unknown; CSS display:grid, скриншот и подходящее отношение сторон не доказывают выполнение. Baseline без источника остаётся unknown.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/foundations/2x-grid/overview"
+      ],
+      "fix": "Объявить вложенные смысловые области и измерить опоры до визуального ревью. Обосновать операционную сетку вместо Golden Canon; сохранить читабельность, reflow и исключения.",
+      "origin": "AG authoring/evidence policy; geometric checks do not certify aesthetics or accessibility",
+      "metric": {
+        "name": "maxDeclaredAnchorResidualPx",
+        "unit": "CSS px",
+        "maximum": 1,
+        "origin": "AG tolerance for explicitly declared geometric anchors"
+      }
+    },
+    {
+      "id": "content-inset-integrity",
+      "title": "У текста и предпросмотра есть объявленные внутренние поля и расстояние до соседних панелей.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "spacing",
+      "componentIds": [
+        "*"
+      ],
+      "method": "До правки задать intendedInset и gap токенами host для внутреннего reading carrier. Измерить края heading/paragraph/list/toolbar и переполнение при edit/preview/split, узком контейнере широкого окна и 200% текста. Остаток — максимальное отклонение от объявленных полей/зазоров и выход за content box в CSS px; нулевой inset допускается при обоснованном full-bleed. Не выдавать ширину внешней страницы за проверку вложенного текста.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/foundations/2x-grid/overview"
+      ],
+      "fix": "Восстановить поля reading carrier и межгрупповой зазор. Проверить текст и фокус в каждом режиме; разные роли могут иметь разные локальные сетки.",
+      "origin": "AG host-content geometry policy; no universal padding size",
+      "metric": {
+        "name": "maxContentInsetResidualPx",
+        "unit": "CSS px",
+        "maximum": 1,
+        "origin": "AG tolerance relative to explicitly declared host spacing tokens"
+      }
+    },
+    {
+      "id": "layout-width-integrity",
+      "title": "Ширина корней и значимых внутренних колонок соответствует объявленному назначению.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "responsive",
+      "componentIds": [
+        "*"
+      ],
+      "method": "auditInterface(root).layoutWidths; сервер пересчитывает факты layoutWidthReview и полноту всех четырёх сценариев. Узкий viewport<=320 CSSpx; текст подтверждается ростом измеренного fontSize, не меткой textScale.",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html"
+      ],
+      "fix": "Объявить fill/content и подходящий локальный минимум; исправить ширину allocated wrapper/вложенные tracks, затем повторить фактические сценарии.",
+      "origin": "AG diagnostic policy and completion coverage, not a universal WCAG column width",
+      "metric": {
+        "name": "maxWidthDeficitPx",
+        "unit": "CSS px",
+        "maximum": 1,
+        "origin": "AG technical tolerance/coverage"
+      }
+    },
+    {
+      "id": "layout-width-scenarios",
+      "title": "Каждый изменённый визуальный блок проверен в normal/narrow/text200/narrow-text200; пропуски видны.",
+      "level": "A",
+      "mandatory": true,
+      "checkId": "responsive",
+      "componentIds": [
+        "*"
+      ],
+      "method": "auditInterface(root).layoutWidths; сервер пересчитывает факты layoutWidthReview и полноту всех четырёх сценариев. Узкий viewport<=320 CSSpx; текст подтверждается ростом измеренного fontSize, не меткой textScale.",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html"
+      ],
+      "fix": "Объявить fill/content и подходящий локальный минимум; исправить ширину allocated wrapper/вложенные tracks, затем повторить фактические сценарии.",
+      "origin": "AG diagnostic policy and completion coverage, not a universal WCAG column width",
+      "metric": {
+        "name": "missingWidthCases",
+        "unit": "cases",
+        "maximum": 0,
+        "origin": "AG technical tolerance/coverage"
+      }
+    }
+  ],
+  "metrics": [
+    {
+      "id": "M01",
+      "definition": "Обоснованность полей = поля с назначением, этапом необходимости и потребителем / все поля",
+      "interpretation": "100%; неизвестные поля перечислены",
+      "method": "Реестр полей + review"
+    },
+    {
+      "id": "M02",
+      "definition": "Полнота подписей = поля с проверенной видимой и связанной программной подписью / применимые поля",
+      "interpretation": "100%; исключения видимой label обоснованы отдельно",
+      "method": "DOM/accessibility tree + визуальная проверка"
+    },
+    {
+      "id": "M03",
+      "definition": "Группировка = понятные проверенные группы / применимые группы; дополнительно локальное отношение межгруппового зазора к максимальному сопоставимому внутреннему",
+      "interpretation": "Для A-правила 100%; 1,5 — R-ориентир, не автоматический запрет",
+      "method": "Ручная разметка групп + геометрия"
+    },
+    {
+      "id": "M04",
+      "definition": "Остаток выравнивания = абсолютное отклонение каждой номинальной опоры от объявленной оси",
+      "interpretation": "Максимум ≤1 CSS px для сравнимых опор; допуск AG. Публиковать также количество/тип исключений",
+      "method": "Browser bounds/типографские опоры; среда/DPR/zoom фиксированы"
+    },
+    {
+      "id": "M05",
+      "definition": "Согласованность размеров = контроли в объявленных размерных семействах / сравнимые контроли",
+      "interpretation": "100% при базовом тексте; рост под контент допустим и проверяется отдельно",
+      "method": "Геометрия, длинные labels, 200% текста"
+    },
+    {
+      "id": "M06",
+      "definition": "Использование токенов = интервалы с разрешённым токеном или принятым исключением / все проверяемые интервалы",
+      "interpretation": "100%; отдельно доля исключений, чтобы не маскировать хаотичную сетку",
+      "method": "CSS/tokens + фактические интервалы"
+    },
+    {
+      "id": "M07",
+      "definition": "Оптическая проверка = варианты пиктограмм с проверенным балансом и записанными поправками / варианты набора в области",
+      "interpretation": "100% покрытия ручной проверки; качество дополнительно pass/fail/unknown. Покрытие само по себе не означает pass",
+      "method": "Contact sheet/панель на реальном размере, обе темы"
+    },
+    {
+      "id": "M08",
+      "definition": "Обоснованность icon-only = иконные действия с объяснённым выбором и свидетельством понимания / все icon-only действия",
+      "interpretation": "100% обоснований; фактическую узнаваемость измерять U04",
+      "method": "Review + пользовательская проверка"
+    },
+    {
+      "id": "M09",
+      "definition": "Доступность имени/роли/состояния = корректные проверенные управления / все применимые управления",
+      "interpretation": "100%; любое нарушение фиксируется поэлементно",
+      "method": "Accessibility tree + скринридер"
+    },
+    {
+      "id": "M10",
+      "definition": "Различимость без цвета = статусы/серии/ошибки с достаточным нецветовым признаком / все применимые элементы",
+      "interpretation": "100%; симулятор и grayscale не заменяют проверку значения",
+      "method": "Review без цветовой подсказки"
+    },
+    {
+      "id": "M11",
+      "definition": "Контраст = прошедшие применимые пары / все применимые пары",
+      "interpretation": "100%; minimum ratio и каждый провал отдельно; текст/графика раздельно",
+      "method": "Фактические цвета и состояния"
+    },
+    {
+      "id": "M12",
+      "definition": "Размер целей = цели, соответствующие SC 2.5.8 или его конкретному исключению / все цели",
+      "interpretation": "100%; дополнительно доля ≥44×44 для AG coarse-pointer профиля",
+      "method": "Bounds зон взаимодействия + проверка расстояний"
+    },
+    {
+      "id": "M13",
+      "definition": "Клавиатурная завершимость = сценарии, завершённые клавиатурой без обходных путей / все применимые сценарии",
+      "interpretation": "100% области приёмки; ловушки/невидимый фокус — отдельные нарушения",
+      "method": "Ручное выполнение целевых сценариев"
+    },
+    {
+      "id": "M14",
+      "definition": "Завершимость со скринридером = успешно выполненные сценарии / все применимые сценарии для конкретной AT-среды",
+      "interpretation": "100% области приёмки отдельно по каждой среде; не усреднять платформенные блокеры",
+      "method": "Реальные браузер + ОС + AT и версии"
+    },
+    {
+      "id": "M15",
+      "definition": "Восстановление = fault-сценарии с сохранным вводом, понятной ошибкой и успешным допустимым повтором / все fault-сценарии",
+      "interpretation": "100%; потеря корректного ввода или повторная необратимая операция — отдельный блокер AG",
+      "method": "Ошибки ввода, timeout, offline, отказ сервера"
+    },
+    {
+      "id": "M16",
+      "definition": "Устойчивость компоновки = прошедшие комбинации сценарий×viewport×тема×масштаб×состояние / запланированные применимые комбинации",
+      "interpretation": "100% плана; 200% текста и reflow проверяются раздельно. Число потерь функций/перекрытий — 0",
+      "method": "Настоящий браузер/host; покрытие плана отдельно от качества"
+    },
+    {
+      "id": "M17",
+      "definition": "Доступность медиа = материалы с проверенным требуемым видом альтернативы / все материалы, для которых он применим",
+      "interpretation": "100% отдельно для субтитров, transcripts и audio description",
+      "method": "Просмотр/прослушивание альтернатив, язык и синхронизация"
+    },
+    {
+      "id": "M18",
+      "definition": "Независимость от слуха = сценарии, завершённые без звука / все применимые сценарии",
+      "interpretation": "100% согласованного продуктового scope",
+      "method": "Ручное прохождение с выключенным звуком"
+    },
+    {
+      "id": "M19",
+      "definition": "Эквивалент графиков = графики с доступными существенными данными/выводами / все содержательные графики",
+      "interpretation": "100%; декоративные исключения перечислены",
+      "method": "Текст/таблица + AT"
+    },
+    {
+      "id": "M20",
+      "definition": "Сохранность статусов = обязательные результаты действий, доступные зрительно и программно / все результаты в плане",
+      "interpretation": "100%; динамические объявления не создают повторяющегося шума",
+      "method": "Визуальная проверка + AT"
+    },
+    {
+      "id": "U01",
+      "definition": "Самостоятельная успешность = завершённые без помощи попытки / все допущенные попытки. Помощь и частичный успех показывать отдельно",
+      "interpretation": "CRM и продажи; время начала/конца и критерий успеха определены заранее",
+      "method": "User study/analytics; predeclared cohort and method"
+    },
+    {
+      "id": "U02",
+      "definition": "Время задачи: median и распределение; p90/p95 только при достаточном числе наблюдений, с n, правилом расчёта и неопределённостью",
+      "interpretation": "Время успешных и незавершённых попыток показывать отдельно; исключение отказов из анализа не должно скрывать проблему",
+      "method": "User study/analytics; predeclared cohort and method"
+    },
+    {
+      "id": "U03",
+      "definition": "Успех с первой отправки = попытки, завершённые первой отправкой без отклонения данных / попытки с отправкой; дополнительно ошибки на попытку и возвраты к полям",
+      "interpretation": "Отделять пользовательский формат, непонятное требование и инфраструктурный сбой; снижение валидации не выдавать за улучшение качества",
+      "method": "User study/analytics; predeclared cohort and method"
+    },
+    {
+      "id": "U04",
+      "definition": "Понимание иконки = ответы с верным ожидаемым действием и областью действия до подсказки / все ответы для данной иконки",
+      "interpretation": "Публиковать n/N, формулировку вопроса, опыт участников и разброс. Узнавание картинки и понимание команды оценивать раздельно",
+      "method": "User study/analytics; predeclared cohort and method"
+    },
+    {
+      "id": "U05",
+      "definition": "Нагрузка формы: начально видимые поля, максимум по ветке, реально потребовавшиеся поля и повторные вводы на попытку",
+      "interpretation": "Для checkout анализировать усилие заполнения, а не только число шагов. CRM оценивать по конкретному этапу, не сводить к одному общему числу",
+      "method": "User study/analytics; predeclared cohort and method"
+    },
+    {
+      "id": "U06",
+      "definition": "Конверсия = пользователи согласованной eligible-когорты с подтверждённым целевым результатом в окне наблюдения / пользователи той же когорты, которым показана форма",
+      "interpretation": "Единица user/session и дедупликация фиксированы; заявка подтверждается backend, покупка — согласованным бизнес-событием. Клик не равен результату",
+      "method": "User study/analytics; predeclared cohort and method"
+    },
+    {
+      "id": "U07",
+      "definition": "Качество лидов = квалифицированные лиды среди завершивших окно оценки / все лиды той же когорты, завершившие это окно; незрелые лиды показаны отдельно",
+      "interpretation": "Сопровождает конверсию, чтобы сокращение полей не ухудшало пригодность обращений. Критерий и окно не менять после просмотра результата",
+      "method": "User study/analytics; predeclared cohort and method"
+    },
+    {
+      "id": "U08",
+      "definition": "Повторная работа CRM: исправленные после сохранения записи / сохранённые записи; восстановление после перерыва — отдельный task success/time",
+      "interpretation": "Разделять ошибку ввода и законное изменение данных; не считать любое редактирование дефектом",
+      "method": "User study/analytics; predeclared cohort and method"
+    }
+  ],
+  "detailedEvidence": "requirementObservations lower parent scores; mandatory failures block qualification"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "AG Design"
+  short_description: "Find, qualify and record reusable UI components"
+  default_prompt: "Use $ag-design to search source-backed rules and reusable components, evaluate colors and interface evidence, then qualify components and record real consumer reuse with stable identities and readback."

@@ -1,0 +1,41 @@
+:root {
+  font: 13px/1.5 var(--ag-font);
+  color: var(--ag-text);
+  background: var(--ag-surface);
+}
+body {
+  margin: 0;
+  padding: 20px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+h1 {
+  font-size: 20px;
+  margin: 0;
+}
+header .ag-field {
+  max-width: 160px;
+}
+p {
+  max-width: 85ch;
+  color: var(--ag-muted);
+}
+.review-area {
+  overflow: auto;
+  max-width: 100%;
+  border: 1px solid var(--ag-border);
+  background: var(--ag-surface-alt);
+}
+iframe {
+  display: block;
+  width: 320px;
+  height: 800px;
+  border: 0;
+}
+a {
+  color: var(--ag-accent);
+}

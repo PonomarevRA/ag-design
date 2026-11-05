@@ -1,0 +1,21 @@
+{
+  "name": "ag-design",
+  "version": "0.47.1",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/components",
+    "packages/rules",
+    "packages/visual-tools",
+    "packages/interaction-tools"
+  ],
+  "scripts": {
+    "build": "node tools/pack.mjs && node tools/pack-libraries.mjs",
+    "test": "node --test tests/public-smoke.test.mjs",
+    "check:publication": "python tools/verify_repository.py --git"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  },
+  "license": "MIT"
+}

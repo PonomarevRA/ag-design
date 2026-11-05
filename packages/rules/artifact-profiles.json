@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "ag-design/artifact-profiles-v1",
+  "language": "en",
+  "authoredBy": "AG; not an empirical maturity scale",
+  "dashboardTiers": [
+    {
+      "id": "L0",
+      "purpose": "Audited table and exact lookup"
+    },
+    {
+      "id": "L1",
+      "purpose": "Overview of defined KPIs and trends"
+    },
+    {
+      "id": "L2",
+      "purpose": "Operational exceptions, owners and freshness"
+    },
+    {
+      "id": "L3",
+      "purpose": "Analytical filters, segments and drill-down"
+    },
+    {
+      "id": "L4",
+      "purpose": "Conditional scenario/sensitivity model"
+    }
+  ],
+  "briefFields": [
+    "audience",
+    "decision",
+    "source",
+    "period",
+    "grain",
+    "units",
+    "baseline",
+    "denominator",
+    "locale",
+    "readingMode",
+    "refresh",
+    "editability",
+    "targetApplication",
+    "capabilityLimits"
+  ],
+  "validationLayers": [
+    "data-calculation",
+    "warranted-meaning",
+    "render-accessibility",
+    "edit-refresh-portability"
+  ]
+}

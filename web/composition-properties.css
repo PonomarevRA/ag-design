@@ -1,0 +1,129 @@
+.composition-properties {
+  display: grid;
+  gap: 20px;
+  min-width: 0;
+  grid-column: 1 / -1;
+  color: var(--ag-text);
+  font: inherit;
+  line-height: 1.4;
+  container-type: inline-size;
+}
+.composition-properties .composition-properties__group {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.composition-properties .composition-properties__heading {
+  margin: 0;
+  color: var(--ag-text);
+  font: inherit;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+.composition-properties summary {
+  cursor: pointer;
+  min-height: 32px;
+  padding-block: 4px;
+  box-sizing: border-box;
+}
+.composition-properties details:not([open]) > :not(summary) {
+  display: none;
+}
+.composition-properties .composition-properties__pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 8px;
+  min-width: 0;
+}
+.composition-properties .ag-field,
+.composition-properties .ag-select {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  min-width: 0;
+  margin: 0;
+  font: inherit;
+}
+/* Paired captions share a row, so wrapping one label keeps both input axes aligned. */
+@supports (grid-template-rows: subgrid) {
+  .composition-properties .composition-properties__pair > .ag-field {
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    row-gap: 4px;
+  }
+}
+.composition-properties .ag-field__label,
+.composition-properties .ag-select > label {
+  font: inherit;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+.composition-properties input,
+.composition-properties textarea,
+.composition-properties select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 32px;
+  padding: 5px 8px;
+  color: var(--ag-text);
+  background: var(--ag-surface-alt);
+  border: 1px solid var(--ag-border);
+  border-radius: var(--ag-radius-control, 7px);
+  font: inherit;
+  line-height: 1.4;
+}
+.composition-properties input[type="checkbox"] {
+  width: 20px;
+  min-height: 20px;
+  margin: 6px 0;
+}
+.composition-properties .composition-properties__hint {
+  margin: 0;
+  color: var(--ag-muted);
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
+}
+.composition-properties .composition-properties__error {
+  color: var(--ag-danger);
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
+}
+.composition-properties [aria-invalid="true"] {
+  border-color: var(--ag-danger);
+}
+.composition-properties :focus-visible {
+  outline: 2px solid var(--ag-accent);
+  outline-offset: 2px;
+}
+.composition-properties .composition-properties__identity {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 4px;
+  margin: 0;
+}
+.composition-properties .composition-properties__identity dt {
+  color: var(--ag-muted);
+  font: inherit;
+}
+.composition-properties .composition-properties__identity dd {
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+.composition-properties > .ag-button {
+  justify-self: start;
+  white-space: normal;
+  max-width: 100%;
+}
+@container (max-width: 225px) {
+  .composition-properties .composition-properties__pair {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.composition-properties textarea {min-height:112px;resize:vertical;font-family:var(--ag-mono,monospace);}

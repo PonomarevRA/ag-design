@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "ag-design/chat-patterns-v1",
+  "checkedAt": "2026-10-31",
+  "method": "Public rendered UI and official page text. Raw curl returned403; no HTML hash asserted. No signed-in service or actual external effect tested.",
+  "sources": [
+    {
+      "title": "x.ai: Grok public demonstration",
+      "url": "https://x.ai/grok",
+      "kind": "primary",
+      "note": "Observed2026-10-31 in rendered marketing UI; not a live account or validated service contract."
+    },
+    {
+      "title": "x.ai: Grok Bot public demonstration",
+      "url": "https://x.ai/bot",
+      "kind": "primary",
+      "note": "Rendered marketing demonstration, not proof of autonomous effects, memory or scheduling guarantees."
+    },
+    {
+      "title": "W3C WAI: Labeling Controls",
+      "url": "https://www.w3.org/WAI/tutorials/forms/labels/",
+      "kind": "primary",
+      "note": "Native control labels; product visuals do not establish accessibility conformance."
+    },
+    {
+      "title": "MDN: keydown event",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event",
+      "kind": "primary",
+      "note": "Composition-aware keyboard events. AG default Enter inserts a newline; no new shortcut is installed."
+    }
+  ],
+  "observations": [
+    {
+      "sourceUrl": "https://x.ai/grok",
+      "reviewArtifact": "grok-demo.png",
+      "screenshotSha256": "613cb7136caacaaa56a8bcb4fbac10b515d66e2b886f131efa72a4e109a10ef6",
+      "distribution": "Local review evidence, not embedded in public package"
+    },
+    {
+      "sourceUrl": "https://x.ai/bot",
+      "reviewArtifact": "bot-demo.png",
+      "screenshotSha256": "b0cef35d6e953f3c432657055c4b9bea0494756dcf949a6dc912f9f9846e1d73",
+      "distribution": "Local review evidence, not embedded in public package"
+    }
+  ],
+  "mapping": [
+    {
+      "id": "chat-composer-patterns",
+      "componentCandidates": [
+        "agent-conversation",
+        "textarea",
+        "button",
+        "field"
+      ],
+      "boundary": "AG composition guidance; no vendor SDK/runtime compatibility, hidden reasoning, voice, file upload or scheduling implementation."
+    },
+    {
+      "id": "agent-work-presentation",
+      "componentCandidates": [
+        "agent-conversation",
+        "conversation-card",
+        "widget-list",
+        "async-boundary",
+        "request-router"
+      ],
+      "boundary": "AG composition guidance; no vendor SDK/runtime compatibility, hidden reasoning, voice, file upload or scheduling implementation."
+    }
+  ]
+}

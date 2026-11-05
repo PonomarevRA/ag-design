@@ -1,0 +1,273 @@
+<!doctype html>
+<html data-ag-select-indicators data-example="analytics" lang="ru" data-style="saas-clarity">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SaaS Clarity · стиль системы</title>
+    <link rel="stylesheet" href="vendor/chart.css" />
+    <link rel="stylesheet" href="dashboard-styles.css" />
+    <script type="module" src="saas-clarity.js"></script>
+    <link rel="stylesheet" href="./vendor/lab/components.css?v=form-review-1" />
+    <link rel="stylesheet" href="./component-lab.css?v=form-review-1" />
+    <link rel="stylesheet" href="../locale-settings.css" />
+    <script type="module" src="./vendor/lab/components.js?v=form-review-1"></script>
+    <link rel="stylesheet" href="./application-layout.css" />
+    <link rel="stylesheet" href="./demo-system.css?v=demo-systems-4" />
+  </head>
+  <body class="clarity">
+    <a class="skip-link" href="#dashboard-main">К содержимому</a>
+    <aside class="dashboard-sidebar">
+      <a class="dashboard-brand" href="#overview"
+        ><span class="brand-logo" aria-hidden="true">c</span>clarity</a
+      >
+      <p class="sidebar-eyebrow">АНАЛИТИКА</p>
+      <nav aria-label="Разделы примера">
+        <a href="#overview" aria-current="page"
+          ><span aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z"
+              /></svg></span
+          >Обзор</a
+        ><a href="#growth"
+          ><span aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 17l5-6 5 3 8-10 M3 21h18" /></svg></span
+          >Рост и выручка</a
+        ><a href="#activation"
+          ><span aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 4h18l-7 8v7l-4 2v-9z" /></svg></span
+          >Активация</a
+        ><a href="#cohorts"
+          ><span aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 4h18v17H3z M3 9h18 M8 9v12 M14 9v12" /></svg></span
+          >Когорты</a
+        ><a href="#markets"
+          ><span aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0 M3 12h18 M12 3c5 5 5 13 0 18 M12 3c-5 5-5 13 0 18"
+              /></svg></span
+          >Рынки</a
+        ><a href="#features"
+          ><span aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 20V9h4v11 M10 20V3h4v17 M16 20V6h4v14" /></svg></span
+          >Использование</a
+        >
+      </nav>
+      <div class="sidebar-end">
+        <p>Больше ясности.<br />Меньше догадок.</p>
+        <a href="/#styles">Все стили ↗</a
+        ><span class="demo-badge">Локальный пример</span>
+      </div>
+    </aside>
+    <div class="dashboard-workspace">
+      <header class="dashboard-header" id="overview">
+        <div>
+          <p class="eyebrow">SAAS CLARITY / SYSTEM STYLE 06</p>
+          <h1>Обзор пространства</h1>
+          <p>Выручка, рост и следующий шаг.</p>
+        </div>
+        <label class="period-control"
+          >Период<select id="analytics-period">
+            <option value="oct">Октябрь 2026</option>
+            <option value="sep">Сентябрь 2026</option>
+          </select></label
+        >
+      </header>
+      <main id="dashboard-main">
+        <section class="analytics-kpis" aria-label="Ключевые показатели">
+          <article class="metric-card">
+            <span class="metric-icon violet" aria-hidden="true">$</span>
+            <div>
+              <h2>Регулярная выручка · MRR</h2>
+              <strong id="mrr-value">$128,450</strong>
+              <p>
+                <span class="positive">USD / месяц</span>
+                <span id="period-label">Октябрь 2026</span>
+              </p>
+            </div>
+          </article>
+          <article class="metric-card">
+            <span class="metric-icon green" aria-hidden="true">↓</span>
+            <div>
+              <h2>Отток выручки</h2>
+              <strong id="churn-value">1.18%</strong>
+              <p><span class="positive">Цель &lt; 1.50%</span> За месяц</p>
+            </div>
+          </article>
+          <article class="metric-card">
+            <span class="metric-icon teal" aria-hidden="true">◎</span>
+            <div>
+              <h2>MRR / workspace</h2>
+              <strong id="arpu-value">$26.65</strong>
+              <p>MRR / активные пространства</p>
+            </div>
+          </article>
+          <article class="metric-card">
+            <span class="metric-icon magenta" aria-hidden="true">▢</span>
+            <div>
+              <h2>Активные пространства</h2>
+              <strong id="workspaces-value">4 820</strong>
+              <p>На конец выбранного периода</p>
+            </div>
+          </article>
+        </section>
+        <div class="analytics-grid">
+          <section class="panel growth-panel" id="growth">
+            <div class="panel-heading">
+              <div>
+                <h2>Активные аккаунты и подписки</h2>
+                <p>Динамика рабочих пространств · 2026</p>
+              </div>
+              <div
+                class="segmented"
+                role="group"
+                aria-label="Группировка графика"
+              >
+                <button type="button" data-grouping="month" aria-pressed="true">
+                  Месяцы</button
+                ><button
+                  type="button"
+                  data-grouping="quarter"
+                  aria-pressed="false"
+                >
+                  Кварталы
+                </button>
+              </div>
+            </div>
+            <div class="dashboard-chart" id="growth-chart"></div>
+            <p class="panel-footnote" id="grouping-note"></p>
+          </section>
+          <section class="panel segment-panel">
+            <div class="panel-heading">
+              <div>
+                <h2>MRR по тарифам</h2>
+                <p>Распределение месячной выручки</p>
+              </div>
+            </div>
+            <div class="dashboard-chart donut-chart" id="segments-chart"></div>
+            <div class="plan-legend" id="plan-legend"></div>
+          </section>
+          <section class="panel funnel-panel" id="activation">
+            <div class="panel-heading">
+              <div>
+                <h2>Воронка активации</h2>
+                <p>Новые регистрации выбранного месяца</p>
+              </div>
+            </div>
+            <div id="funnel"></div>
+            <p class="conversion-note" id="conversion"></p>
+          </section>
+          <section class="panel market-panel" id="markets">
+            <div class="panel-heading">
+              <div>
+                <h2>Основные рынки</h2>
+                <p>Доля от MRR · USD</p>
+              </div>
+            </div>
+            <div id="market-bars"></div>
+          </section>
+          <section class="panel cohort-panel" id="cohorts">
+            <div class="panel-heading">
+              <div>
+                <h2>Удержание выручки по когортам</h2>
+                <p>
+                  MRR к стартовому месяцу · значение &gt;100% означает
+                  расширение
+                </p>
+              </div>
+            </div>
+            <div class="table-scroll" tabindex="0" aria-label="Таблица данных">
+              <table class="cohort-table">
+                <caption class="sr-only">
+                  Фиксированный когортный срез, октябрь 2026. Прочерк означает
+                  отсутствие наблюдения.
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Когорта</th>
+                    <th scope="col">Новый MRR</th>
+                    <th scope="col">M0</th>
+                    <th scope="col">M1</th>
+                    <th scope="col">M2</th>
+                    <th scope="col">M3</th>
+                    <th scope="col">M4</th>
+                  </tr>
+                </thead>
+                <tbody id="cohort-body"></tbody>
+              </table>
+            </div>
+            <p class="panel-footnote">
+              Фиксированный срез на октябрь 2026 · «—» = нет данных.
+            </p>
+          </section>
+          <section class="panel adoption-panel" id="features">
+            <div class="panel-heading">
+              <div>
+                <h2>Использование функций</h2>
+                <p>Доля активных пространств · фиксированный срез</p>
+              </div>
+            </div>
+            <div id="adoption"></div>
+          </section>
+        </div>
+
+        <section
+          id="ag-components"
+          data-ag-component-lab
+          aria-label="Компоненты AG Design в выбранном стиле"
+        ></section>
+      </main>
+      <footer class="dashboard-footer">
+        SaaS Clarity · синтетические данные для демонстрации дизайна
+        <a href="learning-air.html">Learning Air ↗</a>
+      </footer>
+    </div>
+  </body>
+</html>

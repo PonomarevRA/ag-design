@@ -1,0 +1,22 @@
+/* Reserve only the compact gutter; the package's fixed dock expands above cards. */
+.catalog-layout {
+  --ag-feed-rail-gutter-width: 20px;
+  display: grid;
+  grid-template-columns: var(--ag-feed-rail-gutter-width) minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+.component-card[id] {
+  scroll-margin-block-start: 24px;
+}
+@media (max-width: 760px) {
+  .catalog-layout {
+    gap: 6px;
+  }
+}
+@media (pointer: coarse) {
+  .catalog-layout {
+    --ag-feed-rail-gutter-width: 24px;
+    gap: 8px;
+  }
+}

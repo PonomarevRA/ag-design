@@ -1,0 +1,442 @@
+.composition-editor {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  color: var(--ag-text);
+}
+.composition-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.composition-toolbar label {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.composition-toolbar input[type="number"] {
+  width: 90px;
+}
+.composition-toolbar select {
+  max-width: 260px;
+}
+.composition-workspace {
+  display: grid;
+  grid-template-columns: minmax(170px, 210px) minmax(0, 1fr) minmax(
+      220px,
+      290px
+    );
+  gap: 12px;
+  min-height: 580px;
+}
+.composition-tree,
+.composition-inspector {
+  padding: 12px;
+  border: 1px solid var(--ag-border);
+  border-radius: 12px;
+  background: var(--ag-surface);
+  min-width: 0;
+  max-height: 800px;
+  overflow: auto;
+}
+.composition-map-node[aria-pressed="true"] {
+  outline: 2px solid var(--ag-accent);
+  outline-offset: -2px;
+}
+.composition-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.composition-crumbs .ag-button + .ag-button::before {
+  content: "›";
+  padding-inline-end: 8px;
+}
+.composition-center {
+  min-width: 0;
+  overflow: hidden;
+}
+.composition-frame-scroll {
+  width: 100%;
+  height: 720px;
+  overflow: auto;
+  border: 1px solid var(--ag-border);
+  background: var(--ag-surface-alt);
+  padding: 12px;
+}
+.composition-stage {
+  position: relative;
+  flex: none;
+}
+.composition-frame {
+  display: block;
+  border: 0;
+  max-width: none;
+  background: var(--ag-surface);
+}
+.composition-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.composition-outline {
+  position: absolute;
+  border: 1px dashed var(--ag-border);
+}
+.composition-outline[data-kind="frame"] {
+  border-color: var(--ag-muted);
+}
+.composition-outline[data-selected="true"] {
+  border: 2px solid var(--ag-accent);
+}
+.composition-outline[data-ancestor="true"] {
+  background: color-mix(in srgb, var(--ag-accent) 3%, transparent);
+}
+.composition-outline span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 10px;
+  line-height: 14px;
+  background: var(--ag-surface);
+  color: var(--ag-text);
+}
+.composition-guide {
+  position: absolute;
+  background: color-mix(in srgb, var(--ag-accent) 45%, transparent);
+}
+.composition-guide--vertical {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+.composition-guide--horizontal {
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+.composition-inspector label {
+  display: grid;
+  gap: 4px;
+}
+.composition-inspector input,
+.composition-inspector select {
+  width: 100%;
+  min-width: 0;
+}
+.composition-inspector code {
+  overflow-wrap: anywhere;
+}
+.composition-inspector dl {
+  display: grid;
+  gap: 5px;
+}
+.composition-inspector dt {
+  font-size: 0.8rem;
+  color: var(--ag-muted);
+}
+.composition-inspector dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.composition-note {
+  font-size: 0.85rem;
+  color: var(--ag-muted);
+}
+.composition-graph {
+  position: relative;
+  height: 720px;
+  overflow: hidden;
+  border: 1px solid var(--ag-border);
+  border-radius: 12px;
+}
+.composition-graph-scene {
+  position: relative;
+  min-width: 640px;
+  min-height: 320px;
+}
+.composition-map-node {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--ag-border);
+  border-radius: 6px;
+  color: var(--ag-text);
+  background: var(--ag-surface);
+  text-align: start;
+  padding: 5px;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+.composition-map-node:focus-visible {
+  outline: 3px solid var(--ag-accent);
+  z-index: 2;
+}
+.composition-relation {
+  position: absolute;
+  max-width: 220px;
+  font-size: 9px;
+  color: var(--ag-muted);
+  pointer-events: none;
+}
+.composition-reports {
+  border-top: 1px solid var(--ag-border);
+  padding-top: 12px;
+  overflow-wrap: anywhere;
+}
+.composition-reports ul {
+  padding-inline-start: 20px;
+  max-height: 320px;
+  overflow: auto;
+}
+.composition-reports li {
+  margin-block: 8px;
+}
+.composition-reports li .ag-button {
+  white-space: normal;
+  text-align: start;
+}
+.composition-status {
+  min-height: 1.5em;
+  overflow-wrap: anywhere;
+}
+.composition-editor [hidden] {
+  display: none !important;
+}
+.composition-editor :focus-visible {
+  outline: 2px solid var(--ag-accent);
+  outline-offset: 2px;
+}
+@media (max-width: 1100px) {
+  .composition-workspace {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
+  .composition-inspector {
+    grid-column: 1/-1;
+    max-height: none;
+  }
+  .composition-inspector h3,
+  .composition-inspector h4,
+  .composition-inspector dl,
+  .composition-inspector p {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 620px) {
+  .composition-workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .composition-tree {
+    max-height: 220px;
+  }
+  .composition-frame-scroll,
+  .composition-graph {
+    height: 520px;
+  }
+  .composition-inspector {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .composition-toolbar select {
+    max-width: 100%;
+  }
+}
+.composition-graph-edges {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+.composition-graph-edges path {
+  fill: none;
+  stroke: var(--ag-muted);
+  stroke-width: 1.5;
+}
+.composition-graph-edges [data-relation="aligns"] {
+  stroke: var(--ag-accent);
+  stroke-dasharray: 5 3;
+}
+.composition-graph-edges [data-relation$="advisory"] {
+  stroke-dasharray: 2 4;
+}
+/* Keep the measured browsing context laid out while Atlas navigation is visible. */
+.composition-frame-scroll--offscreen {
+  position: fixed;
+  left: -100000px;
+  top: 0;
+  width: max-content;
+  height: max-content;
+  max-width: none;
+  pointer-events: none;
+  padding: 0;
+  border: 0;
+}
+
+.composition-preview-info {
+  font-size: 0.8rem;
+  color: var(--ag-muted);
+  overflow-wrap: anywhere;
+}
+
+.composition-frame-scroll {
+  scrollbar-gutter: stable;
+}
+
+/* Named tool groups keep creation, camera, document and measured environment distinct. */
+.composition-toolbar--primary {
+  justify-content: space-between;
+  gap: 16px;
+}
+.composition-actions,
+.composition-preview-controls {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.composition-toolbar label,
+.composition-tool-details > label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: var(--ag-muted);
+}
+.composition-toolbar :is(input:not([type="checkbox"]), select),
+.composition-tool-details > label > select {
+  box-sizing: border-box;
+  min-height: 32px;
+  border: 1px solid var(--ag-border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  background: var(--ag-surface);
+  color: var(--ag-text);
+  font: inherit;
+  min-width: 0;
+}
+.composition-toolbar .composition-toggle {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--ag-text);
+}
+.composition-preview-controls output {
+  flex-basis: 100%;
+  text-align: end;
+}
+.composition-tool-group {
+  margin: 0;
+  min-width: 0;
+  border: 0;
+  border-block-start: 1px solid var(--ag-border);
+  padding: 12px 0 0;
+}
+.composition-tool-group legend {
+  padding-inline: 0 8px;
+  font-weight: 600;
+}
+.composition-tool-group .composition-toolbar {
+  align-items: end;
+}
+.composition-tool-group .composition-note {
+  margin: 8px 0 0;
+  max-width: 95ch;
+}
+.composition-secondary-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+.composition-tool-details {
+  min-width: 0;
+  max-width: 100%;
+}
+.composition-tool-details > summary {
+  padding-block: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.composition-tool-details[open] {
+  flex: 1 1 380px;
+}
+.composition-tool-details[open] > .composition-toolbar {
+  align-items: end;
+  margin-block: 8px;
+}
+.composition-tool-details > label {
+  max-width: 260px;
+  margin-block: 8px;
+}
+.composition-tool-details details {
+  margin-block-start: 12px;
+}
+.composition-environment-fields label {
+  flex: 1 1 120px;
+  max-width: 180px;
+}
+.composition-environment-fields input[type="number"] {
+  width: 100%;
+}
+.composition-inspector > .composition-properties {
+  min-width: 0;
+}
+@media (max-width: 620px) {
+  .composition-toolbar--primary,
+  .composition-actions,
+  .composition-preview-controls {
+    align-items: stretch;
+    width: 100%;
+  }
+  .composition-toolbar--primary label,
+  .composition-tool-group label {
+    flex: 1 1 160px;
+    min-width: 0;
+  }
+  .composition-toolbar--primary .ag-button {
+    flex: 1 1 auto;
+  }
+  .composition-preview-controls output {
+    text-align: start;
+  }
+  .composition-tool-group .ag-button {
+    white-space: normal;
+  }
+}
+
+/* The reusable tree owns its rows; the host supplies only panel geometry. */
+.composition-tree {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  padding: 4px;
+  border-radius: 8px;
+}
+.composition-tree > h3 {
+  flex: none;
+  margin: 0;
+  padding: 6px 8px;
+  font-size: 0.85rem;
+}
+.composition-tree > .ag-tree {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+/* Creation tools live beside the canvas, never above its working area. */
+.composition-tree { overflow: auto; }
+.composition-tree > .composition-tool-group { flex: none; padding: 8px; border: 0; }
+.composition-tree .composition-toolbar { align-items: stretch; flex-direction: column; }
+.composition-tree .composition-toolbar > *, .composition-tree select { width: 100%; max-width: 100%; }
+.composition-tree > .ag-tree { flex: 0 0 auto; overflow: visible; }
+.composition-tree .composition-editing-hint { margin-block: 8px; }
+@media (max-width: 620px) {
+  .composition-center { grid-row: 1; }
+  .composition-tree { max-height: none; }
+}

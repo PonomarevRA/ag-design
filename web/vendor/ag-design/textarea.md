@@ -1,0 +1,17 @@
+# Multiline text field
+
+`createTextarea({id,label,hint,value,rows:3,maxLength:1200})` returns an `HTMLLabelElement`, matching `createField`. Its native `textarea` owns editing, selection, Enter, clipboard, validation, resize and form reset. The host owns unique IDs, translated copy, events and persistence. When maxLength is supplied, call field.dispose() before unmount to release counter/reset/locale subscriptions and pending feedback. Call field.sync() after assigning control.value programmatically; input/change and native form reset refresh automatically.
+
+Use a persistent visible label above the field and a short separate hint. Placeholder is an optional example, never the only name or instructions. Hint and error IDs are linked with `aria-describedby`; a supplied error also sets `aria-invalid`. Literal strings never become markup. Disabled and readonly keep native semantics; readonly stays selectable and focusable. A valid `rows` value is an AG policy of1..50; default3 is an authored starting point, not a standard requirement. Choose height for expected content. Vertical resizing cannot widen the column; automatic growth remains outside this component.
+
+Use this for notes, feedback or a chart's multiline context. Use `createField` for short single-line answers, a code/Markdown editor for structured source, and a noneditable text component for reading. Never block paste. Native `maxLength` follows browser UTF-16 semantics; the host must validate programmatic values and server submissions too.
+
+Research reviewed2026-10-28: [Carbon text input/area](https://www.carbondesignsystem.com/building-blocks/core/components/text-input/guidelines), [Fluent2 textarea](https://fluent2.microsoft.design/components/web/react/core/textarea/usage/), [Spectrum text area](https://spectrum.adobe.com/web/rsp/components/text-area), [GOV.UK textarea](https://design-system.service.gov.uk/components/textarea/), [MDN textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea). AG tokens define colors/spacing/radius; this does not copy their visual theme. Draft component; browser checks do not establish native-app or assistive-technology qualification.
+
+Source differences: Carbon defaults to vertical resizing, Fluent makes resizing opt-in; AG chooses vertical for this context editor and offers none. Spectrum and Fluent differ on placeholder redundancy, help/error replacement and punctuation. AG keeps essential hints with errors, uses placeholders only for optional examples and follows caller-owned locale copy; these are explicit policy choices rather than universal source mandates.
+
+## Optional length feedback
+
+`maxLength` adds a compact remaining/max counter at the lower trailing edge, outside the native input. Hint/error messages retain the leading feedback track. It uses native UTF-16 units (an emoji may occupy two), not graphemes; programmatic values are never truncated and overflow is reported explicitly. `maxLength:0` is valid. Without a limit no counter is rendered. A live status announces after 700ms of idle typing; composition updates do not announce mid-IME. RU/EN chrome follows the explicit `i18n` provider or document provider; caller text is never translated.
+
+Source2026-10-31: GOV.UK character count informs separate feedback and idle announcements. Its soft-limit policy differs deliberately from the existing AG/native hard limit requested here. Server validation remains host-owned.

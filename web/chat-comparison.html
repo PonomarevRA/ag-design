@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Три представления чата · AG Design</title>
+    <link rel="stylesheet" href="/vendor/ag-design/tokens.css" />
+    <link rel="stylesheet" href="/vendor/ag-design/styles.css" />
+    <link rel="stylesheet" href="/chat-comparison.css" />
+  </head>
+  <body>
+    <header class="comparison-header">
+      <a href="/" data-copy="back">Каталог AG Design</a>
+      <h1 data-copy="heading">Три представления. Один разговор.</h1>
+      <p data-copy="intro">
+        Сравните одинаковые сообщения и состояния операций. Представление меняет
+        способ чтения, сохраняя смысл и порядок событий.
+      </p>
+      <div class="comparison-settings">
+        <label
+          ><span data-copy="textSize">Размер текста</span
+          ><select id="comparison-text-size">
+            <option value="16">100%</option>
+            <option value="32">200%</option>
+          </select></label
+        >
+        <label
+          ><span data-copy="theme">Оформление</span
+          ><select id="comparison-theme">
+            <option value="light" data-copy="light">Светлое</option>
+            <option value="dark" data-copy="dark">Тёмное</option>
+          </select></label
+        ><label
+          ><span data-copy="profile">Палитра</span
+          ><select id="comparison-profile" disabled></select></label
+        ><label
+          ><span>Language / Язык</span
+          ><select id="comparison-language">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+          </select></label
+        >
+      </div>
+    </header>
+    <main data-chat-comparison></main>
+    <details class="comparison-checks">
+      <summary data-copy="checks">Проверки для агентов</summary>
+      <label
+        >Direction
+        <select id="comparison-direction">
+          <option value="ltr">LTR</option>
+          <option value="rtl">RTL</option>
+        </select></label
+      >
+      <button
+        type="button"
+        class="ag-button"
+        id="comparison-check"
+        data-copy="check"
+      >
+        Показать структурные проверки
+      </button>
+      <pre id="comparison-facts"></pre>
+    </details>
+    <script type="module" src="/chat-comparison.js"></script>
+  </body>
+</html>

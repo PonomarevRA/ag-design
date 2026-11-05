@@ -1,0 +1,300 @@
+.ui-map {
+  min-width: 0;
+  color: var(--ag-text);
+  background: var(--ag-surface);
+}
+.ui-map button,
+.ui-map input,
+.ui-map select,
+.ui-map textarea {
+  font: inherit;
+}
+.ui-map input,
+.ui-map select,
+.ui-map textarea {
+  color: var(--ag-text);
+  background: var(--ag-surface);
+  border: 1px solid var(--ag-border);
+  border-radius: var(--ag-radius-control);
+  padding: 6px 9px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.ui-map__toolbar,
+.ui-map__pager,
+.ui-map__filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+  margin-block: 12px;
+}
+.ui-map__toolbar label,
+.ui-map__filters label {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.ui-map__status {
+  min-height: 1.5em;
+  overflow-wrap: anywhere;
+}
+.ui-map__coverage {
+  padding: 12px 16px;
+  border-inline-start: 3px solid var(--ag-accent);
+  background: var(--ag-surface-alt);
+  overflow-wrap: anywhere;
+}
+.ui-map__coverage p {
+  margin-block: 4px;
+}
+.ui-map__workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 340px);
+  gap: 16px;
+  align-items: start;
+}
+.ui-map__main,
+.ui-map__canvas {
+  min-width: 0;
+}
+.ui-map__viewport {
+  height: min(62vh, 580px);
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--ag-border);
+  border-radius: var(--ag-radius-panel);
+  background: var(--ag-surface-alt);
+}
+.ui-map__scene {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.ui-map__mark {
+  position: absolute;
+  box-sizing: border-box;
+  color: var(--ag-text);
+  background: var(--ag-surface);
+  border: 1px solid var(--ag-border);
+  text-align: start;
+  padding: 4px 8px;
+  border-radius: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.ui-map__mark[data-mode="spatial"] {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+.ui-map__mark[data-mode="spatial"] span {
+  background: var(--ag-surface);
+  font-size: 0.85em;
+  padding: 0 2px;
+}
+.ui-map__mark[aria-pressed="true"] {
+  outline: 2px solid var(--ag-accent);
+  outline-offset: 2px;
+  z-index: 2;
+}
+.ui-map__mark[data-status="fail"] {
+  border-style: dashed;
+  border-color: var(--ag-danger);
+}
+.ui-map__mark:focus-visible,
+.ui-map button:focus-visible {
+  outline: 2px solid var(--ag-accent);
+  outline-offset: 3px;
+}
+.ui-map__edges {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+  color: var(--ag-muted);
+}
+.ui-map__list {
+  padding-inline-start: 28px;
+}
+.ui-map__list li {
+  padding-block: 4px;
+  overflow-wrap: anywhere;
+}
+.ui-map__list button {
+  white-space: normal;
+  text-align: start;
+}
+.ui-map__list [aria-pressed="true"] {
+  color: var(--ag-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.ui-map__branch {
+  display: inline-block;
+  border-inline-start: 1px solid var(--ag-border);
+  margin-inline-end: 6px;
+  padding-inline-start: 8px;
+}
+.ui-map-inspector {
+  position: sticky;
+  top: 8px;
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  padding: 16px;
+  background: var(--ag-surface-alt);
+  border: 1px solid var(--ag-border);
+  border-radius: var(--ag-radius-panel);
+  box-sizing: border-box;
+  min-width: 0;
+}
+.ui-map-inspector[hidden] {
+  display: none;
+}
+.ui-map-inspector h2 {
+  font-size: 1.15rem;
+}
+.ui-map-inspector h3 {
+  font-size: 1rem;
+  margin-block: 20px 8px;
+}
+.ui-map-inspector dt {
+  color: var(--ag-muted);
+  margin-block-start: 8px;
+}
+.ui-map-inspector dd {
+  margin-inline-start: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.ui-map-inspector ul {
+  padding-inline-start: 16px;
+}
+.ui-map-inspector button {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: start;
+}
+.ui-map__import textarea {
+  width: 100%;
+  min-height: 110px;
+}
+.ui-map__demo {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  background: var(--ag-surface);
+  border: 1px solid var(--ag-border);
+  border-radius: var(--ag-radius-panel);
+  max-width: 680px;
+}
+.ui-map__demo fieldset {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.ui-map__demo label {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.ui-map__demo legend {
+  font-weight: 600;
+  margin-block-end: 8px;
+}
+.ui-map__finding-list {
+  padding-inline-start: 24px;
+}
+.ui-map__finding-list button {
+  white-space: normal;
+  text-align: start;
+}
+.ui-map__group {
+  margin-block: 8px;
+  padding: 8px;
+  border-inline-start: 2px solid var(--ag-border);
+}
+.ui-map__group summary {
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.ui-map__workspace:has(.ui-map-inspector[hidden]) {
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (max-width: 850px) {
+  .ui-map__workspace {
+    display: flex;
+    flex-direction: column;
+  }
+  .ui-map__main,
+  .ui-map-inspector {
+    width: 100%;
+  }
+  .ui-map-inspector {
+    position: static;
+    max-height: none;
+  }
+  .ui-map__demo fieldset {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ui-map *,
+  .ui-map *::before,
+  .ui-map *::after {
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+/* Controls reflow with enlarged text; the map scene alone may remain two-dimensional. */
+.ui-map *,
+.ui-map *::before,
+.ui-map *::after {
+  box-sizing: border-box;
+}
+.ui-map__toolbar > *,
+.ui-map__filters > *,
+.ui-map__pager > *,
+.ui-map__source,
+.ui-map__import {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+.ui-map__toolbar label,
+.ui-map__filters label {
+  flex: 1 1 200px;
+}
+.ui-map input:not([type="checkbox"]):not([type="radio"]),
+.ui-map select,
+.ui-map textarea {
+  width: 100%;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+.ui-map .ag-button {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.ui-map__demo {
+  width: 100%;
+}
+.ui-map .ag-segmented-choice legend,
+.ui-map .ag-segmented-choice__option,
+.ui-map .ag-board__controls .ag-button,
+.ui-map .ag-board__settings,
+.ui-map .ag-board__help,
+.ui-map .ag-board__help-text,
+.ui-map .ag-board__preferences {
+  font: inherit;
+}

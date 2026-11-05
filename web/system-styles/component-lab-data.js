@@ -1,0 +1,156 @@
+/** Independent synthetic snapshot for every mount; IDs and parentage are explicit. */
+export function historyDemoData() {
+  return {
+    commits: [
+      {
+        id: "e9f4a12",
+        title: "Объединить редактор и рабочее пространство",
+        parents: ["d71bc90", "c82a41f"],
+        refs: ["main", "HEAD"],
+        author: "Анна К.",
+        date: "26 окт · 14:32",
+        description:
+          "Общий релиз: новый редактор, проверенные токены и навигация.",
+      },
+      {
+        id: "d71bc90",
+        title: "Согласовать токены всех поверхностей",
+        parents: ["b630f21"],
+        refs: ["design/tokens"],
+        author: "Марк С.",
+        date: "26 окт · 13:48",
+      },
+      {
+        id: "c82a41f",
+        title: "Добавить предпросмотр Markdown",
+        parents: ["a580cd1"],
+        refs: ["feature/editor"],
+        author: "Анна К.",
+        date: "26 окт · 13:12",
+      },
+      {
+        id: "b630f21",
+        title: "Проверить контраст и состояния фокуса",
+        parents: ["a580cd1"],
+        author: "Лена М.",
+        date: "26 окт · 12:40",
+      },
+      {
+        id: "a580cd1",
+        title: "Объединить навигацию и библиотеку форм",
+        parents: ["91a0ee2", "802bce4"],
+        author: "Марк С.",
+        date: "26 окт · 11:24",
+      },
+      {
+        id: "91a0ee2",
+        title: "Настроить таблицу материалов",
+        parents: ["714ad80"],
+        refs: ["feature/content"],
+        author: "Лена М.",
+        date: "25 окт · 17:35",
+      },
+      {
+        id: "802bce4",
+        title: "Добавить поиск по пространству",
+        parents: ["714ad80"],
+        author: "Анна К.",
+        date: "25 окт · 16:18",
+      },
+      {
+        id: "714ad80",
+        title: "Собрать каркас системы",
+        parents: ["6a9be33"],
+        refs: ["v0.1"],
+        author: "Марк С.",
+        date: "25 окт · 10:00",
+      },
+    ],
+    tasks: [
+      { id: "DS-24", title: "Рабочее пространство", status: "На проверке" },
+      { id: "DS-25", title: "Редактор материалов", status: "В работе" },
+      { id: "DS-26", title: "Контраст и доступность", status: "Запланировано" },
+    ],
+    events: [
+      {
+        id: "ev9",
+        taskId: "DS-24",
+        title: "Передано на проверку",
+        author: "Марк С.",
+        date: "26 окт · 14:32",
+        description:
+          "Проверить навигацию, узкий экран и токены выбранного стиля.",
+      },
+      {
+        id: "ev8",
+        taskId: "DS-25",
+        title: "Добавлен предпросмотр Markdown",
+        author: "Анна К.",
+        date: "26 окт · 13:12",
+      },
+      {
+        id: "ev7",
+        taskId: "DS-26",
+        title: "Согласован список проверок",
+        author: "Лена М.",
+        date: "26 окт · 12:40",
+      },
+      {
+        id: "ev6",
+        taskId: "DS-24",
+        title: "Собран экран пространства",
+        author: "Марк С.",
+        date: "26 окт · 11:24",
+      },
+      {
+        id: "ev5",
+        taskId: "DS-25",
+        title: "Редактор взят в работу",
+        author: "Анна К.",
+        date: "25 окт · 17:35",
+      },
+      {
+        id: "ev4",
+        taskId: "DS-26",
+        title: "Создана задача проверки",
+        author: "Лена М.",
+        date: "25 окт · 16:18",
+      },
+      {
+        id: "ev3",
+        taskId: "DS-24",
+        title: "Согласована структура разделов",
+        author: "Марк С.",
+        date: "25 окт · 12:00",
+      },
+      {
+        id: "ev2",
+        taskId: "DS-25",
+        title: "Создана задача редактора",
+        author: "Анна К.",
+        date: "25 окт · 11:20",
+      },
+      {
+        id: "ev1",
+        taskId: "DS-24",
+        title: "Создано рабочее пространство",
+        author: "Марк С.",
+        date: "25 окт · 10:00",
+      },
+    ],
+    dependencies: [
+      { from: "ev7", to: "ev8", label: "Проверка ожидает редактор" },
+    ],
+  };
+}
+export const styleDemoLinks = [
+  ["violet-soft-3d", "Soft 3D", "example.html?style=violet-soft-3d"],
+  ["midnight-glass", "Glass", "example.html?style=midnight-glass"],
+  ["coral-pulse", "Coral", "coral-pulse.html"],
+  ["graphite-gold", "Gold", "gold-console.html"],
+  ["amber-circuit", "Amber", "amber-circuit.html"],
+  ["saas-clarity", "SaaS", "saas-clarity.html"],
+  ["learning-air", "Learning", "learning-air.html"],
+  ["orchid-studio", "Orchid", "orchid-studio.html"],
+  ["periwinkle-cms", "Periwinkle", "periwinkle-cms.html"],
+];

@@ -1,0 +1,20 @@
+title = "AG Design source checks"
+
+[extend]
+useDefault = true
+
+# These are file-integrity metadata formats, not API credential fields.
+# Other lines and other rules in the same files remain scanned.
+[[allowlists]]
+description = "Pinned local tokenizer SHA256"
+condition = "AND"
+paths = ['''(^|/)ag_design/search_model\.py$''']
+regexTarget = "line"
+regexes = ['''^\s*'tokenizer\.json': \('onnx/tokenizer\.json', '[a-f0-9]{64}'\),?\s*$''']
+
+[[allowlists]]
+description = "Generated tokens stylesheet SHA256"
+condition = "AND"
+paths = ['''(^|/)web/vendor/ag-design/manifest\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"tokens\.css": "[a-f0-9]{64}",?\s*$''']

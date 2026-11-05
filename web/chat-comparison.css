@@ -1,0 +1,138 @@
+:root {
+  font: 16px/1.5 var(--ag-font);
+  color: var(--ag-text);
+  background: var(--ag-surface);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: clamp(16px, 3vw, 40px);
+}
+.comparison-header,
+main,
+.comparison-checks {
+  max-inline-size: 1560px;
+  margin-inline: auto;
+}
+a {
+  color: var(--ag-accent);
+}
+h1 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-block: 24px 12px;
+}
+.comparison-header > p {
+  max-inline-size: 76ch;
+  color: var(--ag-muted);
+  margin-block-end: 24px;
+}
+.comparison-settings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-block: 16px 28px;
+}
+.comparison-settings label {
+  display: grid;
+  gap: 6px;
+  min-inline-size: 0;
+}
+.comparison-settings select {
+  font: inherit;
+  color: var(--ag-text);
+  background: var(--ag-surface);
+  min-block-size: 44px;
+  max-inline-size: 100%;
+  border: 1px solid var(--ag-border);
+  border-radius: var(--ag-radius-control);
+  padding: 6px 12px;
+}
+main {
+  container-type: inline-size;
+}
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.comparison-column {
+  min-inline-size: 0;
+}
+.comparison-column > h2 {
+  font-size: 1.15em;
+  margin-block: 16px 6px;
+}
+.comparison-note {
+  min-block-size: 4.5em;
+  color: var(--ag-muted);
+  margin-block: 0 16px;
+}
+.comparison-column .ag-conversation {
+  --ag-conversation-log-height: 31rem;
+}
+.comparison-column .ag-conversation__header {
+  background: var(--ag-surface-alt);
+}
+.comparison-status {
+  color: var(--ag-muted);
+  margin-block: 16px 8px;
+}
+.comparison-checks {
+  border-block-start: 1px solid var(--ag-border);
+  padding-block: 24px;
+  margin-block-start: 32px;
+}
+.comparison-checks summary {
+  cursor: pointer;
+}
+.comparison-checks pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+@container (max-width:1050px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-note {
+    min-block-size: 0;
+  }
+}
+@media (max-width: 1100px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-note {
+    min-block-size: 0;
+  }
+}
+@media print {
+  .comparison-settings,
+  .comparison-checks,
+  .ag-conversation__composer,
+  .ag-conversation__footer {
+    display: none;
+  }
+  .comparison-grid {
+    display: block;
+  }
+  .ag-conversation__viewport {
+    height: auto;
+    overflow: visible;
+  }
+}
+/* Enlarged text must reflow the host controls as well as the three viewers. */
+.comparison-header h1 {
+  overflow-wrap: anywhere;
+}
+.comparison-settings label {
+  max-inline-size: 100%;
+}
+.comparison-settings select {
+  min-inline-size: 0;
+  inline-size: 100%;
+}

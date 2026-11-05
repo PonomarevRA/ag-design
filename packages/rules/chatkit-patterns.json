@@ -1,0 +1,162 @@
+{
+  "schemaVersion": "ag-design/chatkit-patterns-v1",
+  "checkedAt": "2026-10-31",
+  "scope": "ChatKit embedded in a product. This is AG guidance and mapping, not a ChatKit JSON renderer or SDK implementation.",
+  "sources": [
+    {
+      "id": "widgets",
+      "url": "https://developers.openai.com/api/docs/guides/chatkit-widgets",
+      "sha256": "cd2e4edb389d424a5e71a249b60c22a79ccd7db83e0757a2323e80056017c75e",
+      "edition": "official Markdown"
+    },
+    {
+      "id": "actions",
+      "url": "https://developers.openai.com/api/docs/guides/chatkit-actions",
+      "sha256": "00eed1e41d4c8c12b3f984a449c8e2aca8b939db44127031f02f8480aa59aa0d",
+      "edition": "official Markdown"
+    },
+    {
+      "id": "themes",
+      "url": "https://developers.openai.com/api/docs/guides/chatkit-themes",
+      "sha256": "65d6dffa378cb5540f0af43985f72e3466ceb9e82aca1c38da18b150a9188a12",
+      "edition": "official Markdown"
+    },
+    {
+      "id": "custom",
+      "url": "https://developers.openai.com/api/docs/guides/custom-chatkit",
+      "sha256": "253d246baee98d86c0833981aaae263b6b51e2e6a501103884dd45c02b691bc1",
+      "edition": "official Markdown"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "chatkit-widget-composition",
+      "ruleId": "chatkit-widget-composition-guidance",
+      "componentCandidates": [
+        "widget-list",
+        "conversation-card",
+        "catalog-card",
+        "data-table",
+        "render-window"
+      ]
+    },
+    {
+      "id": "chatkit-widget-actions",
+      "ruleId": "chatkit-widget-actions-guidance",
+      "componentCandidates": [
+        "widget-list",
+        "conversation-card",
+        "async-boundary",
+        "request-router",
+        "event-bus"
+      ]
+    },
+    {
+      "id": "chatkit-widget-forms",
+      "ruleId": "chatkit-widget-forms-guidance",
+      "componentCandidates": [
+        "field",
+        "textarea",
+        "select",
+        "settings-panel",
+        "widget-list"
+      ]
+    }
+  ],
+  "mapping": [
+    {
+      "sourceTypes": [
+        "Card"
+      ],
+      "agComponents": [
+        "conversation-card",
+        "catalog-card"
+      ],
+      "boundary": "AG data contracts; no arbitrary ChatKit children/styles/asForm adapter."
+    },
+    {
+      "sourceTypes": [
+        "ListView",
+        "ListViewItem"
+      ],
+      "agComponents": [
+        "widget-list"
+      ],
+      "boundary": "AG keyed data,100items maximum, one action per item; not ChatKit JSON."
+    },
+    {
+      "sourceTypes": [
+        "Button"
+      ],
+      "agComponents": [
+        "button"
+      ],
+      "boundary": "Native semantics; effects and server authorization are host-owned."
+    },
+    {
+      "sourceTypes": [
+        "Form",
+        "Select"
+      ],
+      "agComponents": [
+        "field",
+        "textarea",
+        "select",
+        "settings-panel"
+      ],
+      "boundary": "Compose a real form; explicitly validate names/payload mapping and common tracks."
+    },
+    {
+      "sourceTypes": [
+        "Text",
+        "Caption",
+        "Title",
+        "Row",
+        "Col",
+        "Box",
+        "Divider",
+        "Spacer"
+      ],
+      "agComponents": [
+        "section-stack"
+      ],
+      "boundary": "Semantic text and composition groups; do not imply every ChatKit style property is implemented."
+    },
+    {
+      "sourceTypes": [
+        "Markdown"
+      ],
+      "agComponents": [
+        "markdown-viewer"
+      ],
+      "boundary": "AG safe renderer contract, not SDK streaming compatibility."
+    },
+    {
+      "sourceTypes": [
+        "Badge"
+      ],
+      "agComponents": [
+        "status"
+      ],
+      "boundary": "Use semantic status labels; numeric-badge represents numeric data only."
+    },
+    {
+      "sourceTypes": [
+        "Transition"
+      ],
+      "agComponents": [
+        "motion"
+      ],
+      "boundary": "Honor reduced motion, cancellation and resource disposal."
+    },
+    {
+      "sourceTypes": [
+        "DatePicker",
+        "Image",
+        "Icon"
+      ],
+      "agComponents": [],
+      "boundary": "No new generic AG renderer promised. Use approved host assets/native date input or a separately qualified implementation."
+    }
+  ]
+}

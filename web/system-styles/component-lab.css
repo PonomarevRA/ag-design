@@ -1,0 +1,365 @@
+/* Host recipes map to semantic AG tokens; component geometry contains no style palette. */
+.ag-style-lab {
+  --ag-font: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ag-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  --ag-text-size: 14px;
+  --ag-label-size: 12px;
+  --ag-control-height: 40px;
+  --ag-radius-control: 8px;
+  --ag-radius-panel: 16px;
+  --ag-text: var(--ink, #27213e);
+  --ag-muted: var(--muted, #665c7d);
+  --ag-accent: var(--accent, #6637d9);
+  --ag-on-accent: var(--on-accent, #fff);
+  --ag-surface: var(--surface, #fff);
+  --ag-surface-alt: var(--alt, #eae4ff);
+  --ag-border: var(--control-line, #aa9dc6);
+  --ag-success: var(--success, #286047);
+  --ag-danger: #b52b47;
+  --ag-space-1: 4px;
+  --ag-space-2: 8px;
+  --ag-space-3: 12px;
+  --ag-space-4: 16px;
+  --ag-space-6: 24px;
+  --ag-space-8: 32px;
+  --ag-history-lane-0: var(--ag-accent);
+  --ag-history-lane-1: var(--ag-success);
+  --ag-history-lane-2: var(--ag-danger);
+  --ag-history-lane-3: var(--ag-muted);
+  grid-column: 1/-1;
+  min-width: 0;
+  width: 100%;
+  margin: 36px 0 24px;
+  padding: 28px;
+  color: var(--ag-text);
+  background: var(--ag-surface);
+  border: 1px solid var(--ag-border);
+  border-radius: var(--ag-radius-panel);
+  font-size: var(--ag-text-size);
+  line-height: 1.5;
+  scroll-margin-top: 24px;
+}
+[data-style="midnight-glass"] .ag-style-lab {
+  --ag-radius-control: 10px;
+  --ag-radius-panel: 20px;
+  --ag-success: #9ad9c4;
+  --ag-danger: #ffa6c0;
+  background: linear-gradient(135deg, #302640dc, #1e192dee);
+  box-shadow: 0 24px 70px #0002;
+  backdrop-filter: blur(14px);
+}
+[data-style="coral-pulse"] .ag-style-lab {
+  --ag-accent: #ff9daf;
+  --ag-on-accent: #2c1234;
+  --ag-surface: #211734;
+  --ag-surface-alt: #302043;
+  --ag-text: #f6f2ff;
+  --ag-muted: #c7c0dd;
+  --ag-border: #89759e;
+  --ag-success: #ade5ee;
+  --ag-danger: #ffac74;
+  --ag-radius-control: 16px;
+  --ag-radius-panel: 24px;
+  --ag-control-height: 44px;
+  background: linear-gradient(155deg, #293c65, #26143e 70%);
+}
+[data-style="graphite-gold"] .ag-style-lab {
+  --ag-accent: #e8cc8e;
+  --ag-on-accent: #241e14;
+  --ag-surface: #252628;
+  --ag-surface-alt: #303133;
+  --ag-border: #9c8d70;
+  --ag-success: #c4d5a3;
+  --ag-danger: #f3ae91;
+  --ag-radius-control: 6px;
+  --ag-radius-panel: 16px;
+  box-shadow: 0 16px 36px #0003;
+}
+[data-style="amber-circuit"] .ag-style-lab {
+  --ag-accent: #ffc267;
+  --ag-on-accent: #291d0b;
+  --ag-surface: #202226;
+  --ag-surface-alt: #2c2f34;
+  --ag-border: #9d8a6c;
+  --ag-success: #a2dfc4;
+  --ag-danger: #ffad98;
+  --ag-radius-control: 4px;
+  --ag-radius-panel: 8px;
+  background: linear-gradient(125deg, #292b2f, #1e2024);
+}
+[data-style="saas-clarity"] .ag-style-lab {
+  --ag-surface: #fff;
+  --ag-surface-alt: #f0f2f8;
+  --ag-border: #8c95a6;
+  --ag-accent: #5949cc;
+  --ag-on-accent: #fff;
+  --ag-success: #08775f;
+  --ag-danger: #ab3850;
+  --ag-radius-control: 5px;
+  --ag-radius-panel: 8px;
+  --ag-control-height: 36px;
+}
+[data-style="learning-air"] .ag-style-lab {
+  --ag-surface: #fff;
+  --ag-surface-alt: #f3f0fb;
+  --ag-border: #a39ab5;
+  --ag-accent: #6245c0;
+  --ag-success: #007b7d;
+  --ag-radius-control: 10px;
+  --ag-radius-panel: 18px;
+  --ag-control-height: 44px;
+}
+[data-style="orchid-studio"] .ag-style-lab {
+  --ag-border: #9b86a7;
+  --ag-success: #076957;
+  --ag-radius-control: 8px;
+  --ag-radius-panel: 12px;
+}
+[data-style="periwinkle-cms"] .ag-style-lab {
+  --ag-border: #8e9abb;
+  --ag-success: #08746e;
+  --ag-radius-control: 10px;
+  --ag-radius-panel: 16px;
+}
+.ag-style-lab [hidden] {
+  display: none !important;
+}
+.ag-style-lab .lab-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.ag-style-lab .lab-heading h2 {
+  font-size: clamp(22px, 2.3vw, 32px);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  margin: 6px 0 8px;
+  line-height: 1.2;
+  color: var(--ag-text);
+}
+.ag-style-lab .lab-heading p {
+  color: var(--ag-muted);
+  margin: 0;
+  max-width: 650px;
+}
+.ag-style-lab .lab-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  color: var(--ag-accent) !important;
+}
+.ag-style-lab .lab-marker {
+  font-size: 11px;
+  color: var(--ag-accent);
+  border: 1px solid var(--ag-border);
+  border-radius: 999px;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+.ag-style-lab .lab-styles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 24px;
+}
+.ag-style-lab .lab-styles a {
+  font-size: 12px;
+  border: 1px solid var(--ag-border);
+  border-radius: var(--ag-radius-control);
+  padding: 7px 10px;
+  color: var(--ag-muted);
+  text-decoration: none;
+  min-height: 36px;
+}
+.ag-style-lab .lab-styles a[aria-current="page"] {
+  color: var(--ag-on-accent);
+  background: var(--ag-accent);
+  border-color: var(--ag-accent);
+}
+.ag-style-lab .lab-styles a:focus-visible {
+  outline: 2px solid var(--ag-accent);
+  outline-offset: 2px;
+}
+.ag-style-lab .ag-tabs__list {
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  gap: 0.5rem;
+  padding: 0.375rem;
+  border: 0;
+  scroll-padding-inline: 0.375rem;
+  scroll-snap-type: inline proximity;
+}
+.ag-style-lab .ag-tabs__list::-webkit-scrollbar {
+  display: none;
+}
+.ag-style-lab .ag-tabs__tab {
+  min-height: 44px;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  padding: 10px 14px;
+  border: 1px solid var(--ag-border);
+  border-radius: 999px;
+  scroll-snap-align: start;
+}
+.ag-style-lab .lab-footer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.ag-style-lab .lab-status {
+  font-size: 12px;
+  color: var(--ag-muted);
+  margin: 0;
+}
+.ag-style-lab .lab-tokens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--ag-surface-alt);
+  border-radius: var(--ag-radius-panel);
+}
+.ag-style-lab .lab-tokens div {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.ag-style-lab .lab-tokens code {
+  color: var(--ag-muted);
+}
+.ag-style-lab .lab-table {
+  display: grid;
+  gap: 16px;
+  overflow: auto;
+}
+.ag-style-lab .lab-form {
+  display: grid;
+  gap: 24px;
+  max-width: 720px;
+  padding: 24px;
+  background: var(--ag-surface-alt);
+  border-radius: var(--ag-radius-panel);
+}
+.ag-style-lab .lab-form-fields {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: start;
+}
+/* A hint belongs below its control; it must not stretch a neighbour's select rows. */
+.ag-style-lab .lab-form-fields > :is(.ag-field, .ag-select) {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  align-content: start;
+  gap: 8px;
+  font: inherit;
+}
+.ag-style-lab .lab-form-fields :is(.ag-field__label, .ag-select > label) {
+  margin: 0;
+  padding: 0;
+  font: 600 var(--ag-label-size)/1.4 var(--ag-font);
+}
+.ag-style-lab .lab-form-fields :is(input, select) {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: var(--ag-control-height);
+  block-size: max(var(--ag-control-height), calc(1.4em + 18px));
+  margin: 0;
+  padding: 8px 10px;
+  font: inherit;
+  line-height: 1.4;
+}
+/* Shared tracks keep wrapped captions aligned; the fallback stacks complete field groups. */
+@supports (grid-template-rows: subgrid) {
+  .ag-style-lab .lab-form-fields {
+    row-gap: 8px;
+  }
+  .ag-style-lab .lab-form-fields > :is(.ag-field, .ag-select) {
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+  }
+}
+.ag-style-lab .lab-form button {
+  justify-self: start;
+}
+.ag-style-lab .lab-editor {
+  min-height: 340px;
+  min-width: 0;
+}
+.ag-style-lab .ag-markdown-editor {
+  --ag-radius: var(--ag-radius-control);
+}
+@supports not (grid-template-rows: subgrid) {
+  .ag-style-lab .lab-form-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  .ag-style-lab {
+    padding: 16px;
+    margin-block: 24px;
+  }
+  .ag-style-lab .lab-heading {
+    display: block;
+  }
+  .ag-style-lab .lab-marker {
+    display: inline-block;
+    margin-top: 14px;
+  }
+  .ag-style-lab .lab-form-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ag-style-lab .lab-form {
+    padding: 16px;
+  }
+  .ag-style-lab .ag-tabs__tab {
+    flex: 0 0 auto;
+  }
+}
+.ag-style-lab .ag-code-viewer,
+.ag-style-lab .ag-markdown-viewer {
+  border-radius: var(--ag-radius-panel);
+}
+.ag-style-lab .ag-code-viewer__action,
+.ag-style-lab .ag-markdown-editor__action {
+  border-radius: var(--ag-radius-control);
+}
+
+/* Keep the real native checkbox at the minimum target size inside retained 44px labels. */
+.ag-style-lab .ag-data-table input[type="checkbox"],
+.ag-style-lab .ag-locale-settings input[type="checkbox"] {
+  inline-size: 24px;
+  block-size: 24px;
+  flex-shrink: 0;
+}
+
+/* The page owns colour roles while the shared chip factory owns interaction and geometry. */
+.style-choice {
+  --ag-font: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ag-control-height: 36px;
+  --ag-text: var(--ink);
+  --ag-muted: var(--muted);
+  --ag-accent: var(--accent, var(--coral));
+  --ag-surface: var(--surface, var(--base, #fff));
+  --ag-surface-alt: var(--alt, var(--base, #f1f1f5));
+  --ag-border: var(--control-line, var(--line));
+  min-width: 0;
+  max-width: 100%;
+}
+[data-style="coral-pulse"] .style-choice {
+  --ag-control-height: 44px;
+}
+@media (pointer: coarse) {
+  .style-choice { --ag-control-height: 44px; }
+}

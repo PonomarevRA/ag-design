@@ -1,0 +1,308 @@
+<!doctype html>
+<html data-ag-select-indicators data-example="workspace" lang="ru" data-style="violet-soft-3d">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Forma · пример стиля системы</title>
+    <link rel="stylesheet" href="./example.css" />
+    <link rel="stylesheet" href="./vendor/chart.css" />
+    <link rel="stylesheet" href="./style-chart.css" />
+    <link rel="stylesheet" href="./workspace-redesign.css" />
+    <script src="./appearance.js"></script>
+    <script type="module" src="./example.js?v=demo-systems-5"></script>
+    <link rel="stylesheet" href="./vendor/lab/components.css?v=form-review-1" />
+    <link rel="stylesheet" href="./component-lab.css?v=form-review-1" />
+    <link rel="stylesheet" href="../locale-settings.css" />
+    <script type="module" src="./vendor/lab/components.js?v=form-review-1"></script>
+    <link rel="stylesheet" href="./application-layout.css" />
+    <link rel="stylesheet" href="./demo-system.css?v=demo-systems-4" />
+  </head>
+  <body>
+    <a class="skip" href="#main">К содержимому</a>
+    <div class="app">
+      <aside class="sidebar">
+        <a class="brand" href="#overview"
+          ><span class="brand-mark" aria-hidden="true">f</span>forma<span
+            class="brand-dot"
+            >●</span
+          ></a
+        >
+        <div class="workspace-label">
+          <span class="workspace-icon" aria-hidden="true">S</span
+          ><span>Studio workspace<small>Командное пространство</small></span>
+        </div>
+        <p class="nav-label">РАБОЧЕЕ ПРОСТРАНСТВО</p>
+        <nav aria-label="Разделы примера">
+          <a class="nav-link" href="#overview" aria-current="page"
+            ><span aria-hidden="true">◫</span>Обзор</a
+          >
+          <a class="nav-link" href="#projects"
+            ><span aria-hidden="true">▣</span>Проекты<span
+              class="nav-count"
+              id="nav-count"
+              >4</span
+            ></a
+          >
+          <a class="nav-link" href="#tasks"
+            ><span aria-hidden="true">☑</span>Мои задачи</a
+          >
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="mini-sculpture" aria-hidden="true"><i></i><b></b></div>
+          <strong>Место для больших идей</strong>
+          <p>Всё важное — в одном<br />спокойном пространстве.</p>
+          <a href="#projects">К проектам <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="profile">
+          <span class="avatar">АК</span>
+          <div>
+            <strong>Александра К.</strong><small>Дизайнер продукта</small>
+          </div>
+          <span class="online" aria-label="В сети"></span>
+        </div>
+      </aside>
+      <div class="workspace">
+        <header class="topbar">
+          <p>
+            Рабочее пространство <span aria-hidden="true">/</span>
+            <strong>Обзор</strong>
+          </p>
+          <div class="style-links" role="group" aria-label="Стиль примера">
+            <a href="?style=violet-soft-3d" data-style-link="violet-soft-3d"
+              >Soft 3D</a
+            ><a href="?style=midnight-glass" data-style-link="midnight-glass"
+              >Glass</a
+            >
+          </div>
+          <a class="catalog-link" href="/#styles" title="Каталог стилей"
+            >Стили систем ↗</a
+          >
+        </header>
+        <main id="main" tabindex="-1">
+          <section id="overview" class="page-intro">
+            <div>
+              <p class="eyebrow">ПОНЕДЕЛЬНИК, 26 ОКТЯБРЯ</p>
+              <h1 id="workspace-title">Добро пожаловать!</h1>
+              <p class="intro-copy" id="workspace-description">
+                Планы, люди и следующий шаг.<br />Соберите главное — и
+                двигайтесь в своём ритме.
+              </p>
+            </div>
+            <div class="sculpture" aria-hidden="true">
+              <div class="orbit orbit-one"></div>
+              <div class="orbit orbit-two"></div>
+              <div class="slab slab-back"></div>
+              <div class="slab slab-front">
+                <div class="sculpture-symbol">✳</div>
+              </div>
+              <div class="floating-chip chip-top">✧</div>
+              <div class="floating-chip chip-bottom"><i></i><i></i><i></i></div>
+              <div class="sculpture-dot"></div>
+            </div>
+            <span class="style-caption" id="style-caption"
+              >01 / VIOLET SOFT 3D</span
+            >
+          </section>
+          <section class="metrics" aria-label="Сводка пространства">
+            <div>
+              <span class="metric-icon" aria-hidden="true">▣</span>
+              <div>
+                <p>Проекты</p>
+                <strong id="metric-project-total">4</strong
+                ><small>в пространстве</small>
+              </div>
+            </div>
+            <div>
+              <span class="metric-icon" aria-hidden="true">☑</span>
+              <div>
+                <p>Задачи</p>
+                <strong id="metric-task-total">15</strong
+                ><small>всего в проектах</small>
+              </div>
+            </div>
+            <div>
+              <span class="metric-icon" aria-hidden="true">◷</span>
+              <div>
+                <p>В работе</p>
+                <strong id="active-count">2</strong
+                ><small>активных проекта</small>
+              </div>
+            </div>
+            <div>
+              <span class="metric-icon" aria-hidden="true">✓</span>
+              <div>
+                <p>Завершено</p>
+                <strong id="done-count">9 / 15</strong
+                ><small>задач команды</small>
+              </div>
+            </div>
+          </section>
+          <div class="work-grid">
+            <section class="panel project-panel" id="projects">
+              <div class="section-heading">
+                <div>
+                  <h2>Проекты</h2>
+                  <p>От замысла к следующему шагу</p>
+                </div>
+                <div class="project-heading-actions">
+                  <button class="primary" id="new-project">
+                    <span aria-hidden="true">＋</span> Новый проект
+                  </button>
+                  <span class="section-count" id="project-count">04</span>
+                </div>
+              </div>
+              <div class="project-tools">
+                <div class="filters" role="group" aria-label="Фильтр проектов">
+                  <button data-filter="all" aria-pressed="true">Все</button
+                  ><button data-filter="active" aria-pressed="false">
+                    В работе</button
+                  ><button data-filter="planned" aria-pressed="false">План</button
+                  ><button data-filter="done" aria-pressed="false">
+                    Готово
+                  </button>
+                </div>
+                <label class="search"
+                  ><span class="search-label">Поиск проекта</span
+                  ><span aria-hidden="true">⌕</span
+                  ><input
+                    type="search"
+                    id="project-search"
+                    placeholder="Найти проект"
+                    maxlength="120"
+                /></label>
+              </div>
+              <div
+                class="table-scroll"
+                tabindex="0"
+                aria-label="Таблица данных"
+              >
+                <table>
+                  <caption class="sr-only">
+                    Проекты команды. Кнопка в названии открывает детали.
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Проект</th>
+                      <th scope="col">Статус</th>
+                      <th scope="col">Прогресс</th>
+                      <th scope="col">Команда</th>
+                    </tr>
+                  </thead>
+                  <tbody id="project-rows"></tbody>
+                </table>
+              </div>
+              <p class="empty" id="empty" hidden>
+                Проектов не найдено. Измените запрос или фильтр.
+              </p>
+              <div class="panel-footer">
+                <span id="result-count">4 проекта</span
+                ><span>Синтетические данные</span>
+              </div>
+            </section>
+            <section class="panel task-panel" id="tasks">
+              <div class="section-heading">
+                <div>
+                  <h2>Следующий шаг</h2>
+                  <p id="task-context">Личный кабинет · задачи проекта</p>
+                </div>
+                <span class="small-note">Отмечайте готовое</span>
+              </div>
+              <div id="task-list"></div>
+            </section>
+            <section class="panel detail-panel" aria-labelledby="detail-title">
+              <div class="detail-top">
+                <span class="detail-overline">В ФОКУСЕ</span
+                ><span id="detail-status" class="status-pill">В работе</span>
+              </div>
+              <div class="project-art" aria-hidden="true">
+                <div class="art-tile">◈</div>
+                <i></i><b></b>
+              </div>
+              <p class="detail-category" id="detail-category">
+                Продуктовый дизайн
+              </p>
+              <h2 id="detail-title">Личный кабинет</h2>
+              <p class="detail-description" id="detail-description"></p>
+              <div class="detail-progress">
+                <span>Готовность</span><strong id="detail-percent">75%</strong>
+              </div>
+              <progress id="detail-progress" max="100" value="75">75%</progress>
+              <div class="detail-meta">
+                <div>
+                  <small>СЛЕДУЮЩИЙ ЭТАП</small
+                  ><strong id="detail-date">28 октября</strong>
+                </div>
+                <div>
+                  <small>ОТВЕТСТВЕННЫЙ</small
+                  ><strong id="detail-owner">Александра</strong>
+                </div>
+              </div>
+              <a class="detail-action" href="#tasks"
+                >Перейти к задачам <span aria-hidden="true">↗</span></a
+              >
+            </section>
+            <section class="panel workspace-chart-panel">
+              <div class="section-heading"><h2>Обзор недели</h2></div>
+              <div id="workspace-chart"></div>
+            </section>
+            <aside class="note-panel">
+              <span class="note-star" aria-hidden="true">✧</span>
+              <p class="eyebrow">МЕНЬШЕ ШУМА</p>
+              <h2>Больше внимания<br />к главному.</h2>
+              <p>
+                Один понятный следующий шаг<br />лучше десятка открытых вкладок.
+              </p>
+            </aside>
+          </div>
+          <footer class="demo-footer">
+            <span id="demo-label">Violet Soft 3D · пример системы</span
+            ><span>Локальная демонстрация · данные в этом браузере</span>
+          </footer>
+          <p
+            id="announcement"
+            class="sr-only"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+          <section
+            id="ag-components"
+            data-ag-component-lab
+            aria-label="Компоненты AG Design в выбранном стиле"
+          ></section>
+        </main>
+      </div>
+    </div>
+    <dialog id="project-dialog" aria-labelledby="dialog-title">
+      <form id="project-form">
+        <div class="dialog-heading">
+          <h2 id="dialog-title">Новый проект</h2>
+          <button type="button" id="close-dialog" aria-label="Закрыть">
+            ×
+          </button>
+        </div>
+        <p>Начните с названия. Остальное можно уточнить по ходу.</p>
+        <label
+          >Название проекта<input
+            id="project-name"
+            name="name"
+            required
+            maxlength="60"
+            autocomplete="off" /></label
+        ><label
+          >Короткое описание<textarea
+            id="project-description"
+            name="description"
+            maxlength="180"
+            rows="3"
+          ></textarea>
+        </label>
+        <div class="dialog-actions">
+          <button type="button" class="secondary" id="cancel-project">
+            Отмена</button
+          ><button class="primary" type="submit">Создать проект</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

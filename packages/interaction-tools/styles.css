@@ -1,0 +1,249 @@
+.ag-it {
+  box-sizing: border-box;
+  min-width: 0;
+  color: var(--ag-text);
+  font-family: var(--ag-font, system-ui, sans-serif);
+  line-height: 1.45;
+}
+.ag-it * {
+  box-sizing: border-box;
+}
+.ag-it button {
+  font: inherit;
+  cursor: pointer;
+}
+.ag-it button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.ag-it button:focus-visible {
+  outline: 2px solid var(--ag-accent);
+  outline-offset: 3px;
+}
+.ag-it-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.ag-it-chips {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 5px;
+  scrollbar-width: thin;
+  max-width: 100%;
+  align-items: center;
+}
+.ag-it-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 7px 13px;
+  min-height: 36px;
+  white-space: nowrap;
+  background: var(--ag-surface-alt);
+  color: var(--ag-muted);
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+}
+.ag-it-chip[aria-pressed="true"] {
+  background: var(--ag-accent);
+  color: var(--ag-on-accent);
+}
+.ag-it-chip__count {
+  font-size: 0.85em;
+  font-variant-numeric: tabular-nums;
+  opacity: 1;
+}
+.ag-it-toasts {
+  container-type: inline-size;
+  container-name: ag-it-toasts;
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  max-width: 440px;
+  outline-offset: 3px;
+}
+.ag-it-toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  border: 1px solid color-mix(in srgb, var(--ag-border) 45%, transparent);
+  border-radius: 12px;
+  padding: 11px 12px;
+  background: var(--ag-surface-alt);
+  box-shadow: 0 4px 14px #0001;
+  animation: ag-it-toast-enter 0.18s ease-out;
+}
+.ag-it-toast__message {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 0.95em;
+}
+.ag-it-action,
+.ag-it-icon {
+  border: 0;
+  background: transparent;
+  color: var(--ag-accent);
+  padding: 4px;
+  flex-shrink: 0;
+}
+.ag-it-action {
+  font-weight: 600;
+  max-width: 40%;
+  overflow-wrap: anywhere;
+}
+.ag-it-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  color: var(--ag-muted);
+  font-size: 24px !important;
+  line-height: 1;
+}
+.ag-it-icon:hover {
+  background: color-mix(in srgb, var(--ag-border) 15%, transparent);
+}
+.ag-it-number {
+  display: inline-flex;
+  position: relative;
+  font-size: 40px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  max-width: 100%;
+}
+.ag-it-number__drawing {
+  display: inline-flex;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre;
+}
+.ag-it-number__cell {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  line-height: 1.2;
+}
+.ag-it-number__new {
+  display: inline-block;
+}
+.ag-it-number__old {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.ag-it-demo {
+  padding: 12px;
+}
+.ag-it-demo__controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.ag-it-demo-button {
+  border: 1px solid var(--ag-border);
+  border-radius: 8px;
+  background: var(--ag-surface-alt);
+  color: var(--ag-text);
+  padding: 7px 11px;
+  min-height: 36px;
+}
+.ag-it-demo__status {
+  display: block;
+  color: var(--ag-muted);
+  font-size: 13px;
+  margin-top: 16px;
+  overflow-wrap: anywhere;
+}
+.ag-it-demo__caption {
+  margin: 0 0 10px;
+  color: var(--ag-muted);
+}
+@keyframes ag-it-toast-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ag-it-toast {
+    animation: none;
+  }
+  .ag-it-chip {
+    transition: none;
+  }
+}
+@media (forced-colors: active) {
+  .ag-it-chip[aria-pressed="true"] {
+    outline: 2px solid Highlight;
+  }
+  .ag-it-toast {
+    border-color: CanvasText;
+  }
+}
+/* A narrow toast keeps the close target beside its text and the action on a readable second row. */
+@container ag-it-toasts (max-width: 320px) {
+  .ag-it-toast {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 30px;
+    gap: 6px;
+    padding: 9px;
+  }
+  .ag-it-toast__message {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .ag-it-icon {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+  }
+  .ag-it-action {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 100%;
+    justify-self: start;
+  }
+}
+@media (max-width: 300px) {
+  .ag-it-toast {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 30px;
+    gap: 6px;
+    padding: 9px;
+  }
+  .ag-it-toast__message {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .ag-it-icon {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+  }
+  .ag-it-action {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 100%;
+    justify-self: start;
+  }
+}

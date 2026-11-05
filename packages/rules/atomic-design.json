@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "ag-design/atomic-design-guidance-v1",
+  "status": "advisory",
+  "chapter": "atomic-design-composition",
+  "sourcesCheckedAt": "2026-11-05",
+  "sources": [
+    {
+      "title": "Brad Frost — Atomic Design Methodology",
+      "url": "https://atomicdesign.bradfrost.com/chapter-2/",
+      "kind": "primary",
+      "note": "Read 2026-11-05. Five concurrent levels, flexible names, template/content distinction; a methodology, not a component package."
+    },
+    {
+      "title": "Brad Frost — Tools of the Trade",
+      "url": "https://atomicdesign.bradfrost.com/chapter-3/",
+      "kind": "primary",
+      "note": "Read 2026-11-05. Pattern Lab includes, content variants, documentation and forward/reverse pattern lineage. No claimed runtime compatibility."
+    },
+    {
+      "title": "Brad Frost — The Atomic Workflow",
+      "url": "https://atomicdesign.bradfrost.com/chapter-4/",
+      "kind": "primary",
+      "note": "Read 2026-11-05. Interface inventory and collaborative pattern workflow; AG evidence procedure below is an authored adaptation."
+    },
+    {
+      "title": "Pattern Lab — Pattern-specific Values",
+      "url": "https://patternlab.io/docs/creating-pattern-specific-values/",
+      "kind": "primary",
+      "note": "Read 2026-11-05. Data overrides reuse the underlying pattern. No Pattern Lab dependency or Mustache execution is added."
+    }
+  ],
+  "patternCardFields": [
+    "purpose",
+    "slots",
+    "childrenWithVersions",
+    "contentContract",
+    "stateAndEvents",
+    "dataOwner",
+    "localGrid",
+    "knownDependenciesWithSources",
+    "scenarios",
+    "evidenceAndUnknowns"
+  ],
+  "levels": [
+    {
+      "id": "atom",
+      "role": "Functional element"
+    },
+    {
+      "id": "molecule",
+      "role": "Small single-purpose group"
+    },
+    {
+      "id": "organism",
+      "role": "Distinct interface section"
+    },
+    {
+      "id": "template",
+      "role": "Content structure and named regions"
+    },
+    {
+      "id": "page",
+      "role": "Representative populated screen and task"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "catalog-screen",
+      "componentIds": [
+        "catalog-search-controls",
+        "catalog-card"
+      ],
+      "slots": [
+        "queryAndFilters",
+        "resultCount",
+        "cards",
+        "state",
+        "detail"
+      ],
+      "fixtures": [
+        "no-results",
+        "one-result",
+        "many-results",
+        "long-title",
+        "missing-image",
+        "filter-reset"
+      ],
+      "layoutOwnership": "host; preserve Pinterest feed"
+    },
+    {
+      "id": "settings-screen",
+      "componentIds": [
+        "settings-panel",
+        "field",
+        "select",
+        "button"
+      ],
+      "slots": [
+        "title",
+        "fieldGroups",
+        "feedback",
+        "actions"
+      ],
+      "fixtures": [
+        "long-label",
+        "unequal-hints",
+        "one-field-error",
+        "read-only"
+      ],
+      "layoutOwnership": "host with declared form tracks"
+    },
+    {
+      "id": "conversation-screen",
+      "componentIds": [
+        "agent-conversation",
+        "choice-chips"
+      ],
+      "slots": [
+        "transcript",
+        "statusOrQuestion",
+        "actions",
+        "ownedComposer"
+      ],
+      "fixtures": [
+        "identical-content-three-views",
+        "long-answer",
+        "streaming",
+        "error",
+        "draft",
+        "pending-action"
+      ],
+      "layoutOwnership": "host; conversation owns composer; external choice-chips optional"
+    }
+  ],
+  "review": {
+    "existingChapters": [
+      "form-row-layout",
+      "component-width-audit",
+      "nested-layout-grids"
+    ],
+    "widthScenarioIds": [
+      "normal",
+      "narrow",
+      "text200",
+      "narrow-text200"
+    ],
+    "existingTool": "design_evaluate_interface",
+    "arguments": [
+      "changed_block_review",
+      "layout_width_review"
+    ],
+    "completion": "Current detailed policy and applicable existing gates; no child-to-page PASS inheritance"
+  },
+  "limits": [
+    "Descriptive recipes, not callable factory or composition API payloads.",
+    "No required five-layer folders or automatic level classification.",
+    "Known dependencies are caller-documented; usage is incomplete.",
+    "No runtime, qualification, accessibility or security certification."
+  ]
+}

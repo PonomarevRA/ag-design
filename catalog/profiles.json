@@ -1,0 +1,290 @@
+{
+  "schemaVersion": "ag-design/profiles-v1",
+  "items": [
+    {
+      "id": "atlas",
+      "name": "Зелёная",
+      "projects": [],
+      "light": {
+        "accent": "#176f56",
+        "onAccent": "#ffffff",
+        "surface": "#fafdfb",
+        "surfaceAlt": "#edf4f0",
+        "text": "#22352e",
+        "muted": "#556b60",
+        "border": "#81988b",
+        "danger": "#a8332e",
+        "success": "#246d46"
+      },
+      "dark": {
+        "accent": "#69c6a7",
+        "onAccent": "#102b21",
+        "surface": "#202126",
+        "surfaceAlt": "#292a31",
+        "text": "#e9eaf0",
+        "muted": "#a8abb6",
+        "border": "#686b76",
+        "danger": "#ff8d83",
+        "success": "#79cf99"
+      },
+      "scope": "semantic web component tokens; host palette preserved",
+      "contrastPolicy": {
+        "apcaWeight": 0.7,
+        "wcagWeight": 0.3,
+        "wcagAARequired": true
+      },
+      "highContrast": {
+        "light": {
+          "accent": "#176f56",
+          "onAccent": "#ffffff",
+          "surface": "#fafdfb",
+          "surfaceAlt": "#edf4f0",
+          "text": "#000000",
+          "muted": "#333333",
+          "border": "#444444",
+          "danger": "#a8332e",
+          "success": "#246d46"
+        },
+        "dark": {
+          "accent": "#69c6a7",
+          "onAccent": "#102b21",
+          "surface": "#202126",
+          "surfaceAlt": "#292a31",
+          "text": "#ffffff",
+          "muted": "#eeeeee",
+          "border": "#dddddd",
+          "danger": "#ff8d83",
+          "success": "#79cf99"
+        }
+      }
+    },
+    {
+      "id": "memory",
+      "name": "Фиолетовая",
+      "projects": [],
+      "light": {
+        "accent": "#7551b8",
+        "onAccent": "#ffffff",
+        "surface": "#fcfaff",
+        "surfaceAlt": "#f1edf8",
+        "text": "#292136",
+        "muted": "#695b77",
+        "border": "#998ca9",
+        "danger": "#ac302f",
+        "success": "#2f7048"
+      },
+      "dark": {
+        "accent": "#b99af2",
+        "onAccent": "#291d3b",
+        "surface": "#202126",
+        "surfaceAlt": "#292a31",
+        "text": "#e9eaf0",
+        "muted": "#a8abb6",
+        "border": "#686b76",
+        "danger": "#ff8d83",
+        "success": "#79cf99"
+      },
+      "scope": "semantic web component tokens; host palette preserved",
+      "contrastPolicy": {
+        "apcaWeight": 0.7,
+        "wcagWeight": 0.3,
+        "wcagAARequired": true
+      },
+      "highContrast": {
+        "light": {
+          "accent": "#7551b8",
+          "onAccent": "#ffffff",
+          "surface": "#fcfaff",
+          "surfaceAlt": "#f1edf8",
+          "text": "#000000",
+          "muted": "#333333",
+          "border": "#444444",
+          "danger": "#ac302f",
+          "success": "#2f7048"
+        },
+        "dark": {
+          "accent": "#b99af2",
+          "onAccent": "#291d3b",
+          "surface": "#202126",
+          "surfaceAlt": "#292a31",
+          "text": "#ffffff",
+          "muted": "#eeeeee",
+          "border": "#dddddd",
+          "danger": "#ff8d83",
+          "success": "#79cf99"
+        }
+      }
+    },
+    {
+      "id": "observer",
+      "name": "Голубая",
+      "projects": [],
+      "light": {
+        "accent": "#086f82",
+        "onAccent": "#ffffff",
+        "surface": "#f9fcff",
+        "surfaceAlt": "#edf3f7",
+        "text": "#20323b",
+        "muted": "#536974",
+        "border": "#8195a0",
+        "danger": "#b13430",
+        "success": "#27714a"
+      },
+      "dark": {
+        "accent": "#68c9e7",
+        "onAccent": "#0b2835",
+        "surface": "#202126",
+        "surfaceAlt": "#292a31",
+        "text": "#e9eaf0",
+        "muted": "#a8abb6",
+        "border": "#686b76",
+        "danger": "#ff8d83",
+        "success": "#79cf99"
+      },
+      "scope": "semantic web component tokens; host palette preserved",
+      "contrastPolicy": {
+        "apcaWeight": 0.7,
+        "wcagWeight": 0.3,
+        "wcagAARequired": true
+      },
+      "highContrast": {
+        "light": {
+          "accent": "#086f82",
+          "onAccent": "#ffffff",
+          "surface": "#f9fcff",
+          "surfaceAlt": "#edf3f7",
+          "text": "#000000",
+          "muted": "#333333",
+          "border": "#444444",
+          "danger": "#b13430",
+          "success": "#27714a"
+        },
+        "dark": {
+          "accent": "#68c9e7",
+          "onAccent": "#0b2835",
+          "surface": "#202126",
+          "surfaceAlt": "#292a31",
+          "text": "#ffffff",
+          "muted": "#eeeeee",
+          "border": "#dddddd",
+          "danger": "#ff8d83",
+          "success": "#79cf99"
+        }
+      }
+    },
+    {
+      "id": "tasks",
+      "name": "Синяя",
+      "projects": [],
+      "light": {
+        "accent": "#0068d4",
+        "onAccent": "#ffffff",
+        "surface": "#fafafc",
+        "surfaceAlt": "#f1f1f5",
+        "text": "#23252c",
+        "muted": "#626571",
+        "border": "#858995",
+        "danger": "#b5312c",
+        "success": "#227244"
+      },
+      "dark": {
+        "accent": "#65acff",
+        "onAccent": "#071b30",
+        "surface": "#202126",
+        "surfaceAlt": "#292a31",
+        "text": "#e9eaf0",
+        "muted": "#a8abb6",
+        "border": "#686b76",
+        "danger": "#ff8d83",
+        "success": "#79cf99"
+      },
+      "scope": "semantic web component tokens; host palette preserved",
+      "contrastPolicy": {
+        "apcaWeight": 0.7,
+        "wcagWeight": 0.3,
+        "wcagAARequired": true
+      },
+      "highContrast": {
+        "light": {
+          "accent": "#0068d4",
+          "onAccent": "#ffffff",
+          "surface": "#fafafc",
+          "surfaceAlt": "#f1f1f5",
+          "text": "#000000",
+          "muted": "#333333",
+          "border": "#444444",
+          "danger": "#b5312c",
+          "success": "#227244"
+        },
+        "dark": {
+          "accent": "#65acff",
+          "onAccent": "#071b30",
+          "surface": "#202126",
+          "surfaceAlt": "#292a31",
+          "text": "#ffffff",
+          "muted": "#eeeeee",
+          "border": "#dddddd",
+          "danger": "#ff8d83",
+          "success": "#79cf99"
+        }
+      }
+    },
+    {
+      "id": "design",
+      "name": "Бирюзовая",
+      "projects": [],
+      "light": {
+        "accent": "#006b68",
+        "onAccent": "#ffffff",
+        "surface": "#fafafc",
+        "surfaceAlt": "#f1f2f5",
+        "text": "#26272d",
+        "muted": "#626570",
+        "border": "#858995",
+        "danger": "#b5312c",
+        "success": "#227244"
+      },
+      "dark": {
+        "accent": "#79c8be",
+        "onAccent": "#102d2a",
+        "surface": "#202126",
+        "surfaceAlt": "#292a31",
+        "text": "#e9eaf0",
+        "muted": "#a8abb6",
+        "border": "#686b76",
+        "danger": "#ff8d83",
+        "success": "#79cf99"
+      },
+      "scope": "semantic web component tokens; host palette preserved",
+      "contrastPolicy": {
+        "apcaWeight": 0.7,
+        "wcagWeight": 0.3,
+        "wcagAARequired": true
+      },
+      "highContrast": {
+        "light": {
+          "accent": "#006b68",
+          "onAccent": "#ffffff",
+          "surface": "#fafafc",
+          "surfaceAlt": "#f1f2f5",
+          "text": "#000000",
+          "muted": "#333333",
+          "border": "#444444",
+          "danger": "#b5312c",
+          "success": "#227244"
+        },
+        "dark": {
+          "accent": "#79c8be",
+          "onAccent": "#102d2a",
+          "surface": "#202126",
+          "surfaceAlt": "#292a31",
+          "text": "#ffffff",
+          "muted": "#eeeeee",
+          "border": "#dddddd",
+          "danger": "#ff8d83",
+          "success": "#79cf99"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Component testing and evidence
+
+**Mandatory AG workflow after adding or changing a component.** Execute the component’s targeted functional/lifecycle tests, its real preview contract and a relevant performance scenario. Registration, generated tests and an older PASS are not execution. Samples provide element, interact() and dispose(); await asynchronous interact/whenIdle. Cover interaction failure, cleanup after failure and continuing to the next component. Connected libraries use their actual package harness, not a fake core preview.
+
+Record executed results with component ID/version, scenario, environment and limits through design_record_performance, then read design_performance. Qualification separately uses design_report_checks with the current contract/evidence. Failed checks have outcome=failed plus phase/message; cancelled work is cancelled; completed measurement is measured. Storing a report executes no code and grants no qualification. Unavailable execution stays unknown/blocked with a reason, never PASS.
+
+Heap per instance is retained JS memory for a live instance under an explicit method. Browser DOM/CSS timings and Node/jsdom with explicit GC remain separate rows. Process heap, RSS, GPU and component memory are not interchangeable; a negative GC median is not zero. “Time measured; memory not measured” describes missing coverage, not component failure. CLI: node --expose-gc tools/benchmark-memory.mjs --component ID --instances 40 --output /absolute/path/report.json. This is Node/jsdom evidence, not browser or AT acceptance.

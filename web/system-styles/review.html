@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Проверка блоков · AG Design</title>
+    <link rel="stylesheet" href="./review.css" />
+    <script type="module" src="./review.js?v=1"></script>
+  </head>
+  <body>
+    <h1>Проверка обновлённых блоков</h1>
+    <p>
+      Реальные примеры, узкая область внутри широкого окна и отдельные состояния
+      полей. Числа не заменяют проверку клавиатурой и глазами.
+    </p>
+    <div class="controls">
+      <label
+        >Стиль<select id="style">
+          <option value="midnight-glass">Midnight Glass</option>
+          <option value="violet-soft-3d">Violet Soft 3D</option>
+          <option value="coral-pulse">Coral Pulse</option>
+          <option value="graphite-gold">Graphite Gold</option>
+          <option value="amber-circuit">Amber Circuit</option>
+          <option value="saas-clarity">SaaS Clarity</option>
+          <option value="learning-air">Learning Air</option>
+          <option value="orchid-studio">Orchid Studio</option>
+          <option value="periwinkle-cms">Periwinkle CMS</option>
+        </select></label
+      >
+      <label
+        >Блок<select id="block">
+          <option value="tasks">История задач</option>
+          <option value="git">История Git</option>
+          <option value="settings">Форма</option>
+          <option value="markdown">Редактор</option>
+          <option value="table">Таблица</option>
+          <option value="language">Язык и регион</option>
+        </select></label
+      >
+      <label
+        >Ширина примера<select id="width">
+          <option>320</option>
+          <option>390</option>
+          <option selected>640</option>
+          <option>1024</option>
+        </select></label
+      >
+      <label
+        >Состояние<select id="state">
+          <option value="normal">Обычное</option>
+          <option value="wrapped">Длинная подпись</option>
+          <option value="feedback">Подсказка и ошибка</option>
+          <option value="text2x">Текст полей 200%</option>
+        </select></label
+      >
+      <button id="matrix" type="button">Проверить все стили</button
+      ><button id="measure" type="button">Проверить блок</button
+      ><a href="/#rules">Дизайн-бук</a>
+    </div>
+    <p id="result" role="status">Подготовка…</p>
+    <p id="matrix-status" role="status"></p>
+    <details>
+      <summary>Матрица всех стилей</summary>
+      <pre id="matrix-report"></pre>
+    </details>
+    <div class="viewport"><iframe title="Проверяемый пример"></iframe></div>
+    <details>
+      <summary>Численные результаты</summary>
+      <pre id="report" data-review-report></pre>
+    </details>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "ag-design/localization-v1",
+  "builtInLocales": [
+    "en",
+    "ru"
+  ],
+  "defaultLocale": "en",
+  "russianRequired": false,
+  "hostConfiguration": [
+    "locale",
+    "availableLocales",
+    "fallbackLocale",
+    "messages",
+    "direction"
+  ],
+  "messageContent": "literal text with named placeholders; no HTML/eval",
+  "formatting": "Intl.NumberFormat/DateTimeFormat/PluralRules/ListFormat",
+  "legacyFallback": "Unconfigured core documents without lang retain ru compatibility; new interfaces pass explicit context.",
+  "contentOwnership": "Application content and caller labels remain host-owned.",
+  "requiredScenarios": [
+    "declared locales",
+    "fallback",
+    "English-only",
+    "long messages",
+    "narrow/200%",
+    "focus/draft preservation",
+    "disposal"
+  ],
+  "conditionalScenarios": [
+    "RTL and mixed-direction text when claimed",
+    "native and manual AT before qualification"
+  ],
+  "sources": [
+    "https://www.w3.org/International/questions/qa-i18n",
+    "https://www.w3.org/International/questions/qa-html-language-declarations",
+    "https://tc39.es/ecma402/2025/"
+  ]
+}

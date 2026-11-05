@@ -1,0 +1,25 @@
+{
+  "name": "@ag-design/visual-tools",
+  "version": "2.1.2-community.1",
+  "description": "Offline AG content navigation, charts, time and planning primitives",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./styles.css": "./styles.css"
+  },
+  "files": [
+    "*.js",
+    "*.css",
+    "*.d.ts",
+    "README.md",
+    "component-specs.json"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AG — варианты форм и скруглений</title>
+    <link rel="stylesheet" href="vendor/ag-design/tokens.css" />
+    <link rel="stylesheet" href="vendor/ag-design/styles.css" />
+    <link rel="stylesheet" href="requirements-preview.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Варианты формы и согласованные скругления</h1>
+      <p>
+        Одинаковые правила ввода и доступности сохраняются при смене плотности и
+        оформления.
+      </p>
+      <div class="settings">
+        <label
+          >Оформление<select id="appearance">
+            <option value="light">Светлое</option>
+            <option value="dark">Тёмное</option>
+            <option value="light-increased">
+              Светлое с повышенным контрастом
+            </option>
+            <option value="dark-increased">
+              Тёмное с повышенным контрастом
+            </option>
+          </select></label
+        >
+        <label
+          >Плотность<select id="density">
+            <option value="compact">Компактная</option>
+            <option value="comfortable">Свободная</option>
+            <option value="touch">Для сенсорного ввода</option>
+          </select></label
+        >
+      </div>
+      <div id="examples" class="examples"></div>
+      <p id="result" role="status">Выберите пример действия.</p>
+    </main>
+    <script type="module" src="requirements-preview.js"></script>
+  </body>
+</html>

@@ -1,0 +1,913 @@
+{
+  "schemaVersion": "ag-design/creative-evidence-v1",
+  "status": "advisory-methods-installed-no-brand-measurements",
+  "checkedAt": "2026-10-26",
+  "language": "ru",
+  "agBaseline": {
+    "application": "0.20.3",
+    "sections": 28,
+    "components": 84,
+    "styles": [
+      "violet-soft-3d",
+      "midnight-glass"
+    ],
+    "styleMcpToolsAdvertised": false,
+    "policyVersion": "ag-component-requirements-v1",
+    "policyHash": "10eeb09781a44bb097ed2070a774e629b80683a773c18e3b9ca32d13d77e8348",
+    "interfaceRubric": "ag-interface-review-v2"
+  },
+  "principles": [
+    {
+      "id": "CD01",
+      "title": "Бриф до оформления",
+      "guidance": "Аудитория, задача, позиционирование, характер, содержание, устройства и ограничения; факты отдельно от гипотез.",
+      "sourceIds": [
+        "S01",
+        "S02"
+      ],
+      "check": "Есть наблюдаемый пользовательский результат.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD02",
+      "title": "Порождающая идея",
+      "guidance": "Сформулировать концепцию, связывающую предмет сайта с композицией, графикой, типом и поведением.",
+      "sourceIds": [
+        "S03",
+        "S05"
+      ],
+      "check": "Каждый выразительный приём связан с идеей и иерархией.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD03",
+      "title": "Различимые направления",
+      "guidance": "AG предлагает сначала сравнить три направления на одинаковом контенте; число является ориентиром проекта.",
+      "sourceIds": [
+        "S02",
+        "S04"
+      ],
+      "check": "Меняется концепция/ритм/графика, а не только палитра.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD04",
+      "title": "Разбор референсов",
+      "guidance": "Указать переносимый принцип, контекст, самостоятельную переработку и намеренно отклонённые решения.",
+      "sourceIds": [
+        "S04",
+        "S20",
+        "S21"
+      ],
+      "check": "Нет цельного клонирования одного сайта.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD05",
+      "title": "Связанный визуальный язык",
+      "guidance": "Определить типографику, сетку, ритм, цветовые роли, форму, материалы, образность, время и микротекст.",
+      "sourceIds": [
+        "S05",
+        "S07",
+        "S13"
+      ],
+      "check": "Система узнаётся на внутренней/mobile/статической странице.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD06",
+      "title": "Фирменный мотив с основанием",
+      "guidance": "Выразительный мотив рождается из идеи и имеет согласованные вариации; количество не является универсальным лимитом.",
+      "sourceIds": [
+        "S05",
+        "S06"
+      ],
+      "check": "Есть смысл и версия без движения.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD07",
+      "title": "Настоящее содержание",
+      "guidance": "Использовать реальные заголовки/длины/данные/изображения и нужные алфавиты.",
+      "sourceIds": [
+        "S02",
+        "S13"
+      ],
+      "check": "Плейсхолдеры не маскируют ограничения.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD08",
+      "title": "Понятные действия",
+      "guidance": "Авторская форма сохраняет распознаваемые действия, фокус, роли и навигацию.",
+      "sourceIds": [
+        "S13",
+        "S15"
+      ],
+      "check": "Основную задачу не приходится разгадывать.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD09",
+      "title": "Относительная оригинальность",
+      "guidance": "Оценивать относительно зафиксированного корпуса, категории, периода и аудитории.",
+      "sourceIds": [
+        "S01",
+        "S08"
+      ],
+      "check": "Нет заявления об уникальности среди всех сайтов.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD10",
+      "title": "Подходящие измерения",
+      "guidance": "VisAWI/UEQ применяются по руководству, с подходящими версией/языком/выборкой и неопределённостью.",
+      "sourceIds": [
+        "S09",
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "check": "Ответы участников не заменены оценкой агента.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD11",
+      "title": "Узнаваемость отдельно",
+      "guidance": "Заранее задать тест распознавания/запоминания с сопоставимыми отвлекающими вариантами и учётом известности бренда.",
+      "sourceIds": [
+        "S01",
+        "S14"
+      ],
+      "check": "AG-протокол явно предложен, а не объявлен валидированной шкалой.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD12",
+      "title": "Раздельные ворота качества",
+      "guidance": "Задачи, доступность и скорость проверять отдельно от новизны и привлекательности.",
+      "sourceIds": [
+        "S14",
+        "S15",
+        "S16"
+      ],
+      "check": "Высокий creative score не компенсирует критический провал.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD13",
+      "title": "Датированное наблюдение",
+      "guidance": "Хранить формулировку сигнала, автора, публикацию, период, проверку, примеры и контрпримеры.",
+      "sourceIds": [
+        "S17",
+        "S19",
+        "S24"
+      ],
+      "check": "Дата обхода не заменяет дату публикации.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD14",
+      "title": "Коррелированные источники",
+      "guidance": "Группировать издателей, платформы и производные пересказы.",
+      "sourceIds": [
+        "S17",
+        "S18",
+        "S19"
+      ],
+      "check": "Два материала Adobe не считаются двумя независимыми подтверждениями.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD15",
+      "title": "Доступная адаптация",
+      "guidance": "Reduced motion, читаемые подложки, reflow, клавиатура, контраст и эквиваленты значимой графики.",
+      "sourceIds": [
+        "S15",
+        "S16"
+      ],
+      "check": "Есть реальные проверки целевых вариантов.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD16",
+      "title": "Происхождение ресурсов",
+      "guidance": "Проверять условия использования шрифтов/изображений; сохранять атрибуцию; поставка с локальными ресурсами.",
+      "sourceIds": [
+        "S05",
+        "S15"
+      ],
+      "check": "Сторонние assets не включены автоматически по ссылке-референсу.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD17",
+      "title": "Версии и обновление",
+      "guidance": "Старую редакцию сохранять; недоступность переводит источник в unverified, а не подтверждает прежний тезис.",
+      "sourceIds": [
+        "S16",
+        "S24",
+        "S25"
+      ],
+      "check": "Есть checkedAt/reviewAfter/status и история.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    },
+    {
+      "id": "CD18",
+      "title": "Популярность отдельно от качества",
+      "guidance": "Награды, лайки и подборки помогают искать, но не доказывают удобство или распространённость.",
+      "sourceIds": [
+        "S14",
+        "S21",
+        "S26",
+        "S27"
+      ],
+      "check": "Творческое ревью не подменяет AG qualification.",
+      "status": "advisory",
+      "origin": "AG proposed advisory policy informed by sources; not a quoted standard"
+    }
+  ],
+  "model": {
+    "brief": [
+      "audience",
+      "primaryTask",
+      "positioning",
+      "brandTraits",
+      "content",
+      "culturalContext",
+      "constraints",
+      "unknowns"
+    ],
+    "direction": [
+      "concept",
+      "why",
+      "visualGrammar",
+      "signature",
+      "copyVoice",
+      "references",
+      "tokenRoles",
+      "motionMeaning",
+      "fallback",
+      "rejectedAlternatives"
+    ],
+    "reference": [
+      "author",
+      "url",
+      "publicationDate",
+      "checkedAt",
+      "borrowedPrinciple",
+      "originalContribution",
+      "rights",
+      "limits"
+    ],
+    "trend": [
+      "claim",
+      "publisherFamily",
+      "sourceIds",
+      "examples",
+      "period",
+      "audience",
+      "counterEvidence",
+      "status",
+      "checkedAt",
+      "reviewAfter"
+    ],
+    "review": [
+      "artifactIdentity",
+      "briefRevision",
+      "comparisonCorpus",
+      "audience",
+      "method",
+      "sample",
+      "results",
+      "uncertainty",
+      "gate",
+      "limits"
+    ]
+  },
+  "refreshPolicy": {
+    "origin": "AG operational proposal, not proven optimum",
+    "principlesDays": 365,
+    "forecastDays": 90,
+    "galleryDays": 30,
+    "onNewBrief": "Recheck relevant sources before claiming current style.",
+    "expiredBehavior": "Keep history; mark stale/unverified and retain stable rationale.",
+    "scheduledAutomationCreated": false
+  },
+  "trendSignals": [
+    {
+      "id": "T01",
+      "title": "Собственная выразительная система",
+      "sourceIds": [
+        "S19",
+        "S05"
+      ],
+      "status": "editorial-signal+established-method",
+      "limits": "Undated case demonstrates rationale, not2026 trend growth.",
+      "checkedAt": "2026-10-26",
+      "reviewAfter": "2027-01-24",
+      "prevalence": "not-measured"
+    },
+    {
+      "id": "T02",
+      "title": "Выразительная типографика",
+      "sourceIds": [
+        "S18",
+        "S19"
+      ],
+      "status": "cross-editorial-direction",
+      "limits": "Two editorial families plus one2026dated gallery entry; tags are metadata, not user benefit, prevalence or measured growth.",
+      "contemporaneousGalleryEntries": [
+        "S29"
+      ],
+      "checkedAt": "2026-10-26",
+      "reviewAfter": "2027-01-24",
+      "prevalence": "not-measured"
+    },
+    {
+      "id": "T03",
+      "title": "Тактильность, ручной след и локальный характер",
+      "sourceIds": [
+        "S17",
+        "S18"
+      ],
+      "status": "forecast-direction",
+      "limits": "One publisher family; validate cultural fit.",
+      "checkedAt": "2026-10-26",
+      "reviewAfter": "2027-01-24",
+      "prevalence": "not-measured"
+    },
+    {
+      "id": "T04",
+      "title": "Игровая сюрреальность",
+      "sourceIds": [
+        "S17"
+      ],
+      "status": "forecast-direction",
+      "limits": "Conditional expressive-campaign direction, not every-product default.",
+      "checkedAt": "2026-10-26",
+      "reviewAfter": "2027-01-24",
+      "prevalence": "not-measured"
+    },
+    {
+      "id": "T05",
+      "title": "Сканируемое содержание и направляющая навигация",
+      "sourceIds": [
+        "S19"
+      ],
+      "status": "editorial-direction",
+      "limits": "Requires content/device testing; not an argument for scroll hijacking.",
+      "checkedAt": "2026-10-26",
+      "reviewAfter": "2027-01-24",
+      "prevalence": "not-measured"
+    },
+    {
+      "id": "T06",
+      "title": "Предметный ASCII-язык",
+      "sourceIds": [
+        "S06",
+        "S19"
+      ],
+      "status": "contextual-case-not-novelty-claim",
+      "limits": "Fits a brand idea; ASCII alone is not inherently modern or unique.",
+      "checkedAt": "2026-10-26",
+      "reviewAfter": "2027-01-24",
+      "prevalence": "not-measured"
+    }
+  ],
+  "integration": {
+    "sections": [
+      "creative-direction",
+      "creative-measurement",
+      "trend-research",
+      "brand-book",
+      "design-system-governance",
+      "customer-journey-prototype",
+      "brand-interchange"
+    ],
+    "application": "0.21.0",
+    "measuredBrandResults": "not-run",
+    "figmaImport": "unknown"
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Runco & Jaeger, creativity",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/10400419.2012.650092",
+      "kind": "research",
+      "publication": "2012",
+      "access": "primary-document-excerpt",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "tandfonline.com",
+      "limitations": "Originality plus effectiveness. Original-paper excerpt also retrieved at https://disf.org/files/doc/2012runcojaegerstandarddefinition.pdf; no worldwide uniqueness test.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S02",
+      "title": "Design Council, Double Diamond",
+      "url": "https://www.designcouncil.org.uk/resources/framework-for-innovation/",
+      "kind": "method",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "designcouncil.org.uk",
+      "limitations": "Divergence/convergence and iterative people-centered design; not a visual formula.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S03",
+      "title": "IDEO.org, Design Principles",
+      "url": "https://www.designkit.org/methods/design-principles.html",
+      "kind": "method",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "designkit.org",
+      "limitations": "Derive guiding principles from findings, not arbitrary decoration.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S04",
+      "title": "IDEO.org, Mash-Ups",
+      "url": "https://www.designkit.org/methods/mash-ups.html",
+      "kind": "method",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "designkit.org",
+      "limitations": "Explore concepts from different domains; not permission to clone an identity.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S05",
+      "title": "Pentagram, Isomorphic Labs",
+      "url": "https://www.pentagram.com/work/isomorphic-labs/story",
+      "kind": "author-case-study",
+      "publication": null,
+      "access": "primary-search-excerpt",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "pentagram.com",
+      "limitations": "Domain concept connects grid/type/imagery/motion. Launch date and business effect unverified.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S06",
+      "title": "Pentagram, Oxide",
+      "url": "https://www.pentagram.com/work/oxide",
+      "kind": "author-case-study",
+      "publication": null,
+      "access": "primary-search-excerpt",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "pentagram.com",
+      "limitations": "CLI/TUI/ASCII fit a computing identity; not a generic technology-site prescription.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S07",
+      "title": "Google Design, DIA interview",
+      "url": "https://design.google/library/design-notes-riffing-on-design",
+      "kind": "creator-interview",
+      "publication": null,
+      "access": "primary-search-excerpt",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "design.google",
+      "limitations": "Type and motion can be an identity system; practitioner's account, not causal evidence.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S08",
+      "title": "Amabile, Componential Theory of Creativity",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/12-085_eb9ecda0-ec0a-4a32-8747-884303f8b4dd.pdf",
+      "kind": "research",
+      "publication": "2012",
+      "access": "primary-document-excerpt",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "hbs.edu",
+      "limitations": "Domain-experienced judges independently compare creative work; AG rubric below is not a validated CAT reproduction.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S09",
+      "title": "Thielsch, VisAWI",
+      "url": "https://meinald.de/forschung/visawi/",
+      "kind": "instrument-author-resource",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "meinald.de",
+      "limitations": "Four aesthetic facets and instrument/manual links; exact version, language and attribution matter.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S10",
+      "title": "Perrig et al., VisAWI-pos",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/10447318.2023.2258634",
+      "kind": "research",
+      "publication": "2024 issue; DOI2023",
+      "access": "primary-search-excerpt",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "tandfonline.com",
+      "limitations": "Positive-item validation and language/factor caveats, including craftsmanship; do not mix instruments.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S11",
+      "title": "UEQ",
+      "url": "https://www.ueq-online.org/",
+      "kind": "instrument-author-resource",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "ueq-online.org",
+      "limitations": "Pragmatic/hedonic UX, including novelty and stimulation; agents are not survey participants.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S12",
+      "title": "UEQ Handbook",
+      "url": "https://www.ueq-online.org/Material/Handbook.pdf",
+      "kind": "instrument-manual",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "ueq-online.org",
+      "limitations": "Prescribed questionnaire, coding and interpretation; no universal sample-size/pass threshold inferred.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S13",
+      "title": "NN/g, Visual Hierarchy",
+      "url": "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/",
+      "kind": "practice-guidance",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "nngroup.com",
+      "limitations": "Visual priority aids comprehension; not a uniqueness score.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S14",
+      "title": "NN/g, Aesthetic-Usability Effect",
+      "url": "https://www.nngroup.com/articles/aesthetic-usability-effect/",
+      "kind": "practice-guidance",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "nngroup.com",
+      "limitations": "Perceived usability and successful behavior must be measured separately.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S15",
+      "title": "WCAG2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "kind": "standard",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "w3.org",
+      "limitations": "Accessibility requirements; checklist/screenshot/APCA alone is not conformance.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S16",
+      "title": "Google, Web Vitals",
+      "url": "https://web.dev/articles/vitals",
+      "kind": "engineering-guidance",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "web.dev",
+      "limitations": "Field p75: LCP<=2.5s, INP<=200ms, CLS<=0.1; segment mobile/desktop and separate lab.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-10-26",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S17",
+      "title": "Adobe, Creative Trends2026",
+      "url": "https://business.adobe.com/uk/resources/creative-trends-report.html",
+      "kind": "vendor-forecast",
+      "publication": "forecast2026; publication unknown",
+      "access": "primary-search-excerpt",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "adobe",
+      "limitations": "Sensory, connection, playful surrealism and local expression; editorial forecast, not prevalence.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-01-24",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S18",
+      "title": "Adobe Express, Design Trends2026",
+      "url": "https://www.adobe.com/express/learn/blog/design-trends-2026",
+      "kind": "vendor-editorial",
+      "publication": "2025-12-12",
+      "access": "primary-search-excerpt",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "adobe",
+      "limitations": "Expressive type and analog/editorial expression; same publisher family asS17.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-01-24",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S19",
+      "title": "Webflow, Web Design Trends2026",
+      "url": "https://webflow.com/blog/web-design-trends-2026",
+      "kind": "vendor-editorial",
+      "publication": "updated2026-01-08; publication unknown",
+      "access": "primary-search-excerpt",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "webflow.com",
+      "limitations": "Ownable systems/type/guided scrolling; most examples built in Webflow, selection bias explicit.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-01-24",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S20",
+      "title": "Siteinspire",
+      "url": "https://www.siteinspire.com/",
+      "kind": "curation",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "siteinspire.com",
+      "limitations": "Curated composition references; inclusion does not qualify UX/accessibility.",
+      "assetsIncluded": false,
+      "reviewAfter": "2026-11-25",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S21",
+      "title": "Landbook",
+      "url": "https://land-book.com/",
+      "kind": "curation",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "land-book.com",
+      "limitations": "Industry/style/type/typeface filters; templates, promoted items and authored work must be separated.",
+      "assetsIncluded": false,
+      "reviewAfter": "2026-11-25",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S22",
+      "title": "Recent",
+      "url": "https://recent.design/",
+      "kind": "curation",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "recent.design",
+      "limitations": "Web/visual categories. Godly URL redirected here; ownership/continuity not inferred.",
+      "assetsIncluded": false,
+      "reviewAfter": "2026-11-25",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S23",
+      "title": "One Page Love",
+      "url": "https://onepagelove.com/",
+      "kind": "curation",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "onepagelove.com",
+      "limitations": "Landing-page/section examples; one-page/template selection bias.",
+      "assetsIncluded": false,
+      "reviewAfter": "2026-11-25",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S24",
+      "title": "Typewolf",
+      "url": "https://www.typewolf.com/",
+      "kind": "typography-curation",
+      "publication": null,
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "typewolf.com",
+      "limitations": "Useful font pairs; retrieved homepage latest entries datedDecember2025, current2026 freshness unverified.",
+      "assetsIncluded": false,
+      "reviewAfter": "2026-11-25",
+      "freshness": "historical material; current2026 edition/feed not verified"
+    },
+    {
+      "id": "S25",
+      "title": "Monotype Type Trends",
+      "url": "https://www.monotype.com/type-trends",
+      "kind": "vendor-typography-editorial",
+      "publication": "opened edition2025",
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "monotype.com",
+      "limitations": "Opened page is Type Trends2025:Re:Vision; not a verified2026 report.",
+      "assetsIncluded": false,
+      "reviewAfter": "2027-01-24",
+      "freshness": "historical material; current2026 edition/feed not verified"
+    },
+    {
+      "id": "S26",
+      "title": "CSSDA, monolayer",
+      "url": "https://cssdesignawards.com/sites/monolayer/49786/",
+      "kind": "jury-gallery",
+      "publication": "2026-07-18",
+      "access": "primary-search-excerpt",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "cssdesignawards.com",
+      "limitations": "Current-year UI/UX/Innovation jury example; scores are not controlled user-task evidence.",
+      "assetsIncluded": false,
+      "reviewAfter": "2026-11-25",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S27",
+      "title": "Awwwards gallery",
+      "url": "https://www.awwwards.com/websites/sites_of_the_day/",
+      "kind": "jury-gallery",
+      "publication": null,
+      "access": "access-limited",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "awwwards.com",
+      "limitations": "Gallery/evaluation timed out. Archived https://www.awwwards.com/sites/self-aware supports historical dimensions only; current weights/feed not verified.",
+      "assetsIncluded": false,
+      "reviewAfter": "2026-10-26",
+      "freshness": "unverified-access; recheck before use"
+    },
+    {
+      "id": "S28",
+      "title": "CSSDA, PREMEDIA",
+      "url": "https://cssdesignawards.com/sites/premedia/50352/",
+      "kind": "jury-gallery",
+      "publication": "2026-10-12",
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "cssdesignawards.com",
+      "limitations": "Recent entry tagged fullscreen/minimal/SVG; site performance100 claims are author statements, not independently measured here.",
+      "assetsIncluded": false,
+      "reviewAfter": "2026-11-25",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    },
+    {
+      "id": "S29",
+      "title": "CSSDA, Profile Behaviour",
+      "url": "https://cssdesignawards.com/sites/profile-behaviour/50057/",
+      "kind": "jury-gallery",
+      "publication": "2026-09-01",
+      "access": "opened",
+      "checkedAt": "2026-10-26",
+      "publisherFamily": "cssdesignawards.com",
+      "limitations": "Recent entry tagged animated/minimal/typographic; metadata supports a dated example, not independently tested live UI or trend growth.",
+      "assetsIncluded": false,
+      "reviewAfter": "2026-11-25",
+      "freshness": "checked-content; publication may be unknown; not proof of current adoption"
+    }
+  ],
+  "measurementMethods": [
+    {
+      "id": "CM01",
+      "name": "Относительная оригинальность",
+      "kind": "AG-advisory",
+      "sourceIds": [
+        "S01",
+        "S08"
+      ],
+      "protocol": "Independent domain-experienced comparisons against pinned corpus, same brief/content; preserve reasons and disagreement.",
+      "output": "Anchored1–5 ratings, N, median/spread; not global uniqueness or reproduced validated CAT.",
+      "results": "not-run"
+    },
+    {
+      "id": "CM02",
+      "name": "Соответствие брифу",
+      "kind": "AG-advisory",
+      "sourceIds": [
+        "S02",
+        "S03"
+      ],
+      "protocol": "Prespecify desired brand attributes and assess concept/form with target audience.",
+      "output": "Attribute responses and explanation; not a validated new psychometric scale.",
+      "results": "not-run"
+    },
+    {
+      "id": "CM03",
+      "name": "Воспринимаемая эстетика",
+      "kind": "published-instrument",
+      "sourceIds": [
+        "S09",
+        "S10"
+      ],
+      "protocol": "Choose exact VisAWI version and suitable language; follow manual, item/scoring/attribution requirements.",
+      "output": "Instrument scores and uncertainty; aesthetics does not prove uniqueness.",
+      "results": "not-run"
+    },
+    {
+      "id": "CM04",
+      "name": "Пользовательский опыт",
+      "kind": "published-instrument",
+      "sourceIds": [
+        "S11",
+        "S12"
+      ],
+      "protocol": "Exact UEQ version/language, real participants, prescribed coding and interpretation.",
+      "output": "Pragmatic/hedonic dimensions including novelty/stimulation; agents are not participants.",
+      "results": "not-run"
+    },
+    {
+      "id": "CM05",
+      "name": "Узнаваемость/память",
+      "kind": "AG-proposed-experiment",
+      "sourceIds": [
+        "S01",
+        "S14"
+      ],
+      "protocol": "Prespecify exposure/delay/distractors/order and known-brand controls; compare equivalent content.",
+      "output": "Correct recall/recognition with raw N, comparison and uncertainty; uncalibrated protocol.",
+      "results": "not-run"
+    },
+    {
+      "id": "CM06",
+      "name": "Выполнение задачи",
+      "kind": "scenario-evidence",
+      "sourceIds": [
+        "S02",
+        "S14"
+      ],
+      "protocol": "Equivalent realistic tasks/content, counterbalance order, record failures and reasons.",
+      "output": "Success, errors, time; no universal sample size or causal conversion claim.",
+      "results": "not-run"
+    },
+    {
+      "id": "CM07",
+      "name": "Доступность",
+      "kind": "standards-and-manual-evidence",
+      "sourceIds": [
+        "S15"
+      ],
+      "protocol": "Applicable criteria and actual keyboard/focus/reflow/motion/AT scenarios; preserve unknowns.",
+      "output": "Criterion evidence and scope; not an aesthetic average.",
+      "results": "not-run"
+    },
+    {
+      "id": "CM08",
+      "name": "Производительность",
+      "kind": "engineering-evidence",
+      "sourceIds": [
+        "S16"
+      ],
+      "protocol": "Fieldp75 segmented mobile/desktop; separate lab and limited samples.",
+      "output": "LCP<=2.5s,INP<=200ms,CLS<=0.1 current guidance; no measurement claimed here.",
+      "results": "not-run"
+    }
+  ]
+}

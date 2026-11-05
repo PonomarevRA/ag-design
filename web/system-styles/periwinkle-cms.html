@@ -1,0 +1,214 @@
+<!doctype html>
+<html data-ag-select-indicators data-example="cms" lang="ru" data-style="periwinkle-cms">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Periwinkle CMS · стиль системы</title>
+    <link rel="stylesheet" href="vendor/cms/editor.css" />
+
+    <link rel="stylesheet" href="cms-example.css" />
+    <script type="module" src="cms-example.js"></script>
+    <link rel="stylesheet" href="./vendor/lab/components.css?v=form-review-1" />
+    <link rel="stylesheet" href="./component-lab.css?v=form-review-1" />
+    <link rel="stylesheet" href="../locale-settings.css" />
+    <script type="module" src="./vendor/lab/components.js?v=form-review-1"></script>
+    <link rel="stylesheet" href="./application-layout.css" />
+    <link rel="stylesheet" href="./demo-system.css?v=demo-systems-4" />
+  </head>
+  <body>
+    <a class="skip-link" href="#cms-main">К содержимому</a>
+    <div class="cms-shell">
+      <aside class="cms-sidebar">
+        <a class="cms-brand" href="#cms-main"
+          ><span aria-hidden="true">o</span>periwinkle</a
+        >
+        <p class="nav-caption">РЕДАКЦИОННАЯ СТУДИЯ</p>
+        <nav aria-label="Разделы примера">
+          <a href="#cms-content" aria-current="location"
+            ><span aria-hidden="true">▦</span>Материалы</a
+          ><a href="#cms-media"><span aria-hidden="true">▧</span>Медиа</a
+          ><a href="#cms-settings"
+            ><span aria-hidden="true">⚙</span>Параметры</a
+          >
+        </nav>
+        <div class="sidebar-note">
+          <p>От идеи<br />до готовой истории.</p>
+          <a href="/#styles">Все стили ↗</a><span>Локальный пример CMS</span>
+        </div>
+      </aside>
+      <div class="cms-workspace">
+        <header class="cms-header">
+          <a class="cms-top-brand" href="#cms-main"
+            >periwinkle<span> / studio</span></a
+          >
+          <nav aria-label="Верхняя навигация">
+            <a href="#cms-content">Материалы</a><a href="#cms-media">Медиа</a
+            ><a href="#cms-settings">Параметры</a>
+          </nav>
+          <a class="all-styles" href="/#styles">Все стили ↗</a>
+        </header>
+        <main id="cms-main">
+          <section class="cms-hero">
+            <div class="hero-copy">
+              <p class="eyebrow">PERIWINKLE CMS / SYSTEM STYLE 09</p>
+              <h1>Материалы студии</h1>
+              <p class="hero-description">
+                Создавайте, редактируйте и собирайте ваши истории в одном
+                пространстве.
+              </p>
+            </div>
+            <div class="cms-art" aria-hidden="true">
+              <div class="art-page">
+                <span class="art-top"></span>
+                <div class="art-page-grid">
+                  <i class="art-image"></i>
+                  <div class="art-lines"><i></i><i></i><i></i></div>
+                  <div class="art-type">Aa</div>
+                  <div class="art-lines"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="art-folder"></div>
+              <div class="art-card"><i></i><i></i><i></i></div>
+              <div class="art-orbit"></div>
+              <div class="art-cross">+</div>
+              <div class="art-spark">✦</div>
+            </div>
+          </section>
+          <section class="cms-metrics" aria-label="Сводка материалов">
+            <div>
+              <span class="metric-symbol" aria-hidden="true">▤</span>
+              <p>Все материалы<strong id="cms-total">3</strong></p>
+            </div>
+            <div>
+              <span class="metric-symbol" aria-hidden="true">✓</span>
+              <p>Опубликовано в демо<strong id="cms-published">1</strong></p>
+            </div>
+            <div>
+              <span class="metric-symbol" aria-hidden="true">Aa</span>
+              <p>Черновики<strong id="cms-drafts">2</strong></p>
+            </div>
+          </section>
+          <div class="cms-work-grid">
+            <section
+              class="cms-editor-panel panel"
+              aria-labelledby="cms-selected-title"
+            >
+              <div class="editor-heading">
+                <div>
+                  <p class="eyebrow">РЕДАКТОР МАТЕРИАЛА</p>
+                  <h2 id="cms-selected-title" tabindex="-1">
+                    Хороший контент начинается с идеи
+                  </h2>
+                </div>
+                <a class="collection-jump" href="#cms-content"
+                  >К списку материалов</a
+                >
+              </div>
+              <div class="cms-fields" id="cms-settings">
+                <label class="title-field"
+                  >Заголовок<input id="cms-title" maxlength="120" required
+                /></label>
+                <details class="cms-properties">
+                  <summary>Свойства материала</summary>
+                  <div class="cms-properties-grid">
+                    <label
+                      >Формат<select id="cms-category">
+                        <option>Статья</option>
+                        <option>Страница</option>
+                        <option>Новость</option>
+                      </select></label
+                    ><label
+                      >Статус в примере<select id="cms-status">
+                        <option value="draft">Черновик</option>
+                        <option value="published">Опубликовано в демо</option>
+                      </select></label
+                    ><label class="excerpt-field"
+                      >Краткое описание<input id="cms-excerpt" maxlength="220"
+                    /></label>
+                  </div>
+                </details>
+              </div>
+              <div class="editor-context">
+                <span>Текст и предпросмотр</span
+                ><span id="cms-save-state">Локальный материал</span>
+              </div>
+              <div id="cms-editor"></div>
+              <p class="local-edit-note">
+                Черновики и материалы сохраняются в этом браузере.
+                Статус не публикует материал в сеть.
+              </p>
+            </section>
+            <section class="cms-list panel" id="cms-content" tabindex="-1">
+              <div class="section-heading">
+                <h2>Материалы</h2>
+                <a class="editor-jump" href="#cms-selected-title"
+                  >К редактору</a
+                >
+                <button class="primary" type="button" id="cms-create">
+                  <span aria-hidden="true">＋</span>Новый материал
+                </button>
+              </div>
+              <div class="list-controls">
+                <label
+                  >Поиск<input
+                    type="search"
+                    id="cms-search"
+                    placeholder="Название или формат"
+                    maxlength="120" /></label
+                ><label
+                  >Статус<select id="cms-filter">
+                    <option value="all">Все материалы</option>
+                    <option value="draft">Черновики</option>
+                    <option value="published">Опубликовано в демо</option>
+                  </select></label
+                >
+              </div>
+              <div id="cms-items"></div>
+              <p id="cms-empty" hidden>Материалы не найдены.</p>
+              <p class="list-count" id="cms-list-count"></p>
+            </section>
+          </div>
+          <section class="cms-media" id="cms-media">
+            <div>
+              <p class="eyebrow">ВИЗУАЛЬНЫЕ МОДУЛИ</p>
+              <h2>У каждого материала — свой характер</h2>
+              <p>Плоская геометрия поддерживает содержание.</p>
+            </div>
+            <div
+              class="media-tile media-cover"
+              role="img"
+              aria-label="Лавандовая обложка с геометрическими плоскостями"
+            >
+              <span></span>
+            </div>
+            <div
+              class="media-tile media-type"
+              aria-label="Типографический модуль"
+            >
+              Aa
+            </div>
+            <div
+              class="media-tile media-shape"
+              role="img"
+              aria-label="Голубая композиция из кругов и прямоугольников"
+            >
+              <span></span>
+            </div>
+          </section>
+
+          <section
+            id="ag-components"
+            data-ag-component-lab
+            aria-label="Компоненты AG Design в выбранном стиле"
+          ></section>
+        </main>
+        <footer class="cms-footer">
+          <span
+            >Periwinkle CMS · синтетические материалы и локальные действия</span
+          ><a href="orchid-studio.html">Orchid Studio ↗</a>
+        </footer>
+      </div>
+    </div>
+    <div class="sr-only" role="status" id="cms-announcement"></div>
+  </body>
+</html>

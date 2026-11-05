@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "ag-design/assistant-platforms-v1",
+  "checkedAt": "2026-10-31",
+  "reviewPolicy": {
+    "beforeRelease": true,
+    "onChanges": [
+      "OS/SDK/browser/assistant release",
+      "permission or discovery change",
+      "integration failure"
+    ],
+    "previewReviewDays": 90
+  },
+  "runtimeAdaptersIncluded": false,
+  "evidenceLevels": [
+    "researched",
+    "implemented",
+    "discovered",
+    "invoked",
+    "task-verified"
+  ],
+  "platforms": [
+    {
+      "id": "apple",
+      "mechanism": "App Intents / App Entities / matching App Schemas",
+      "status": "Target OS/SDK and assistant availability must be verified",
+      "chapterId": "apple-app-intents",
+      "sources": [
+        "https://developer.apple.com/videos/play/wwdc2026/240/"
+      ]
+    },
+    {
+      "id": "windows",
+      "mechanism": "App Actions / URI or COM IActionProvider",
+      "status": "Package identity and MSIX registration required; verify target Windows/SDK",
+      "chapterId": "windows-app-actions",
+      "sources": [
+        "https://learn.microsoft.com/en-us/windows/ai/app-actions/"
+      ]
+    },
+    {
+      "id": "android",
+      "mechanism": "AppFunctions",
+      "status": "Experimental preview; Android16+; Gemini private-preview access separately gated",
+      "chapterId": "android-app-functions",
+      "sources": [
+        "https://developer.android.com/ai/appfunctions",
+        "https://developer.android.com/ai/appfunctions/quality-guidelines"
+      ]
+    },
+    {
+      "id": "linux",
+      "mechanism": "D-Bus application interfaces / desktop actions / optional MCP adapter",
+      "status": "Environment-specific; not a universal assistant registry",
+      "chapterId": "linux-assistant-interfaces",
+      "sources": [
+        "https://specifications.freedesktop.org/desktop-entry/latest/dbus.html",
+        "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture"
+      ]
+    },
+    {
+      "id": "web",
+      "mechanism": "WebMCP",
+      "status": "Draft Community Group Report, not W3C Standard; Chrome origin trial / local development flag",
+      "chapterId": "webmcp-design",
+      "sources": [
+        "https://developer.chrome.com/docs/ai/webmcp",
+        "https://webmachinelearning.github.io/webmcp/"
+      ]
+    },
+    {
+      "id": "mcp",
+      "mechanism": "MCP local or remote application adapter",
+      "status": "Client/server protocol, not OS action registration or page WebMCP",
+      "chapterId": "assistant-action-contract",
+      "sources": [
+        "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture"
+      ]
+    }
+  ]
+}

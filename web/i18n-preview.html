@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AG localization scenarios</title>
+    <link rel="stylesheet" href="vendor/ag-design/tokens.css" />
+    <link rel="stylesheet" href="vendor/ag-design/styles.css" />
+    <link rel="stylesheet" href="i18n-preview.css" />
+    <script type="module" src="i18n-preview.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Localization scenarios</h1>
+      <label
+        >Scenario<select id="locale">
+          <option value="en">English</option>
+          <option value="ru">Русский</option>
+          <option value="en-XA">Long labels</option>
+          <option value="ar">RTL layout fixture</option>
+        </select></label
+      >
+      <p id="scenario-note">
+        Synthetic data. The RTL fixture tests layout, not a complete Arabic
+        translation.
+      </p>
+      <div id="history"></div>
+      <div id="editor"></div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,1211 @@
+{
+  "schemaVersion": "ag-design/patterns-v1",
+  "items": [
+    {
+      "id": "component-system-routing",
+      "title": "Выбор компонентов: Carbon / Fluent2 / Spectrum",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Read current English agent briefs via design_rule_section: forms for textarea/select/combobox/checkbox/switch; actions for button emphasis and toolbar/menu; navigation for tabs/tree; layers for dialogs; data for table/selection; feedback for toast/messagebar/empty/skeleton/progress; icons for tooltip/help. Use design_rule_sections with RU/EN purpose queries. Each enterprise-* rule declares when/avoid/checks and real AG candidate IDs. Source conventions differ; do not assume vendor capabilities exist in AG. Offline: component-system-guidance.json. For Promise UI search async-boundary and read async-components; synchronous components need no boundary. For palette selection search palette-builder and read color-palettes; use design_palette without overriding host roles. For product/component cards and catalog search, read catalog-item-presentation and catalog-discovery; preserve the host Pinterest layout. For human-first interfaces usable by agents, read human-first-agent-interfaces and agent-interface-verification; keep native semantics and verify actual outcomes without changing host layout. For every web interface, read web-security-by-design, safe-web-content and secure-web-actions: server authorization, untrusted output and agent tools need explicit trust boundaries. For shared component data, event bus, request router or hot gestures read scoped-runtime-coordination: keep local state and explicit host authority; do not duplicate API calls or query caches. For cinematic/photo framing, discover all14profiles through design_layout_grids and read each grid-<type> chapter. For icons read grid-icon-generation and inspect grid-icon-draft; preserve recognizable host family and mandatory policies. For reusable screen structure, read atomic-design-composition: parts and whole, data fixtures and contextual impact review; preserve purpose-based names and current gates.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/text-input/guidelines",
+        "https://fluent2.microsoft.design/components/web/react/core/field/usage/",
+        "https://spectrum.adobe.com/web/rsp/components/text-area"
+      ],
+      "evaluation": "Source-backed AG interpretation; caller checks and native/AT qualification remain separate."
+    },
+    {
+      "id": "native-assistant-routing",
+      "title": "Ассистенты: платформенные действия и контракты компонентов",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Read assistant-action-contract and native-assistant-overview, then apple-app-intents/windows-app-actions/android-app-functions/linux-assistant-interfaces as applicable, assistant-components and assistant-integration-testing. Share host commands and stable entity IDs across UI and adapters. Keep platform registration, discovery and actual task evidence separate; verify current OS/SDK/browser/assistant availability. Offline: native-assistants.en.md and assistant-platforms.json. No native adapters are included by this guidance.",
+      "sources": [
+        "https://developer.apple.com/videos/play/wwdc2026/240/",
+        "https://learn.microsoft.com/en-us/windows/ai/app-actions/",
+        "https://developer.android.com/ai/appfunctions",
+        "https://specifications.freedesktop.org/desktop-entry/latest/dbus.html"
+      ],
+      "evaluation": "Dated AG interpretation of primary sources; native/assistant/AT qualification remains unknown until target tests.",
+      "queryTerms": [
+        "app intents",
+        "appintents",
+        "app actions",
+        "appfunctions",
+        "native assistant",
+        "ассистент",
+        "siri",
+        "gemini",
+        "webmcp",
+        "d-bus"
+      ]
+    },
+    {
+      "id": "gitlab-list-workflows",
+      "title": "GitLab/Pajamas: списки, сортировка и контекстные настройки",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "For GitLab-like work lists, compact view settings, sorting, listbox/disclosure/popover choices read gitlab-pajamas-patterns, list-view-controls and nonmodal-popovers. Source-pinned12pattern mapping: @ag-design/rules/gitlab-patterns.json. Reuse existing AG primitives; only popover and sorting-control are new. Host owns data/routes/history/authority and palette; preserve masonry and current security/color/accessibility gates.",
+      "sources": [
+        "https://design.gitlab.com/components/sorting/",
+        "https://design.gitlab.com/components/popover/"
+      ],
+      "evaluation": "Pinned source analysis and original AG implementation; caller evidence is not upstream AT qualification.",
+      "queryTerms": [
+        "gitlab",
+        "pajamas"
+      ]
+    },
+    {
+      "id": "form-row-layout-routing",
+      "title": "Поля формы в одной строке: выравнивание и перенос",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "For inline forms, search/filter bars and settings read form-row-layout. Declare semantic rows; shared label/control/feedback tracks; comparable density; status below; responsive container stacking; hidden/closed disclosure. Inspect numeric rectangles with @ag-design/rules/form-row before images. Missing evidence is unknown. Preserve host masonry, DOM/keyboard order and current security/color/accessibility gates. Use auditInterface(root).formRows from @ag-design/components/audit for declared field groups; measure captions, controls and hints, preserve unknown and report current-policy requirementObservations.",
+      "sources": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines",
+        "https://www.w3.org/WAI/tutorials/forms/grouping/",
+        "https://designsystem.digital.gov/components/form/"
+      ],
+      "evaluation": "Source-backed AG interpretation; numeric geometry is caller evidence, not AT certification.",
+      "queryTerms": [
+        "выравнивание полей",
+        "подписи",
+        "подсказки",
+        "form alignment",
+        "label alignment",
+        "hint alignment",
+        "inline form"
+      ]
+    },
+    {
+      "id": "project-fit",
+      "title": "Подбор под проект",
+      "stages": [
+        "plan",
+        "layout",
+        "component"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Начните со сценария, платформы и существующей палитры. Сравните реальные элементы, назначение, ограничения и тестовые свидетельства; не выбирайте стиль по моде. Для PPTX/XLSX изучите artifact-format-selection и форматные главы; агенты по умолчанию получают компактные English instructions, пользователь выбираетRU/EN.",
+      "sources": [
+        "https://m3.material.io/foundations/",
+        "https://www.artlebedev.ru/backstage/navigation-rules/"
+      ],
+      "evaluation": "AG policy interpretation; manual review, not source certification"
+    },
+    {
+      "id": "offscreen-render-window",
+      "title": "Render-window для длинных лент и тяжёлых превью",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Если экран содержит длинную ленту, галерею или тяжёлые превью, рассмотрите createRenderWindow (render-window, core0.9.0+). Прочитайте компонент и раздел performance. Фабрика создаёт owned subtree; snapshot хранит ограниченное состояние без DOM, dispose освобождает RAF/таймеры/подписки/media. Защитите высоту, фокус, drag и несохранённый ввод. Для маленького статичного блока, основного текста, печати/SEO/browser Find предпочтителен eager DOM или отдельно проверенный режим. Для больших данных нужна отдельная пагинация. Не оборачивайте уже windowed элементы повторно; счётчики Node не доказывают CPU/RSS.",
+      "sources": [
+        "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API",
+        "https://web.dev/articles/content-visibility"
+      ],
+      "evaluation": "Conditional AG engineering recommendation; browser API facts and local lifecycle policy are separate. Manual review, no performance guarantee."
+    },
+    {
+      "id": "native-toolbar",
+      "title": "Контекстная шапка окна",
+      "stages": [
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "При поддержке ОС перенесите частые действия в настоящую шапку окна. После системных кнопок — назад/вперёд и управление панелями. Название раздела или открытой сущности заменяет статичное имя приложения в рабочем заголовке. Сохраняйте отдельную идентичность приложения и browser fallback. Перед заменой подписи откройте раздел icons: icon-only — для узнаваемой команды с ясным объектом; icon+text/text — для неоднозначных действий и значимых разрешений; редкие команды — в подписанный overflow. Quiet, локализованное имя, tooltip/focus/touch и hit target сохраняются. Не скрывайте подписи автоматически ради плотности. Сначала прочитайте navigation / window-command-placement: scope важнее частоты. Копирование кода, локальный поиск и управление графиком остаются в компоненте. Переносите только однозначные команды окна/документа; проверяйте поддержку каждой команды и её состояния. После переноса всех действий удалите пустую дублирующую HTML-полосу; при сбое/reload верните fallback. Системное меню и toolbar могут иметь общую команду; это не требует второго HTML-ряда.",
+      "sources": [
+        "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+      ],
+      "evaluation": "AG policy interpretation; manual review, not source certification"
+    },
+    {
+      "id": "resizable-panels",
+      "title": "Изменяемая ширина панелей",
+      "stages": [
+        "layout",
+        "component",
+        "review"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Левая и правая панели изменяются за внутреннюю границу: pointer, стрелки клавиатуры, Home/End. Сохраняйте ширину, ограничивайте минимум/максимум и место контента; схлопывание не переносит панель на другую сторону.",
+      "sources": [
+        "https://m3.material.io/foundations/",
+        "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+      ],
+      "evaluation": "AG policy interpretation; manual review, not source certification"
+    },
+    {
+      "id": "predictable-navigation",
+      "title": "Понятная навигация и обратная связь",
+      "stages": [
+        "plan",
+        "layout",
+        "review"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Положение управляющих элементов стабильно. Показывайте текущий раздел, контекст, состояния загрузки/ошибки/пустоты. Названия действий объясняют результат; цвет не заменяет текст.",
+      "sources": [
+        "https://www.artlebedev.ru/backstage/navigation-rules/",
+        "https://www.nngroup.com/articles/ten-usability-heuristics/"
+      ],
+      "evaluation": "AG synthesis: Lebedev supports structure/location/predictability; NN/g supports feedback. Manual review, no certification."
+    },
+    {
+      "id": "profile-contrast",
+      "title": "Цветовые профили и читаемость",
+      "stages": [
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Каждый элемент использует семантические токены. Проверьте light/dark, типографику и реальные пары цветов. APCA имеет вес 70%, WCAG2 30% в рекомендательном балле; провал WCAG AA не усредняется до успеха.",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+        "https://github.com/Myndex/SAPC-APCA/blob/master/documentation/minimum_compliance.md"
+      ],
+      "evaluation": "AG policy interpretation; manual review, not source certification"
+    },
+    {
+      "id": "qualification",
+      "title": "Сначала дизайн-система, затем продукт",
+      "stages": [
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Новый элемент регистрируется как черновик. Сначала функциональные, клавиатурные, профильные и нагрузочные проверки с очисткой в ag-design; затем интеграция и повторные проверки в продукте для той же версии. Сохраните назначение, причины выбора, ограничения и факты использования.",
+      "sources": [
+        "https://m3.material.io/foundations/"
+      ],
+      "evaluation": "AG policy interpretation; manual review, not source certification"
+    },
+    {
+      "id": "spacing-grouping",
+      "title": "Отступы и смысловые группы",
+      "stages": [
+        "layout",
+        "component",
+        "review"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Близость показывает смысловые связи. Внутренний интервал меньше межгруппового. AG отправная точка 8 px внутри, 16–24 между; сначала пробел/ось, затем обоснованный разделитель.",
+      "sources": [
+        "https://developer.apple.com/design/human-interface-guidelines/layout"
+      ],
+      "evaluation": "AG policy interpretation; cited source guidance and local defaults are separate; manual review required"
+    },
+    {
+      "id": "layered-surfaces",
+      "title": "Слои и поверхности",
+      "stages": [
+        "layout",
+        "component",
+        "review"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Поверхности отражают контекст и порядок взаимодействия. AG: именованные слои content/sticky/popover/modal; проверяйте clipping, focus и наложения. Не лечите конфликт случайным ростом z-index.",
+      "sources": [
+        "https://developer.apple.com/design/human-interface-guidelines/materials"
+      ],
+      "evaluation": "AG policy interpretation; cited source guidance and local defaults are separate; manual review required"
+    },
+    {
+      "id": "card-content",
+      "title": "Карточки для сканирования",
+      "stages": [
+        "layout",
+        "component",
+        "review"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Карточка помогает сканировать сущность и открыть детали. AG task: ключ/статус → название → следующий шаг/блокировка → роль/языки. Code: имя/тип/место и реальные связи. Проверяйте длинный текст.",
+      "sources": [
+        "https://developer.apple.com/design/human-interface-guidelines/layout"
+      ],
+      "evaluation": "AG policy interpretation; cited source guidance and local defaults are separate; manual review required"
+    },
+    {
+      "id": "human-centered-cycle",
+      "title": "Сценарий, прототип, обратная связь",
+      "stages": [
+        "layout",
+        "component",
+        "review"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Начинать с задачи, контекста и проверяемого результата. Агентская оценка не заменяет пользовательское исследование. Сохраните условия, участников, затруднения и изменения после обратной связи.",
+      "sources": [
+        "https://www.designkit.org/methods.html"
+      ],
+      "evaluation": "AG policy interpretation; cited source guidance and local defaults are separate; manual review required"
+    },
+    {
+      "id": "evidence-review",
+      "title": "Оценка с покрытием и доказательствами",
+      "stages": [
+        "layout",
+        "component",
+        "review"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Эвристики, сценарии и измерения дополняют друг друга. Unknown отдельно от fail/pass; N/A требует применимой причины. Показывайте coverage и critical gates рядом со score. Для презентации/Excel отдельно проверяйте данные, обоснованность выводов, реальный render/accessibility и редактирование/refresh; artifact-validation не заменяет target Office test.",
+      "sources": [
+        "https://www.w3.org/WAI/test-evaluate/preliminary/"
+      ],
+      "evaluation": "AG policy interpretation; cited source guidance and local defaults are separate; manual review required"
+    },
+    {
+      "id": "agent-requests",
+      "title": "Понятный журнал запросов агента",
+      "stages": [
+        "layout",
+        "component",
+        "review"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Человек понимает запрос, ответ, состояние и границы полномочий. Лог связывает агента/задачу/request/response, отличает предложение, ошибку и выполнение. Полномочия человека и автоматизации показаны явно.",
+      "sources": [
+        "https://learn.microsoft.com/ru-ru/agents/design-guidelines/human-centered-design"
+      ],
+      "evaluation": "AG policy interpretation; cited source guidance and local defaults are separate; manual review required"
+    },
+    {
+      "id": "async-component-lifecycle",
+      "title": "Async component ownership / асинхронная граница",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Use async-boundary/createAsyncBoundary for Promise-owned UI (core0.23.0+), not every synchronous component. Read its typed contract. Give each object/user/tenant an explicit key; load({signal,key}) returns detached same-document {element,dispose} or null. Consume signal; use a generation fence; clean partial resources before return and owned resources after return. Retain previous DOM only for same-key refresh; hosts protect dirty input. Separate loading/refreshing/empty/error/timeout/cancelled, polite status outside busy content, generic localized errors, explicit safe retry. Read .state before screenshots. Compose inside render-window’s sync factory; eviction disposes/aborts. Host owns cache, mutations, backoff, SSR and authorization. Verify out-of-order results, ignored abort, timeout, late cleanup, reentrancy, focus/locale and eviction. Defaults are configurable AG choices; native/AT and production performance remain unqualified. Read design_rule_section(section_id=\"async-components\").",
+      "sources": [
+        "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal",
+        "https://react.dev/reference/react/useEffect",
+        "https://tanstack.com/query/latest/docs/framework/react/guides/query-cancellation",
+        "https://tanstack.com/query/latest/docs/framework/react/guides/background-fetching-indicators",
+        "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
+      ],
+      "evaluation": "Source-backed AG interpretation; lifecycle tests are separate from native/AT qualification."
+    },
+    {
+      "id": "palette-harmony-candidates",
+      "title": "Палитры из базового цвета / color harmony",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Read color policy first; preserve host palette and semantic roles. Use design_palette(base_color,background,foreground,color_space,harmonies,font_size,font_weight,role) for7bounded harmony candidates, an always-OKLCH tonal scale, actual text/fill/ink/nontext checks and ordered pair matrices. generatePalette is the offline equivalent; createPaletteBuilder powers the wiki. Wheel rotations are explicit AG heuristics, not a universal harmony standard. OKLCH and HSL differ; neither is RYB or Material HCT. Gray hue is undefined, base HEX stays exact, gamut reductions are flagged. Retain existing APCA70/WCAG30 ranking, signed Lc/fontGuidance/sentinel restrictions and separate AA gates. Numeric nontext3:1 covers only the named adjacent surface. Select roles, then recheck real pairs with design_contrast/design_color_scheme. No autoapply/profile writes, status-role remapping, CVD/AT/native/print or full-conformance claim. Read design_rule_section(section_id=\"color-palettes\").",
+      "sources": [
+        "https://color.adobe.com/create/color-wheel",
+        "https://bottosson.github.io/posts/oklab/",
+        "https://www.w3.org/TR/css-color-4/",
+        "https://developer.android.com/design/ui/mobile/guides/styles/color",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+        "https://github.com/Myndex/SAPC-APCA/blob/master/documentation/minimum_compliance.md"
+      ],
+      "evaluation": "Harmony heuristics and actual pair checks, not full accessibility or aesthetic certification."
+    },
+    {
+      "id": "catalog-choice-presentation",
+      "title": "Карточки и поиск: содержание без смены Pinterest",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Use createCatalogCard for literal decision metadata, native title/action controls and a borrowed detached media slot. The host owns resource disposal, routing and truthful fields. Map retail price/variants/review count to component version/package/platform/qualification as domain-appropriate; registered usage is not a rating. Separate listing comparison from detailed presentation. Preserve existing Pinterest/masonry natural heights, DOM order, wide board card, rail and render-window ownership; no fixed tile height/aspect ratio is imposed. Check actual platform/category media rules before publishing; they are not universal AG layout rules. Validate missing/unknown data, links/actions/alt, price variant/rating count, actual contrast, keyboard/focus/locale, narrow/text2x and disposal. Draft/library tests do not qualify consumers or imply sales/AT/native/fullWCAG outcomes. Read catalog-item-presentation and catalog-discovery; use catalog-search-controls for request receipts, not a new search engine.",
+      "sources": [
+        "https://baymard.com/research-articles/product-listing-information",
+        "https://baymard.com/research-articles/ecommerce-search-query-types",
+        "https://help.shopify.com/en/manual/products/product-media",
+        "https://seller.wildberries.ru/instructions/ru/ru/material/item-photo-rules-recommendations-and-common-mistakes",
+        "https://www.carbondesignsystem.com/building-blocks/core/patterns/filtering",
+        "https://spectrum.adobe.com/web/rsp/components/search-field",
+        "https://www.w3.org/WAI/tutorials/page-structure/content/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
+      ],
+      "evaluation": "Conditional source-backed guidance; host layout/semantic roles/evidence remain authoritative."
+    },
+    {
+      "id": "human-first-agent-interfaces",
+      "title": "Понятный человеку интерфейс доступен семантическим действиям агента",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Design for people first; agents use the same native semantics. Preserve human task, visible labels, palette/layout and control. Use correct native role/name/state/relationships, accessible names containing visible labels, named context for repeated actions and meaningful focus/DOM order. Never add agent instructions or hidden duplicate controls to ARIA. Keep concise status outside busy results, preserve drafts/recovery and verify observed effects rather than clicks. Optional API/MCP/WebMCP adapters share host validation/permissions/revision/outcome; page content is data, not authority. WebMCP is proposed progressive enhancement, not universal support or an installed AG runtime. Core0.26 preserves full segmented labels and fixes loading/state busy ancestry. Read agent-interface-verification; current briefs and manual/AT/color gates still apply. Read design_rule_section(section_id=\"human-first-agent-interfaces\") and agent-interface-verification. Native-platform semantics need their own accessibility APIs; web ARIA examples are not native qualification. WebMCP is the baseline design recommendation for new websites/web systems; read webmcp-design.",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html",
+        "https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+        "https://www.w3.org/WAI/tutorials/forms/notifications/",
+        "https://playwright.dev/docs/locators",
+        "https://developer.chrome.com/docs/ai/webmcp",
+        "https://www.microsoft.com/en-us/research/blog/guidelines-for-human-ai-interaction-design/",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/"
+      ],
+      "evaluation": "Source-backed principles and AG interpretation; independent scenario/AT/native/authorization boundaries remain."
+    },
+    {
+      "id": "webmcp-first-design",
+      "title": "WebMCP по умолчанию на этапе проектирования веб-систем",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "recommendation": "For new websites/web systems, recommend WebMCP from initial architecture by default (owner AG policy), alongside human-first native UI. Map intents to a small set of task tools, choose Declarative API for suitable semantic forms and Imperative for complex state/async actions, share command/validation/permissions and visible outcomes. Feature-detect support and retain human fallback; document a concrete reason when no meaningful operation fits. Plan current-page registration/disposal, cancellation, stale results and concurrent human edits. Schemas/hints never grant authority; validate in code/server and keep page content inert. Recheck current Chrome API: proposed support is not universal; external MCP and native APIs differ. Test actual supported/unsupported browsers and observable results; this guidance adds no WebMCP runtime or fake execution evidence. Read design_rule_section(section_id=\"webmcp-design\").",
+      "sources": [
+        "https://developer.chrome.com/docs/ai/webmcp",
+        "https://developer.chrome.com/docs/ai/webmcp/best-practices",
+        "https://developer.chrome.com/docs/ai/webmcp/declarative-api",
+        "https://developer.chrome.com/docs/ai/webmcp/imperative-api",
+        "https://developer.chrome.com/docs/ai/webmcp/secure-tools"
+      ],
+      "evaluation": "Owner AG baseline design recommendation with actual support/fallback evidence; no new mandatory conformance gate or runtime claim."
+    },
+    {
+      "id": "web-security-by-design",
+      "title": "Безопасность веб-интерфейса закладывается с brief",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "recommendation": "Baseline for every web stage: map assets, actors, object/tenant ownership, untrusted sources and operation consequences. UI owns safe contextual output and clear accessible state; server owns authentication, per-request authorization, validation, state and session controls. Hidden/disabled buttons, schemas, client roles and quality scores are not security boundaries. Minimize secrets in URLs/storage/captures/logs; support password managers and risk-based reauthentication. Apply current applicable OWASP ASVS (stable5.0.0 checked2026-10-28) with owners and positive/negative evidence. Read safe-web-content and secure-web-actions. Preserve current brief/color/accessibility gates and WebMCP baseline. Use pass/fail/unknown/not-applicable; no certification/pentest/production claim from local UI checks. Read design_rule_section(section_id=\"web-security-by-design\"), safe-web-content and secure-web-actions. Portable checklist: @ag-design/rules/web-security.md.",
+      "sources": [
+        "https://asvs.owasp.org/",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP",
+        "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage",
+        "https://developer.chrome.com/docs/ai/webmcp/secure-tools"
+      ],
+      "evaluation": "Source-backed defensive guidance and AG interpretation; applicable server/browser controls need actual evidence, not automatic security certification."
+    },
+    {
+      "id": "scoped-runtime-coordination",
+      "title": "Scoped шина и общий роутер для сложных UI",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Read event-bus-coordination, request-routing-data and realtime-ui-load; inspect event-bus/createEventBus and request-router/createRequestRouter. Use callbacks/parent state for small coupled UI; EventTarget for simple signals. createEventBus is a scoped headless bounded notification bus, not a global store/durable broker/authority. Three independent FIFO queues use AG8:4:1 fairness, not strict next-first or preemption; caps1024/tier, max256events/4ms cooperative flush, TTL5000ms at drain. Explicit coalesceKey only for replaceable state, never commands/increments/undo. Payload references are immutable by convention; host owns byte budgets and schema. Short sync subscribers; async work goes router. Custom scheduler must defer/cancel/call once; manual rAF uses autoFlush:false. Unsubscribe/AbortSignal/dispose retire listeners/queues/timers and late diagnostics; no replay. Inspect stats before screenshots and verify actual host qualification. createRequestRouter routes operation names to trusted host handlers, not URL navigation/HTTP proxy. Query-only complete-key dedup and opt-in TTL/LRU in one session/tenant scope; dispose/recreate across identity changes. Commands never dedup/cache/retry. Defaults6physical active/128pending/512waiters/128routes/128cache, not rate limiting. Each waiter has own signal/deadline; last cancellation aborts, but ignored-abort physical slots stay occupied until actual settle. Urgent join promotes queued tier without preemption or strict next-first guarantee. Invalidate/unregister/dispose fence late results and old joins; owner invalidation affects all consumers. No auto polling/SWR/replay/exactly-once. Host owns transport, authority, byte budgets, immutable results and recovery. Prefer existing mature query framework; pair with async-boundary for UI lifecycle. Counters/synthetic savings do not prove production capacity/security.",
+      "sources": [
+        "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget",
+        "https://developer.mozilla.org/en-US/docs/Web/API/Scheduler/postTask",
+        "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal",
+        "https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame",
+        "https://tanstack.com/query/latest/docs/framework/react/guides/important-defaults",
+        "https://tanstack.com/query/latest/docs/framework/react/guides/query-keys",
+        "https://tanstack.com/query/latest/docs/framework/react/guides/query-cancellation",
+        "https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel",
+        "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers",
+        "https://web.dev/articles/inp"
+      ],
+      "evaluation": "AG authored contracts, bounded synthetic evidence and host-specific qualification; no real-time/production/backend savings guarantee."
+    },
+    {
+      "id": "grid-icon-authoring",
+      "title": "Иконки по назначению и сетке",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Search existing recognizable icons first. Read design_layout_grids/iconSuitability and grid-<type>. UI icons use keylines/spacing/currentColor and host family; unfamiliar/consequential actions retain labels/native controls/target size. design_icon_draft or createGridIconDraft produces4fixed original starters, not unrestricted text-to-icon AI: purpose/ui24 vs illustrative64, safe literal80UTF16title, bounded primitives/SVG, visible stroke bounds and geometric report. No arbitrary SVG/scripts/resources. Spacing default recipe step2; structural reading/track grids are surrounding layout. Inspect numeric constraints before16/20/24/32px/lightdark/optical/recognition review. A construction hit/currentColor does not certify aesthetics, contrast, AT or originality. Preserve mandatory policies and qualify actual host use. For cinematic/photo framing read design_layout_grids and each wikiSectionId; all14profiles have examples.",
+      "sources": [
+        "https://www.ibm.com/design/language/iconography/ui-icons/design/",
+        "https://m1.material.io/style/icons.html"
+      ],
+      "evaluation": "Original bounded drafts and numeric construction evidence, not optical/AT/aesthetic qualification."
+    },
+    {
+      "id": "cinematic-photo-grids",
+      "title": "Композиция кадра: кино/фото и локальные сетки",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "recommendation": "Discover all14profiles with design_layout_grids and read each wikiSectionId(grid-<type>). Golden Canon remains preferred general creative start, distinct from phi. Cinema edge/lead-room/perspective and photo phi/triangle/diagonal add declared framing choices; points/guides/regions are geometric, never inferred optical subjects or aesthetic certificates. Match purpose, physical units/aspect/side/reflection and nested scope. UI icons use keylines/spacing; read grid-icon-generation and use bounded design_icon_draft before actual-size optical review. Preserve operational/reading/host layouts and current mandatory color/accessibility/security/WebMCP policy.",
+      "sources": [
+        "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/English-Video-Handbook.pdf",
+        "https://nikonschool.co.uk/hints-and-tips/using-leading-lines-in-your-compositions"
+      ],
+      "evaluation": "Authored templates grounded in source techniques; numerical fit is not professional aesthetic/AT qualification."
+    },
+    {
+      "id": "learnui-mesh-gradients",
+      "title": "Mesh-градиенты: фон, акцент и читаемый контент",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "queryTerms": [
+        "mesh",
+        "mesh gradient",
+        "mesh-gradient",
+        "меш",
+        "градиент"
+      ],
+      "recommendation": "Read mesh-gradients and related chapters color, color-palettes, motion, creative-direction. Read color, color-palettes and motion. Treat mesh as optional decoration, preserve host semantic roles, inspect worst actual composited backgrounds and provide a stable text surface. Prefer static fallback; do not certify gradients from an opaque average-color pair. Practitioner advice is conditional; current AG policy and host contracts remain authoritative.",
+      "sources": [
+        "https://www.learnui.design/blog/mesh-gradients.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+      ],
+      "evaluation": "Authored lexical topic match; manual guidance, not semantic search, implemented capability or automatic conformance."
+    },
+    {
+      "id": "learnui-visual-interest-techniques",
+      "title": "Визуальные акценты без потери иерархии",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "queryTerms": [
+        "visual interest",
+        "spice up",
+        "decorative",
+        "декор",
+        "визуальн",
+        "акцент",
+        "выразительн",
+        "unslop",
+        "sokolovsky",
+        "соколовск",
+        "визуальная доводка",
+        "визуальный аудит",
+        "шаблонный дизайн",
+        "visual polish",
+        "visual audit",
+        "generic ui",
+        "ai looking",
+        "ai-looking"
+      ],
+      "recommendation": "Read visual-interest-techniques and related chapters creative-direction, hierarchy, layers, motion. Read creative-direction, hierarchy, layers and motion. Solve hierarchy before styling, justify a coherent motif, compare identical content, and preserve functional visual signals. Decorative grids are distinct from composition/debug grids. Existing color, accessibility, security and performance gates remain authoritative. Practitioner advice is conditional; current AG policy and host contracts remain authoritative. For visual polish/unslop, read creative-direction (direction card and scope), visual-interest-techniques (product content emphasis) and creative-measurement (location→impact→correction→recheck). Use these conditional craft questions within the existing AG rules, not as aesthetic bans, a new theme or proof of UX quality.",
+      "sources": [
+        "https://www.learnui.design/blog/spice-up-designs.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "https://github.com/heydamir/unslop/blob/main/skills/unslop/SKILL.md"
+      ],
+      "evaluation": "Authored lexical topic match; manual guidance, not semantic search, implemented capability or automatic conformance."
+    },
+    {
+      "id": "learnui-authentication-ux",
+      "title": "Вход и регистрация: понятный и безопасный путь",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "queryTerms": [
+        "signup",
+        "sign up",
+        "sign-up",
+        "login",
+        "log in",
+        "sign in",
+        "authentication",
+        "password",
+        "регистрац",
+        "вход",
+        "аутентификац",
+        "парол",
+        "восстановлен"
+      ],
+      "recommendation": "Read authentication-ux and related chapters forms, form-quality-common, web-security-by-design, secure-web-actions. Read forms and web-security-by-design. Use valid input types, actual labels and username/current-password/new-password/one-time-code autocomplete; preserve leading-zero codes and allow paste/password managers. Generic auth failures avoid enumeration. Keep secrets out of persistence, telemetry and UI maps. Autofocus, SSO/passkeys/codes and consent are conditional host decisions, not automatic article defaults. Practitioner advice is conditional; current AG policy and host contracts remain authoritative.",
+      "sources": [
+        "https://www.learnui.design/blog/tips-signup-login-ux.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html",
+        "https://www.w3.org/WAI/tutorials/forms/labels/",
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input",
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode",
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html",
+        "https://pages.nist.gov/800-63-4/sp800-63b.html"
+      ],
+      "evaluation": "Authored lexical topic match; manual guidance, not semantic search, implemented capability or automatic conformance."
+    },
+    {
+      "id": "learnui-logo-robustness",
+      "title": "Логотип: различимость и работа в малом размере",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "queryTerms": [
+        "logo",
+        "logotype",
+        "логотип",
+        "фирменный знак",
+        "brand mark"
+      ],
+      "recommendation": "Read logo-robustness and related chapters brand-book, creative-measurement, icons, grid-icon-generation. Read brand-book and creative-measurement. Preserve approved identity, justify new marks against an explicit corpus, and test actual minimum sizes plus applicable mono/inverse variants. No hue ban or universal 70px header. Logo exceptions do not waive control names/focus or ordinary UI contrast; no trademark or recognition certification is inferred. Practitioner advice is conditional; current AG policy and host contracts remain authoritative.",
+      "sources": [
+        "https://www.learnui.design/blog/3-most-common-logo-design-mistakes.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+      ],
+      "evaluation": "Authored lexical topic match; manual guidance, not semantic search, implemented capability or automatic conformance."
+    },
+    {
+      "id": "learnui-intuitive-control-selection",
+      "title": "Интуитивный выбор: подходящий контрол и видимый результат",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "queryTerms": [
+        "intuitive",
+        "control choice",
+        "dropdown",
+        "radio",
+        "checkbox",
+        "интуитив",
+        "выбор контрол",
+        "выпадающ",
+        "выбор даты"
+      ],
+      "recommendation": "Read intuitive-control-selection and related chapters forms, actions, action-locality, human-first-agent-interfaces. Read forms, actions and action-locality. Select native semantics before density: independent/exclusive choice, immediate/deferred commit and quantity/identifier. Expose small frequent choices; searchable dropdown or native select remains contextual. No universal 2–5 cutoff. Squint tests assess salience only; examples and actual scenario checks establish different evidence. Practitioner advice is conditional; current AG policy and host contracts remain authoritative.",
+      "sources": [
+        "https://www.learnui.design/blog/4-rules-intuitive-ux.html",
+        "https://www.w3.org/WAI/tutorials/forms/labels/"
+      ],
+      "evaluation": "Authored lexical topic match; manual guidance, not semantic search, implemented capability or automatic conformance."
+    },
+    {
+      "id": "learnui-action-locality",
+      "title": "Локальность действий: объект, список и приложение",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "queryTerms": [
+        "locality",
+        "action scope",
+        "bulk action",
+        "scope of action",
+        "локальност",
+        "расположение кноп",
+        "размещение действ",
+        "массовая операц",
+        "действия строки"
+      ],
+      "recommendation": "Read action-locality and related chapters actions, information-architecture, form-row-layout, human-first-agent-interfaces. Map every action to object/list/application scope, including selected versus full filtered collections. Keep nested ownership and contextual names. Above-region placement is a heuristic; reachability/RTL/native constraints may justify alternatives. Distant or hover-revealed actions still need visible context, keyboard/touch access and verified outcomes. No permission follows from proximity. Practitioner advice is conditional; current AG policy and host contracts remain authoritative.",
+      "sources": [
+        "https://www.learnui.design/blog/the-3-laws-of-locality.html",
+        "https://www.w3.org/WAI/tutorials/forms/labels/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ],
+      "evaluation": "Authored lexical topic match; manual guidance, not semantic search, implemented capability or automatic conformance."
+    },
+    {
+      "id": "learnui-ui-font-sizing",
+      "title": "Размеры UI-текста по задаче и платформе",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "queryTerms": [
+        "font size",
+        "font-size",
+        "typography",
+        "type scale",
+        "шрифт",
+        "размер текста",
+        "типограф",
+        "кегль"
+      ],
+      "recommendation": "Read ui-font-sizing and related chapters typography, form-row-layout, platform, golden-canon-grid. Read typography and current host tokens. Treat 2024 Learn UI size ranges as scenario candidates, not WCAG minima or a dense-desktop override. Distinguish CSSpx/rem from native pt/sp, actual fonts and language. Test 200% text, 320 CSSpx reflow and actual-device input focus zoom; never disable zoom. Golden-ratio type scales and Golden Canon layout are separate. Practitioner advice is conditional; current AG policy and host contracts remain authoritative.",
+      "sources": [
+        "https://www.learnui.design/blog/ultimate-guide-font-sizes-ui-design.html",
+        "https://www.learnui.design/blog/mobile-desktop-website-font-size-guidelines.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+      ],
+      "evaluation": "Authored lexical topic match; manual guidance, not semantic search, implemented capability or automatic conformance."
+    },
+    {
+      "id": "openai-conversation-surfaces",
+      "title": "OpenAI: интерфейс внутри диалога",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "queryTerms": [
+        "OpenAI",
+        "ChatGPT",
+        "Apps SDK",
+        "MCP Apps",
+        "conversation-card",
+        "inline card",
+        "carousel",
+        "fullscreen",
+        "PiP",
+        "карточка диалога"
+      ],
+      "recommendation": "Read openai-conversation-surfaces. For ChatGPT/plugin/MCP Apps UI read this chapter before composition. Choose the smallest useful surface, preserve host tokens/composer and use conversation-card for one focused result. Do not apply ChatGPT styling limits to ordinary websites. inspectConversationSurface accepts declared facts only; missing observations stay unknown. Real host, keyboard/AT and accessibility qualification remain separate.",
+      "sources": [
+        "https://developers.openai.com/plugins/concepts/ui-guidelines",
+        "https://developers.openai.com/plugins/build/chatgpt-ui",
+        "https://openai.github.io/apps-sdk-ui/"
+      ],
+      "evaluation": "Scoped source-backed guidance; declared numeric checks are advisory, not verified host qualification."
+    },
+    {
+      "id": "openai-tool-ui-contract",
+      "title": "OpenAI: инструменты, состояние и UI",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "queryTerms": [
+        "OpenAI",
+        "ChatGPT",
+        "MCP Apps",
+        "headless",
+        "structuredContent",
+        "widgetState",
+        "tool contract",
+        "состояние виджета",
+        "инструменты"
+      ],
+      "recommendation": "Read openai-tool-ui-contract. Keep MCP tools usable headlessly with explicit IDs, outputSchema and structuredContent. Prefer standard MCP Apps for new host integration and feature-detect extensions. Separate authoritative business snapshots, per-instance UI state and durable preferences. Reuse AG async-boundary/event-bus/request-router by their distinct ownership. Test denial, stale results, uncertain writes and negative tool-selection prompts; do not infer success from a click.",
+      "sources": [
+        "https://developers.openai.com/plugins/build/chatgpt-ui",
+        "https://developers.openai.com/plugins/plan/tools",
+        "https://developers.openai.com/plugins/reference",
+        "https://developers.openai.com/plugins/guides/optimize-metadata"
+      ],
+      "evaluation": "Scoped source-backed guidance; declared numeric checks are advisory, not verified host qualification."
+    },
+    {
+      "id": "openai-embedded-ui-security",
+      "title": "OpenAI: границы безопасности встроенного UI",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "queryTerms": [
+        "OpenAI",
+        "ChatGPT",
+        "MCP Apps",
+        "CSP",
+        "sandbox",
+        "_meta",
+        "embedded UI",
+        "встроенный интерфейс",
+        "безопасность виджета"
+      ],
+      "recommendation": "Read openai-embedded-ui-security. Treat tool results and UI content as untrusted. Keep authorization/validation/effects on the server; annotations and hidden controls are not enforcement. Minimize model/browser/log data, distinguish structuredContent from result _meta, validate current CSP/origins and feature-detect sandbox capabilities. Test positive and negative enforcement separately; local UI checks are not security or publication certification.",
+      "sources": [
+        "https://developers.openai.com/plugins/guides/security-privacy",
+        "https://developers.openai.com/plugins/reference",
+        "https://developers.openai.com/plugins/plan/tools"
+      ],
+      "evaluation": "Scoped source-backed guidance; declared numeric checks are advisory, not verified host qualification."
+    },
+    {
+      "id": "chatkit-widget-composition",
+      "title": "ChatKit: композиция виджетов и списков",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "queryTerms": [
+        "ChatKit",
+        "widgets",
+        "widget-list",
+        "ListView",
+        "WidgetRoot",
+        "JSON widget",
+        "виджеты",
+        "список виджетов"
+      ],
+      "recommendation": "Read chatkit-widget-composition. For ChatKit embeds preserve product theming; do not apply ChatGPT plugin styling limits. Treat builder JSON as a separate versioned contract, map supported types explicitly, and reject unsupported fields. Reuse conversation-card, widget-list, existing controls and common form tracks. AG list limits are not OpenAI standards. Inspect counts/revision/pending before optical review; test stable keys, reorder, removal, RTL, narrow/200% text and themes.",
+      "sources": [
+        "https://developers.openai.com/api/docs/guides/chatkit-widgets",
+        "https://developers.openai.com/api/docs/guides/chatkit-themes",
+        "https://developers.openai.com/api/docs/guides/custom-chatkit"
+      ],
+      "evaluation": "Source-backed scoped advice; AG mapping is not ChatKit SDK compatibility or automatic conformance."
+    },
+    {
+      "id": "chatkit-widget-actions",
+      "title": "ChatKit: адресные действия и область ожидания",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "queryTerms": [
+        "ChatKit",
+        "widget actions",
+        "ActionConfig",
+        "loadingBehavior",
+        "self container",
+        "действия виджета",
+        "ожидание виджета"
+      ],
+      "recommendation": "Read chatkit-widget-actions. Separate client intent from authoritative server results. Use actual SDK routing and server validation; keys/revisions are not authorization. ChatKit loadingBehavior defaults are source guidance, while AG widget-list exposes explicit setPending scopes. Test self/container/none, reordered/current-key actions, stale snapshots, denial, uncertain writes and disposal. Keep accepted data visible; do not infer success or retry a write from a button event.",
+      "sources": [
+        "https://developers.openai.com/api/docs/guides/chatkit-actions",
+        "https://developers.openai.com/api/docs/guides/custom-chatkit",
+        "https://developers.openai.com/api/docs/guides/chatkit-widgets"
+      ],
+      "evaluation": "Source-backed scoped advice; AG mapping is not ChatKit SDK compatibility or automatic conformance."
+    },
+    {
+      "id": "chatkit-widget-forms",
+      "title": "ChatKit: компактные формы и явный payload",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "queryTerms": [
+        "ChatKit",
+        "widget forms",
+        "asForm",
+        "onSubmitAction",
+        "payload collision",
+        "форма виджета",
+        "коллизия полей"
+      ],
+      "recommendation": "Read chatkit-widget-forms. For ChatKit forms verify actual named-field and collision semantics before adapting payloads. Keep authoritative object/revision/operation separate from editable fields; collect only action-relevant values. Reuse AG native form controls and form-row audit. Native required/pattern is not server validation. Test duplicate/conflicting names, keyboard submit, denied writes, retained input and200%text. widget-list does not auto-collect form values or implement ChatKit Form.",
+      "sources": [
+        "https://developers.openai.com/api/docs/guides/chatkit-actions",
+        "https://developers.openai.com/api/docs/guides/chatkit-widgets",
+        "https://developers.openai.com/api/docs/guides/chatkit-themes"
+      ],
+      "evaluation": "Source-backed scoped advice; AG mapping is not ChatKit SDK compatibility or automatic conformance."
+    },
+    {
+      "id": "chat-composer-patterns",
+      "title": "Чат: компактный ввод и явные инструменты",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "queryTerms": [
+        "Grok",
+        "chat composer",
+        "compact composer",
+        "компактный чат",
+        "поле сообщения",
+        "инструменты чата"
+      ],
+      "recommendation": "Read chat-composer-patterns. For a compact chat reuse agent-conversation with opt-in composerAppearance:compact, visible composerLabel and native multiline/submit semantics. Preserve Enter newline; host shortcuts require IME tests. Only declared composerActions/capabilities render; callbacks carry current sessionId/actionId, not draft/files. Host owns permissions, transport, server authority and effects. Check composerState first, then keyboard/focus, narrow/enlarged text, RTL and themes; test stale errors, unknown send and disposal. field-sizing is progressive enhancement. Public Grok marketing UI is observation, not a live product guarantee.",
+      "sources": [
+        "https://x.ai/grok",
+        "https://www.w3.org/WAI/tutorials/forms/labels/",
+        "https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event"
+      ],
+      "evaluation": "Observed public marketing pattern, adapted by AG; not automatic conformance or a runtime guarantee."
+    },
+    {
+      "id": "agent-work-presentation",
+      "title": "Чат агента: адресат, работа, черновик и результат",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "queryTerms": [
+        "Grok Bot",
+        "agent work",
+        "draft versus sent",
+        "работа агента",
+        "черновик и отправка",
+        "адресат чата",
+        "handoff"
+      ],
+      "recommendation": "Read agent-work-presentation. Use explicit current recipient/task, per-session drafts and scoped actions. Show observable tool activity and artifacts, not private chain of thought or invented progress. Keep connection/runtime, prepared drafts, accepted sends and completed results distinct. Reuse agent-conversation tool/approval blocks, conversation-card, widget-list and async-boundary; a chat does not implement scheduling, transport or server authority. Test switches, stale results, unknown receipts, bounded history, focus/scroll/drafts. Public Grok Bot marketing sequences do not establish live product guarantees.",
+      "sources": [
+        "https://x.ai/bot",
+        "https://x.ai/grok"
+      ],
+      "evaluation": "Observed public marketing pattern, adapted by AG; not automatic conformance or a runtime guarantee."
+    },
+    {
+      "id": "chat-presentation-selection",
+      "title": "Три представления чата: документ, переписка и журнал работы",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "queryTerms": [
+        "chat presentation",
+        "чат документ",
+        "переписка",
+        "messenger",
+        "work-log",
+        "журнал работы",
+        "document chat",
+        "сравнение чатов"
+      ],
+      "recommendation": "Choose presentation=document for explanations/research/long answers, messenger for short recipient exchanges, work-log for development/diagnostics/observable operations. Use one agent-conversation model and setPresentation in place; preserve draft, keyed controls, focus/selection, disclosure, pending receipts and follow/read anchor. presentationState is redacted structure only. Fair comparison requires identical messages/states; use chat-comparison shared scenarios, not different content or invented progress. Test narrow/enlarged text, RTL/themes, streams, pending actions and disposal. No view implements delivery, transport, scheduling, private reasoning or server authority.",
+      "sources": [
+        "https://x.ai/grok",
+        "https://x.ai/bot",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ],
+      "evaluation": "AG view-selection guidance. Exact content parity and actual browser checks are separate from consumer qualification."
+    },
+    {
+      "id": "atomic-design-composition",
+      "title": "Atomic Design: от частей к проверенному экрану",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "queryTerms": [
+        "atomic design",
+        "атомарн",
+        "pattern lab",
+        "pattern lineage",
+        "component composition",
+        "составн",
+        "шаблон страницы",
+        "page template",
+        "real content",
+        "реальное содержимое",
+        "контекст компонента",
+        "contextual review",
+        "повторное использование",
+        "reusable patterns"
+      ],
+      "recommendation": "Read atomic-design-composition. Start from the user task, inventory real components and compose purpose-based patterns/templates; five levels are optional concurrent perspectives, not a factory/folder mandate. Separate shared structure from representative fixture data. Record named slots, pinned children, state/data owner and known direct/reverse dependencies; registered usage is not a complete graph. Recheck affected nested controls and representative screens with current changed_block_review, form-row-layout and component-width-audit scenarios. An isolated component PASS does not certify the page. Preserve host palette, native semantics, qualification and the Pinterest catalog layout. Offline: atomic-design.json; descriptive recipes are not prepare_composition arguments.",
+      "sources": [
+        "https://atomicdesign.bradfrost.com/chapter-2/",
+        "https://atomicdesign.bradfrost.com/chapter-3/",
+        "https://atomicdesign.bradfrost.com/chapter-4/",
+        "https://patternlab.io/docs/creating-pattern-specific-values/"
+      ],
+      "evaluation": "Advisory AG adaptation. No new mandatory gate, auto-lineage computation or Pattern Lab runtime dependency."
+    }
+  ]
+}

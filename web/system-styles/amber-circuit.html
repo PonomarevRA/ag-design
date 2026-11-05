@@ -1,0 +1,174 @@
+<!doctype html>
+<html data-ag-select-indicators data-example="console" lang="ru" data-style="amber-circuit">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="./vendor/chart.css" />
+    <link rel="stylesheet" href="./style-chart.css" />
+    <link rel="stylesheet" href="./gold-console.css" />
+    <script type="module" src="./gold-console.js?v=demo-systems-5"></script>
+    <title>Amber Circuit · Контур</title>
+    <link rel="stylesheet" href="./vendor/lab/components.css?v=form-review-1" />
+    <link rel="stylesheet" href="./component-lab.css?v=form-review-1" />
+    <link rel="stylesheet" href="../locale-settings.css" />
+    <script type="module" src="./vendor/lab/components.js?v=form-review-1"></script>
+    <link rel="stylesheet" href="./application-layout.css" />
+    <link rel="stylesheet" href="./demo-system.css?v=demo-systems-4" />
+  </head>
+  <body>
+    <a class="skip" href="#gold-main">К содержимому</a>
+    <header class="console-header">
+      <div>
+        <h1>КОНТУР</h1>
+        <span>СИСТЕМА УПРАВЛЕНИЯ</span>
+      </div>
+      <span class="demo-badge">● ДЕМО-СЕАНС / 09:05</span>
+      <nav class="style-picker" aria-label="Примеры золотого семейства">
+        <a href="./gold-console.html">Graphite Gold</a
+        ><a href="./amber-circuit.html">Amber Circuit</a
+        ><a href="/#styles">Все стили ↗</a>
+      </nav>
+    </header>
+    <main id="gold-main" class="console-layout">
+      <section class="gold-panel parameter-panel">
+        <h2>Параметр</h2>
+        <div
+          class="tactile-dial"
+          id="gold-dial"
+          role="img"
+          aria-label="Интенсивность 72%"
+        >
+          <div class="dial-face">
+            <span aria-hidden="true">☀</span><strong id="dial-value">72%</strong
+            ><span id="dial-label">Освещение</span>
+          </div>
+        </div>
+        <label class="dial-range-label"
+          >Интенсивность<input
+            type="range"
+            id="dial-range"
+            min="0"
+            max="100"
+            value="72"
+        /></label>
+        <div class="scene-commit">
+          <button id="apply-scene" class="gold-primary">
+            Применить <span aria-hidden="true">→</span>
+          </button>
+          <div class="secondary-actions">
+            <button id="reset-scene">Сброс</button
+            ><button id="save-scene">Сохранить</button>
+          </div>
+          <p id="apply-status" class="apply-status" role="status">
+            Параметры подготовлены для локального примера.
+          </p>
+        </div>
+      </section>
+      <div class="console-overview">
+        <section class="gold-panel system-panel">
+          <h2>Система</h2>
+          <strong class="system-score">92%</strong
+          ><progress
+            max="100"
+            value="92"
+            aria-label="Демонстрационный индекс системы: 92%"
+          ></progress>
+          <p>Стабильный сценарий <span>Синтетические данные</span></p>
+        </section>
+        <section class="gold-panel channels-panel">
+          <h2>Каналы</h2>
+          <div id="channel-list"></div>
+        </section>
+      </div>
+      <section
+        class="gold-panel portal-panel"
+        aria-label="Отдельная декоративная зона: золотой геометрический портал"
+      >
+        <img
+          src="./references/amber-circuit-portal.png"
+          alt="Золотые геометрические рамы уходят в глубину"
+        /><span>ГЕОМЕТРИЯ / ГЛУБИНА</span>
+      </section>
+      <section class="gold-panel stream-panel">
+        <div class="panel-title-row">
+          <h2>Поток данных</h2>
+          <label
+            >Период<select id="stream-period">
+              <option value="hour">1 час</option>
+              <option value="day">7 дней</option>
+            </select></label
+          >
+        </div>
+        <div class="stream-layout">
+          <div id="gold-chart"></div>
+          <dl class="stream-stats">
+            <dt>Текущее</dt>
+            <dd id="stream-current">72%</dd>
+            <dt>Среднее</dt>
+            <dd id="stream-mean"></dd>
+            <dt>Мин / макс</dt>
+            <dd id="stream-range"></dd>
+          </dl>
+        </div>
+      </section>
+      <section class="gold-panel scenes-panel">
+        <h2>Сцены</h2>
+        <div class="scene-buttons" role="group" aria-label="Сцены">
+          <button data-scene="base" aria-pressed="true">
+            <span aria-hidden="true">◎</span>Базовая</button
+          ><button data-scene="depth" aria-pressed="false">
+            <span aria-hidden="true">▱</span>Глубина</button
+          ><button data-scene="pulse" aria-pressed="false">
+            <span aria-hidden="true">⌁</span>Импульс</button
+          ><button data-scene="scan" aria-pressed="false">
+            <span aria-hidden="true">⬡</span>Сканирование
+          </button>
+        </div>
+      </section>
+      <section class="gold-panel journal-panel">
+        <h2>Журнал</h2>
+        <div class="event-scroll" tabindex="0" aria-label="История действий">
+          <table>
+            <caption class="sr-only">
+              Локальные действия в демонстрации
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Время</th>
+                <th scope="col">Источник</th>
+                <th scope="col">Событие</th>
+              </tr>
+            </thead>
+            <tbody id="gold-events">
+              <tr>
+                <td>09:05:00</td>
+                <td>Демо</td>
+                <td>Базовая сцена загружена</td>
+              </tr>
+              <tr>
+                <td>09:04:32</td>
+                <td>Демо</td>
+                <td>Контролы готовы к настройке</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section
+        id="ag-components"
+        data-ag-component-lab
+        aria-label="Компоненты AG Design в выбранном стиле"
+      ></section>
+    </main>
+    <footer class="gold-page-footer">
+      Amber Circuit · локальная демонстрация на синтетических данных
+    </footer>
+    <p
+      id="gold-announcement"
+      class="sr-only"
+      role="status"
+      aria-live="polite"
+    ></p>
+  </body>
+</html>
