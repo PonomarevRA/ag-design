@@ -1,3 +1,4 @@
+import { bindCompositionInsertGesture } from "./composition-insert-gesture.js";
 import { createWorkbenchPanels, fitWorkbenchViewport } from "./workbench-panels.js";
 import { createLayoutGridController } from "./layout-grid-controller.js";
 import { createGoldenCanonPanel } from "./golden-canon-panel.js";
@@ -325,6 +326,33 @@ export function createCompositionEditor({
     h("option", { value: "sample" }, "Отдельный образец"),
     h("option", { value: "group" }, "В выбранную группу"),
   );
+  const addSample = button("Добавить компонент", () =>
+    addComponent(picker.value),
+  );
+  addSample.classList.add("composition-add-sample");
+  addSample.title = "Нажмите или перетащите отдельный образец на холст";
+  bindCompositionInsertGesture({
+    button: addSample,
+    frame,
+    stage,
+    signal,
+    canStart: () =>
+      !busy &&
+      frameReady &&
+      picker.value &&
+      insertionMode.value === "sample" &&
+      editingMode.value === "edit" &&
+      state && { documentHash: state.documentHash, component: picker.value },
+    onDrop(context, point) {
+      if (
+        state?.documentHash !== context.documentHash ||
+        editingMode.value !== "edit" ||
+        insertionMode.value !== "sample"
+      )
+        return;
+      addComponent(context.component, point);
+    },
+  });
   const addBar = h(
     "fieldset",
     { className: "composition-tool-group" },
@@ -334,20 +362,20 @@ export function createCompositionEditor({
       { className: "composition-toolbar" },
       componentPicker.element,
       controlLabel("Размещение", insertionMode),
-      button("Добавить компонент", () => addComponent(picker.value)),
+      addSample,
       button("Добавить контейнер", addFrame),
       button("Создать форму", addForm),
     ),
     h(
       "p",
       { className: "composition-note" },
-      "Отдельный образец проверяется сам по себе. Для общей формы выберите контейнер и размещение «В выбранную группу».",
+      "Чтобы разместить отдельный образец, перетащите кнопку «Добавить компонент» на холст. Нажатие добавляет его в конец. Для общей формы выберите «В выбранную группу».",
     ),
   );
   const editingHint = h(
     "p",
     { className: "composition-note composition-editing-hint" },
-    "Редактирование: тяните элемент или ручку ⠿; размер — за края. В строке/столбце перенос меняет порядок. Alt — без сетки. В режиме «Просмотр» работают поля и кнопки.",
+    "Редактирование: тяните элемент или ручку ⠿; размер — за края. В строке, колонке и сетке соседние блоки уступают место, пунктир показывает позицию вставки. Escape отменяет перенос. Alt — без сетки. В режиме «Просмотр» работают поля и кнопки.",
   );
   addBar.append(
     h("details", {}, h("summary", {}, "Как редактировать"), editingHint),
@@ -660,18 +688,23 @@ export function createCompositionEditor({
     return Math.min(10000, nextY);
   }
   /** Samples get independent labelled containers; insertion into a real group is an explicit choice. */
-  async function addComponent(component) {
+  async function addComponent(component, dropAt = null) {
     await initialization;
     if (!state || disposed) return;
     const definition = components.find((item) => item.id === component);
+    if (!definition) {
+      notify("Сначала выберите компонент для добавления.");
+      return;
+    }
     const separate = insertionMode.value === "sample";
     const nodeId = id("node");
     await mutate(async () => {
-      if (separate && frameReady) await measure();
+      if (separate && !dropAt && frameReady) await measure();
       let parentId = insertionParent();
       const operations = [];
       if (separate) {
-        const nextY = insertionY(null);
+        const x = dropAt?.x ?? 24;
+        const nextY = dropAt?.y ?? insertionY(null);
         parentId = id("sample");
         operations.push({
           op: "add",
@@ -684,9 +717,11 @@ export function createCompositionEditor({
             props: { sample: true },
             layout: {
               mode: "column",
-              x: 24,
+              x,
               y: nextY,
-              width: Math.max(240, state.document.viewport.width - 48),
+              width: dropAt
+                ? Math.min(360, state.document.viewport.width - x)
+                : Math.max(240, state.document.viewport.width - 48),
               height: "hug",
               gap: 16,
               padding: 16,
@@ -926,6 +961,35 @@ export function createCompositionEditor({
     if ([...scenario.options].some((option) => option.value === previous))
       scenario.value = previous;
   }
+  /** Single-click alternative to reordering by a pointer or keyboard arrows in the canvas. */
+  function renderSiblingActions(node) {
+    const { nodes } = state.document;
+    const parent = nodes.find((item) => item.id === node.parentId);
+    if (!parent || parent.layout.mode === "free") return;
+    const siblings = nodes.filter((item) => item.parentId === parent.id);
+    const index = siblings.indexOf(node);
+    if (siblings.length < 2) return;
+    const group = h("div", {
+      className: "composition-toolbar",
+      role: "group",
+      "aria-label": "Порядок в группе",
+    });
+    for (const [label, target, beforeId] of [
+      ["Раньше", index - 1, siblings[index - 1]?.id],
+      ["Позже", index + 1, siblings[index + 2]?.id ?? null],
+    ]) {
+      const allowed = target >= 0 && target < siblings.length;
+      const action = button(label, () => {
+        if (allowed) mutate([{ op: "reorder", id: node.id, beforeId }]);
+      });
+      action.setAttribute("aria-label", `${label} в группе`);
+      // Keep the initiating control focusable after it moves to a boundary.
+      action.setAttribute("aria-disabled", String(!allowed));
+      group.append(action);
+    }
+    inspector.append(group);
+  }
+
   /** Recreate controlled properties for the selected instance; all changes use the same server command bus. */
   function renderInspector() {
     const openGroups = new Set();
@@ -951,6 +1015,7 @@ export function createCompositionEditor({
       onRemove: () => mutate([{ op: "remove", id: node.id }]),
       onError: notify,
     });
+    renderSiblingActions(node);
     inspector.append(propertiesController.element);
     for (const detail of inspector.querySelectorAll("details"))
       detail.open = openGroups.has(

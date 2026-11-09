@@ -1,3 +1,3 @@
 """Independent local design catalog and caller-reported engineering evidence."""
 
-__version__ = '0.47.1'
+__version__ = '0.47.2'

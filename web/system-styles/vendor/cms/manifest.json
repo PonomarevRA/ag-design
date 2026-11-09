@@ -1,6 +1,6 @@
 {
   "component": "markdown-editor",
-  "version": "0.43.0-community.2",
+  "version": "0.43.1-community.2",
   "outputs": {
     "editor.js": "627f0ba85a061030ef10d4e31d99703d7405323ad7e8382182ab3a10f9a274a3",
     "editor.css": "215d6f3e1099098715812bd82c2b2e8a901e5b0f5cc495daa845d603eaa5d144"

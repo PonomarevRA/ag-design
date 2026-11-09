@@ -5869,6 +5869,54 @@
       "fallbackUsed": false,
       "contentMode": "agent-instructions",
       "body": "# Atomic Design: components in a working screen\n\n## Source and AG adaptation\n\nBrad Frost describes five concurrent perspectives: functional elements, small groups, distinct sections, content structures and populated screens. It is a flexible mental model, not a prescribed bottom-up sequence. Pattern Lab demonstrates shared includes, data variations and forward/reverse pattern lineage. AG already has factories, pinned compositions, nested grids and review gates. Add purpose, composition and context evidence rather than another component framework.\n\n| Perspective | AG example | Review scope |\n| --- | --- | --- |\n| Atom / element | button, field, select; shared tokens are foundations | Semantics, label, states, focus and target size |\n| Molecule / compound control | catalog-search-controls, a labelled field with feedback | One task, label/control/hint association and control-track alignment |\n| Organism / section | Search/results/cards or agent-conversation with its owned composer | Child interaction, async states, ownership and disposal |\n| Template | Named catalog/workspace regions | Reading order, local grids and container adaptation |\n| Page | The template with representative content and state | End-to-end task, long text, result cardinality and focus recovery |\n\nThese are AG interpretations, not canonical component classifications. Read the actual field anatomy; it may already be compound. Skip unhelpful levels and retain purpose-based names. Do not create one wrapper, folder or factory per level.\n\n## Agent workflow\n\nStart with the user's screen/task and inventory repeated controls. Move between whole and parts. Read design_brief, search and inspect actual definitions before choosing reuse/adapt/native-fallback/new-in-ag; record exact pins and qualification limits. Separate reusable structure from synthetic fixture data, without cloning markup for each state.\n\nRecord a pattern card: purpose, named slots, actual child IDs/versions, required/optional/repeated content, state/events/data owner, local grid, known dependencies and scenarios. It is documentation, not new prepare_composition arguments. Use the existing prepare/inspect/apply/check composition operations with explicit groups and revisions. Template structure and page data should be independently inspectable. Camera zoom is not container width. Host palette, native semantics and reading order remain authoritative.\n\n## Existing AG recipes\n\nCatalog: catalog-search-controls + catalog-card in the existing host. Slots cover search/filters, results count, cards, state and detail. Fixtures cover zero/one/many results, long titles, missing images and filter reset. Preserve the host Pinterest feed and DOM order. Atomic Design does not mandate masonry or bento.\n\nSettings: settings-panel + field + select + button, after exact-contract inspection. Slots cover title, field groups, feedback and actions. Test long labels, unequal hints, one-field errors and read-only values. Align actual control tracks; unequal hint bottoms can be valid.\n\nChat: agent-conversation already owns a composer; add choice-chips only when the host needs an external view selector. Do not nest another composer. Compare document/messenger/work-log using identical messages; test long responses, streaming, errors, drafts and pending actions. The host owns transport/data; a new presentation needs no new backend API.\n\nPortable, non-executable pattern-card fields and recipes: @ag-design/rules/atomic-design.json. They are advisory references, not prepared sandbox documents, callable factory arguments or component admission.\n\n## Impact and contextual review\n\nRecord direct children and known reverse usage with exact version/source. Verify code through Code Atlas and source files, composition pins and registered usage. Usage is not a complete dependency graph; an absent registration proves no absence of consumers. Do not claim generated lineage or complete impact coverage.\n\nFor a changed element, inspect affected compound patterns and representative templates/pages, including a constrained container. Keep unknown consumers explicit. Fix the responsible shared component when appropriate rather than hiding its defect with page-specific CSS.\n\nReconcile changed-block inventory with diff and rendered DOM, including nested affected elements and contexts. Use changed_block_review; missing observations stay unchecked. Read form-row-layout and component-width-audit. Measure roots AND inner text columns after fonts settle. Run normal/narrow/text200/narrow-text200 with actual viewport<=320CSSpx and measured font growth for width evidence. Additional content fixtures are report context, not replacement width scenario IDs. Retain artifact revision, fixture/environment and precise observations.\n\nRequire current detailed requirements, layoutWidthReview.gate=pass, changedBlockReview.unchecked=[] and completionGate=pass when applicable. A child PASS never certifies its section or screen. Role-dependent visibility is not server authorization; numeric geometry is not AT, optical, security or host qualification. Reuse current palette/grid/accessibility policies; no new mandatory gate or fixed taxonomy is introduced.\n"
+    },
+    {
+      "id": "layout-drop-preview",
+      "title": "Reordering layout blocks",
+      "summary": "Preview the destination and let nearby items make room in a row, column or grid.",
+      "tags": [
+        "drag-drop",
+        "reorder",
+        "перетаскивание",
+        "перестановка",
+        "песочница",
+        "макет",
+        "grid",
+        "responsive",
+        "container queries",
+        "фабрика"
+      ],
+      "ruleIds": [
+        "keyboard-flow",
+        "reduced-motion",
+        "a11y-status-announcement",
+        "design-rationale"
+      ],
+      "sources": [
+        {
+          "title": "Moxen — Parrilla",
+          "url": "https://moxen.cl/recursos/parrilla/",
+          "kind": "primary",
+          "note": "Публичное описание поведения демо. Реализация ag-design самостоятельная."
+        },
+        {
+          "title": "W3C — Dragging Movements",
+          "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+          "kind": "primary",
+          "note": "Действие должно быть доступно одним указателем без перетаскивания."
+        }
+      ],
+      "body": "Use createLayoutDropPreview inside a declared editable row, column or grid. Show the reserved insertion slot and let neighbors reflow. Hit-test against original positions so animated neighbors cannot move targets under a stationary pointer.\n\nCommit semantic order once with undo. Escape and lost capture restore the original paint. Reflow immediately with reduced motion. Offer single-click move controls, retain focus and announce the new order.\n\nAdapt factory content to the width of its own block. Keep the name, key value and action in the compact variant, and add breakdowns or context when space allows. Use container queries to reveal already loaded details. Pass an explicit density to the factory when rendering or data fetching changes. Preserve block state and keep critical statuses and actions available.\n\nThe ag-design composition sandbox applies this to Row, Column and Grid groups. Use free positioning for coordinates and intentional overlap. Use drag-drop for transfers between lists. Test drop, cancellation, pointer tracking, the last slot, RTL, narrow width and 200% text.",
+      "sourceHash": "9a0cb85fae1f5965fa001dc8be9040d48223e0a0b46d0aa75eebfe2eeab12076",
+      "locale": "en",
+      "requestedLocale": "en",
+      "fallbackUsed": false,
+      "contentMode": "agent-instructions",
+      "audience": "agent",
+      "availableLocales": [
+        "ru",
+        "en"
+      ]
     }
   ]
 }

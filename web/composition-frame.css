@@ -11,7 +11,6 @@ html,body{margin:0;min-height:100%;background:var(--ag-surface);color:var(--ag-t
 #composition-root[data-composition-editing="true"] .composition-node{cursor:move;touch-action:none}
 .composition-node[data-composition-edit-selected]{outline:1px solid var(--ag-accent);outline-offset:0}
 .composition-node[data-composition-moving]{z-index:10;opacity:.8;box-shadow:0 8px 20px #0002}
-.composition-node[data-composition-drop]{outline:2px dashed var(--ag-accent);outline-offset:3px}
 .composition-edit-chrome{position:absolute;inset:0;pointer-events:none;z-index:100;display:block}
 .composition-move-handle,.composition-resize-handle{position:absolute;pointer-events:auto;touch-action:none;background:var(--ag-surface);color:var(--ag-accent);border:1px solid var(--ag-accent);border-radius:3px}
 .composition-move-handle{inset-block-start:0;inset-inline-end:0;display:grid;place-items:center;width:24px;height:24px;cursor:move;font-size:18px}

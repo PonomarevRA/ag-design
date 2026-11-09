@@ -3190,3 +3190,15 @@ For a changed element, inspect affected compound patterns and representative tem
 Reconcile changed-block inventory with diff and rendered DOM, including nested affected elements and contexts. Use changed_block_review; missing observations stay unchecked. Read form-row-layout and component-width-audit. Measure roots AND inner text columns after fonts settle. Run normal/narrow/text200/narrow-text200 with actual viewport<=320CSSpx and measured font growth for width evidence. Additional content fixtures are report context, not replacement width scenario IDs. Retain artifact revision, fixture/environment and precise observations.
 
 Require current detailed requirements, layoutWidthReview.gate=pass, changedBlockReview.unchecked=[] and completionGate=pass when applicable. A child PASS never certifies its section or screen. Role-dependent visibility is not server authorization; numeric geometry is not AT, optical, security or host qualification. Reuse current palette/grid/accessibility policies; no new mandatory gate or fixed taxonomy is introduced.
+
+## Reordering layout blocks (`layout-drop-preview`)
+
+Use createLayoutDropPreview inside a declared editable row, column or grid. Show the reserved insertion slot and let neighbors reflow. Hit-test against original positions so animated neighbors cannot move targets under a stationary pointer.
+
+Commit semantic order once with undo. Escape and lost capture restore the original paint. Reflow immediately with reduced motion. Offer single-click move controls, retain focus and announce the new order.
+
+Adapt factory content to the width of its own block. Keep the name, key value and action in the compact variant, and add breakdowns or context when space allows. Use container queries to reveal already loaded details. Pass an explicit density to the factory when rendering or data fetching changes. Preserve block state and keep critical statuses and actions available.
+
+The ag-design composition sandbox applies this to Row, Column and Grid groups. Use free positioning for coordinates and intentional overlap. Use drag-drop for transfers between lists. Test drop, cancellation, pointer tracking, the last slot, RTL, narrow width and 200% text.
+
+[Parrilla](https://moxen.cl/recursos/parrilla/) · [WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html)

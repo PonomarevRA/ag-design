@@ -1,4 +1,4 @@
-export const version = "0.43.0-community.2";
+export const version = "0.43.1-community.2";
 export { resolveCornerRadius, applyControlGeometry } from "./geometry.js";
 export { createButton, createField, createStatus, createEmptyState, createNotice, bindNavigation, createSidebarController, createPopup } from "./primitives.js";
 
@@ -114,3 +114,4 @@ export { bindTooltip } from "./tooltip.js";
 export { formatTimeAxisTicks, layoutAxisTicks } from "./chart-axis.js";
 
 export { createBentoGrid } from "./bento-grid.js";
+export { createLayoutDropPreview } from "./layout-drop-preview.js";

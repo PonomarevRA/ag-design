@@ -1,3 +1,4 @@
+import { buildLayoutDropSample } from "./layout-drop-sample.js";
 import { buildBentoSample } from "./bento-grid-sample.js";
 import {buildWidgetListSample} from "./widget-list-sample.js";
 import {buildConversationCardSample} from "./conversation-card-sample.js";
@@ -58,6 +59,7 @@ let serial = 0;
 
 /** Real package controls power both the showcase and load tests; disposing never touches another preview. */
 export function buildSample(id, {strict = false} = {}) {
+  if (id === "layout-drop-preview") return buildLayoutDropSample();
   if (id === "widget-list") return buildWidgetListSample();
   if (id === "conversation-card") return buildConversationCardSample();
   if (id === "grid-icon-draft") return buildGridIconWorkshop({locale:document.documentElement.lang||"ru"});

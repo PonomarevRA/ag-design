@@ -39,3 +39,13 @@ The HTTP adapters use only fixed same-origin POST paths: `/api/v1/ui-snapshots` 
 operations never fetch a submitted URL, execute captured text, register qualification, or certify
 accessibility. Old installed services and existing MCP connections may not expose these tools;
 verify fresh discovery rather than assuming that source changes updated them.
+
+## Checked compositions
+
+When the installed MCP advertises composition tools, use `prepare_composition` after the current brief, relevant rules and component search. Declare stable parent/child groups, required node identities, comparable height/alignment/gap constraints and intended scenario matrix. Keep the returned documentId, revision, component pins, policy hash and contextReceipt. Open this exact document in the sandbox; the DOM editor and MCP share the same server command bus.
+
+Use `apply_composition_patch` with expected_revision and a stable idempotency_key. After a timeout, inspect the addressed document or retry the exact same command/key; never create a fresh operation merely because acknowledgement was lost. Batches are atomic. `undo_composition` consumes only the latest own undoable command and refuses to cross another author. Mandatory baseline checks, required component identity, original pins and scenario coverage cannot be weakened by a patch; a reviewed changed baseline requires a new preparation.
+
+Render real AG factories at the actual iframe viewport; camera zoom is separate. `check_composition` accepts bounded measured facts, computes its own results and returns immutable reportId. Read `composition_report` and repair failures; `compare_compositions` accepts only compatible report identities and environments. Preserve physical vs logical RTL alignment, actual height differences, gaps inside explicit groups and distances to a selected distant object. Inferred grouping remains advisory; semantic graph coordinates are not UI distances.
+
+Report geometry score, coverage, gate and unknowns together. A successful geometry result is caller evidence, not trusted browser/AT or host certification. `qualify_composition` binds its decision to artifact/revision/policies/facts; current automatic admission stays unknown until independent runner, manual scenarios and target-host evidence are available. Never claim ready or integrate solely from a high geometry score. Legacy servers retain the existing checks workflow; reconnect after installing new MCP tools.

@@ -1135,3 +1135,7 @@ h3 {
   max-height: 640px;
   overflow: auto;
 }
+
+.composition-toolbar [aria-disabled="true"] {opacity:.65;cursor:default;}
+.composition-add-sample {touch-action:none;}
+.composition-insert-marker {position:absolute;z-index:10;width:24px;height:24px;border-top:2px dashed var(--ag-accent);border-left:2px dashed var(--ag-accent);pointer-events:none;}

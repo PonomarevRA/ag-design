@@ -1206,6 +1206,38 @@
         "https://patternlab.io/docs/creating-pattern-specific-values/"
       ],
       "evaluation": "Advisory AG adaptation. No new mandatory gate, auto-lineage computation or Pattern Lab runtime dependency."
+    },
+    {
+      "id": "layout-drop-preview",
+      "title": "Перестановка блоков и адаптивные данные",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "queryTerms": [
+        "parrilla",
+        "перестанов",
+        "перетаскиван",
+        "reorder",
+        "drag and drop",
+        "container queries",
+        "responsive widget",
+        "адаптивные данные"
+      ],
+      "recommendation": "Read layout-drop-preview. In an editable row, column or grid, let neighbors reflow before release and show the exact slot. Commit semantic order once; provide Escape, reduced motion and single-click move buttons. When a widget width changes, keep the key data and action, and reveal context through container queries. Use explicit factory density if the rendering or data pipeline changes.",
+      "sources": [
+        "https://moxen.cl/recursos/parrilla/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html"
+      ],
+      "evaluation": "One parent; test pointer and keyboard, narrow layout, 200% text, cancellation and persisted undo."
     }
   ]
 }

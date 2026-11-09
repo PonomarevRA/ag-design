@@ -38,6 +38,7 @@
     "interaction-tools--toast-stack",
     "issue-summary",
     "language-switcher",
+    "layout-drop-preview",
     "layout-grid-overlay",
     "loading-indicator",
     "markdown-editor",
@@ -92,16 +93,16 @@
     "widget-list",
     "window-toolbar"
   ],
-  "version": "0.47.1",
+  "version": "0.47.2",
   "edition": "community",
   "packageArtifacts": {
     "components": {
-      "version": "0.43.0-community.2",
-      "sha256": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "version": "0.43.1-community.2",
+      "sha256": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     "rules": {
-      "version": "0.32.0-community.2",
-      "sha256": "7a2478421e50009d9ede67efa10100fcdc9632a26ff9c03cd663efa6e2ba029b"
+      "version": "0.32.1-community.2",
+      "sha256": "9a8a1a44150f0bcd0140d9c3bfe6833db5070bf0006c35e7485e1dc6d8e71395"
     },
     "visual-tools": {
       "version": "2.1.2-community.2",

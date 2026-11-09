@@ -1,3 +1,13 @@
+/* packages/components/layout-drop-preview.css */
+.ag-layout-drop-slot {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border: 2px dashed var(--ag-accent);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
 /* packages/components/bento-grid.css */
 .ag-bento-grid {
   display: grid;

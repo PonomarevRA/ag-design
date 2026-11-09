@@ -1,17 +1,16 @@
+import { createLayoutDropPreview } from "./vendor/ag-design/layout-drop-preview.js";
 import { applyCompositionLayout } from "./composition-renderer.js";
 
 const EDGES = ["nw", "n", "ne", "e", "se", "s", "sw", "w"];
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
-/** Resize measured CSS dimensions, retaining the opposite edge and declared size limits. */
+/** Resize only the dragged axes; preserve automatic sizing on the other axis. */
 export function gestureLayout(node, rect, edge, dx, dy, snap = 8) {
   const step = (value) => (snap ? Math.round(value / snap) * snap : value);
   const layout = node.layout;
   const next = {
     x: layout.x,
     y: layout.y,
-    width: rect.width,
-    height: rect.height,
   };
   if (!edge)
     return {
@@ -44,9 +43,12 @@ export function flowBeforeId(
   mode,
   point,
   direction = "ltr",
+  anchors,
 ) {
   for (const sibling of siblings) {
-    const rect = elements.get(sibling.id).getBoundingClientRect();
+    const rect =
+      anchors?.get(sibling.id) ??
+      elements.get(sibling.id).getBoundingClientRect();
     const beforeX =
       direction === "rtl"
         ? point.x > rect.x + rect.width / 2
@@ -92,11 +94,10 @@ export function bindCompositionGestures({
     if (!gesture) return;
     const old = gesture;
     gesture = null;
-    applyCompositionLayout(old.element, old.node, nodes.get(old.node.parentId));
+    old.preview?.clear();
+    applyCompositionLayout(old.element, old.node, old.parent);
     old.element.style.transform = old.transform;
     old.element.removeAttribute("data-composition-moving");
-    for (const element of elements.values())
-      element.removeAttribute("data-composition-drop");
     try {
       root.releasePointerCapture?.(old.pointerId);
     } catch {
@@ -145,16 +146,21 @@ export function bindCompositionGestures({
     if (Math.hypot(dx, dy) < 3 && !g.changed) return;
     g.changed = true;
     if (g.flow && !g.edge) {
-      g.element.style.transform = `translate(${dx}px, ${dy}px)`;
+      if (!g.preview) {
+        g.preview = createLayoutDropPreview({
+          items: g.peers.map((item) => elements.get(item.id)),
+          source: g.element,
+        });
+      }
       g.beforeId = flowBeforeId(
         g.siblings,
         elements,
         g.parent.layout.mode,
-        { x: event.clientX, y: event.clientY },
+        { x: event.clientX + view.scrollX, y: event.clientY + view.scrollY },
         model.viewport?.direction || "ltr",
+        g.anchors,
       );
-      for (const [id, element] of elements)
-        element.toggleAttribute("data-composition-drop", id === g.beforeId);
+      g.preview.move(elements.get(g.beforeId) ?? null, dx, dy);
     } else {
       g.next = gestureLayout(
         g.node,
@@ -194,13 +200,32 @@ export function bindCompositionGestures({
     paint();
     const parent = nodes.get(node.parentId),
       flow = parent && parent.layout.mode !== "free";
+    const peers = model.nodes.filter((item) => item.parentId === node.parentId);
+    const siblings = peers.filter((item) => item.id !== node.id);
+    const edge = handle && handle !== "move" ? handle : null;
+    const anchors = new Map();
+    if (flow && !edge) {
+      // Snap against the original slots. Measuring animated siblings here would
+      // move the hit targets and make a stationary pointer flip between slots.
+      for (const sibling of siblings) {
+        const { x, y, width, height } = elements
+          .get(sibling.id)
+          .getBoundingClientRect();
+        anchors.set(sibling.id, {
+          x: x + view.scrollX,
+          y: y + view.scrollY,
+          width,
+          height,
+        });
+      }
+    }
     gesture = {
       node,
       parent,
       flow,
       element: wrapper,
       rect: wrapper.getBoundingClientRect(),
-      edge: handle && handle !== "move" ? handle : null,
+      edge,
       pointerId: event.pointerId,
       x: event.clientX + view.scrollX,
       y: event.clientY + view.scrollY,
@@ -208,9 +233,9 @@ export function bindCompositionGestures({
       changed: false,
       next: null,
       beforeId: null,
-      siblings: model.nodes.filter(
-        (item) => item.parentId === node.parentId && item.id !== node.id,
-      ),
+      peers,
+      siblings,
+      anchors,
     };
     root.setPointerCapture?.(event.pointerId);
     onActivity(true);
@@ -223,10 +248,7 @@ export function bindCompositionGestures({
     let operations = [];
     if (g.changed) {
       if (g.flow && !g.edge) {
-        const siblings = model.nodes.filter(
-          (item) => item.parentId === g.node.parentId,
-        );
-        const nextId = siblings[siblings.indexOf(g.node) + 1]?.id || null;
+        const nextId = g.peers[g.peers.indexOf(g.node) + 1]?.id || null;
         if (nextId !== g.beforeId)
           operations = [{ op: "reorder", id: g.node.id, beforeId: g.beforeId }];
       } else if (g.next)

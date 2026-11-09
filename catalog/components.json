@@ -13,7 +13,7 @@
         "меню",
         "навигация"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createSidebarController",
       "platforms": [
@@ -96,7 +96,7 @@
           "https://www.artlebedev.ru/backstage/navigation-rules/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425",
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2",
       "anatomy": [
         "Постоянная ведущая рейка",
         "Иконка и подпись раздела",
@@ -127,7 +127,7 @@
         "confirmation button",
         "confirm action"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createButton",
       "platforms": [
@@ -205,7 +205,7 @@
           "https://www.artlebedev.ru/backstage/navigation-rules/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425",
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2",
       "anatomy": [
         "Текст действия или подписанная иконка",
         "Видимый фокус и состояние disabled"
@@ -237,7 +237,7 @@
         "поле",
         "поиск"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createField",
       "platforms": [
@@ -324,7 +324,7 @@
           "https://www.artlebedev.ru/backstage/navigation-rules/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425",
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2",
       "anatomy": [
         "Видимая подпись",
         "Поле ввода",
@@ -354,7 +354,7 @@
         "state",
         "статус"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createStatus",
       "platforms": [
@@ -419,7 +419,7 @@
           "https://www.artlebedev.ru/backstage/navigation-rules/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425",
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2",
       "anatomy": [
         "Читаемый текст состояния",
         "Дополняющий смысловой цвет"
@@ -444,7 +444,7 @@
         "пусто",
         "загрузка"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createEmptyState",
       "platforms": [
@@ -510,7 +510,7 @@
           "https://www.artlebedev.ru/backstage/navigation-rules/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425",
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2",
       "anatomy": [
         "Понятный заголовок",
         "Причина отсутствия данных",
@@ -534,7 +534,7 @@
         "notice",
         "ошибка"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createNotice",
       "platforms": [
@@ -600,7 +600,7 @@
           "https://www.artlebedev.ru/backstage/navigation-rules/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425",
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2",
       "anatomy": [
         "Текст результата или причины",
         "Контекстный live region"
@@ -627,7 +627,7 @@
         "попап",
         "диалог"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createPopup",
       "platforms": [
@@ -710,7 +710,7 @@
           "https://www.artlebedev.ru/backstage/navigation-rules/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425",
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2",
       "anatomy": [
         "Постоянная компактная шапка",
         "Кнопка закрытия",
@@ -739,7 +739,7 @@
         "агент",
         "чат"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createAgentActivityChat",
       "platforms": [
@@ -805,7 +805,7 @@
           "https://www.artlebedev.ru/backstage/navigation-rules/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425",
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2",
       "anatomy": [
         "Компактная шапка «Агенты»",
         "Агент и задача",
@@ -840,7 +840,7 @@
         "панель",
         "меню"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "bindResizablePanel",
       "platforms": [
@@ -908,7 +908,7 @@
           "https://www.artlebedev.ru/backstage/navigation-rules/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425",
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2",
       "anatomy": [
         "Содержимое существующей панели",
         "Внутренняя граница separator",
@@ -936,7 +936,7 @@
         "header",
         "шапка"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createWindowToolbar",
       "platforms": [
@@ -1016,7 +1016,7 @@
           "https://www.artlebedev.ru/backstage/navigation-rules/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425",
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2",
       "anatomy": [
         "Реальная история назад/вперёд",
         "Контекстный заголовок",
@@ -1046,7 +1046,7 @@
         "граф",
         "связь"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createCardConnections",
       "platforms": [
@@ -1112,7 +1112,7 @@
           "https://www.artlebedev.ru/backstage/navigation-rules/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425",
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2",
       "anatomy": [
         "Явные ID узлов",
         "Направленные реальные рёбра",
@@ -1144,7 +1144,7 @@
         "роль",
         "проблемы"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createIssueSummary",
       "platforms": [
@@ -1231,7 +1231,7 @@
         "длинный заголовок",
         "dispose"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "section-stack",
@@ -1246,7 +1246,7 @@
         "отступы",
         "композиция"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createSectionStack",
       "platforms": [
@@ -1345,7 +1345,7 @@
         "заполненная группа",
         "пустая группа"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "state-panel",
@@ -1364,7 +1364,7 @@
         "semantic interface",
         "интерфейсы для агентов"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createStatePanel",
       "platforms": [
@@ -1453,7 +1453,7 @@
         "ошибка с повтором",
         "dispose"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "inline-help",
@@ -1471,7 +1471,7 @@
         "help beside text",
         "inline contextual help"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createInlineHelp",
       "platforms": [
@@ -1568,7 +1568,7 @@
           "https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "segmented-choice",
@@ -1586,7 +1586,7 @@
         "semantic interface",
         "интерфейсы для агентов"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createSegmentedChoice",
       "platforms": [
@@ -1685,7 +1685,7 @@
           "https://www.w3.org/WAI/ARIA/apg/patterns/radio/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "breadcrumbs",
@@ -1700,7 +1700,7 @@
         "хлебные крошки",
         "где я"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createBreadcrumbs",
       "platforms": [
@@ -1784,7 +1784,7 @@
           "https://www.artlebedev.ru/backstage/navigation-rules/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "progress",
@@ -1800,7 +1800,7 @@
         "загрузка",
         "объём работы"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createProgress",
       "platforms": [
@@ -1886,7 +1886,7 @@
           "https://developer.android.com/develop/ui/compose/components/progress"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "board-viewport",
@@ -1909,7 +1909,7 @@
         "background",
         "pattern"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createBoardViewport",
       "platforms": [
@@ -2000,7 +2000,7 @@
         "lifecycle": "draft",
         "sources": []
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "skeleton",
@@ -2012,7 +2012,7 @@
         "offline",
         "общие"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createSkeleton",
       "platforms": [
@@ -2087,7 +2087,7 @@
         "lifecycle": "draft",
         "sources": []
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "motion",
@@ -2099,7 +2099,7 @@
         "offline",
         "общие"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createMotion",
       "platforms": [
@@ -2173,7 +2173,7 @@
         "lifecycle": "draft",
         "sources": []
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "drag-drop",
@@ -2185,7 +2185,7 @@
         "offline",
         "общие"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createDragDrop",
       "platforms": [
@@ -2259,7 +2259,92 @@
         "lifecycle": "draft",
         "sources": []
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
+    },
+    {
+      "id": "layout-drop-preview",
+      "name": "Перестановка блоков в макете",
+      "summary": "Перенос внутри ряда, колонки или сетки с контуром места и предварительной перестройкой соседей.",
+      "category": "controls",
+      "tags": [
+        "drag-drop",
+        "reorder",
+        "перетаскивание",
+        "перестановка",
+        "песочница",
+        "макет",
+        "grid",
+        "responsive",
+        "container queries",
+        "фабрика"
+      ],
+      "version": "0.43.1-community.2",
+      "package": "@ag-design/components",
+      "exportName": "createLayoutDropPreview",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "rules": [
+        "accessible-name",
+        "keyboard-flow",
+        "reduced-motion",
+        "a11y-status-announcement",
+        "a11y-zoom-reflow-extended",
+        "qualification",
+        "design-rationale"
+      ],
+      "extensions": [
+        "move",
+        "clear",
+        "semantic CSS variables"
+      ],
+      "usageExample": "createLayoutDropPreview({items, source})",
+      "budget": {
+        "mountP95Ms": 16,
+        "interactionP95Ms": 16,
+        "retainedBytesPerInstance": 262144
+      },
+      "colorProfiles": [
+        "atlas",
+        "memory",
+        "observer",
+        "tasks",
+        "design"
+      ],
+      "anatomy": [
+        "Перетаскиваемый блок",
+        "Контур места вставки",
+        "Соседние блоки"
+      ],
+      "variants": [
+        "строка",
+        "колонка",
+        "сетка"
+      ],
+      "states": [
+        "готово",
+        "предпросмотр",
+        "отмена",
+        "перенос"
+      ],
+      "design": {
+        "intendedUse": "Перенос внутри ряда, колонки или сетки с контуром места и предварительной перестройкой соседей.",
+        "rationale": "Показывает результат до записи изменений.",
+        "alternatives": [
+          "drag-drop для переноса между списками",
+          "Свободное размещение для координат и наложений"
+        ],
+        "limitations": "Один родитель. Хост определяет допустимые места, управление без жеста, запись и отмену.",
+        "lifecycle": "draft",
+        "sources": [
+          "https://moxen.cl/recursos/parrilla/",
+          "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html"
+        ]
+      },
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "ascii-background",
@@ -2280,7 +2365,7 @@
         "лендинг",
         "бегущая строка"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createAsciiBackground",
       "platforms": [
@@ -2376,7 +2461,7 @@
           "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "ambient-chart",
@@ -2391,7 +2476,7 @@
         "свечение",
         "offline"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createAmbientChart",
       "platforms": [
@@ -2487,7 +2572,7 @@
         "lifecycle": "draft",
         "sources": []
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "loading-indicator",
@@ -2506,7 +2591,7 @@
         "semantic interface",
         "интерфейсы для агентов"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createLoadingIndicator",
       "platforms": [
@@ -2593,7 +2678,7 @@
         "lifecycle": "draft",
         "sources": []
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "render-window",
@@ -2621,7 +2706,7 @@
         "gallery",
         "long feed"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createRenderWindow",
       "platforms": [
@@ -2705,7 +2790,7 @@
           "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "agent-conversation",
@@ -2729,7 +2814,7 @@
         "переписка",
         "журнал работы"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createAgentConversation",
       "platforms": [
@@ -2836,7 +2921,7 @@
         "ошибка",
         "ограниченное окно"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "numeric-badge",
@@ -2854,7 +2939,7 @@
         "частота",
         "нормализация"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createNumericBadge",
       "platforms": [
@@ -2939,7 +3024,7 @@
         "нет шкалы",
         "обновление"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "select",
@@ -2951,7 +3036,7 @@
         "engineering",
         "select"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createSelect",
       "platforms": [
@@ -3012,7 +3097,7 @@
         "focus-visible",
         "empty"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "tabs",
@@ -3024,7 +3109,7 @@
         "engineering",
         "tabs"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createTabs",
       "platforms": [
@@ -3086,7 +3171,7 @@
         "focus-visible",
         "empty"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "menu",
@@ -3098,7 +3183,7 @@
         "engineering",
         "menu"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createMenu",
       "platforms": [
@@ -3159,7 +3244,7 @@
         "focus-visible",
         "empty"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "data-table",
@@ -3171,7 +3256,7 @@
         "engineering",
         "data-table"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createDataTable",
       "platforms": [
@@ -3236,7 +3321,7 @@
         "focus-visible",
         "empty"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "tree",
@@ -3253,7 +3338,7 @@
         "слои",
         "вложенность"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createTree",
       "platforms": [
@@ -3318,7 +3403,7 @@
         "focus-visible",
         "empty"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "settings-panel",
@@ -3330,7 +3415,7 @@
         "engineering",
         "settings-panel"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createSettingsPanel",
       "platforms": [
@@ -3389,7 +3474,7 @@
         "focus-visible",
         "empty"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "masonry-layout",
@@ -3409,7 +3494,7 @@
         "карточки",
         "лента"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createMasonryLayout",
       "platforms": [
@@ -3488,7 +3573,7 @@
         "скрыто",
         "disposed"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "dropdown-select",
@@ -3509,7 +3594,7 @@
         "выбор",
         "форма"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createDropdownSelect",
       "platforms": [
@@ -3584,7 +3669,7 @@
         "ошибка",
         "disposed"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "data-grid",
@@ -3609,7 +3694,7 @@
         "regular-table",
         "data-grid-component"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createDataGrid",
       "platforms": [
@@ -3686,7 +3771,7 @@
         "saving",
         "disposed"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "code-viewer",
@@ -3703,7 +3788,7 @@
         "редактор",
         "readonly"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createCodeViewer",
       "platforms": [
@@ -3782,7 +3867,7 @@
         "error",
         "disposed"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "markdown-viewer",
@@ -3798,7 +3883,7 @@
         "preview",
         "source"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createMarkdownViewer",
       "platforms": [
@@ -3863,7 +3948,7 @@
         "error",
         "disposed"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "markdown-editor",
@@ -3879,7 +3964,7 @@
         "split",
         "файл"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createMarkdownEditor",
       "platforms": [
@@ -3945,7 +4030,7 @@
         "error",
         "disposed"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "git-history",
@@ -3959,7 +4044,7 @@
         "история",
         "git"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createGitHistory",
       "platforms": [
@@ -4052,7 +4137,7 @@
         "граница снимка",
         "dispose"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "task-history",
@@ -4066,7 +4151,7 @@
         "история",
         "задачи"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createTaskHistory",
       "platforms": [
@@ -4159,7 +4244,7 @@
         "граница снимка",
         "dispose"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "language-switcher",
@@ -4174,7 +4259,7 @@
         "локализация",
         "настройки"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createLanguageSwitcher",
       "platforms": [
@@ -4244,7 +4329,7 @@
         "single-locale",
         "focus-visible"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "golden-canon-grid",
@@ -4260,7 +4345,7 @@
         "композиция",
         "pptx"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createGoldenCanonGrid",
       "platforms": [
@@ -4311,7 +4396,7 @@
         "miss",
         "disposed"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "layout-grid-overlay",
@@ -4338,7 +4423,7 @@
         "композиция кадра",
         "14 grids"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createLayoutGridOverlay",
       "platforms": [
@@ -4397,7 +4482,7 @@
         "inherited axes",
         "disposed"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "textarea",
@@ -4415,7 +4500,7 @@
         "комментарий",
         "заметка"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createTextarea",
       "platforms": [
@@ -4502,7 +4587,7 @@
           "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425",
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2",
       "anatomy": [
         "Постоянная видимая подпись",
         "Native textarea",
@@ -4545,7 +4630,7 @@
         "async component",
         "асинхронная загрузка"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createAsyncBoundary",
       "platforms": [
@@ -4637,7 +4722,7 @@
           "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "palette-builder",
@@ -4661,7 +4746,7 @@
         "hue",
         "linked-handles"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createPaletteBuilder",
       "platforms": [
@@ -4743,7 +4828,7 @@
           "https://github.com/Myndex/SAPC-APCA/blob/master/documentation/minimum_compliance.md"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "catalog-card",
@@ -4760,7 +4845,7 @@
         "презентация товара",
         "каталог"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createCatalogCard",
       "platforms": [
@@ -4836,7 +4921,7 @@
           "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "catalog-search-controls",
@@ -4856,7 +4941,7 @@
         "inline form",
         "поля в строке"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createCatalogSearchControls",
       "platforms": [
@@ -4941,7 +5026,7 @@
           "https://www.carbondesignsystem.com/building-blocks/core/components/form/guidelines"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "event-bus",
@@ -4960,7 +5045,7 @@
         "lifecycle",
         "hot gestures"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createEventBus",
       "platforms": [
@@ -5055,7 +5140,7 @@
           "https://web.dev/articles/inp"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "request-router",
@@ -5074,7 +5159,7 @@
         "lifecycle",
         "hot gestures"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createRequestRouter",
       "platforms": [
@@ -5170,7 +5255,7 @@
           "https://web.dev/articles/inp"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "grid-icon-draft",
@@ -5186,7 +5271,7 @@
         "keylines",
         "grid-first"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createGridIconDraft",
       "platforms": [
@@ -5271,7 +5356,7 @@
           "https://m1.material.io/style/icons.html"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "popover",
@@ -5286,7 +5371,7 @@
         "настройки вида",
         "compact controls"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createPopover",
       "platforms": [
@@ -5353,7 +5438,7 @@
           "https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/0bd5ecb28b58969a0951ec6c6cc9356073718994/packages/gitlab-ui/src/components/base/new_dropdowns/base_dropdown/base_dropdown.vue"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "sorting-control",
@@ -5368,7 +5453,7 @@
         "направление сортировки",
         "compact controls"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createSortingControl",
       "platforms": [
@@ -5433,7 +5518,7 @@
           "https://gitlab.com/gitlab-org/gitlab/-/blob/4a0d285e5e2958702347bb4231f8ba515bf639db/app/assets/javascripts/vue_shared/components/filtered_search_bar/filtered_search_bar_root.vue"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "conversation-card",
@@ -5449,7 +5534,7 @@
         "карточка диалога",
         "карточка результата"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createConversationCard",
       "platforms": [
@@ -5522,7 +5607,7 @@
           "https://developers.openai.com/plugins/reference"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "widget-list",
@@ -5538,7 +5623,7 @@
         "список результатов",
         "действия виджета"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createWidgetList",
       "platforms": [
@@ -5609,7 +5694,7 @@
           "https://developers.openai.com/api/docs/guides/chatkit-themes"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "text-block",
@@ -5627,7 +5712,7 @@
         "копирование",
         "выделение"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createTextBlock",
       "platforms": [
@@ -5692,7 +5777,7 @@
         "manual-copy",
         "disposed"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "choice-chips",
@@ -5709,7 +5794,7 @@
         "radio",
         "scroll"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createChoiceChips",
       "platforms": [
@@ -5808,7 +5893,7 @@
           "https://www.w3.org/WAI/ARIA/apg/patterns/radio/"
         ]
       },
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     {
       "id": "bento-grid",
@@ -5826,7 +5911,7 @@
         "layout",
         "nested grid"
       ],
-      "version": "0.43.0-community.2",
+      "version": "0.43.1-community.2",
       "package": "@ag-design/components",
       "exportName": "createBentoGrid",
       "platforms": [
@@ -5893,7 +5978,7 @@
         "light",
         "dark"
       ],
-      "artifactHash": "bbe8ab9504ad7811cdb65bdc3fd995747dd64ae74a4be0d6904187806b070425"
+      "artifactHash": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     }
   ]
 }

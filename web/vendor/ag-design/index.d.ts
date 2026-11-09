@@ -1287,3 +1287,4 @@ export function layoutAxisTicks(options: TimeAxisFormat & {
 
 export { createBentoGrid } from "./bento-grid.js";
 export type { BentoItem, BentoGridOptions, BentoGridController } from "./bento-grid.js";
+export { createLayoutDropPreview } from "./layout-drop-preview.js";
