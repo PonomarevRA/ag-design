@@ -8,6 +8,7 @@ import asyncio
 import logging
 import os
 import sqlite3
+import sys
 import uuid
 from time import perf_counter
 
@@ -35,6 +36,8 @@ from .studio_workspace import StudioWorkspace
 from .studio_routes import STUDIO_PATHS, install as install_studio_routes
 from .project_catalog import PROJECT_CATALOG_WRITES, PROJECT_COMPONENTS, ProjectCatalog
 from .project_catalog_routes import install as install_project_catalog
+from .update_checker import UpdateChecker, CHECK_INTERVAL_SECONDS
+from .update_routes import REMINDER_PATH, install as install_update_routes
 
 CSP = "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; object-src 'none'; frame-src 'self'; frame-ancestors 'self'; base-uri 'none'"
 
@@ -62,11 +65,24 @@ def create_app(data_dir=None, *, catalog_dir=None, web_dir=None, origin=None, li
     async def lifespan(app):
         """Acquire one external data owner, publish only its identity and close both resources on every exit."""
         store = Store(directory)
-        discovery = studio = telemetry = maintenance = None
+        discovery = studio = telemetry = maintenance = update_worker = None
         try:
             discovery_search.refresh(catalog)
             discovery = Discovery(directory, configured_origin, instance_id) if configured_origin else None
             app.state.store = store
+            app.state.native_updates = UpdateChecker(directory, __version__)
+            app.state.native_updates_loop = asyncio.get_running_loop()
+
+            async def check_installed_updates():
+                """Let startup finish, then refresh public release metadata in the background."""
+                await asyncio.sleep(10)
+                while True:
+                    result = await app.state.native_updates.check()
+                    interval = 3600 if result['status'] == 'unavailable' else CHECK_INTERVAL_SECONDS
+                    await asyncio.sleep(interval)
+
+            if configured_origin and getattr(sys, 'frozen', False) and os.getenv('AG_DESIGN_DISABLE_UPDATE_CHECK') != '1':
+                update_worker = asyncio.create_task(check_installed_updates(), name='ag-design-native-updates')
             app.state.project_catalog = ProjectCatalog(store)
             app.state.compositions = CompositionStore(store,catalog)
             app.state.grid_captures = GridCaptureStore(app.state.compositions)
@@ -88,6 +104,9 @@ def create_app(data_dir=None, *, catalog_dir=None, web_dir=None, origin=None, li
             yield
         finally:
             discovery_search.close()
+            if update_worker:
+                update_worker.cancel()
+                await asyncio.gather(update_worker, return_exceptions=True)
             if maintenance:
                 maintenance.cancel()
                 await asyncio.gather(maintenance,return_exceptions=True)
@@ -120,7 +139,7 @@ def create_app(data_dir=None, *, catalog_dir=None, web_dir=None, origin=None, li
         started = perf_counter()
         if not permitted_request(request, configured_origin):
             response = JSONResponse({'error':{'code':'forbidden','message':'Local same-origin access required'}},status_code=403)
-        elif request.method in {'POST','PATCH','PUT','DELETE'} and request.url.path not in {'/api/v1/agent/performance','/api/v1/agent/components','/api/v1/agent/checks','/api/v1/agent/usage','/api/v1/color-scheme','/api/v1/palette','/api/v1/interface-evaluation','/api/v1/agent/libraries','/api/v1/agent/libraries/state','/api/v1/golden-canon/check'} | set(UI_MAP_PATHS) | set(COMPOSITION_PATHS) | set(STUDIO_PATHS) | set(GRID_PATHS) | set(WINDOW_WRITES) | set(PROJECT_CATALOG_WRITES) and not secrets.compare_digest(request.headers.get('x-ag-design-ui','').encode('utf-8'),ui_token.encode('ascii')):
+        elif request.method in {'POST','PATCH','PUT','DELETE'} and request.url.path not in {REMINDER_PATH, '/api/v1/agent/performance','/api/v1/agent/components','/api/v1/agent/checks','/api/v1/agent/usage','/api/v1/color-scheme','/api/v1/palette','/api/v1/interface-evaluation','/api/v1/agent/libraries','/api/v1/agent/libraries/state','/api/v1/golden-canon/check'} | set(UI_MAP_PATHS) | set(COMPOSITION_PATHS) | set(STUDIO_PATHS) | set(GRID_PATHS) | set(WINDOW_WRITES) | set(PROJECT_CATALOG_WRITES) and not secrets.compare_digest(request.headers.get('x-ag-design-ui','').encode('utf-8'),ui_token.encode('ascii')):
             response = JSONResponse({'error':{'code':'ui_action_required','message':'Use the local UI session for writes'}},status_code=403)
         else:
             try:
@@ -157,7 +176,7 @@ def create_app(data_dir=None, *, catalog_dir=None, web_dir=None, origin=None, li
         return {'application':'ag-design','version':__version__,'instanceId':instance_id,'catalogRevision':catalog.revision,
                 'counts':{name:len(items) for name,items in catalog.sections.items()},
                 'storage':{'kind':'sqlite','external':True,'counts':store.counts(),'retention':asdict(store.settings)},
-                'capabilities':{'mcpReadOnly':False,'metadataWritesOnly':True,'projectCatalog':'local-project-components-v1','performanceReports':'outcome-v2','agentPerformanceWrite':True,'reportTrust':'caller-reported','stageRecommendations':library is not None,'colorProfiles':library is not None,'ruleSections':library is not None,'interfaceRubric':'ag-interface-review-v2','authoringBrief':library is not None,'requirementsPolicy':'ag-component-requirements-v1','statelessEvaluation':library is not None,'systemStyles':'ag-design/system-styles-v1','componentPurposeSearch':'offline-ru-en-v1','uiMap':'ag-design/ui-graph-v1','uiMapImportBytes':4194304,'composition':'ag-design/composition-v2','compositionTrust':'caller-reported','compositionBytes':524288,'brandStudio':'ag-design/brand-studio-v1','journeyTesting':'exact-revision-v1','temporaryJourneyCache':'sliding-activity-v1','studioPptx':'editable-schematic-v1','layoutGrids':'ag-design/layout-grid-v1','layoutGridCapture':'numeric-only-transient-v1','goldenCanonGrid':'ag-diagonal-core-v1','goldenCanonPptx':'ag-design/golden-canon-pptx-v1'},
+                'capabilities':{'mcpReadOnly':False,'metadataWritesOnly':True,'projectCatalog':'local-project-components-v1','performanceReports':'outcome-v2','agentPerformanceWrite':True,'reportTrust':'caller-reported','stageRecommendations':library is not None,'colorProfiles':library is not None,'ruleSections':library is not None,'interfaceRubric':'ag-interface-review-v2','authoringBrief':library is not None,'requirementsPolicy':'ag-component-requirements-v1','statelessEvaluation':library is not None,'nativeUpdates':'ag-design/native-updates-v1','systemStyles':'ag-design/system-styles-v1','componentPurposeSearch':'offline-ru-en-v1','uiMap':'ag-design/ui-graph-v1','uiMapImportBytes':4194304,'composition':'ag-design/composition-v2','compositionTrust':'caller-reported','compositionBytes':524288,'brandStudio':'ag-design/brand-studio-v1','journeyTesting':'exact-revision-v1','temporaryJourneyCache':'sliding-activity-v1','studioPptx':'editable-schematic-v1','layoutGrids':'ag-design/layout-grid-v1','layoutGridCapture':'numeric-only-transient-v1','goldenCanonGrid':'ag-diagonal-core-v1','goldenCanonPptx':'ag-design/golden-canon-pptx-v1'},
                 'library':{'external':library is not None,'directory':str(library.directory) if library else None},
                 'discovery': discovery_search.status()}
 
@@ -183,6 +202,7 @@ def create_app(data_dir=None, *, catalog_dir=None, web_dir=None, origin=None, li
     install_composition_routes(app)
     install_studio_routes(app)
     install_project_catalog(app)
+    install_update_routes(app)
     if library:
         from .design_routes import install as install_design_routes
         install_design_routes(app,catalog,library)

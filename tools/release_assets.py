@@ -34,6 +34,30 @@ def check_tag(tag):
     return product
 
 
+def release_notes(changelog, version):
+    """Extract one checked stable version section for display in GitHub and the native app."""
+    heading = f'## {version}'
+    lines = changelog.read_text(encoding='utf-8').splitlines()
+    if lines.count(heading) != 1:
+        raise ValueError(f'Expected one changelog section: {heading}')
+    bullets = []
+    for line in lines[lines.index(heading) + 1:]:
+        if line.startswith('## '):
+            break
+        if not line.strip():
+            continue
+        if not line.startswith('- ') or not 1 <= len(line[2:].strip()) <= 160:
+            raise ValueError('Use one short changelog bullet per line, up to 160 characters')
+        bullets.append(line)
+    if not 1 <= len(bullets) <= 3:
+        raise ValueError('Expected 1–3 user-facing changes')
+    return '\n'.join([
+        '## Что нового', '', *bullets, '', '## Установка', '',
+        'Установщики доступны для macOS (Apple Silicon и Intel), Windows x64 и Linux x64.',
+        'Сверьте SHA-256 по файлу SHA256SUMS. macOS-сборки подписаны ad-hoc, Windows-сборки без подписи.',
+    ])
+
+
 def collect(directory, product):
     """Verify all four installers against their receipts and write one portable SHA256SUMS."""
     sums = []
@@ -64,7 +88,7 @@ def collect(directory, product):
     (directory / 'SHA256SUMS').write_text(''.join(sums))
 
 
-def publish(tag, directory):
+def publish(tag, directory, notes):
     """Upload verified assets to a draft and publish it once all uploads finish."""
     command = ['gh', 'release']
     repository = ['--repo', REPOSITORY]
@@ -76,18 +100,13 @@ def publish(tag, directory):
     if result == 'false':
         raise ValueError('This release is already published. Bump the version to replace assets.')
     if not result:
-        notes = (
-            'AG Design Community installers for macOS (Apple Silicon and Intel), Windows x64 and Linux x64. '
-            'See the installation guide for platform requirements. macOS is ad-hoc signed and not notarized. '
-            'Windows setup is unsigned. Verify downloads against SHA256SUMS.'
-        )
         subprocess.run(command + ['create', tag, '--verify-tag', '--draft', '--title', tag,
-                                  '--generate-notes', '--notes', notes] + repository, check=True)
+                                  '--notes', notes] + repository, check=True)
     elif result != 'true':
         raise ValueError('Ambiguous GitHub release state')
     assets = [str(path) for path in sorted(directory.iterdir()) if path.suffix != '.sha256']
     subprocess.run(command + ['upload', tag, '--clobber'] + repository + ['--', *assets], check=True)
-    subprocess.run(command + ['edit', tag, '--draft=false'] + repository, check=True)
+    subprocess.run(command + ['edit', tag, '--notes', notes, '--draft=false'] + repository, check=True)
 
 
 def main():
@@ -100,10 +119,11 @@ def main():
     if args.publish and args.assets is None:
         parser.error('--publish requires --assets')
     product = check_tag(args.tag)
+    notes = release_notes(ROOT / 'CHANGELOG.md', product['version'])
     if args.assets:
         collect(args.assets, product)
     if args.publish:
-        publish(args.tag, args.assets)
+        publish(args.tag, args.assets, notes)
 
 
 if __name__ == '__main__':

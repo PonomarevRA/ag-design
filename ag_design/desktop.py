@@ -109,12 +109,16 @@ def run_desktop(app_factory, data_dir: Path, port: int = 8897, *, allow_fallback
             """Dispatch only the fixed local UI event shared by the native titlebar and menu shortcut."""
             window.run_js("window.dispatchEvent(new Event('ag-design:toggle-sidebar'))")
 
+        from .native_updates_help import UpdateHelp
+        update_help = UpdateHelp(window, app.state.native_updates, app.state.native_updates_loop)
+        help_actions = update_help.actions()
+
         def configure_menu():
             """Install macOS responder menus only after the native window is ready."""
             install_native_menu(window, "ag-design", sidebar_action=toggle_sidebar, view_actions=(("Change Appearance", lambda: window.run_js("document.getElementById('theme')?.click()")), ("Refresh Data", lambda: window.run_js("document.getElementById('refresh')?.click()")),), help_actions=(
                 ("Design Help", lambda: window.create_confirmation_dialog("Ag Design",
                     "Search reusable components and source guidelines. Notes, audits and measurements are caller-reported and saved outside the repository. When the tray is ready, closing hides this window. Quit stops only this instance.")),
-            ))
+            ) + help_actions)
             from .native_toolbar import install_native_toolbar
             install_native_toolbar(window, toggle_sidebar, identity="ag-design")
 
@@ -131,9 +135,13 @@ def run_desktop(app_factory, data_dir: Path, port: int = 8897, *, allow_fallback
         from . import __version__
         background = bind_background(window, app_id="ag-design-community", title="AG Design Community", origin=origin,
                                      on_quit=restore_shutdown.request_quit, data_directory=data_dir,
-                                     current_version=__version__, open_activity=lambda: window.load_url(origin + "/desktop-activity.html?desktop=1"))
+                                     current_version=__version__, on_update=update_help.check, open_activity=lambda: window.load_url(origin + "/desktop-activity.html?desktop=1"))
         window.events.loaded += configure_menu
-        webview.start(gui={"darwin": "cocoa", "win32": "edgechromium"}.get(sys.platform, "qt"), debug=False, private_mode=False, storage_path=str(data_dir / "webview"))
+        menu = []
+        if sys.platform != "darwin":
+            from webview.menu import Menu, MenuAction
+            menu = [Menu("Help", [MenuAction(label, action) for label, action in help_actions])]
+        webview.start(menu=menu, gui={"darwin": "cocoa", "win32": "edgechromium"}.get(sys.platform, "qt"), debug=False, private_mode=False, storage_path=str(data_dir / "webview"))
     finally:
         try:
             stopped = shutdown_owned_server()

@@ -35,3 +35,7 @@ Before building UI, call `design_project_components(project_id="demo-project")` 
 Add `component_id` to the catalog call for the full record. Use its `revision` as `expected_revision` when editing or calling `design_remove_project_component`. Omit it when creating a record.
 
 Records live in the AG Design runtime SQLite database. The default user data directory is outside the checkout. Shared search, repository publication and usage counts read separate sources. `project_id` provides logical scoping. Clients with access to the same local MCP can address any project catalog. Component code and files stay in the project.
+
+## Application updates
+
+At the end of a task that used ag-design, optionally call `design_claim_update_reminder` once. When it returns a new version, append a short note with the release link and user-facing changes. Empty responses and errors leave the task result intact. A new reminder can be claimed after three days. Use `design_update_status` to read the cache without claiming a reminder.

@@ -1,7 +1,7 @@
 {
   "appId": "ag-design-community",
   "name": "AG Design Community",
-  "version": "0.47.4",
+  "version": "0.47.5",
   "binary": "AgDesign",
   "bundleId": "local.ag-design-community.desktop",
   "repository": "PonomarevRA/ag-design",
