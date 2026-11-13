@@ -12,7 +12,7 @@ def form_requirements(purpose='operations'):
     """Return a pinned authored checklist for funnel or operational forms, with explicit caller-evidence limits."""
     if purpose not in ('funnel','operations'):
         raise DesignError('invalid_studio','Use funnel or operations form purpose.',422)
-    policy = json.loads((resource_root()/'catalog/form-requirements.json').read_text())
+    policy = json.loads((resource_root()/'catalog/form-requirements.json').read_text(encoding='utf-8'))
     profile = policy['profiles'][purpose]
     result = {'schema':policy['schema'],'version':policy['version'],'purpose':purpose,'title':profile['title'],
               'origin':policy['origin'],'checkedAt':policy['checkedAt'],'sources':policy['sources'],

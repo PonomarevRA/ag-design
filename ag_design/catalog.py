@@ -75,7 +75,7 @@ class Catalog:
         plugin_index = libraries.index()
         from .element_bundles import validate_bundle
         profile_path = self.directory / 'profiles.json'
-        profile_ids = {p['id'] for p in json.loads(profile_path.read_text())['items']} if profile_path.exists() else set()
+        profile_ids = {p['id'] for p in json.loads(profile_path.read_text(encoding='utf-8'))['items']} if profile_path.exists() else set()
         for bundle in libraries.bundles(index=plugin_index):
             validate_bundle(bundle, self)
             for profile in bundle.get('profiles', []):
