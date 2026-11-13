@@ -5917,6 +5917,74 @@
         "ru",
         "en"
       ]
+    },
+    {
+      "id": "figma-design-workflow",
+      "title": "Apply ag-design rules in Figma",
+      "summary": "A Figma design workflow for Auto Layout, form alignment, component variants, variables and developer handoff.",
+      "tags": [
+        "figma",
+        "фигма",
+        "layout",
+        "forms",
+        "accessibility"
+      ],
+      "ruleIds": [
+        "design-rationale",
+        "form-row-control-alignment",
+        "form-row-feedback-track",
+        "form-row-label-alignment",
+        "layout-width-integrity",
+        "layout-width-scenarios",
+        "semantic-color-roles",
+        "contrast",
+        "async-component-lifecycle",
+        "accessible-name",
+        "keyboard-flow"
+      ],
+      "sources": [
+        {
+          "title": "Guide to auto layout",
+          "url": "https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout-in-Figma",
+          "kind": "primary"
+        },
+        {
+          "title": "Create and use variants",
+          "url": "https://help.figma.com/hc/en-us/articles/360056440594-Create-and-use-variants",
+          "kind": "primary"
+        },
+        {
+          "title": "Explore component properties",
+          "url": "https://help.figma.com/hc/en-us/articles/5579474826519-Explore-component-properties",
+          "kind": "primary"
+        },
+        {
+          "title": "Modes for variables",
+          "url": "https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables",
+          "kind": "primary"
+        },
+        {
+          "title": "Guide to inspecting",
+          "url": "https://help.figma.com/hc/en-us/articles/22012921621015-Guide-to-inspecting",
+          "kind": "primary"
+        },
+        {
+          "title": "Accessible prototypes",
+          "url": "https://help.figma.com/hc/en-us/articles/7810391964695-Accessible-prototypes-in-Figma",
+          "kind": "primary"
+        }
+      ],
+      "locale": "en",
+      "requestedLocale": "en",
+      "audience": "agent",
+      "availableLocales": [
+        "ru",
+        "en"
+      ],
+      "sourceHash": "a7f0ea4e1998e4d5dfb3e0e9bd7533fbb085094b8f822c510373cff23e77ced0",
+      "fallbackUsed": false,
+      "contentMode": "agent-instructions",
+      "body": "Apply current design_brief and reuse from design_search. Use layout-grid-selection and nested-layout-grids to choose scope. Map shared tracks to nested Auto Layout, keep label/control/hint alignment per form-row-layout and show normal/narrow frames with representative content and larger text. Map behavior to variants, content to component properties, and host semantic roles to Variables/Modes. Check actual color pairs via design_color_scheme. Hand off block ID, rule, width, state, roles and expected interaction. Submit changed_block_review via design_evaluate_interface in the implementation with normal/narrow/text200/narrow-text200, form and width measurements, keyboard and accessibility evidence. Treat missing runtime evidence as unknown."
     }
   ]
 }

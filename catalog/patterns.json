@@ -1238,6 +1238,40 @@
         "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html"
       ],
       "evaluation": "One parent; test pointer and keyboard, narrow layout, 200% text, cancellation and persisted undo."
+    },
+    {
+      "id": "figma-design-workflow",
+      "title": "Правила ag-design в Figma",
+      "stages": [
+        "plan",
+        "layout",
+        "component",
+        "review",
+        "release"
+      ],
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "queryTerms": [
+        "figma",
+        "фигм",
+        "auto layout",
+        "автолейаут",
+        "авто лейаут"
+      ],
+      "recommendation": "Read figma-design-workflow for applying current AG rules in Figma. Map nested grids and form tracks to Auto Layout, behavior to variants, and host roles to Variables. Hand off block-level rules and evidence. Submit changed_block_review via design_evaluate_interface on the implementation at normal, narrow, text200 and narrow-text200.",
+      "sources": [
+        "https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout-in-Figma",
+        "https://help.figma.com/hc/en-us/articles/360056440594-Create-and-use-variants",
+        "https://help.figma.com/hc/en-us/articles/5579474826519-Explore-component-properties",
+        "https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables",
+        "https://help.figma.com/hc/en-us/articles/22012921621015-Guide-to-inspecting",
+        "https://help.figma.com/hc/en-us/articles/7810391964695-Accessible-prototypes-in-Figma"
+      ],
+      "evaluation": "Advisory workflow. Frame geometry is design evidence. Runtime checks retain their existing requirements."
     }
   ]
 }

@@ -93,7 +93,7 @@
     "widget-list",
     "window-toolbar"
   ],
-  "version": "0.47.2",
+  "version": "0.47.3",
   "edition": "community",
   "packageArtifacts": {
     "components": {
@@ -101,8 +101,8 @@
       "sha256": "0ecdeb8dcaa3440724d8028dfaceed140851b4f40e29eae3989baeb8959056a2"
     },
     "rules": {
-      "version": "0.32.1-community.2",
-      "sha256": "9a8a1a44150f0bcd0140d9c3bfe6833db5070bf0006c35e7485e1dc6d8e71395"
+      "version": "0.32.2-community.2",
+      "sha256": "dd267e5d76de0fbbf64f7bc62d459de973d2f395f23f2487e511c3da197de69d"
     },
     "visual-tools": {
       "version": "2.1.2-community.2",

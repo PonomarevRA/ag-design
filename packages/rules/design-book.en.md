@@ -3202,3 +3202,25 @@ Adapt factory content to the width of its own block. Keep the name, key value an
 The ag-design composition sandbox applies this to Row, Column and Grid groups. Use free positioning for coordinates and intentional overlap. Use drag-drop for transfers between lists. Test drop, cancellation, pointer tracking, the last slot, RTL, narrow width and 200% text.
 
 [Parrilla](https://moxen.cl/recursos/parrilla/) · [WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html)
+
+## Apply ag-design rules in Figma
+
+### Start with the current brief
+
+Read `design_brief` and use `design_search` to find applicable components. Give each changed block a reference to the AG rule and the place where it will be checked. In Figma, put this in the component description or a note next to the frame.
+
+### Grids, forms and width
+
+- Choose a grid for the outer frame based on the screen's purpose. A nested block can inherit its parent's guides or use its own grid. Use Golden Canon Grid for composition anchors where it serves the task. For operational forms use shared tracks and control alignment. See `layout-grid-selection` and `nested-layout-grids`.
+- Use nested Auto Layout for spacing, order and size behavior. Hug contents suits short actions, Fill container suits a field that can use available space, and fixed sizing suits elements with justified dimensions. Switch the narrow frame's layout before labels and internal columns collapse.
+- Check label tops, control tops and heights, and space for hints and errors separately. Make normal and narrow frames and repeat each with long content and enlarged type. A large-type frame exposes risks to check later at actual 200% text in the browser.
+
+### Components and tokens
+
+- Build instances from shared parts. Use variants for meaningful changes in state, density or behavior. Use Text, Boolean and Instance swap properties for labels, visibility and swapping a supporting icon. Show applicable loading, empty, error and success content and actions on a representative screen.
+- Bind layers to project semantic roles with Variables. Use Modes for light and dark values, or show separate annotated frames with role names when modes are unavailable. Record actual pairs such as `text/default` on `surface/default` and evaluate them with `design_color_scheme`. Include relevant states such as focus and error.
+
+### Handoff and review
+
+- For each changed block hand off component ID, rule, frame width, state, color roles and expected interaction. Use Dev Mode annotations and measurements where available. A visible note can carry the same contract.
+- For a Project name / Visibility row, show how it stacks at narrow widths and where the hint stays attached. In the implementation submit `changed_block_review` via `design_evaluate_interface` with form and width evidence for normal, narrow, text200 and narrow-text200. Also verify accessible names, keyboard focus order and error announcements. Leave runtime results unknown until checked.

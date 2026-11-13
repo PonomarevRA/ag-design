@@ -21,6 +21,8 @@ from .ui_map_routes import UI_MAP_PATHS, PUBLIC_MAP_ERRORS
 from .composition_routes import COMPOSITION_PATHS, PUBLIC_COMPOSITION_ERRORS
 from .studio_routes import STUDIO_PATHS, PUBLIC_STUDIO_ERRORS
 from .layout_grid_routes import GRID_PATHS, PUBLIC_GRID_ERRORS
+from .project_catalog import (PROJECT_COMPONENTS, PROJECT_COMPONENT_WRITE,
+                              PROJECT_COMPONENT_REMOVE, PROJECT_CATALOG_WRITES, PUBLIC_PROJECT_ERRORS)
 
 
 # Fixed public guidance is safe even when a local service returns hostile error text.
@@ -33,7 +35,7 @@ PUBLIC_REQUEST_ERRORS = {
 }
 
 
-def request_failure(status, raw):
+def request_failure(status, raw, route_errors=None):
     """Forward recognized code/status pairs with fixed guidance; never echo remote error messages."""
     result = {'error': {'code': 'design_request_failed', 'httpStatus': status}}
     try:
@@ -42,7 +44,7 @@ def request_failure(status, raw):
         return result
     error = value.get('error') if isinstance(value, dict) else None
     code = error.get('code') if isinstance(error, dict) else None
-    allowed = (PUBLIC_REQUEST_ERRORS.get(code) or PUBLIC_MAP_ERRORS.get(code) or PUBLIC_COMPOSITION_ERRORS.get(code) or PUBLIC_STUDIO_ERRORS.get(code) or PUBLIC_GRID_ERRORS.get(code)) if isinstance(code, str) else None
+    allowed = (PUBLIC_REQUEST_ERRORS.get(code) or PUBLIC_MAP_ERRORS.get(code) or PUBLIC_COMPOSITION_ERRORS.get(code) or PUBLIC_STUDIO_ERRORS.get(code) or PUBLIC_GRID_ERRORS.get(code) or (route_errors or {}).get(code)) if isinstance(code, str) else None
     statuses = ()
     if allowed:
         statuses = (allowed[0],) if isinstance(allowed[0],int) else allowed[0]
@@ -85,7 +87,9 @@ class DesignClient:
                     raise ValueError('Response limit')
                 raw.extend(chunk)
             if response.status_code != (expected_status or (201 if payload is not None else 200)):
-                return request_failure(response.status_code, raw)
+                path = httpx.URL(url).path
+                route_errors = PUBLIC_PROJECT_ERRORS if path == PROJECT_COMPONENTS or path in PROJECT_CATALOG_WRITES else None
+                return request_failure(response.status_code, raw, route_errors)
             value = json.loads(raw)
             if not isinstance(value,dict):
                 raise ValueError('Invalid response')
@@ -116,7 +120,7 @@ class DesignClient:
     def write(self, path, payload):
         """Submit fixed declarative writes or stateless evaluation after resolving the exact local owner."""
         try:
-            if path not in ('/api/v1/agent/performance','/api/v1/agent/components','/api/v1/agent/checks','/api/v1/agent/usage','/api/v1/color-scheme','/api/v1/palette','/api/v1/interface-evaluation','/api/v1/agent/libraries','/api/v1/agent/libraries/state','/api/v1/golden-canon/check') and path not in UI_MAP_PATHS and path not in COMPOSITION_PATHS and path not in STUDIO_PATHS and path not in GRID_PATHS and path not in WINDOW_WRITES:
+            if path not in ('/api/v1/agent/performance','/api/v1/agent/components','/api/v1/agent/checks','/api/v1/agent/usage','/api/v1/color-scheme','/api/v1/palette','/api/v1/interface-evaluation','/api/v1/agent/libraries','/api/v1/agent/libraries/state','/api/v1/golden-canon/check') and path not in UI_MAP_PATHS and path not in COMPOSITION_PATHS and path not in STUDIO_PATHS and path not in GRID_PATHS and path not in WINDOW_WRITES and path not in PROJECT_CATALOG_WRITES:
                 raise ValueError('Unsupported write')
             status = self.read('/api/v1/status')
             if status.get('application') != 'ag-design':
@@ -130,7 +134,7 @@ class DesignClient:
                 if location['instanceId'] != status['instanceId']:
                     raise ValueError('Changed owner')
                 base = local_origin(location['origin'])
-            expected = UI_MAP_PATHS.get(path) or COMPOSITION_PATHS.get(path) or STUDIO_PATHS.get(path) or GRID_PATHS.get(path) or WINDOW_WRITES.get(path)
+            expected = UI_MAP_PATHS.get(path) or COMPOSITION_PATHS.get(path) or STUDIO_PATHS.get(path) or GRID_PATHS.get(path) or WINDOW_WRITES.get(path) or PROJECT_CATALOG_WRITES.get(path)
             if expected is None:
                 expected = 200 if path in ('/api/v1/color-scheme','/api/v1/palette','/api/v1/interface-evaluation','/api/v1/agent/libraries/state','/api/v1/golden-canon/check') else 201
             return self._read_json(base+path,payload=payload,expected_status=expected)
@@ -142,7 +146,7 @@ def build_mcp(origin=None, directory=None, client=None):
     """Register bounded catalog reads and explicit metadata/check writes; no arbitrary URLs, execution or file reads."""
     from mcp.server.fastmcp import FastMCP
     bridge = DesignClient(origin,directory,client)
-    mcp = FastMCP('ag-design',log_level='WARNING',instructions='For an explicit visual-style request, search design_styles and inspect design_style before selecting components; styles are advisory and never override host semantics or qualification. Call design_brief before developing or changing components; retain its policy hash, select suitable variants and report detailed requirements before qualification. Find project-appropriate components and stage recommendations first. Empty exact items do not mean no existing basis: inspect separate reuseCandidates and unmatchedTerms before adapting or custom authoring; declared draft lifecycle is not consumer qualification. Register missing elements as drafts with purpose, rationale, profiles and limitations. Test current definitions in ag-design before consumer qualification and usage. After qualified consumer integration, record actual reuse with stable consumer/component/location identity and read it back; previews and retries never increment unique usage. Read design_usage_summary for registered counts, not quality. Discover design_layout_grids and the grid-selection/nested-grid/inspection chapters; combine purpose-specific local grids and inspect_layout_grids numeric evidence before image review. Prefer Golden Canon Grid for creative compositions; read design_golden_canon and the grid/slide-recipe chapters, predeclare anchors and tolerance, and justify alternatives while preserving host/readability/accessibility. Grid fit is geometric evidence only. APCA has70% weight, but WCAG AA failure is never averaged away. Metadata/test reports are caller evidence; no code execution or accessibility certification.')
+    mcp = FastMCP('ag-design',log_level='WARNING',instructions='For an explicit visual-style request, search design_styles and inspect design_style before selecting components; styles are advisory and never override host semantics or qualification. Call design_brief before developing or changing components; retain its policy hash, select suitable variants and report detailed requirements before qualification. Find project-appropriate components and stage recommendations first. Empty exact items do not mean no existing basis: inspect separate reuseCandidates and unmatchedTerms before adapting or custom authoring; declared draft lifecycle is not consumer qualification. For project-specific UI, look up design_project_components under the exact project ID before authoring and save reusable project metadata there. Register shared catalog drafts with purpose, rationale, profiles and limitations. For work in Figma, find figma-design-workflow through design_rule_sections and apply current AG rules to the file. Test current definitions in ag-design before consumer qualification and usage. After qualified consumer integration, record actual reuse with stable consumer/component/location identity and read it back; previews and retries never increment unique usage. Read design_usage_summary for registered counts, not quality. Discover design_layout_grids and the grid-selection/nested-grid/inspection chapters; combine purpose-specific local grids and inspect_layout_grids numeric evidence before image review. Prefer Golden Canon Grid for creative compositions; read design_golden_canon and the grid/slide-recipe chapters, predeclare anchors and tolerance, and justify alternatives while preserving host/readability/accessibility. Grid fit is geometric evidence only. APCA has70% weight, but WCAG AA failure is never averaged away. Metadata/test reports are caller evidence; no code execution or accessibility certification.')
 
     @mcp.tool()
     def design_status() -> dict:
@@ -342,6 +346,30 @@ def build_mcp(origin=None, directory=None, client=None):
         if expected_revision is not None:
             payload['expectedRevision'] = expected_revision
         return bridge.write('/api/v1/agent/components', payload)
+
+    @mcp.tool()
+    def design_project_components(project_id: str, component_id: str | None = None,
+                                  limit: int = 20, offset: int = 0) -> dict:
+        """List reusable local metadata for one explicit project or read one exact component and its revision."""
+        return bridge.read(PROJECT_COMPONENTS, {'projectId': project_id, 'componentId': component_id,
+                           'limit': max(1, min(limit, 50)), 'offset': max(0, min(offset, 100000))})
+
+    @mcp.tool()
+    def design_save_project_component(project_id: str, component_id: str, title: str, purpose: str,
+                                      locations: list[str] | None = None, states: list[str] | None = None,
+                                      base_component_ids: list[str] | None = None, notes: str = '',
+                                      expected_revision: str | None = None) -> dict:
+        """Save project-local metadata. For updates supply the revision returned by the exact read."""
+        definition = {'title': title, 'purpose': purpose, 'locations': locations or [],
+                      'states': states or [], 'baseComponentIds': base_component_ids or [], 'notes': notes}
+        return bridge.write(PROJECT_COMPONENT_WRITE, {'projectId': project_id, 'componentId': component_id,
+                            'definition': definition, 'expectedRevision': expected_revision})
+
+    @mcp.tool()
+    def design_remove_project_component(project_id: str, component_id: str, expected_revision: str) -> dict:
+        """Remove an explicitly addressed project component after reading its current revision."""
+        return bridge.write(PROJECT_COMPONENT_REMOVE, {'projectId': project_id, 'componentId': component_id,
+                            'expectedRevision': expected_revision})
 
     @mcp.tool()
     def design_report_checks(report: dict) -> dict:

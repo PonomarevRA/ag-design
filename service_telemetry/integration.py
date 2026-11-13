@@ -108,13 +108,15 @@ class Telemetry:
 class TelemetryMiddleware:
     """Tee bounded request/response prefixes while preserving streaming, errors and cancellation."""
 
-    def __init__(self, app, owner):
+    def __init__(self, app, owner, excluded_paths=()):
+        """Allow the host to omit private routes from body and query capture."""
         self.app, self.owner = app, owner
+        self.excluded_paths = frozenset(excluded_paths)
 
     async def __call__(self, scope, receive, send):
         """Observe product API operations only; skip health, static assets and all telemetry polling."""
         path = scope.get('path', '')
-        if scope['type'] != 'http' or not path.startswith('/api/v1/') or path in POLL_PATHS:
+        if scope['type'] != 'http' or not path.startswith('/api/v1/') or path in POLL_PATHS or path in self.excluded_paths:
             return await self.app(scope, receive, send)
         request_body, response_body = bytearray(), bytearray()
         status, started = 500, time.monotonic()

@@ -11291,6 +11291,123 @@
         "body": "Use createLayoutDropPreview inside a declared editable row, column or grid. Show the reserved insertion slot and let neighbors reflow. Hit-test against original positions so animated neighbors cannot move targets under a stationary pointer.\n\nCommit semantic order once with undo. Escape and lost capture restore the original paint. Reflow immediately with reduced motion. Offer single-click move controls, retain focus and announce the new order.\n\nAdapt factory content to the width of its own block. Keep the name, key value and action in the compact variant, and add breakdowns or context when space allows. Use container queries to reveal already loaded details. Pass an explicit density to the factory when rendering or data fetching changes. Preserve block state and keep critical statuses and actions available.\n\nThe ag-design composition sandbox applies this to Row, Column and Grid groups. Use free positioning for coordinates and intentional overlap. Use drag-drop for transfers between lists. Test drop, cancellation, pointer tracking, the last slot, RTL, narrow width and 200% text.",
         "sourceHash": "9a0cb85fae1f5965fa001dc8be9040d48223e0a0b46d0aa75eebfe2eeab12076"
       }
+    },
+    {
+      "id": "figma-design-workflow",
+      "title": "Правила ag-design в Figma",
+      "summary": "Рабочий процесс для макетов в Фигме. Сетки, Auto Layout, выравнивание полей, variants, variables и передача на проверку.",
+      "body": "## Перед началом\n\nОткройте актуальный `design_brief` и найдите соответствующие компоненты через `design_search`. Для каждого изменённого блока запишите, какое правило ag-design применяете и где его проверите. В Figma это можно оформить описанием компонента или заметкой рядом с фреймом.\n\n## Сетки, формы и ширина\n\n- Назначьте сетку верхнему фрейму по назначению экрана. Для вложенного блока выбирайте локальную сетку или наследуйте направляющие родителя. Golden Canon Grid используйте для композиционных опор, когда они помогают задаче. В рабочих формах используйте общие треки и выравнивание элементов. Рецепты — `layout-grid-selection` и `nested-layout-grids`.\n- Используйте вложенный Auto Layout для отступов, порядка и распределения размеров. Короткие действия могут использовать Hug contents, поле ввода — Fill container при доступном месте, а фиксированный размер оставляйте для элементов с обоснованной геометрией. На узкой версии меняйте раскладку до того, как подписи и внутренние колонки схлопнутся.\n- У формы отдельно сверяйте верх подписей, верх и высоту контролов, место подсказок и ошибок. Соберите обычный и узкий фреймы, затем повторите оба с длинным содержимым и увеличенным текстом. Макет с увеличенным текстом показывает риск, который затем проверяется на фактических 200% в браузере.\n\n## Компоненты и токены\n\n- Стройте экземпляры из общих частей. Variants подходят для существенных различий состояния, плотности или поведения. Для подписи, видимости вспомогательной иконки и её замены используйте Text, Boolean и Instance swap. Покажите на одном экране, как состояния loading, empty, error и success меняют содержимое и действия, когда они применимы.\n- Привязывайте элементы к семантическим ролям проекта через Variables. Для светлой и тёмной тем задайте значения в Modes или покажите отдельные фреймы с именами ролей, если режимы недоступны. Запишите, например, пару `text/default` и `surface/default`, и проверяйте фактические цвета текста и подложки через `design_color_scheme`. Сверьте каждое применимое состояние, включая ошибку и фокус.\n\n## Передача и проверка\n\n- Для каждого изменённого блока передайте ID компонента, правило, ширину фрейма, состояние, роли цвета и ожидаемое действие. В Dev Mode можно привязать аннотацию и размеры к слою. Тот же контекст можно записать текстом рядом с фреймом.\n- На примере строки «Название проекта / Видимость» покажите перенос в колонку при нехватке ширины и независимое место для подсказки. В реализации передайте `changed_block_review` в `design_evaluate_interface` с замерами формы и ширины на четырёх сценариях: обычный, узкий, 200% текста и узкий с 200%. Проверьте также имена контролов, порядок клавиатурного фокуса и объявление ошибок. До проверки реализации отмечайте эти результаты как неизвестные.\n",
+      "tags": [
+        "figma",
+        "фигма",
+        "layout",
+        "forms",
+        "accessibility"
+      ],
+      "ruleIds": [
+        "design-rationale",
+        "form-row-control-alignment",
+        "form-row-feedback-track",
+        "form-row-label-alignment",
+        "layout-width-integrity",
+        "layout-width-scenarios",
+        "semantic-color-roles",
+        "contrast",
+        "async-component-lifecycle",
+        "accessible-name",
+        "keyboard-flow"
+      ],
+      "sources": [
+        {
+          "title": "Guide to auto layout",
+          "url": "https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout-in-Figma",
+          "kind": "primary",
+          "note": "Nested layout, spacing and resizing."
+        },
+        {
+          "title": "Create and use variants",
+          "url": "https://help.figma.com/hc/en-us/articles/360056440594-Create-and-use-variants",
+          "kind": "primary",
+          "note": "Meaningful axes of variation in a component set."
+        },
+        {
+          "title": "Explore component properties",
+          "url": "https://help.figma.com/hc/en-us/articles/5579474826519-Explore-component-properties",
+          "kind": "primary",
+          "note": "Text, visibility and instance replacement."
+        },
+        {
+          "title": "Modes for variables",
+          "url": "https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables",
+          "kind": "primary",
+          "note": "Values and overrides for different contexts."
+        },
+        {
+          "title": "Guide to inspecting",
+          "url": "https://help.figma.com/hc/en-us/articles/22012921621015-Guide-to-inspecting",
+          "kind": "primary",
+          "note": "Layer annotations and geometry during handoff."
+        },
+        {
+          "title": "Accessible prototypes",
+          "url": "https://help.figma.com/hc/en-us/articles/7810391964695-Accessible-prototypes-in-Figma",
+          "kind": "primary",
+          "note": "Prototype navigation and layer order."
+        }
+      ],
+      "lesson": {
+        "group": "interface",
+        "takeaway": "Привяжите каждый изменённый фрейм к действующему правилу и проверке реализации.",
+        "scenario": "Дизайнер передаёт разработчику форму настроек проекта с подсказкой и выпадающим списком.",
+        "before": "Есть один широкий фрейм. Поведение при переносе, длинных подписях и ошибке неизвестно.",
+        "after": "Широкий и узкий фреймы показывают общую сетку контролов и место для подсказки. Проверки поведения привязаны к блокам.",
+        "practice": [
+          "Соберите широкую строку и узкую колонку",
+          "Повторите оба фрейма с увеличенным текстом",
+          "Запишите ID блока, ожидаемую геометрию и проверки клавиатуры"
+        ],
+        "figure": {
+          "kind": "flow",
+          "labels": [
+            "Правило ag-design",
+            "Фреймы и состояния",
+            "Проверка реализации"
+          ]
+        }
+      },
+      "localizations": {
+        "en": {
+          "title": "Apply ag-design rules in Figma",
+          "summary": "A Figma design workflow for Auto Layout, form alignment, component variants, variables and developer handoff.",
+          "body": "## Start with the current brief\n\nRead `design_brief` and use `design_search` to find applicable components. Give each changed block a reference to the AG rule and the place where it will be checked. In Figma, put this in the component description or a note next to the frame.\n\n## Grids, forms and width\n\n- Choose a grid for the outer frame based on the screen's purpose. A nested block can inherit its parent's guides or use its own grid. Use Golden Canon Grid for composition anchors where it serves the task. For operational forms use shared tracks and control alignment. See `layout-grid-selection` and `nested-layout-grids`.\n- Use nested Auto Layout for spacing, order and size behavior. Hug contents suits short actions, Fill container suits a field that can use available space, and fixed sizing suits elements with justified dimensions. Switch the narrow frame's layout before labels and internal columns collapse.\n- Check label tops, control tops and heights, and space for hints and errors separately. Make normal and narrow frames and repeat each with long content and enlarged type. A large-type frame exposes risks to check later at actual 200% text in the browser.\n\n## Components and tokens\n\n- Build instances from shared parts. Use variants for meaningful changes in state, density or behavior. Use Text, Boolean and Instance swap properties for labels, visibility and swapping a supporting icon. Show applicable loading, empty, error and success content and actions on a representative screen.\n- Bind layers to project semantic roles with Variables. Use Modes for light and dark values, or show separate annotated frames with role names when modes are unavailable. Record actual pairs such as `text/default` on `surface/default` and evaluate them with `design_color_scheme`. Include relevant states such as focus and error.\n\n## Handoff and review\n\n- For each changed block hand off component ID, rule, frame width, state, color roles and expected interaction. Use Dev Mode annotations and measurements where available. A visible note can carry the same contract.\n- For a Project name / Visibility row, show how it stacks at narrow widths and where the hint stays attached. In the implementation submit `changed_block_review` via `design_evaluate_interface` with form and width evidence for normal, narrow, text200 and narrow-text200. Also verify accessible names, keyboard focus order and error announcements. Leave runtime results unknown until checked.\n",
+          "sourceHash": "a7f0ea4e1998e4d5dfb3e0e9bd7533fbb085094b8f822c510373cff23e77ced0",
+          "lesson": {
+            "group": "interface",
+            "takeaway": "Link each changed frame to a current rule and an implementation check.",
+            "scenario": "A designer hands off project settings with a hint and a dropdown.",
+            "before": "One wide frame leaves narrow layout, long labels and error behavior open.",
+            "after": "Wide and narrow frames show shared control tracks and hint placement, with runtime checks tied to each block.",
+            "practice": [
+              "Build the wide row and narrow stack",
+              "Repeat both frames with larger text",
+              "Record block ID, expected geometry and keyboard checks"
+            ],
+            "figure": {
+              "kind": "flow",
+              "labels": [
+                "AG rule",
+                "Frames and states",
+                "Implementation review"
+              ]
+            }
+          }
+        }
+      },
+      "agentInstructions": {
+        "language": "en",
+        "sourceHash": "a7f0ea4e1998e4d5dfb3e0e9bd7533fbb085094b8f822c510373cff23e77ced0",
+        "body": "Apply current design_brief and reuse from design_search. Use layout-grid-selection and nested-layout-grids to choose scope. Map shared tracks to nested Auto Layout, keep label/control/hint alignment per form-row-layout and show normal/narrow frames with representative content and larger text. Map behavior to variants, content to component properties, and host semantic roles to Variables/Modes. Check actual color pairs via design_color_scheme. Hand off block ID, rule, width, state, roles and expected interaction. Submit changed_block_review via design_evaluate_interface in the implementation with normal/narrow/text200/narrow-text200, form and width measurements, keyboard and accessibility evidence. Treat missing runtime evidence as unknown."
+      }
     }
   ]
 }
