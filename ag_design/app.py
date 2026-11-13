@@ -36,7 +36,7 @@ from .studio_workspace import StudioWorkspace
 from .studio_routes import STUDIO_PATHS, install as install_studio_routes
 from .project_catalog import PROJECT_CATALOG_WRITES, PROJECT_COMPONENTS, ProjectCatalog
 from .project_catalog_routes import install as install_project_catalog
-from .update_checker import UpdateChecker, CHECK_INTERVAL_SECONDS
+from .update_checker import UpdateChecker
 from .update_routes import REMINDER_PATH, install as install_update_routes
 
 CSP = "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; object-src 'none'; frame-src 'self'; frame-ancestors 'self'; base-uri 'none'"
@@ -73,16 +73,8 @@ def create_app(data_dir=None, *, catalog_dir=None, web_dir=None, origin=None, li
             app.state.native_updates = UpdateChecker(directory, __version__)
             app.state.native_updates_loop = asyncio.get_running_loop()
 
-            async def check_installed_updates():
-                """Let startup finish, then refresh public release metadata in the background."""
-                await asyncio.sleep(10)
-                while True:
-                    result = await app.state.native_updates.check()
-                    interval = 3600 if result['status'] == 'unavailable' else CHECK_INTERVAL_SECONDS
-                    await asyncio.sleep(interval)
-
             if configured_origin and getattr(sys, 'frozen', False) and os.getenv('AG_DESIGN_DISABLE_UPDATE_CHECK') != '1':
-                update_worker = asyncio.create_task(check_installed_updates(), name='ag-design-native-updates')
+                update_worker = asyncio.create_task(app.state.native_updates.run_periodic(), name='ag-design-native-updates')
             app.state.project_catalog = ProjectCatalog(store)
             app.state.compositions = CompositionStore(store,catalog)
             app.state.grid_captures = GridCaptureStore(app.state.compositions)

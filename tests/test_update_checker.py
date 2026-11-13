@@ -64,3 +64,37 @@ def test_fetch_interval_and_offline_recovery(tmp_path):
     assert check.claim() == {'update': None}
     candidate = release('0.47.6')
     assert asyncio.run(check.check(force=True))['status'] == 'available'
+
+
+def test_manual_failure_wakes_periodic_check_before_original_deadline(tmp_path, monkeypatch):
+    """A failed manual check replaces a day-long wait with the retry deadline."""
+    monkeypatch.setattr('ag_design.update_checker.RETRY_INTERVAL_SECONDS', 0.01)
+
+    async def exercise():
+        first = asyncio.Event()
+        recovered = asyncio.Event()
+        calls = 0
+
+        async def fetch():
+            nonlocal calls
+            calls += 1
+            if calls == 1:
+                first.set()
+            elif calls == 2:
+                raise OSError('offline')
+            elif calls == 3:
+                recovered.set()
+            return release('0.47.6')
+
+        checker = UpdateChecker(tmp_path, '0.47.5', fetch=fetch, suffix='macos-arm64.dmg')
+        task = asyncio.create_task(checker.run_periodic(initial_delay=0))
+        try:
+            await asyncio.wait_for(first.wait(), timeout=2)
+            assert (await checker.check(force=True))['status'] == 'unavailable'
+            await asyncio.wait_for(recovered.wait(), timeout=3)
+            assert checker.status()['status'] == 'available'
+        finally:
+            task.cancel()
+            await asyncio.gather(task, return_exceptions=True)
+
+    asyncio.run(exercise())

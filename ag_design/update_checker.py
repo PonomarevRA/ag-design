@@ -113,6 +113,7 @@ class UpdateChecker:
         self.clock = clock
         self.suffix = suffix if suffix is not None else _installer_suffix()
         self._check_lock = asyncio.Lock()
+        self._deadline_changed = asyncio.Event()
         self._lock = Lock()
         self._snapshot = {}
         self._load_reminder()
@@ -181,7 +182,22 @@ class UpdateChecker:
             now = self.clock()
             with self._lock:
                 self._snapshot = {**result, 'checkedAt': now, 'nextCheckAt': now + interval}
-                return self._status(now)
+                status = self._status(now)
+            if force:
+                self._deadline_changed.set()
+            return status
+
+    async def run_periodic(self, *, initial_delay=10):
+        """Follow the cached deadline and wake early if Help changes it."""
+        await asyncio.sleep(initial_delay)
+        while True:
+            self._deadline_changed.clear()
+            result = await self.check()
+            delay = max(1, result['nextCheckAt'] - self.clock())
+            try:
+                await asyncio.wait_for(self._deadline_changed.wait(), timeout=delay)
+            except TimeoutError:
+                pass
 
     def claim(self):
         """Persist one notice before returning it to an agent at the end of a task."""
