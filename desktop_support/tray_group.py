@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 CATALOG = {
     'code-atlas': ('local.code-atlas.desktop', 'Code Atlas'),
-    'ag-design': ('local.ag-design.desktop', 'Ag Design'),
+    'ag-design-community': ('local.ag-design-community.desktop', 'AG Design Community'),
     'ag-observer': ('local.ag-observer.desktop', 'Ag Observer'),
     'ag-tasks': ('local.ag-tasks.desktop', 'Ag Tasks'),
     'agmemory': ('com.ponomarev.agmemory', 'AgMemory'),

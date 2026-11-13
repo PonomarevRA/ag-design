@@ -32,7 +32,7 @@ def main(argv=None):
     directory = options.data_dir or default_data_dir()
     if options.port is None:
         from desktop_support import read_installation
-        options.port = read_installation('ag-design', directory).preferred_port or 8897
+        options.port = read_installation('ag-design-community', directory).preferred_port or 8897
     if options.desktop:
         run_desktop(create_app,directory,options.port,allow_fallback=not options.strict_port)
         return

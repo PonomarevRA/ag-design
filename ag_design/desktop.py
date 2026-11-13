@@ -129,7 +129,7 @@ def run_desktop(app_factory, data_dir: Path, port: int = 8897, *, allow_fallback
                                                hide_on_close=lambda: bool(background and background.hide_on_close()))
         from desktop_support import bind_background
         from . import __version__
-        background = bind_background(window, app_id="ag-design", title="ag-design", origin=origin,
+        background = bind_background(window, app_id="ag-design-community", title="AG Design Community", origin=origin,
                                      on_quit=restore_shutdown.request_quit, data_directory=data_dir,
                                      current_version=__version__, open_activity=lambda: window.load_url(origin + "/desktop-activity.html?desktop=1"))
         window.events.loaded += configure_menu

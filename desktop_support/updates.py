@@ -6,7 +6,7 @@ from urllib.request import Request, build_opener, HTTPRedirectHandler, ProxyHand
 
 REPOSITORIES = {
     'code-atlas': 'code-atlas', 'agmemory': 'ag-memmory', 'ag-observer': 'ag-observer',
-    'ag-tasks': 'ag-tasks', 'ag-design': 'ag-design',
+    'ag-tasks': 'ag-tasks', 'ag-design-community': 'ag-design',
 }
 
 

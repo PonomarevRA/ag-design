@@ -21,13 +21,13 @@ def default_data_dir():
         return Path(override).expanduser().resolve()
     from platformdirs import user_data_path
     from desktop_support import configured_data_dir
-    return user_data_path('AGDesignCommunity', appauthor=False)
+    return configured_data_dir('ag-design-community', user_data_path('AGDesignCommunity', appauthor=False))
 
 
 def default_backup_dir():
     """Read the installer's separate backup location without creating or migrating a store."""
     from desktop_support import configured_backup_dir
-    return default_data_dir().parent / 'AGDesignCommunityBackups'
+    return configured_backup_dir('ag-design-community', default_data_dir())
 
 
 @dataclass(frozen=True)

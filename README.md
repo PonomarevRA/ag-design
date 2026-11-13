@@ -14,6 +14,8 @@ AG Design helps people and agents choose existing components, compose screens an
 | Use an agent | Connect the local MCP and install the bundled ag-design skill |
 | Ship without the service | Build exact local component/rules archives and vendor checked assets |
 
+[Download a native installer](https://github.com/PonomarevRA/ag-design/releases/latest) for macOS, Windows or Linux.
+
 ## Quick start
 
 Python **3.11+**, Node **22+** and npm are required for the source edition.

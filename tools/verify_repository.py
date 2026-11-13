@@ -46,6 +46,8 @@ def check_blob(name, content):
     try:
         text = content.decode('utf-8')
     except UnicodeDecodeError:
+        if path.as_posix() == 'packaging/icons/AppIcon.icns' and content.startswith(b'icns'):
+            return
         if path.suffix.lower() not in {'.png','.jpg','.jpeg','.webp','.gif','.ico','.woff2','.ttf','.otf'}:
             raise ValueError('Unreviewed binary file: ' + name)
         return

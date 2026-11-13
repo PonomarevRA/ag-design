@@ -107,7 +107,7 @@ def create_app(data_dir=None, *, catalog_dir=None, web_dir=None, origin=None, li
 
     app = FastAPI(title='Ag Design',version=__version__,lifespan=lifespan)
     from desktop_support.activity import install_activity
-    install_activity(app, 'ag-design')
+    install_activity(app, 'ag-design-community')
     app.state.telemetry = None
     install_telemetry_routes(app, lambda: app.state.telemetry, directory)
     app.add_middleware(TelemetryMiddleware, owner=lambda: app.state.telemetry, excluded_paths=PROJECT_CATALOG_WRITES.keys() | {PROJECT_COMPONENTS})

@@ -168,6 +168,9 @@ export async function pack(
   const community = publication !== null && JSON.parse(publication).edition === "community";
   const libraryPackages = path.join(destination, "library-packages");
   await mkdir(libraryPackages, { recursive: true });
+  const npmCli = process.platform === "win32" ? process.env.npm_execpath : null;
+  if (process.platform === "win32" && !npmCli)
+    throw new Error("Run the pack script through npm on Windows");
   for (const name of [
     "components",
     "rules",
@@ -176,8 +179,8 @@ export async function pack(
   ]) {
     const directory = path.join(root, "packages", name);
     const output = execFileSync(
-      "npm",
-      ["pack", "--ignore-scripts", "--json", "--pack-destination", destination],
+      npmCli ? process.execPath : "npm",
+      [...(npmCli ? [npmCli] : []), "pack", "--ignore-scripts", "--json", "--pack-destination", destination],
       { cwd: directory, encoding: "utf8" },
     );
     const [entry] = JSON.parse(output);

@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 import sys
 
-APP_IDS = frozenset({'code-atlas', 'agmemory', 'ag-observer', 'ag-tasks', 'ag-design'})
+APP_IDS = frozenset({'code-atlas', 'agmemory', 'ag-observer', 'ag-tasks', 'ag-design-community'})
 
 
 @dataclass(frozen=True)

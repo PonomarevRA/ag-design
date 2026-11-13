@@ -4,6 +4,11 @@
 
 Run commands from this checkout. Python 3.11+ and Node 22+/npm are required. Dependency installation downloads declared packages from their configured registries; it is not an offline bootstrap. After installation the bundled catalogue/components work locally.
 
+## Native installers
+
+Choose the installer for your OS from [GitHub Releases](https://github.com/PonomarevRA/ag-design/releases/latest). macOS has separate Apple Silicon and Intel DMGs. Windows x64 requires the WebView2 runtime. On Linux x64, unpack the archive and launch `Setup` from a graphical session. The installer asks for separate application, data and backup folders. Check downloads against `SHA256SUMS`. macOS installers are ad-hoc signed and lack Apple notarization. Windows installers are unsigned.
+
+
 ## Automatic setup
 
 ```sh
